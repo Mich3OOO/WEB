@@ -43,14 +43,14 @@ a{
 .flex-gauche{
     display: flex;
     flex-direction: column;
-    flex: 1;
+    margin-left: 35%;
     padding: 10px 20px;
 }
 
 .flex-droit{
     display: flex;
     flex-direction: column;
-    flex: 1;
+    margin-right: 35%;
     padding: 10px 20px;
 }
 
@@ -58,6 +58,7 @@ a{
 .flex-bas{
     text-align: center;
     padding: 20px ;
+    margin-bottom: 100px;
 }
 
 .image-profil{
@@ -142,6 +143,7 @@ footer
     color: #C5C6C6;
     margin-left: -10px;
     margin-right: -10px;
+    margin-top: 10px;
     padding: 10px;  
     text-align: center;
     width: 100%;
