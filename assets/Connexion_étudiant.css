@@ -1,0 +1,74 @@
+#Titre
+{
+    text-align: center;
+}
+.liste
+{
+    list-style: none;
+    
+}
+
+#flexContainer
+{
+    display: flex;   
+}
+
+#Filtres
+{
+    align-items: center;
+    flex: 1;
+    background-color: aqua;
+    position: relative;
+}
+
+#Filtres>ul
+{
+    position:absolute;
+    right: 10px;
+}
+
+#offres
+{
+    
+    flex: 2;
+    background-color: bisque;
+    border: solid;
+    border-width: 1px;
+    border-radius: 8px;
+
+}
+
+.Offre
+{
+    background-color: aqua;
+    margin: 10px;
+    box-sizing: border-box;
+    border: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    width: 200px;
+}
+
+
+
+.StarButon
+{
+    visibility: hidden;
+    position: relative;
+    bottom: 115px; left: 158px;
+    font-size: 38px;
+    color: yellow;
+}
+.StarButon::before
+{
+    visibility:visible ;
+    content: "\2727";
+    opacity: 80%;
+
+}
+.StarButon:checked::before
+{
+    visibility:visible ;
+    content: "\2726";   
+    opacity: 100%;   
+}
