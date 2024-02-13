@@ -65,6 +65,14 @@ a{
     padding-bottom: 20px;
 }
 
+select{
+    width: 80px;
+}
+
+input{
+    width: 200px;
+}
+
 .liste-deroulante{
     overflow-x: hidden; 
     overflow-y: scroll; 
@@ -154,19 +162,28 @@ footer
 
 @media(max-width:1024px) 
 {
+    
     footer>div>ul>li
     {
         text-align: left;
         display: list-item;
     }
     .flex-container{
+        
         flex-direction: column;
     }
     .flex-gauche{
-        margin-left: 0%;
+        margin-left: 25%;
+        width: 200px;
+    }
+    .flex-droit{
+        margin-left: 25%;
+        width: 200px;
     }
     .flex-bas{
         margin-bottom: 200px;
+        margin-left: 25%;
+        text-align: left;
     }
 }
 
