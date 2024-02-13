@@ -1,0 +1,161 @@
+
+h1{
+    text-align: center;
+}
+
+.login{
+    width: 200px;
+    height: auto;
+    border: 1px black solid;
+    display: flex;
+    padding: 10px 15px;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+label{
+    font-size: large;
+    padding-bottom: 10px ;
+    padding-top: 5px ;
+}
+
+.Connexion{
+    width:auto;
+    margin-top: 15px;
+}
+
+a{
+    padding-top: 10px;
+}
+
+.image-profil{
+    width:200px;
+    height: 200px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-gauche{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.flex-droit{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 20px;
+}
+
+
+.flex-bas{
+    text-align: center;
+    padding: 20px ;
+}
+
+.image-profil{
+    padding-bottom: 20px;
+}
+
+.liste-deroulante{
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+    border:#000000 1px solid; 
+    width: 600px; 
+    height: 300px;
+    margin: 100px auto;
+}
+.compte{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 5px;
+    
+}
+
+.gauche-compte{
+    flex: 1;
+    padding-right: 20px;
+}
+
+.haut-compte{
+    text-align: center;
+
+}
+.droit-compte{
+    flex: 1;
+    padding-right: 10px;
+}
+
+
+.bas-compte{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: small;
+    
+}
+
+.image-compte{
+    width: 100px; 
+    height: 100px;
+    padding-right: 10px;
+}
+
+.compte-gauche{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding-left: 10px;
+    padding-top: 15px;
+    width: 250px;
+    height: 125px;
+    margin-right: 10px;
+    border: #000000 2px solid;
+}
+.compte-droit{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding-left: 10px;
+    padding-top: 15px;
+    width: 250px;
+    height: 125px;
+    border: #000000 2px solid;
+}
+footer>div>ul>li
+{
+    margin: 10px;
+    display: inline;
+}
+
+footer
+{
+    background-color: #516079;
+    color: #C5C6C6;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 10px;  
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom:0
+    
+}
+
+@media(max-width:1024px) 
+{
+    footer>div>ul>li
+    {
+        text-align: left;
+        display: list-item;
+    }
+}
+
