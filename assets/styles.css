@@ -159,5 +159,14 @@ footer
         text-align: left;
         display: list-item;
     }
+    .flex-container{
+        flex-direction: column;
+    }
+    .flex-gauche{
+        margin-left: 0%;
+    }
+    .flex-bas{
+        margin-bottom: 200px;
+    }
 }
 
