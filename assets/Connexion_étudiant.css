@@ -2,11 +2,14 @@
 {
     text-align: center;
 }
+
+
 main
 {
-    background-color: #C5C6C6;
+    
     margin: -10px;
 }
+
 .liste
 {
     list-style: none;
@@ -16,60 +19,85 @@ main
 {
     display: flex;
     margin: 30px;
-    
 }
+
 #Filtres>*
 {
     margin-bottom: 10px;
-    margin-left: 20px;
+    margin: 0px 20px 10px 10px;
 }
+
 #Filtres
 {
-    
     align-items: center;
     flex: 1;
-    
     position: relative;
 }
 
 #Filtres>label
 {
-    font-weight: bold;
-    margin-left: 0px;
     
+    font-weight: bold;
+    margin-left: 0px;    
 }
+
 #Filtres>li>input
 {
-    border: none;
-    border-radius: 8px;
+    padding: 0px 10px;
+    accent-color: #F1895C;
+    border:solid;
+    border-width: 1px;
+    border-radius: 10px;
+    height: 25px; width:200px;
+}
+
+#RechercheOffre
+{
+    flex: 2;   
+}
+
+#search
+{
+    display: list-item;
+    border: solid;
+    border-width: 1px;
     
-}   
+    border-radius: 100px;
+    height: 30px; width: 400px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    padding: 2px 30px;
+}
+
+
 
 #offres
-{
-    
-    flex: 2;
-    
+{  
+    float: inline-start;
     border: solid;
     border-width: 1px;
     border-radius: 8px;
-    
-    
-
+    max-width: 660px;
 }
 
 .Offre
 {
-    float: inline-start;
+    float:inline-start;
     margin: 10px;
     box-sizing: border-box;
     border: solid;
     border-radius: 20px;
     border-width: 1px;
     width: 200px;
-    
+    background-color: #FFFFFF;
+}
+.Offre:hover
+{
+    background-color: #C5C6C6;
+    cursor:pointer;
     
 }
+
 .Offre>ul>li:not(:nth-last-child(1),:nth-last-child(2))
 {
     font-weight: bold;
@@ -86,16 +114,16 @@ main
    padding: 0px 15px;
 }
 
-
-
 .StarButon
 {
     visibility: hidden;
     position: relative;
-    bottom: 115px; left: 158px;
+    bottom: 115px; left: 70px;
     font-size: 38px;
-    color: yellow;
+    color: orange;
+    cursor: pointer;
 }
+
 .StarButon::before
 {
     visibility:visible ;
@@ -103,9 +131,20 @@ main
     opacity: 80%;
 
 }
+
 .StarButon:checked::before
 {
     visibility:visible ;
     content: "\2726";   
     opacity: 100%;   
+}
+
+@media(min-width: 1024px)
+{
+    #flexContainer
+    {
+        
+        margin: 0% 22%;
+    }
+    
 }
