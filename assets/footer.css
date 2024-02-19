@@ -12,12 +12,18 @@ footer
     margin-left: -10px;
     margin-right: -10px;
     padding: 10px;  
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom:0
+    
 }
 
 @media(max-width:1024px) 
 {
     footer>div>ul>li
     {
+        text-align: left;
         display: list-item;
     }
 }
