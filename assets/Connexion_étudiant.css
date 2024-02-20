@@ -31,7 +31,6 @@ main
 {
     align-items: center;
     flex: 1;
-    position: relative;
 }
 
 #Filtres>label
@@ -77,39 +76,41 @@ main
     border: solid;
     border-width: 1px;
     border-radius: 8px;
-    max-width: 660px;
+    width: 710px;
 }
 
-.Offre
+.Offre>button
 {
-    float:inline-start;
-    margin: 10px;
-    box-sizing: border-box;
+    
+    
     border: solid;
     border-radius: 20px;
     border-width: 1px;
     width: 200px;
     background-color: #FFFFFF;
 }
-.Offre:hover
+.Offre
+{
+    padding: 5px;
+    float:inline-start;
+
+}
+
+.Offre>button:hover
 {
     background-color: #C5C6C6;
     cursor:pointer;
     
 }
 
-.Offre>ul>li:not(:nth-last-child(1),:nth-last-child(2))
+.Offre>button>ul>li:not(:nth-last-child(1),:nth-last-child(2))
 {
     font-weight: bold;
     font-size: 20px;   
 }
 
-.Offre>ul>li
-{
-    text-align: center;
-}
 
-.Offre>ul
+.Offre>button>ul
 {
    padding: 0px 15px;
 }
@@ -118,7 +119,7 @@ main
 {
     visibility: hidden;
     position: relative;
-    bottom: 115px; left: 70px;
+    bottom: 28px; right: 49px;
     font-size: 38px;
     color: orange;
     cursor: pointer;
@@ -145,6 +146,7 @@ main
     {
         
         margin: 0% 22%;
+     
     }
     
 }
