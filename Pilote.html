@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="stylesheet" href="./assets/css/Pilote.css">
+        <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+        <script src="assets/include.js"></script>
+        <title>Pilote</title>
+    </head>
+    <body>
+        <h2 class="FormeH">Recherche d'offre de stage</h2>
+        <h5>Filtre : </h5>
+        <div id="flex-mere">
+            <div id="flex-filtres">
+                <label for="Ville">Ville</label><br>
+                <select multiple name="Ville" id="Ville">
+                    <option value="Ville1">Ville 1</option>
+                    <option value="Ville2">Ville 2</option>
+                    <option value="Ville3">Ville 3</option>
+                </select><br><br>
+                <label for="Dep">Département</label><br>
+                <select multiple name="Dep" id="Dep">
+                    <option value="Departement1">Département 1</option>
+                    <option value="Departement2">Département 2</option>
+                    <option value="Departement3">Département 3</option>
+                </select><br><br>
+                <label for="SectAct">Secteur d'activité</label><br>
+                <select multiple name="SectAct" id="SectAct">
+                    <option value="SectAct1">Secteur d'activité 1</option>
+                    <option value="SectAct2">Secteur d'activité 2</option>
+                    <option value="SectAct3">Secteur d'activité 3</option>
+                </select><br><br>
+                <label for="Comp">Compétences</label><br>
+                <select multiple name="Comp" id="Comp">
+                    <option value="Comp1">Compétence 1</option>
+                    <option value="Comp2">Compétence 2</option>
+                    <option value="Comp3">Compétence 3</option>
+                </select><br><br>
+                <label for="Date">Date</label><br>
+                <input type="date"><br><br>
+                <label for="Duree">Durée (en semaine)</label><br>
+                <input id="Duree" type="text"><br><br>
+                <label for="">Type de contrat</label><br>
+                <select name="Contrat" id="Contrat">
+                    <option value="Contrat1">Stage</option>
+                    <option value="Contrat2">CDD</option>
+                    <option value="Contrat3">CDI</option>
+                </select><br>
+            </div>
+            <div id="flex-recherche">
+                <input id="SearchBar" type="text" size="30" placeholder="Entreprise, poste, etc...">
+                <div class="liste-deroulante">
+                    <div class="compte">
+                    <article class="compte-gauche">
+                        <div>
+                        <img  class="image-compte" src="image/persov5.jpg" >
+                        </div>
+                        <div class="droit-compte">
+                        <div class="haut-compte">
+                        <label>Nom</label>
+                        <label>Prenom</label>
+                        </div>
+                        <div class="bas-compte">
+                        <a href="">Modifier</a>
+                        <a href="">Supprimer</a>
+                        <a href="">More</a>
+                        </div>
+                        </div>
+                    </article>
+                    <article class="compte-droit">
+                        <div >
+                            <img  class="image-compte" src="image/persov5.jpg" >
+                            </div>
+                            <div class="droit-compte">
+                            <div class="haut-compte">
+                            <label>Nom</label>
+                            <label>Prenom</label>
+                            </div>
+                            <div class="bas-compte">
+                            <a href="">Modifier</a>
+                            <a href="">Supprimer</a>
+                            <a href="">More</a>
+                            </div>
+                            </div>
+                    </article>
+                    </div>
+                    <div class="compte">
+                        <article class="compte-gauche">
+                            <div class="gauche-compte">
+                                <img  class="image-compte" src="image/persov5.jpg" >
+                            </div>
+                            <div class="droit-compte">
+                                <div class="haut-compte">
+                                    <label>Nom</label>
+                                    <label>Prenom</label>
+                                </div>
+                                <div class="bas-compte">
+                                    <a href="">Modifier</a>
+                                    <a href="">Supprimer</a>
+                                    <a href="">More</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="compte-droit">
+                            <div  class="gauche-compte">
+                            <img  class="image-compte" src="image/persov5.jpg" >
+                            </div>
+                            <div class="droit-compte">
+                            <div class="haut-compte">
+                            <label>Nom</label>
+                            <label>Prenom</label>
+                            </div>
+                            <div class="bas-compte">
+                            <a href="">Modifier</a>
+                            <a href="">Supprimer</a>
+                            <a href="">More</a>
+                            </div>
+                            </div>
+                        </article>
+                        </div>
+                </div>
+
+            </div>
+
+        </div>
+        <include src = "./Footer.html"></include>
+    </body>
+</html>
