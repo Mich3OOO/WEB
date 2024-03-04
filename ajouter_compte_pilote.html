@@ -5,12 +5,12 @@
     <meta charset="utf-8" >
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" >
-    <script src="assets/include.js"></script>
-    <title>Créer un compte pilote</title>
+    <script src="assets/js/include.js"></script>
+    <title>Créer un compte </title>
   </head>
   <body>
     <header>
-        <h1>Créer un compte pilote</h1>
+        <h1>Créer un compte </h1>
     </header>
     <nav>
 
@@ -21,6 +21,13 @@
             <img class="image-profil" src="image/persov5.jpg" alt="image profil">
             <button type="submit" class="Importation" >Importer un image</button>
             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+            <label for="Role">Choisir le role:</label>
+            <select name="Role" id="Role" required="required" multiple>
+                <option value="Pilote">Pilote</option>
+                <option value="Admin">Admin</option>
+                <option value="Etudiant">Etudiant</option>
+                
+            </select>
             <label for="Promotion">Choisir les promotions:</label>
 
             <select name="Promotion" id="Promotion" required="required" multiple>
@@ -35,13 +42,7 @@
             </select>
             <label for="Campus">Campus</label>
             <input type="text" required="required" id="Campus" name="Campus" placeholder="Campus">
-            <label for="Role">Choisir le role:</label>
-            <select name="Role" id="Role" required="required" multiple>
-                <option value="Pilote">Pilote</option>
-                <option value="Admin">Admin</option>
-                <option value="Etudiant">Etudiant</option>
-                
-            </select>
+            
         </div>
         <div class="flex-droit">
             

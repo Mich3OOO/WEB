@@ -61,6 +61,7 @@ a{
 
 .flex-bas{
     text-align: center;
+    
     padding: 20px ;
     margin-bottom: 100px;
 }
@@ -77,13 +78,18 @@ input{
     width: 200px;
 }
 
+.search-bar{
+    text-align: center;
+}
+
+
 .liste-deroulante{
     overflow-x: hidden; 
     overflow-y: scroll; 
     border:#000000 1px solid; 
     width: 600px; 
     height: 300px;
-    margin: 100px auto;
+    margin: 20px auto;
 }
 .compte{
     display: flex;

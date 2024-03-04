@@ -3,13 +3,15 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" >
-    <link href="assets/styles.css" rel="stylesheet" type="text/css" />
+    
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" >
-    <title>Modifier un compte pilote</title>
+    <script src="assets/js/include.js"></script>
+    <title>Modifier un compte </title>
   </head>
   <body>
     <header>
-        <h1>Modifier un compte pilote</h1>
+        <h1>Modifier un compte </h1>
     </header>
     <nav>
 
@@ -19,6 +21,13 @@
         <div class="flex-gauche">
             <img class="image-profil" src="image/persov5.jpg" alt="image profil">
             <button type="submit" class="Importation" >Importer un image</button>
+            <label for="Role">Choisir le role:</label>
+            <select name="Role" id="Role" required="required" multiple>
+                <option value="Pilote">Pilote</option>
+                <option value="Admin">Admin</option>
+                <option value="Etudiant">Etudiant</option>
+                
+            </select>
             <label for="Promotion">Choisir les promotions:</label>
 
             <select name="Promotion" id="Promotion" required="required" multiple>
@@ -36,13 +45,7 @@
             
         </div>
         <div class="flex-droit">
-            <label for="Role">Choisir le role:</label>
-            <select name="Role" id="Role" required="required" multiple>
-                <option value="Pilote">Pilote</option>
-                <option value="Admin">Admin</option>
-                <option value="Etudiant">Etudiant</option>
-                
-            </select>
+            
             <label for="Nom">Nom</label>
             <input type="text" required="required" id="Nom" name="Nom" placeholder="Nom">
             <label for="Prenom">Prenom</label>
@@ -72,15 +75,7 @@
     </section>
   </body>
   <footer>
-    <div>
-        
-        <ul>
-            <li>Nous Contacter </li>
-            <li>Téléphone: 06 09 41 51 00</li>
-            <li>email: Contact@presqu'auChaud.com</li>
-            <li>Adresse: 4 Rue de Gaule, Paris 75000</li>
-        </ul>
-    </div>
+    <include src = "./Footer.html"></include>
     
 </footer>
 
