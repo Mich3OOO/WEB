@@ -30,6 +30,11 @@ a{
     padding-top: 10px;
 }
 
+.button{
+    height: 20px;
+    width: 100px;
+}
+
 .image-profil{
     width:200px;
     height: 200px;
@@ -43,14 +48,13 @@ a{
 .flex-gauche{
     display: flex;
     flex-direction: column;
-    margin-left: 35%;
+    margin-left: 37.5%;
     padding: 10px 20px;
 }
 
 .flex-droit{
     display: flex;
     flex-direction: column;
-    margin-right: 35%;
     padding: 10px 20px;
 }
 
@@ -63,6 +67,14 @@ a{
 
 .image-profil{
     padding-bottom: 20px;
+}
+
+select{
+    width: 80px;
+}
+
+input{
+    width: 200px;
 }
 
 .liste-deroulante{
@@ -154,10 +166,32 @@ footer
 
 @media(max-width:1024px) 
 {
+    
     footer>div>ul>li
     {
         text-align: left;
         display: list-item;
+    }
+    .flex-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .flex-container label{
+        text-align: left;
+    }
+    
+    .flex-gauche{
+        margin-left: 0%;
+        width: 200px;
+    }
+    .flex-droit{
+    
+        width: 200px;
+    }
+    .flex-bas{
+        margin-bottom: 200px;
+        text-align: center;
+        
     }
 }
 
