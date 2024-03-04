@@ -1,11 +1,13 @@
 #Titre
 {
     text-align: center;
+    margin-bottom: 100px;
 }
 
 main
 {
-    margin: 0px 5vw;
+    max-width: 1100px;
+    
 }
 
 .liste
@@ -21,19 +23,13 @@ main
 #Filtres>*
 {
     margin-bottom: 10px;
-    margin: 0px 20px 10px 10px;
 }
 
 #Filtres
 {
-    align-items: center;
     flex: 1;
-}
-
-#Filtres>label
-{
-    font-weight: bold;
-    margin-left: 0px;
+    margin-right: 1px;
+    max-width: 300px;
 }
 
 #Filtres>li>input
@@ -43,7 +39,10 @@ main
     border:solid;
     border-width: 1px;
     border-radius: 10px;
-    height: 25px; width:200px;
+    height: 25px;
+    max-width: 200px;
+    min-width: 10px;
+    width: 80%;
 }
 
 #RechercheOffre
@@ -57,9 +56,9 @@ main
     border: solid;
     border-width: 1px;
     border-radius: 100px;
-    height: 30px; width: 400px;
+    max-width:400px ;
+    height: 30px; width: 80%;
     margin-bottom: 20px;
-    
     padding: 2px 30px;
 }
 
@@ -69,9 +68,8 @@ main
     float:inline-start;
     border: solid;
     border-width: 1px;
-    border-radius: 8px;
-    min-width: 440px;
-   
+    border-radius: 8px; 
+    width: 100%; 
 }
 
 .Offre>div>button , .Offre>div
@@ -210,3 +208,30 @@ main
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 670px) {
+    #offres
+    {
+        width: 230px; 
+    }
+    
+}
+@media screen and (max-width: 1000px) {
+    #offres
+    {
+        width: 460px; 
+    }
+
+    
+}
+@media screen and (min-width: 1000px) {
+    #offres
+    {
+        width: 690px; 
+    }
+    main
+    {
+        margin-left: calc((100% - 1100px)/2)
+    }
+    
+}
