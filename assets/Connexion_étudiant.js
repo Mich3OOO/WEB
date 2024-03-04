@@ -3,9 +3,10 @@ let Offres = document.getElementsByClassName("Offre");
 
 for(let i = 0 ; i< Offres.length;i++)
 {
-    
-    Offres[i].children[0].addEventListener("click",ShowOffre)(Offres[i].id);
-    Offres[i].children[1].addEventListener("click",addToWishList);
+    console.log( Offres[i].id)
+    Offres[i].children[0].children[0].addEventListener("click",ShowOffre);
+    Offres[i].children[0].children[1].addEventListener("click",addToWishList);
+ 
 }
 
 console.log("b");
