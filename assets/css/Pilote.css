@@ -22,11 +22,26 @@ h5{
 #SearchBar{
     margin-bottom: 20px;
     border-radius: 8px;
-    align-items: center;
+    margin-left: 50px;
+    width: 200px;
+}
+
+.liste-deroulante2{
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+    border:#000000 1px solid; 
+    width: 600px; 
+    height: 300px;
+    margin: 20px auto;
 }
 
 #flex-recherche{
     flex: 1;
     padding-right: 20%;
     margin-left: 20px;
+}
+
+select{
+    border-radius: 8px;
+    width: 100px;
 }
