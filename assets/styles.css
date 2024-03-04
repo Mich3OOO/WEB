@@ -30,6 +30,11 @@ a{
     padding-top: 10px;
 }
 
+.button{
+    height: 20px;
+    width: 100px;
+}
+
 .image-profil{
     width:200px;
     height: 200px;
@@ -43,14 +48,13 @@ a{
 .flex-gauche{
     display: flex;
     flex-direction: column;
-    margin-left: 35%;
+    margin-left: 37.5%;
     padding: 10px 20px;
 }
 
 .flex-droit{
     display: flex;
     flex-direction: column;
-    margin-right: 35%;
     padding: 10px 20px;
 }
 
@@ -169,21 +173,25 @@ footer
         display: list-item;
     }
     .flex-container{
-        
         flex-direction: column;
+        align-items: center;
     }
+    .flex-container label{
+        text-align: left;
+    }
+    
     .flex-gauche{
-        margin-left: 25%;
+        margin-left: 0%;
         width: 200px;
     }
     .flex-droit{
-        margin-left: 25%;
+    
         width: 200px;
     }
     .flex-bas{
         margin-bottom: 200px;
-        margin-left: 25%;
-        text-align: left;
+        text-align: center;
+        
     }
 }
 

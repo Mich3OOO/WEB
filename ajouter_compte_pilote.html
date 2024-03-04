@@ -19,6 +19,7 @@
         <div class="flex-gauche">
             <img class="image-profil" src="image/persov5.jpg" alt="image profil">
             <button type="submit" class="Importation" >Importer un image</button>
+            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
             <label for="Promotion">Choisir les promotions:</label>
 
             <select name="Promotion" id="Promotion" required="required" multiple>
@@ -33,9 +34,6 @@
             </select>
             <label for="Campus">Campus</label>
             <input type="text" required="required" id="Campus" name="Campus" placeholder="Campus">
-            
-        </div>
-        <div class="flex-droit">
             <label for="Role">Choisir le role:</label>
             <select name="Role" id="Role" required="required" multiple>
                 <option value="Pilote">Pilote</option>
@@ -43,6 +41,9 @@
                 <option value="Etudiant">Etudiant</option>
                 
             </select>
+        </div>
+        <div class="flex-droit">
+            
             <label for="Nom">Nom</label>
             <input type="text" required="required" id="Nom" name="Nom" placeholder="Nom">
             <label for="Prenom">Prenom</label>
@@ -62,8 +63,8 @@
         
     </div>
     <div class="flex-bas">
-        <button type="submit" class="Valider">Valider</button>
-        <button type="submit" class="Reinitialiser">Réinitialiser</button> 
+        <input type="submit" class="button" value="Envoyer"> 
+        <input type="reset" class="button" value="Reset"> 
     </div>
     
     </form>
