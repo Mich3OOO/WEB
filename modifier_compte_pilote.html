@@ -5,12 +5,11 @@
     <meta charset="utf-8" >
     <link href="assets/styles.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" >
-    <script src="assets/include.js"></script>
-    <title>Créer un compte pilote</title>
+    <title>Modifier un compte pilote</title>
   </head>
   <body>
     <header>
-        <h1>Créer un compte pilote</h1>
+        <h1>Modifier un compte pilote</h1>
     </header>
     <nav>
 
@@ -20,7 +19,6 @@
         <div class="flex-gauche">
             <img class="image-profil" src="image/persov5.jpg" alt="image profil">
             <button type="submit" class="Importation" >Importer un image</button>
-            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
             <label for="Promotion">Choisir les promotions:</label>
 
             <select name="Promotion" id="Promotion" required="required" multiple>
@@ -35,6 +33,9 @@
             </select>
             <label for="Campus">Campus</label>
             <input type="text" required="required" id="Campus" name="Campus" placeholder="Campus">
+            
+        </div>
+        <div class="flex-droit">
             <label for="Role">Choisir le role:</label>
             <select name="Role" id="Role" required="required" multiple>
                 <option value="Pilote">Pilote</option>
@@ -42,9 +43,6 @@
                 <option value="Etudiant">Etudiant</option>
                 
             </select>
-        </div>
-        <div class="flex-droit">
-            
             <label for="Nom">Nom</label>
             <input type="text" required="required" id="Nom" name="Nom" placeholder="Nom">
             <label for="Prenom">Prenom</label>
@@ -64,16 +62,26 @@
         
     </div>
     <div class="flex-bas">
-        <input type="submit" class="button" value="Envoyer"> 
-        <input type="reset" class="button" value="Reset"> 
+        <button type="submit" class="Valider">Valider</button>
+        <button type="submit" class="Reinitialiser">Réinitialiser</button> 
     </div>
     
     </form>
     <section>
 
     </section>
-    <include src = "./Footer.html"></include>
-
   </body>
+  <footer>
+    <div>
+        
+        <ul>
+            <li>Nous Contacter </li>
+            <li>Téléphone: 06 09 41 51 00</li>
+            <li>email: Contact@presqu'auChaud.com</li>
+            <li>Adresse: 4 Rue de Gaule, Paris 75000</li>
+        </ul>
+    </div>
+    
+</footer>
 
 </html>
