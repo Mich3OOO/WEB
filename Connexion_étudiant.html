@@ -8,7 +8,7 @@
         
         <link rel = "StyleSheet" href = "assets/css/Connexion_étudiant.css">
         <script src="assets/js/include.js"></script>
-        
+        <script async src="assets/js/Connexion_étudiant.js"></script>
 
     </head>
     <body>
@@ -16,19 +16,18 @@
         </header>
         <main>
             <h1 id="Titre">Recherche d'offre de stage</h1>
-            <div id="flexContainer">              
+            <div class = "flexContainer">              
                 <ul class="liste" id ="Filtres">
-                    <label for="Filtres">Filtres:</label>
+                    <li><label for="Filtres">Filtres:</label></li>
                     <li>
                         <label for="Ville">Ville</label>
                     </li>
                     <li>
-                        
                         <input type="text" list="Ville">
                         <datalist id = "Ville">
-                            <option value="v1"></option>
-                            <option value="v2"></option>
-                            <option value="v3"></option>
+                            <option value="pau"></option>
+                            <option value="algo"></option>
+                            <option value="Hendaya"></option>
                         </datalist>
                     </li>
                     <li>
@@ -62,10 +61,10 @@
                     </li>
 
                     <li>
-                        <label for="Date_fin">Date fin</label>
+                        <label for="durée">durée</label>
                     </li>
                     <li>
-                        <input type="date" id="Date_fin">
+                        <input type="" id="durée">
                     </li>
 
                     
@@ -83,45 +82,80 @@
                     
                 </ul>
                 <div id = "RechercheOffre">
-                    <input list="Satages" id="search" placeholder="🔎︎ search">
-                    <div id="offres">
-                        <button class="Offre">
-                            <ul class="liste">
-                                <li>Nom du poste</li>
-                                <li>Nom Entreprise</li>
-                                <li>Ville</li>
-                                <li>Résumé</li>
-                            </ul>
-                            <input class="StarButon" type="checkbox">
-                        </button>
-                        <button class="Offre">
-                            <ul class="liste">
-                                <li>Nom du poste</li>
-                                <li>Nom Entreprise</li>
-                                <li>Ville</li>
-                                <li>Résumé</li>
-                            </ul>
-                            <input class="StarButon" type="checkbox">
-                        </button>
-                        <button class="Offre">
-                            <ul class="liste">
-                                <li>Nom du poste</li>
-                                <li>Nom Entreprise</li>
-                                <li>Ville</li>
-                                <li>Résumé</li>
-                            </ul>
-                            <input class="StarButon" type="checkbox">
-                        </button>
+                    <input list="Stages" id="search" placeholder="🔎︎ search">
+
+                    <datalist id = "Stages">
+                        <option value="v1"></option>
+                        <option value="v2"></option>
+                        <option value="v3"></option>
+                    </datalist>
+
+                    <fi id="offres">
+                        <div class="Offre" id ="1">
+                            <div>
+                                <button >
+                                    <ul class="liste">
+                                        <li>Nom du poste</li>
+                                        <li>Nom Entreprise</li>
+                                        <li>Ville</li>
+                                    </ul>
+                                    
+                                </button>
+                                <input class="StarButon" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="Offre" id ="2">
+                            <div>
+                                <button >
+                                    <ul class="liste">
+                                        <li>Nom du poste</li>
+                                        <li>Nom Entreprise</li>
+                                        <li>Ville</li>
+                                    </ul>
+                                    
+                                </button>
+                                <input class="StarButon" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="Offre" id ="3">
+                            <div>
+                                <button >
+                                    <ul class="liste">
+                                        <li>Nom du poste</li>
+                                        <li>Nom Entreprise</li>
+                                        <li>Ville</li>
+                                    </ul>
+                                    
+                                </button>
+                                <input class="StarButon" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="Offre" id ="4">
+                            <div>
+                                <button >
+                                    <ul class="liste">
+                                        <li>Nom du poste</li>
+                                        <li>Nom Entreprise</li>
+                                        <li>Ville</li>
+                                    </ul>
+                                    
+                                </button>
+                                <input class="StarButon" type="checkbox">
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                 
             </div>
             
         </main>
-       
-        <include src = "./Footer.html"></include>
 
         
+        
+        <include src = "./Footer.html"></include>
     </body>
+
+    
 
 </html>
