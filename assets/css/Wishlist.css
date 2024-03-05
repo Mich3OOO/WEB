@@ -1,5 +1,5 @@
 .FormeH{
-    text-align: center;
+    margin-left: 47%;
     margin-bottom: 10px;
     font-weight: bold;
     font-size: large;
@@ -10,32 +10,7 @@ h4{
     margin-bottom: 10px;
 }
 
-#flex-mere{
-    display: flex;
-}
 
-
-#flex-filtres{
-    padding-left: 20%;
-}
-
-#SearchBar{
-    margin-bottom: 20px;
-    border-radius: 8px;
-    margin-left: 50px;
-    width: 200px;
-}
-
-#flex-recherche{
-    flex: 1;
-    padding-right: 20%;
-    margin-left: 20px;
-}
-
-.flex-filtres select{
-    border-radius: 8px;
-    width: 70px;
-}
 
 input{
     border-radius: 8px;
@@ -59,8 +34,38 @@ input{
     height: 30px; width: 400px;
     margin-top: 30px;
     margin-bottom: 20px;
-    margin-left: 40%;
+    margin-left: 35%;
     padding: 2px 30px;
+}
+
+.mail{
+    font-size: small;
+    color: black;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+
+.Info{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.gauche{
+    flex: 1;
+    width: 100px;
+    height: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.droite{
+    flex: 1;
+    width: 100px;
+    height: auto;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
 }
 
 .liste-deroulante2{
@@ -74,16 +79,15 @@ input{
 
 
 .compte{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
     padding: 5px;
-    
+    border: solid 2px black;
+    width: auto;
+    height: auto;
+    margin: 10px 10px;
 }
 
 .haut-compte{
     text-align: center;
-
 }
 .droit-compte{
     flex: 1;
@@ -92,23 +96,11 @@ input{
 
 .bas-compte{
     display: flex;
-    flex-direction: column;
     text-align: left;
     font-size: small;
     
 }
 
-.compte-gauche{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    padding-left: 10px;
-    padding-top: 15px;
-    width: auto;
-    height: auto;
-    margin-right: 10px;
-    border: #000000 2px solid;
-}
 .compte-droit{
     display: flex;
     flex-direction: row;
@@ -120,9 +112,6 @@ input{
     border: #000000 2px solid;
 }
 
-.Info{
-    margin-top: 10px;
-}
 
 .modif{
     margin-top: 10px;
