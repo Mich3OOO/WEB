@@ -5,7 +5,7 @@
     font-size: large;
 }
 
-h5{
+h4{
     padding-left: 20%;
     margin-bottom: 10px;
 }
@@ -26,6 +26,43 @@ h5{
     width: 200px;
 }
 
+#flex-recherche{
+    flex: 1;
+    padding-right: 20%;
+    margin-left: 20px;
+}
+
+.flex-filtres select{
+    border-radius: 8px;
+    width: 70px;
+}
+
+input{
+    border-radius: 8px;
+}
+
+.selection{
+    border-radius: 8px;
+    width: 130px;
+}
+
+#Duree{
+    width: 70px;
+}
+
+#search
+{
+    display: list-item;
+    border: solid;
+    border-width: 1px;
+    border-radius: 100px;
+    height: 30px; width: 400px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 40%;
+    padding: 2px 30px;
+}
+
 .liste-deroulante2{
     overflow-x: hidden; 
     overflow-y: scroll; 
@@ -35,13 +72,64 @@ h5{
     margin: 20px auto;
 }
 
-#flex-recherche{
+
+.compte{
+    display: flex;
+    flex-direction: row;
     flex: 1;
-    padding-right: 20%;
-    margin-left: 20px;
+    padding: 5px;
+    
 }
 
-select{
-    border-radius: 8px;
-    width: 100px;
+.gauche-compte{
+    flex: 1;
+    padding-right: 20px;
+}
+
+.haut-compte{
+    text-align: center;
+
+}
+.droit-compte{
+    flex: 1;
+    padding-right: 10px;
+}
+
+.bas-compte{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: small;
+    
+}
+
+.compte-gauche{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding-left: 10px;
+    padding-top: 15px;
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    border: #000000 2px solid;
+}
+.compte-droit{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding-left: 10px;
+    padding-top: 15px;
+    width: auto;
+    height: auto;
+    border: #000000 2px solid;
+}
+
+.Info{
+    margin-top: 10px;
+}
+
+.modif{
+    margin-top: 10px;
+    text-align: right;
 }
