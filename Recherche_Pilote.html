@@ -1,9 +1,9 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" >
-    <link href="assets/styles.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" >
-    <script src="assets/include.js"></script>
+    <script src="assets/js/include.js"></script>
     <title>Recherche Pilote</title>
   </head>
   <body>
@@ -13,6 +13,30 @@
     <nav>
 
     </nav>
+    <div class="search-bar">
+    <div>
+        <input list="compte" class="SearchBar" placeholder="🔎︎ search">
+    </div>
+    <div class="filtre-element">
+        <div class="filtre">
+            <select name="Promotion">
+
+                <option value="A1">A1</option>
+                <option value="A2-Info">A2 Info</option>
+                <option value="A2-Géné">A2-Géné</option>
+                <option value="A3-Info">A3-Info</option>
+                <option value="A3-Géné">A2 Info</option>
+                <option value="A4-Info">A4-Info</option>
+                <option value="A4-Géné">A4-Géné</option>
+            </select>
+            <select name="Campus">
+
+                <option value="Pau">Pau</option>
+                <option value="Nantaire">Nantaire</option>
+                
+            </select>
+                
+        </div>
     <div class="liste-deroulante">
         <div class="compte">
         <article class="compte-gauche">
@@ -82,6 +106,8 @@
                 </div>
             </article>
             </div>
+    </div>
+    </div>
     </div>
     <include src = "./Footer.html"></include>
 

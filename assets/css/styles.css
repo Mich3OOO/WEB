@@ -43,6 +43,7 @@ a{
 .flex-container{
     display: flex;
     flex-direction: row;
+    
 }
 
 .flex-gauche{
@@ -61,8 +62,14 @@ a{
 
 .flex-bas{
     text-align: center;
+    
     padding: 20px ;
     margin-bottom: 100px;
+}
+
+.Description {
+    text-align: center;
+    align-items: center;
 }
 
 .image-profil{
@@ -77,13 +84,46 @@ input{
     width: 200px;
 }
 
+.search-bar{
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    
+}
+
+.SearchBar{
+    display: list-item;
+    border: solid;
+    border-width: 1px;
+    border-radius: 100px;
+    height: 30px; 
+    width: 300px;
+    padding: 2px 30px;
+    margin-top: 100px;
+    margin-left: 120px;
+}   
+
 .liste-deroulante{
     overflow-x: hidden; 
     overflow-y: scroll; 
     border:#000000 1px solid; 
     width: 600px; 
     height: 300px;
-    margin: 100px auto;
+    margin: 20px 1;
+}
+.filtre-element{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.filtre{
+
+}
+
+.filtre select{
+    margin-top: 20px;
+    
 }
 .compte{
     display: flex;
@@ -149,29 +189,9 @@ footer>div>ul>li
     display: inline;
 }
 
-footer
-{
-    background-color: #516079;
-    color: #C5C6C6;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: 10px;
-    padding: 10px;  
-    text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom:0
-    
-}
 
 @media(max-width:1024px) 
 {
-    
-    footer>div>ul>li
-    {
-        text-align: left;
-        display: list-item;
-    }
     .flex-container{
         flex-direction: column;
         align-items: center;
@@ -192,6 +212,15 @@ footer
         margin-bottom: 200px;
         text-align: center;
         
+    }
+    
+    .Description label{
+        text-align: left;
+        height: 200px;
+    }
+    .Description textarea{
+        width: 200px;
+        height: 100px;
     }
 }
 
