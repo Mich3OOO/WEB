@@ -66,6 +66,7 @@ a{
     margin-bottom: 100px;
 }
 
+
 .image-profil{
     padding-bottom: 20px;
 }
@@ -80,8 +81,22 @@ input{
 
 .search-bar{
     text-align: center;
+    width: 600px;
+    margin: auto;
+    
 }
 
+.SearchBar{
+    display: list-item;
+    border: solid;
+    border-width: 1px;
+    border-radius: 100px;
+    height: 30px; 
+    width: 300px;
+    padding: 2px 30px;
+    margin-top: 100px;
+    margin-left: 120px;
+}   
 
 .liste-deroulante{
     overflow-x: hidden; 
@@ -89,7 +104,21 @@ input{
     border:#000000 1px solid; 
     width: 600px; 
     height: 300px;
-    margin: 20px auto;
+    margin: 20px 1;
+}
+.filtre-element{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.filtre{
+
+}
+
+.filtre select{
+    margin-top: 20px;
+    
 }
 .compte{
     display: flex;
