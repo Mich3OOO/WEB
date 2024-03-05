@@ -1,6 +1,7 @@
 
 h1{
-    text-align: center;
+    text-align: left;
+    margin-left: 30px;
 }
 
 .login{
@@ -33,6 +34,11 @@ a{
 .button{
     height: 20px;
     width: 100px;
+   
+}
+
+.horizontale button{
+    margin-left: 10px;
 }
 
 .image-profil{
@@ -49,7 +55,7 @@ a{
 .flex-gauche{
     display: flex;
     flex-direction: column;
-    margin-left: 37.5%;
+    flex: 1;
     padding: 10px 20px;
 }
 
@@ -57,19 +63,21 @@ a{
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
+    flex: 1;
 }
 
 
 .flex-bas{
     text-align: center;
     
-    padding: 20px ;
+    padding: 10px 20px;
     margin-bottom: 100px;
 }
 
 .Description {
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: left;
+    
 }
 
 .image-profil{
@@ -78,6 +86,11 @@ a{
 
 select{
     width: 80px;
+}
+
+.horizontale{
+    display: flex;
+    flex-direction: row;
 }
 
 input{
@@ -213,10 +226,10 @@ footer>div>ul>li
         text-align: center;
         
     }
-    
-    .Description label{
-        text-align: left;
+    .Description {
+        text-align: center;
         height: 200px;
+        
     }
     .Description textarea{
         width: 200px;
