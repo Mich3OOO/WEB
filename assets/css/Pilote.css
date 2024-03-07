@@ -63,68 +63,6 @@ input{
     padding: 2px 30px;
 }
 
-.liste-deroulante2{
-    overflow-x: hidden; 
-    overflow-y: scroll; 
-    border:#000000 1px solid; 
-    width: 600px; 
-    height: 300px;
-    margin: 20px auto;
-}
-
-
-.compte{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    padding: 5px;
-    
-}
-
-.haut-compte{
-    text-align: center;
-
-}
-.droit-compte{
-    flex: 1;
-    padding-right: 10px;
-}
-
-.bas-compte{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    font-size: small;
-    
-}
-
-.compte-gauche{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    padding-left: 10px;
-    padding-top: 15px;
-    width: auto;
-    height: auto;
-    margin-right: 10px;
-    border: #000000 2px solid;
-}
-.compte-droit{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    padding-left: 10px;
-    padding-top: 15px;
-    width: auto;
-    height: auto;
-    border: #000000 2px solid;
-}
-
-.Info{
-    margin-top: 10px;
-}
-
 .modif{
-    margin-top: 10px;
     text-align: right;
 }
