@@ -63,6 +63,18 @@ input{
     padding: 2px 30px;
 }
 
-.modif{
-    text-align: right;
+.Offre>div>.modif
+{
+    position: relative;
+    bottom: 25%; left: 72%;
+    border: hidden;
+    width: 25px;
+    border-radius: 8px;
+    background-color: none;
+    background-color: white;
+}
+
+.modif:hover{
+    font-weight: bold;
+    color: gold;
 }
