@@ -1,3 +1,7 @@
+*{
+    font-family: Arial;
+}
+
 .FormeH{
     margin-left: 47%;
     margin-bottom: 10px;
@@ -48,6 +52,12 @@ input{
 .Info{
     margin-top: 10px;
     margin-left: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.Info:hover{
+    color: gold;
 }
 
 .gauche{
@@ -70,17 +80,19 @@ input{
 
 .liste-deroulante2{
     overflow-x: hidden; 
-    overflow-y: scroll; 
+    overflow-y: auto; 
     border:#000000 1px solid; 
     width: 600px; 
     height: 300px;
     margin: 20px auto;
+    border-radius: 8px;
 }
 
 
 .compte{
+    border-radius: 8px;
     padding: 5px;
-    border: solid 2px black;
+    border: solid 1px black;
     width: auto;
     height: auto;
     margin: 10px 10px;
@@ -92,6 +104,8 @@ input{
 .droit-compte{
     flex: 1;
     padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .bas-compte{
@@ -116,4 +130,24 @@ input{
 .modif{
     margin-top: 10px;
     text-align: right;
+}
+
+.NomPoste{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+*::-webkit-scrollbar
+{
+    border: none;
+    background-color:#eeeeee;
+    border-radius: 30px;
+    width: 10px;
+}
+*::-webkit-scrollbar-thumb
+{
+    border: none;
+    border-radius: 30px;
+    background-color: #C5C6C6;
+    
 }

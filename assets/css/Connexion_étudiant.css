@@ -210,14 +210,14 @@ main
     background-color: #C5C6C6;
 }
 
-#StagePopUp>div::-webkit-scrollbar
+*::-webkit-scrollbar
 {
     border: none;
     background-color:#eeeeee;
     border-radius: 30px;
     width: 10px;
 }
-#StagePopUp>div::-webkit-scrollbar-thumb
+*::-webkit-scrollbar-thumb
 {
     border: none;
     border-radius: 30px;
