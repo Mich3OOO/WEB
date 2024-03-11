@@ -47,7 +47,7 @@ main
 }
 .tagcontent
 {
-    display:inline-block;
+    display:table;
     
     height: fit-content;
 
