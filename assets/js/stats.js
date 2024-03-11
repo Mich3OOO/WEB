@@ -16,10 +16,10 @@ autosize: true
 Plotly.newPlot("CentresEtudiant", data, layout);
 Plotly.newPlot("PromotionsEtudiant", data, layout);
 Plotly.newPlot("Competences", data, layout);
-Plotly.newPlot("Localite", data, layout);
+Plotly.newPlot("Localitee", data, layout);
 Plotly.newPlot("TopWhishList", data, layout);
 Plotly.newPlot("PromotionsConcernees", data, layout);
 Plotly.newPlot("DureeStage", data, layout);
-Plotly.newPlot("Localite", data, layout);
+Plotly.newPlot("LocaliteeEnt", data, layout);
 Plotly.newPlot("SecteurAct", data, layout);
 Plotly.newPlot("TopAnnonces", data, layout);
