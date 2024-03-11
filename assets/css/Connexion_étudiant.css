@@ -72,13 +72,13 @@ main
     width: 100%; 
 }
 
-.Offre>div>button , .Offre>div
+.Offre>div>button:first-child , .Offre>div
 {    
     border-radius: 20px;
     background-color: #FFFFFF;
     transition: all 500ms;
 }
-.Offre>div>button
+.Offre>div>button:first-child
 {
     border: solid;
     border-width: 1px;
@@ -210,14 +210,14 @@ main
     background-color: #C5C6C6;
 }
 
-#StagePopUp>div::-webkit-scrollbar
+*::-webkit-scrollbar
 {
     border: none;
     background-color:#eeeeee;
     border-radius: 30px;
     width: 10px;
 }
-#StagePopUp>div::-webkit-scrollbar-thumb
+*::-webkit-scrollbar-thumb
 {
     border: none;
     border-radius: 30px;
