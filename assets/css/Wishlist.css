@@ -54,6 +54,19 @@ input{
     color: blue;
 }
 
+.plus{
+    margin-top: 10px;
+    margin-left: 50%;
+    font-family: Arial;
+    text-decoration: none;
+    border: none;
+    background-color: white;
+}
+
+.plus:hover{
+    color: gold;
+}
+
 .Info:hover{
     color: gold;
 }
