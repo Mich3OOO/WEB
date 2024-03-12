@@ -16,12 +16,14 @@ function data(cond,longueur,valeur,id,commentaire){
     if(longueur!=0)
     {
         if(valeur.length == longueur){
-            for(i=0;i<longueur;i++){
-                if(!(cond.exec(valeur.charAt(i))!=null)){
-                    document.getElementById(id).insertAdjacentHTML("beforebegin","<div class='cond_commentaire'>  "+"⚠️"+commentaire+"⚠️"+"</div>");
+            if(cond.test(valeur)==false){
+                if(document.getElementById("cond_"+id)!=null){
                     return false;
                 }
-            }
+                document.getElementById(id).insertAdjacentHTML("beforebegin","<div class='cond_commentaire' id=cond_"+id+">"+"⚠️"+commentaire+"⚠️"+"</div>");
+                    
+                return false;
+        }
         }
         else{
             alert("Champs incorrect");
@@ -29,20 +31,19 @@ function data(cond,longueur,valeur,id,commentaire){
         }
     }    
     else{
-        for(i=0;i<valeur.length;i++){
-            if(!(cond.exec(valeur.charAt(i))!=null)){
-                if(document.getElementById("cond_"+id)!=null){
-                    return false;
-                }
-                document.getElementById(id).insertAdjacentHTML("beforebegin","<div class='cond_commentaire' id=cond_"+id+">"+"⚠️"+commentaire+"⚠️"+"</div>");
-                    
+
+        if(cond.test(valeur)==false){
+            if(document.getElementById("cond_"+id)!=null){
                 return false;
             }
-        }
+            document.getElementById(id).insertAdjacentHTML("beforebegin","<div class='cond_commentaire' id=cond_"+id+">"+"⚠️"+commentaire+"⚠️"+"</div>");
+                
+            return false;
     }
     retrait("cond_"+id)
     
-}
+    }
+}   
 
 function retrait(id){
     document.getElementById(id).remove();
