@@ -1,7 +1,6 @@
 let taille = document.getElementsByClassName("plus");
 
 for(i=0;i<taille.length;i++){
-    
     taille[i].addEventListener("click", function(event){
         let idParent = event.target.parentNode.parentNode.parentNode.parentNode.id;
         if(document.getElementById("ID_"+idParent) != null){
@@ -11,3 +10,14 @@ for(i=0;i<taille.length;i++){
         }
 });
 };
+
+let suppression = document.getElementsByClassName("suppr");
+
+for(i=0;i<suppression.length;i++){
+    console.log(suppression.length);
+    suppression[i].addEventListener("click",sup );
+};
+
+function sup(event){
+    event.target.parentNode.parentNode.parentNode.parentNode.remove();
+}
