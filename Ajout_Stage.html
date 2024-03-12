@@ -3,16 +3,13 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" >
-    <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/stage.css" rel="stylesheet" type="text/css" />
    
     <meta name="viewport" content="width=device-width" >
     <script src="assets/js/include.js"></script>
     <title>Ajout Stage </title>
   </head>
   <body>
-    <header>
-        <h1>Ajouter un Stage </h1>
-    </header>
     <div class="flex-container">
         <div class="flex-gauche">
             <label for="Nom_Poste">Nom  Poste :</label>
@@ -42,8 +39,7 @@
                 <option value="A3-Info">A3-Info</option>
                 <option value="A3-Géné">A2 Info</option>
                 <option value="A4-Info">A4-Info</option>
-                <option value="A4-Géné">A4-Géné</option>
-                
+                <option value="A4-Géné">A4-Géné</option>  
             </select>
             <label for="Competences">Compétences necessaire :</label>
             <select name="Competences" id="Competences" required="required" multiple>
@@ -52,11 +48,7 @@
                 <option value="Industrie">Industrie</option>
                 <option value="HTML">HTML</option>
                 <option value="Python">Python</option>
-        
-                
             </select>
-        </div>
-        
     </div>
     <div class="flex-bas">
     <div class="Description">
@@ -64,6 +56,8 @@
         <br>
         <textarea name="Description" rows="10" cols="50"></textarea>
     </div>
+        <button type="submit" class="button" value="Valider">Valider</button> 
+        <button type="submit" class="button" value="Annuler">Annuler</button> 
     </div>
     </body>
     

@@ -1,3 +1,19 @@
+body{
+    font-family: Arial, sans-serif;
+    background-image: url(../../image/fond.jpg);
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+h1{
+    text-align: Center;
+    margin-left: 30px;
+    font-size: 30px;
+    padding-bottom: 10px ;
+    padding-top: 5px ;
+    color: #C5C6C6; 
+}
+
 .login {
     width: 300px;
     height: auto;
@@ -7,7 +23,7 @@
     flex-direction: column; /* met les attributs en colonne*/
     align-items: center;
     padding: 20px;
-    margin: 100px auto;
+    margin: 300px auto;
     background-color: #2E3244;
     
 }
@@ -27,8 +43,7 @@
     color: #2E3244;
 }
 
-.login input[type="text"]:focus,
-.login input[type="password"]:focus {
+.login input[type="text"]:focus {
     border-color: #F1895C;
 }
 
