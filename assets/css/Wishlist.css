@@ -14,6 +14,10 @@ h4{
     margin-bottom: 10px;
 }
 
+h2{
+    margin: 10 auto;
+}
+
 input{
     border-radius: 8px;
 }
@@ -29,14 +33,12 @@ input{
 
 #search
 {
-    display: list-item;
+    display: block;
+    margin: 20px auto;
     border: solid;
     border-width: 1px;
     border-radius: 100px;
-    height: 30px; width: 400px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 35%;
+    height: 30px; width: auto;
     padding: 2px 30px;
 }
 
@@ -52,6 +54,20 @@ input{
     margin-left: 5px;
     text-decoration: none;
     color: blue;
+    width: fit-content;
+}
+
+.plus{
+    margin-top: 10px;
+    margin-left: 50%;
+    font-family: Arial;
+    text-decoration: none;
+    border: none;
+    background-color: white;
+}
+
+.plus:hover{
+    color: gold;
 }
 
 .Info:hover{
@@ -71,9 +87,12 @@ input{
     flex: 1;
     width: 100px;
     height: auto;
-    text-align: right;
     display: flex;
     flex-direction: column;
+}
+
+.droite>a{
+    margin-left: 74%;
 }
 
 .liste-deroulante2{
@@ -147,5 +166,4 @@ input{
     border: none;
     border-radius: 30px;
     background-color: #C5C6C6;
-    
 }
