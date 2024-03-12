@@ -1,0 +1,141 @@
+body{
+    font-family: Arial, sans-serif;
+    background: url(6195005.jpg);
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+
+h1{
+    text-align: Center;
+    margin-left: 30px;
+    font-size: 30px;
+    padding-bottom: 10px ;
+    padding-top: 5px ;
+    color: #C5C6C6; 
+}
+
+
+label{
+    color: #C5C6C6;
+    margin-bottom: 5px; 
+    font-size: large;
+    padding-bottom: 10px ;
+    padding-top: 5px ;
+}
+
+
+.flex-container input[type="text"] /* modifie la zone de texte */ {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+}
+
+textarea{
+    margin-top: 10px;
+    width: 50%;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+}
+
+.flex-container{
+    margin-top: 200px;
+}
+
+.flex-container button{
+    width: 40%;
+    height: 33px;
+    border: none;
+    border-radius: 4px;
+    background-color: #516079;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.flex-bas button{
+    width: 40%;
+    height: 33px;
+    border: none;
+    border-radius: 4px;
+    background-color: #516079;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background-color: #E76E3B;
+}
+
+.horizontale button{
+    margin-left: 10px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.flex-gauche{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.flex-droit{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    flex: 1;
+}
+
+
+.flex-bas{
+    text-align: center;
+    
+    padding: 10px 20px;
+    margin-bottom: 100px;
+}
+
+select {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+    box-sizing: border-box;
+    appearance: none; /* Masque l'apparence par défaut du navigateur */
+}
+
+select:focus {
+    border-color: #F1895C;
+    outline: none;
+}
+
+
+.horizontale{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+footer>div>ul>li
+{
+    margin: 10px;
+    display: inline;
+}
