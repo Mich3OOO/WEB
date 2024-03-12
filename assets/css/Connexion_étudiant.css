@@ -32,6 +32,7 @@ main
     max-width: 300px;
 }
 
+
 #Filtres>li>input
 {
     padding: 0px 10px;
@@ -43,6 +44,52 @@ main
     max-width: 200px;
     min-width: 10px;
     width: 80%;
+}
+.tagcontent
+{
+    display:table;
+    
+    height: fit-content;
+
+    
+
+}
+.tag
+{
+    border: solid;
+    border-color: transparent;
+    border-width: 1px;
+    background-color: #ec9875;
+    width: fit-content; height: 20px;
+    padding: 2px;
+    border-radius: 40px;
+    float: inline-start;
+    margin: 3px 2px;
+    
+
+    
+
+}
+.tag:hover
+{
+    box-shadow: 2px 2px #00000051;   
+    background-color:#F1895C;
+    border-color: black;
+}
+.tag>*
+{
+    display: inline;
+}
+
+.tag>button
+{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.tag>p
+{
+    cursor: default;
 }
 
 #RechercheOffre
@@ -72,13 +119,13 @@ main
     width: 100%; 
 }
 
-.Offre>div>button , .Offre>div
+.Offre>div>button:first-child , .Offre>div
 {    
     border-radius: 20px;
     background-color: #FFFFFF;
     transition: all 500ms;
 }
-.Offre>div>button
+.Offre>div>button:first-child
 {
     border: solid;
     border-width: 1px;
@@ -210,14 +257,14 @@ main
     background-color: #C5C6C6;
 }
 
-#StagePopUp>div::-webkit-scrollbar
+*::-webkit-scrollbar
 {
     border: none;
     background-color:#eeeeee;
     border-radius: 30px;
     width: 10px;
 }
-#StagePopUp>div::-webkit-scrollbar-thumb
+*::-webkit-scrollbar-thumb
 {
     border: none;
     border-radius: 30px;

@@ -23,34 +23,40 @@
                         <label for="Ville">Ville</label>
                     </li>
                     <li>
-                        <input type="text" list="Ville">
-                        <datalist id = "Ville">
+                        <input id = "Ville" type="text" list="DLVille" class="MChoise">
+                        <datalist id = "DLVille">
                             <option value="pau"></option>
                             <option value="algo"></option>
                             <option value="Hendaya"></option>
                         </datalist>
+                        <div id = "VilleList" class="tagcontent">
+                        </div>
                     </li>
                     <li>
                         <label for="Département">Département</label>
                     </li>
                     <li>
-                        <input list="Département">
-                        <datalist id = "Département">
+                        <input id = "Département" list="DLDépartement" class="MChoise">
+                        <datalist id = "DLDépartement">
                             <option value="v1"></option>
                             <option value="v2"></option>
                             <option value="v3"></option>
                         </datalist>
+                        <div id = "DépartementList" class="tagcontent">
+                        </div>
                     </li>
                     <li>
-                        <label for="Sécteur d'activité">Sécteur d'activité</label>
+                        <label for="SécteurA">Sécteur d'activité</label>
                     </li>
                     <li>
-                        <input list="Sécteur d'activité">
-                        <datalist id = "Sécteur d'activité">
+                        <input id = "SécteurA" list="DLSécteurA" class="MChoise">
+                        <datalist id = "DLSécteurA">
                             <option value="v1"></option>
                             <option value="v2"></option>
                             <option value="v3"></option>
                         </datalist>
+                        <div id = "SécteurAList" class="tagcontent">
+                        </div>
                     </li>
 
                     <li>
@@ -61,23 +67,25 @@
                     </li>
 
                     <li>
-                        <label for="durée">durée</label>
+                        <label for="durée">durée (en mois)</label>
                     </li>
                     <li>
-                        <input type="" id="durée">
+                        <input type = "number" id="durée">
                     </li>
 
                     
                     <li>
-                        <label for="Type de contrat">Type de contrat</label>
+                        <label for="TypeContrat">Type de contrat</label>
                     </li>
                     <li>
-                        <input list="Type de contrat">
-                        <datalist id = "Type de contrat">
+                        <input id = "TypeContrat" list="DLTypeContrat" class="MChoise">
+                        <datalist id = "DLTypeContrat">
                             <option value="v1"></option>
                             <option value="v2"></option>
                             <option value="v3"></option>
                         </datalist>
+                        <div id = "TypeContratList" class="tagcontent">
+                        </div>
                     </li>
                     
                 </ul>
@@ -90,7 +98,7 @@
                         <option value="v3"></option>
                     </datalist>
 
-                    <fi id="offres">
+                    <div id="offres">
                         <div class="Offre" id ="1">
                             <div>
                                 <button >
