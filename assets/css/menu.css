@@ -20,7 +20,7 @@ h{
     font-size: 18px;
 }
 
-nav{
+.Barre{
     width: 100%;
     top: 0px;
     border: 2px black solid;
@@ -43,16 +43,16 @@ span{
     text-align: center;
 }
 
-nav ul{
+.Barre ul{
     list-style-type: none;
     font-size: 25px;
 }
 
-nav li{
+.Barre li{
     float: left; /* met le texte aligner*/
 }
 
-nav a{
+.Barre a{
     display: block; /*Toute la surface sera cliquable*/
     text-decoration: none;
     color: black;
@@ -60,7 +60,7 @@ nav a{
     padding: 10px 150px;/*Agrandit le menu et espace la bordure du texte*/
 }
 
-nav a:hover{
+.Barre a:hover{
     color: orange;
     border-bottom: 2px solid orange;
 }

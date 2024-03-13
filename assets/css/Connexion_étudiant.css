@@ -129,13 +129,13 @@ main
 }
 
 
-.Offre>div>button , .Offre>div
+.Offre>div>button:first-child , .Offre>div
 {    
     border-radius: 20px;
     background-color: #FFFFFF;
     transition: all 500ms;
 }
-.Offre>div>button
+.Offre>div>button:first-child
 {
     border: solid;
     border-width: 1px;
