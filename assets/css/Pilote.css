@@ -1,0 +1,80 @@
+.FormeH{
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+h4{
+    padding-left: 20%;
+    margin-bottom: 10px;
+}
+
+#flex-mere{
+    display: flex;
+}
+
+
+#flex-filtres{
+    padding-left: 20%;
+}
+
+#SearchBar{
+    margin-bottom: 20px;
+    border-radius: 8px;
+    margin-left: 50px;
+    width: 200px;
+}
+
+#flex-recherche{
+    flex: 1;
+    padding-right: 20%;
+    margin-left: 20px;
+}
+
+.flex-filtres select{
+    border-radius: 8px;
+    width: 70px;
+}
+
+input{
+    border-radius: 8px;
+}
+
+.selection{
+    border-radius: 8px;
+    width: 130px;
+}
+
+#Duree{
+    width: 70px;
+}
+
+#search
+{
+    display: list-item;
+    border: solid;
+    border-width: 1px;
+    border-radius: 100px;
+    height: 30px; width: 400px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 40%;
+    padding: 2px 30px;
+}
+
+.Offre>div>.modif
+{
+    position: relative;
+    bottom: 25%; left: 72%;
+    border: hidden;
+    width: 25px;
+    border-radius: 8px;
+    background-color: none;
+    background-color: white;
+}
+
+.modif:hover{
+    font-weight: bold;
+    color: gold;
+}

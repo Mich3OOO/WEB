@@ -9,16 +9,18 @@ footer
 {
     background-color: #516079;
     color: #C5C6C6;
-    margin-left: -10px;
-    margin-right: -10px;
+    margin: 0px;
     padding: 10px;
     text-align: center;
+    width: 99%;
+    
 }
 
 @media(max-width:1024px) 
 {
     footer>ul>li
     {
+        text-align: left;
         display: list-item;
         text-align: left;
     }
