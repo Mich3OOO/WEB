@@ -18,7 +18,7 @@
             <p>Ce site est hébergé par .<br> Siège social : </p>
             <p>Cet hébergeur détient à ce jour les informations personnelles concernant l'auteur de ce site.</p>
             <h4>Publicité et affiliation</h4>
-            <p>Ce site est autofinancé et réalisé à but d'exercice de formation au sein de l'école CESI - PAu, 64000 - FRANCE.</p>
+            <p>Ce site est autofinancé et réalisé à but d'exercice de formation au sein de l'école CESI - PAU, 64000 - FRANCE.</p>
         </div>
     </body>
 </html>
