@@ -3,13 +3,12 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" >
-    <link href="assets/css/ajout_compte.css" rel="stylesheet" type="text/css" />
-   
+    <link href="assets/css/ajout_entreprise.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" >
-    <script src="assets/js/include.js"></script>
     <title>Ajout Entreprise </title>
   </head>
   <body>
+    <?= include "./Menu.php"?>
     <div class="flex-container">
         <div class="flex-gauche">
             <label for="Nom_Entreprise">Nom  Entreprise :</label>
@@ -59,10 +58,10 @@
         <button type="submit" class="button" value="Valider">Valider</button> 
         <button type="submit" class="button" value="Annuler">Annuler</button> 
     </div>
-    
+    <?= include "./Footer.html"?>
     </body>
     
-    <include src = "./Footer.html"></include>
+    
     
 
 </html>

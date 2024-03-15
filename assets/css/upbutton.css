@@ -1,0 +1,26 @@
+#upbutton
+{
+    position: sticky;
+    left: 90%; bottom: 20px;
+    width: 100px; height: 100px;
+    transition: 150ms 150ms linear;
+    font-size: 50px;
+    text-align: center;
+    border: solid black;
+    border-width: 1px;
+    border-radius: 10px;
+    background-color: white;
+    visibility: hidden;
+    
+    
+}
+
+#upbutton:hover
+{
+    transition: 150ms 150ms linear;
+    background-color: #F1895C;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+

@@ -45,13 +45,14 @@ input /*modifie la zone de texte */ {
     width: 20%;
 }
 
+button:hover {
+    background-color: #E76E3B;
+}
+
 .flex-bas{
     text-align: center;
 }
 
-button:hover {
-    background-color: #E76E3B;
-}
 
 select {
     font-size: 20px;
