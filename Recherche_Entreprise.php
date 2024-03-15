@@ -2,13 +2,14 @@
 <html lang="fr">
     <head>
         <link rel="stylesheet" href="./assets/css/Recherche_Entreprise.css">
-
+        <meta charset="utf-8" >
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
-        <script src="assets/js/include.js"></script>
+        
         <title>Recherche d'entreprise</title>
     </head>
     <body>
+        <?= include "./Menu.php"?>
         <h2 class="FormeH">Recherche d'entreprise</h2>
         <input list="Satages" id="search" placeholder="🔎︎ search">
         <div id="flex-mere">
@@ -127,6 +128,6 @@
             </div>
 
         </div>
-        <include src = "./Footer.html"></include>
+        <?= include "./Footer.html"?>
     </body>
 </html>

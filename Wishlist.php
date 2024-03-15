@@ -2,15 +2,17 @@
 <html lang="fr">
     <head>
         <link rel="stylesheet" href="./assets/css/Wishlist.css">
-        <script src="assets/js/include.js"></script>
+        <meta charset="utf-8" >
+        <script async src="assets/js/Wishlist.js"></script>
         <title>Wishlist</title>
     </head>
     <body>
-        <h2 class="FormeH">Ma Wishlist</h2>
+        <?= include "./Menu.php"?>
+        <h2 class="FormeH" id="testtest">Ma Wishlist</h2>
         <input list="Satages" id="search" placeholder="🔎︎ search">
                
-        <div class="liste-deroulante2">
-                    <div class="compte">
+                <div class="liste-deroulante2">
+                    <div class="compte" id="1">
                         <div class="droit-compte">
                             <div class="haut-compte">
                                     <label class="NomPoste">Nom du Poste</label>
@@ -21,14 +23,13 @@
                                     <p class="mail">Lieu</p>
                                 </div>
                                 <div class="droite">
-                                    <a class="Info" href="">Supprimer</a>
-                                    <a class="Info" href="">Plus d'information</a>
+                                    <a class="Info suppr" href="#">Supprimer</a>
+                                    <button class="plus">Plus d'information ⇓ </button>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div class="compte">
+                    <div class="compte" id="2">
                         <div class="droit-compte">
                             <div class="haut-compte">
                                     <label class="NomPoste">Nom du Poste</label>
@@ -39,14 +40,13 @@
                                     <p class="mail">Lieu</p>
                                 </div>
                                 <div class="droite">
-                                    <a class="Info" href="">Plus d'information</a>
-                                    <a class="Info" href="">Supprimer</a>
+                                    <a class="Info suppr" href="#">Supprimer</a>
+                                    <button class="plus">Plus d'information ⇓ </button>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div class="compte">
+                    <div class="compte" id="3">
                         <div class="droit-compte">
                             <div class="haut-compte">
                                     <label class="NomPoste">Nom du Poste</label>
@@ -57,15 +57,13 @@
                                     <p class="mail">Lieu</p>
                                 </div>
                                 <div class="droite">
-                                    <a class="Info" href="">Plus d'information</a>
-                                    <a class="Info" href="">Supprimer</a>
+                                    <a class="Info suppr" href="#">Supprimer</a>
+                                    <button class="plus">Plus d'information ⇓ </button>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-             </div>
-             
-        <include src = "./Footer.html"></include>
+                </div>
+        <?= include "./Footer.html"?>
     </body>
 </html>

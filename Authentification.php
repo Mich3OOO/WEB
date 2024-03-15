@@ -5,22 +5,17 @@
     <meta charset="utf-8" >
     <link href="assets/css/login.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" >
-    <script src="assets/js/include.js"></script>
     <title>Authentification Presqu'auChaud Mage</title>
   </head>
   
   <body>
-    <header>
-        <center><h1>Authentification</h1></center>
-    </header>
-    <nav>
+    <?= include "./Menu.php"?>
 
-    </nav>
     <section>
         <form>
             <div class="login">
-                <label for="Mail">Mail</label>
-                <input type="text" required="required" id="Mail" name="Mail" placeholder="Mail étudiant">
+                <label for="Email">Email</label>
+                <input type="text" required="required" id="Email" name="Email" placeholder="Email">
                 <label for="Mot-de-passe">Mot de passe</label>
                 <input type="text" required="required" id="Mot-de-passe" name="Mot-de-passe" placeholder="Mot de passe">
                 <a href="" > Mot de passe oublié ?</a>
@@ -28,7 +23,7 @@
             </div>
         </form>
     </section>
-    <include src = "./Footer.html"></include>
+    <?= include "./Footer.html"?>
 
   </body>
   

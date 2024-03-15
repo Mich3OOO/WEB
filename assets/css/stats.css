@@ -1,0 +1,18 @@
+
+.floatContainer
+{
+    display: flow-root;
+
+
+}
+.Graph
+{
+    width: 500px; height: 500px;
+    float: left;
+}
+
+h1
+{
+    text-align: center;
+    margin: 10px 0px;
+}

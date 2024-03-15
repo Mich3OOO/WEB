@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <link rel="stylesheet" href="assets/css/menu.css">
-    <link href="dist/hamburgers.css" rel="stylesheet">
-    <meta charset="utf-8">
-    <meta name="" content="">
-    <title>Entreprise</title>
-</head>
-<body>
+<link rel="stylesheet" href="assets/css/menu.css">
+<link href="dist/hamburgers.css" rel="stylesheet">
+<header>
     <nav>
         <div id="flex">
             <div id="block2">
@@ -34,5 +27,4 @@
             </div>                          
         </div>
     </nav>
-</body> 
-</html>
+</header>

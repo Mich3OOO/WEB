@@ -1,0 +1,116 @@
+body{
+    font-family: Arial, sans-serif;
+    background: url(../../image/fond.jpg);
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+label{
+    color: #C5C6C6;
+    margin-bottom: 5px; 
+    font-size: large;
+    padding-bottom: 10px ;
+    padding-top: 5px ;
+}
+
+input /*modifie la zone de texte */ {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+}
+
+.flex-gauche input{
+    margin-right: 30px;
+}
+
+.flex-container input{
+    width: 200px;
+}
+
+.flex-bas button{
+    width: 40%;
+    height: 33px;
+    border: none;
+    border-radius: 4px;
+    background-color: #F1895C;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 20%;
+}
+
+button:hover {
+    background-color: #E76E3B;
+}
+
+.flex-bas{
+    text-align: center;
+}
+
+
+select {
+    font-size: 20px;
+    width: 10%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+    box-sizing: border-box;
+    appearance: none; /* Masque l'apparence par défaut du navigateur */
+}
+
+select:focus {
+    border-color: #F1895C;
+    outline: none;
+}
+
+.flex-gauche{
+    text-align: center;
+    margin-top: 150px;
+}
+
+.flex-droit{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-bottom: 70px;
+}
+
+.flex-droit select{
+    align-items: center;
+    width: 70%;
+    margin-right: 80px;
+}
+
+.flex-droit label{
+    margin-right: 50px;
+    white-space: nowrap;
+}
+
+textarea{
+    margin-top: 10px;
+    width: 50%;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+}
+
+
+
+.Description {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+

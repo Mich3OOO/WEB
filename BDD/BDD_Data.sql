@@ -1,0 +1,16 @@
+INSERT INTO Utilisateur (IDu, MdpU, NomU, PrenomU, Date_NaisU, MailU, role) VALUES
+(1, 'mdp1', 'Do1e', 'John', '1990-05-15', 'john.doe@example.com', 'Etudiant'),
+(2, 'mdp2', 'Smith', 'Alice', '1985-09-21', 'alice.smith@example.com', 'Administrateur'),
+(3, 'mdp3', 'Johnson', 'Michael', '1982-03-10', 'michael.johnson@example.com', 'Etudiant'),
+(4, 'mdp4', 'Williams', 'Emily', '1995-12-03', 'emily.williams@example.com', 'Etudiant'),
+(5, 'mdp5', 'Brown', 'Jessica', '1988-07-28', 'jessica.brown@example.com', 'Etudiant'),
+(6, 'mdp6', 'Jones', 'David', '1979-11-18', 'david.jones@example.com', 'Pilote'),
+(7, 'mdp7', 'Garcia', 'Maria', '1984-02-22', 'maria.garcia@example.com', 'Etudiant'),
+(8, 'mdp8', 'Martinez', 'Daniel', '1992-06-14', 'daniel.martinez@example.com', 'Etudiant'),
+(9, 'mdp9', 'Hernandez', 'Jennifer', '1987-04-05', 'jennifer.hernandez@example.com', 'Etudiant'),
+(10, 'mdp10', 'Lopez', 'Christopher', '1980-09-09', 'christopher.lopez@example.com', 'Etudiant'),
+(11, 'mdp11', 'Lee', 'Kim', '1991-08-12', 'kim.lee@example.com', 'Etudiant'),
+(12, 'mdp12', 'Kim', 'Brian', '1983-01-30', 'brian.kim@example.com', 'Etudiant'),
+(13, 'mdp13', 'Park', 'Jessica', '1975-07-07', 'jessica.park@example.com', 'Pilote'),
+(14, 'mdp14', 'Chen', 'William', '1993-04-25', 'william.chen@example.com', 'Etudiant'),
+(15, 'mdp15', 'Wang', 'Linda', '1986-10-17', 'linda.wang@example.com', 'Etudiant')

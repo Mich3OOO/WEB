@@ -4,9 +4,44 @@
     margin-bottom: 100px;
 }
 
+body{
+    font-family: Arial, sans-serif;
+    background: url(../../image/fond.jpg);
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+label{
+    color: #C5C6C6;
+    margin-bottom: 5px; 
+    font-size: large;
+    padding-bottom: 10px ;
+    padding-top: 5px ;
+}
+
+input/* modifie la zone de texte */ {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+}
+
+select{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+}
+
 main
 {
-    max-width: 1100px;
+    max-width: 1200px;
     
 }
 
@@ -17,7 +52,7 @@ main
 
 .flexContainer
 {
-    display: flex;
+    display: flex;;
 }
 
 #Filtres>*
@@ -112,12 +147,19 @@ main
 
 #offres
 {  
-    float:inline-start;
-    border: solid;
-    border-width: 1px;
-    border-radius: 8px; 
+    float:inline-start; 
     width: 100%; 
+    max-height: 500px;
+    min-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+#offres>h2
+{
+    text-align: center;
+    color: grey;
+}
+
 
 .Offre>div>button:first-child , .Offre>div
 {    
@@ -333,7 +375,7 @@ article>p
 @media screen and (max-width: 1000px) {
     #offres
     {
-        width: 460px; 
+        width: 480px; 
     }
 
     
@@ -341,7 +383,7 @@ article>p
 @media screen and (min-width: 1000px) {
     #offres
     {
-        width: 690px; 
+        width: 700px; 
     }
     main
     {

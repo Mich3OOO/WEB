@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <link rel="stylesheet" href="./assets/css/Wishlist.css">
-        <script src="assets/js/include.js"></script>
+        <meta charset="utf-8" >
+        <link rel="stylesheet" href="./assets/css/user.css">
+        <script async src="assets/js/Wishlist.js"></script>
         <title>Gestion d'User</title>
     </head>
     <body>
-        <h2 class="FormeH">Gérer un user</h2>
+        <?= include "./Menu.php"?>
         <input list="Satages" id="search" placeholder="🔎︎ search">
                 <div class="liste-deroulante2">
                     <div class="compte">
@@ -21,7 +22,7 @@
                                     <p class="mail">Campus</p>
                                 </div>
                                 <div class="droite">
-                                    <a class="Info" href="">Supprimer</a>
+                                    <a class="Info suppr" href="#">Supprimer</a>
                                     <a class="Info" href="">Plus d'information</a>
                                 </div>
                             </div>
@@ -40,7 +41,7 @@
                                     <p class="mail">Campus</p>
                                 </div>
                                 <div class="droite">
-                                    <a class="Info" href="">Supprimer</a>
+                                    <a class="Info suppr" href="#">Supprimer</a>
                                     <a class="Info" href="">Plus d'information</a>
                                 </div>
                             </div>
@@ -58,13 +59,13 @@
                                     <p class="mail">Campus</p>
                                 </div>
                                 <div class="droite">
-                                    <a class="Info" href="">Supprimer</a>
+                                    <a class="Info suppr" href="#">Supprimer</a>
                                     <a class="Info" href="">Plus d'information</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-            </div>
-        <include src = "./Footer.html"></include>
+            </div>  
+        <?= include "./Footer.html"?>
     </body>
 </html>
