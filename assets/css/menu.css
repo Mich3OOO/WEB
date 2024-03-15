@@ -7,8 +7,14 @@
 
 .NavImage
 {
-    width: 6%;
-    height: 6%;
+    width: 100px;
+    height: 80px;
+    margin-right: 50px;
+}
+
+.navbar{
+    margin-top: 20px;
+    text-align: right;
 }
 
 #flex{
@@ -22,6 +28,7 @@ h{
 
 .Barre{
     width: 100%;
+    height: 100px;
     top: 0px;
     border: 2px black solid;
     background-color: grey;
@@ -30,6 +37,7 @@ h{
 }
 
 #block1{
+    width: 150px;
     white-space : nowrap; 
     border: 2px black solid; 
     align-items: center;
@@ -37,6 +45,10 @@ h{
     padding-left: 10px;
     padding-right: 10px;
     background-color: grey;
+}
+
+#block2{
+    width: 100%;
 }
 
 span{
@@ -57,7 +69,7 @@ span{
     text-decoration: none;
     color: black;
     border-bottom: 2px solid transparent;/*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
-    padding: 10px 150px;/*Agrandit le menu et espace la bordure du texte*/
+    padding: 10px 50px;/*Agrandit le menu et espace la bordure du texte*/
 }
 
 .Barre a:hover{
@@ -69,26 +81,28 @@ span{
 /**********************************************/
 
 
-.btn{
+.btn_more{
     padding: 5px 10px;
-    margin-top: 30px;
+    margin-top: 5px;
     margin-left: -10px;
     font-size: 10px;
     color: white;
     background-color: inherit;
 }
 .more {
-      font-size: 20px;    
-      border: none;
-      color: white;
-      padding: 2px 5px;
-      background-color: inherit;
+    height: fit-content;
+    width: fit-content;
+    font-size: 20px;    
+    border: none;
+    color: white;
+    padding: 2px 5px;
+    background-color: inherit;
 }
 /* Menu appuyer sur le bouton */
     .more-menu {
-      display: none;
       position: absolute;
       background-color: #f9f9f9;
+      text-align: left;
     }
 
 /* Menu appuyer sur le bouton sur "a" */
