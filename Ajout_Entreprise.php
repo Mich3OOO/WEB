@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width" >
     <title>Ajout Entreprise </title>
   </head>
-  <body>
+  <body>    
     <?= include "./Menu.php"?>
     <div class="flex-container">
         <div class="flex-gauche">
