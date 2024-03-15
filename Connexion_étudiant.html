@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Accueille étudiant</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="étudiant,Stage,accueille">
+        <meta name="description" content="site d'annonce de stage">
+        <link rel = "StyleSheet" href = "assets/css/Connexion_étudiant.css">
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <script src="assets/js/include.js"></script>
+        <script async src="assets/js/Connexion_étudiant.js"></script>
+        <script src= "assets/js/more_menu.js"></script>
+        
+    </head>
+    <body>
+        <header>
+            <include src="menu.html"> </include>
+        </header>
+        <main>
+            <h1 id="Titre">Recherche d'offre de stage</h1>
+            <div class = "flexContainer">              
+                <ul class="liste" id ="Filtres">
+                    <li><label for="Filtres">Filtres:</label></li>
+                    <li>
+                        <label for="Ville">Ville</label>
+                    </li>
+                    <li>
+                        <input id = "Ville" type="text" list="DLVille" class="MChoise">
+                        <datalist id = "DLVille">
+                            <option value="pau"></option>
+                            <option value="algo"></option>
+                            <option value="Hendaya"></option>
+                        </datalist>
+                        <div id = "VilleList" class="tagcontent">
+                        </div>
+                    </li>
+                    <li>
+                        <label for="Département">Département</label>
+                    </li>
+                    <li>
+                        <input id = "Département" list="DLDépartement" class="MChoise">
+                        <datalist id = "DLDépartement">
+                            <option value="v1"></option>
+                            <option value="v2"></option>
+                            <option value="v3"></option>
+                        </datalist>
+                        <div id = "DépartementList" class="tagcontent">
+                        </div>
+                    </li>
+                    <li>
+                        <label for="SécteurA">Sécteur d'activité</label>
+                    </li>
+                    <li>
+                        <input id = "SécteurA" list="DLSécteurA" class="MChoise">
+                        <datalist id = "DLSécteurA">
+                            <option value="v1"></option>
+                            <option value="v2"></option>
+                            <option value="v3"></option>
+                        </datalist>
+                        <div id = "SécteurAList" class="tagcontent">
+                        </div>
+                    </li>
+
+                    <li>
+                        <label for="Date_début">Date début</label>
+                    </li>
+                    <li>
+                        <input type="date" id="Date_début">
+                    </li>
+
+                    <li>
+                        <label for="durée">durée (en mois)</label>
+                    </li>
+                    <li>
+                        <input type = "number" id="durée">
+                    </li>
+
+                    
+                    <li>
+                        <label for="TypeContrat">Type de contrat</label>
+                    </li>
+                    <li>
+                        <input id = "TypeContrat" list="DLTypeContrat" class="MChoise">
+                        <datalist id = "DLTypeContrat">
+                            <option value="v1"></option>
+                            <option value="v2"></option>
+                            <option value="v3"></option>
+                        </datalist>
+                        <div id = "TypeContratList" class="tagcontent">
+                        </div>
+                    </li>
+                    
+                </ul>
+                <div id = "RechercheOffre">
+                    <input list="Stages" id="search" placeholder="🔎︎ search">
+
+                    <datalist id = "Stages">
+                        <option value="v1"></option>
+                        <option value="v2"></option>
+                        <option value="v3"></option>
+                    </datalist>
+
+                    <div id="offres">
+                        <div class="Offre" id ="1">
+                            <div>
+                                <button >
+                                    <ul class="liste">
+                                        <li>Nom du poste</li>
+                                        <li>Nom Entreprise</li>
+                                        <li>Ville</li>
+                                    </ul>
+                                    
+                                </button>
+                                <input class="StarButon" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="Offre" id ="2">
+                            <div>
+                                <button >
+                                    <ul class="liste">
+                                        <li>Nom du poste</li>
+                                        <li>Nom Entreprise</li>
+                                        <li>Ville</li>
+                                    </ul>
+                                    
+                                </button>
+                                <input class="StarButon" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="Offre" id ="3">
+                            <div>
+                                <button >
+                                    <ul class="liste">
+                                        <li>Nom du poste</li>
+                                        <li>Nom Entreprise</li>
+                                        <li>Ville</li>
+                                    </ul>
+                                    
+                                </button>
+                                <input class="StarButon" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="Offre" id ="4">
+                            <div>
+                                <button >
+                                    <ul class="liste">
+                                        <li>Nom du poste</li>
+                                        <li>Nom Entreprise</li>
+                                        <li>Ville</li>
+                                    </ul>
+                                    
+                                </button>
+                                <input class="StarButon" type="checkbox">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+        </main>
+
+        
+        
+        <include src = "./Footer.html"></include>
+    </body>
+
+    
+
+</html>
