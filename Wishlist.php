@@ -2,11 +2,12 @@
 <html lang="fr">
     <head>
         <link rel="stylesheet" href="./assets/css/Wishlist.css">
-        <script src="assets/js/include.js"></script>
+        <meta charset="utf-8" >
         <script async src="assets/js/Wishlist.js"></script>
         <title>Wishlist</title>
     </head>
     <body>
+        <?= include "./Menu.php"?>
         <h2 class="FormeH" id="testtest">Ma Wishlist</h2>
         <input list="Satages" id="search" placeholder="🔎︎ search">
                
@@ -63,6 +64,6 @@
                         </div>
                     </div>
                 </div>
-        <include src = "./Footer.html"></include>
+        <?= include "./Footer.html"?>
     </body>
 </html>

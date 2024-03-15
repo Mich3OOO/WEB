@@ -2,6 +2,7 @@
 <html lang="fr">
     <head>
         <title>Accueille étudiant</title>
+        <meta charset="utf-8" >
         <meta charset="UTF-8">
         <meta name="keywords" content="étudiant,Stage,accueille">
         <meta name="description" content="site d'annonce de stage">
@@ -10,10 +11,8 @@
 
     </head>
     <body>
-        <header>
+        <?= include "./Menu.php"?>
 
-
-        </header>
         <main>
             <div class = "flexContainer">              
                 <ul class="liste" id ="Filtres">
@@ -100,7 +99,7 @@
         </main>
 
         
-        
+        <?= include "./Footer.html"?>
         
     </body>
 

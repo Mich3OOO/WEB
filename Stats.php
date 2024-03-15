@@ -5,10 +5,11 @@
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script async src="assets/js/stats.js"></script>
         <title>Statisques</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         
     </head>
     <body>
+    <?= include "./Menu.php"?>
         <h1>Satistiques</h1>
         <h2>Statisques des étudiant</h2>
         <div class="floatContainer">

@@ -3,16 +3,12 @@
     <meta charset="utf-8" >
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" >
-    <script src="assets/js/include.js"></script>
+    
     <title>Recherche Pilote</title>
   </head>
   <body>
-    <header>
-        <h1 class="text_center">Recherche Pilote</h1>
-    </header>
-    <nav>
-
-    </nav>
+    <?= include "./Menu.php"?>
+    <h1 class="text_center">Recherche Pilote</h1>
     <div class="search-bar">
     <div>
         <input list="compte" class="SearchBar" placeholder="🔎︎ search">
@@ -109,7 +105,7 @@
     </div>
     </div>
     </div>
-    <include src = "./Footer.html"></include>
+    <?= include "./Footer.html"?>
 
   </body>
 

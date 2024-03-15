@@ -6,10 +6,12 @@
     <link href="assets/css/stage.css" rel="stylesheet" type="text/css" />
    
     <meta name="viewport" content="width=device-width" >
-    <script src="assets/js/include.js"></script>
     <title>Ajout Stage </title>
   </head>
   <body>
+    
+    <?= include "./Menu.php"?>
+
     <div class="flex-container">
         <div class="flex-gauche">
             <label for="Nom_Poste">Nom  Poste :</label>
@@ -59,9 +61,10 @@
         <button type="submit" class="button" value="Valider">Valider</button> 
         <button type="submit" class="button" value="Annuler">Annuler</button> 
     </div>
+    <?= include "./Footer.html"?>
     </body>
     
-    <include src = "./Footer.html"></include>
+
     
 
 </html>
