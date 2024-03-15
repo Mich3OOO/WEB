@@ -2,13 +2,12 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" >
-        <link rel="stylesheet" href="./assets/css/Wishlist.css">
+        <link rel="stylesheet" href="./assets/css/user.css">
         <script async src="assets/js/Wishlist.js"></script>
         <title>Gestion d'User</title>
     </head>
     <body>
         <?= include "./Menu.php"?>
-        <h2 class="FormeH">Gérer un user</h2>
         <input list="Satages" id="search" placeholder="🔎︎ search">
                 <div class="liste-deroulante2">
                     <div class="compte">
@@ -66,7 +65,7 @@
                             </div>
                         </div>
                     </div>
-            </div>
+            </div>  
         <?= include "./Footer.html"?>
     </body>
 </html>
