@@ -5,11 +5,12 @@
     <meta charset="utf-8" >
     <link href="assets/css/login.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" >
-    <script src="assets/js/include.js"></script>
     <title>Authentification Presqu'auChaud Mage</title>
   </head>
   
   <body>
+    <?= include "./Menu.php"?>
+
     <section>
         <form>
             <div class="login">
@@ -22,7 +23,7 @@
             </div>
         </form>
     </section>
-    <include src = "./Footer.html"></include>
+    <?= include "./Footer.html"?>
 
   </body>
   

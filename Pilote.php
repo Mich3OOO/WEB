@@ -4,10 +4,11 @@
         <link rel="stylesheet" href="./assets/css/Pilote.css">
         <link rel = "StyleSheet" href = "assets/css/Connexion_étudiant.css">
         
-        <script src="assets/js/include.js"></script>
+        
         <title>Pilote</title>
     </head>
     <body>
+        <?= include "./Menu.php"?>
         <h2 class="FormeH">Recherche d'offre de stage</h2>
         <input list="Satages" id="search" placeholder="🔎︎ search">
         <div id="flex-mere">
@@ -106,6 +107,6 @@
             </div>
 
         </div>
-        <include src = "./Footer.html"></include>
+        <?= include "./Footer.html"?>
     </body>
 </html>

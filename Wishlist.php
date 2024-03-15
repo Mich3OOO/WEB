@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <link rel="stylesheet" href="assets/css/user.css">
-        <script src="assets/js/include.js"></script>
+        <link rel="stylesheet" href="./assets/css/Wishlist.css">
+        <meta charset="utf-8" >
         <script async src="assets/js/Wishlist.js"></script>
-        <title>Gestion d'User</title>
+        <title>Wishlist</title>
     </head>
     <body>
+        <?= include "./Menu.php"?>
+        <h2 class="FormeH" id="testtest">Ma Wishlist</h2>
         <input list="Satages" id="search" placeholder="🔎︎ search">
+               
                 <div class="liste-deroulante2">
-                    <div class="compte">
+                    <div class="compte" id="1">
                         <div class="droit-compte">
                             <div class="haut-compte">
-                                    <label class="NomPoste">Nom Prénom</label>
+                                    <label class="NomPoste">Nom du Poste</label>
                             </div>
                             <div class="bas-compte">
                                 <div class="gauche">
-                                    <p class="mail">Classe</p>
-                                    <p class="mail">Pilote</p>
-                                    <p class="mail">Campus</p>
+                                    <a class="Info" href="">Entreprise</a>
+                                    <p class="mail">Lieu</p>
                                 </div>
                                 <div class="droite">
                                     <a class="Info suppr" href="#">Supprimer</a>
-                                    <a class="Info" href="">Plus d'information</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="compte">
-                        <div class="droit-compte">
-                            <div class="haut-compte">
-                                    <label class="NomPoste">Nom Prénom</label>
-                            </div>
-                            <div class="bas-compte">
-                                <div class="gauche">
-                                    <p class="mail">Classe</p>
-                                    <p class="mail">Pilote</p>
-                                    <p class="mail">Campus</p>
-                                </div>
-                                <div class="droite">
-                                    <a class="Info suppr" href="#">Supprimer</a>
-                                    <a class="Info" href="">Plus d'information</a>
+                                    <button class="plus">Plus d'information ⇓ </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="compte">
+                    <div class="compte" id="2">
                         <div class="droit-compte">
                             <div class="haut-compte">
-                                    <label class="NomPoste">Nom Prénom</label>
+                                    <label class="NomPoste">Nom du Poste</label>
                             </div>
                             <div class="bas-compte">
                                 <div class="gauche">
-                                    <p class="mail">Classe</p>
-                                    <p class="mail">Pilote</p>
-                                    <p class="mail">Campus</p>
+                                    <a class="Info" href="">Entreprise</a>
+                                    <p class="mail">Lieu</p>
                                 </div>
                                 <div class="droite">
                                     <a class="Info suppr" href="#">Supprimer</a>
-                                    <a class="Info" href="">Plus d'information</a>
+                                    <button class="plus">Plus d'information ⇓ </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-            </div>
-        <include src = "./Footer.html"></include>
+                    <div class="compte" id="3">
+                        <div class="droit-compte">
+                            <div class="haut-compte">
+                                    <label class="NomPoste">Nom du Poste</label>
+                            </div>
+                            <div class="bas-compte">
+                                <div class="gauche">
+                                    <a class="Info" href="">Entreprise</a>
+                                    <p class="mail">Lieu</p>
+                                </div>
+                                <div class="droite">
+                                    <a class="Info suppr" href="#">Supprimer</a>
+                                    <button class="plus">Plus d'information ⇓ </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <?= include "./Footer.html"?>
     </body>
 </html>

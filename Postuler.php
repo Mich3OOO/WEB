@@ -2,10 +2,11 @@
 <html lang="fr">
     <head>
         <link rel="stylesheet" href="./assets/css/Postuler.css">
-        <script src="assets/js/include.js"></script>
+        <meta charset="utf-8" >
         <title>Postuler</title>
     </head>
     <body>
+        <?= include "./Menu.php"?>
         <h5>Postuler</h5>
         <article id="RappelOffre">
             Rappel de l'offre
@@ -27,7 +28,7 @@
         </div>
         <input type="button" id="Post" value="Je postule!">
 
-        <include src = "./Footer.html"></include>
+        <?= include "./Footer.html"?>
 
     </body>
 </html>

@@ -2,14 +2,14 @@
 <html lang="fr">
     <head>
         <link rel="stylesheet" href="./assets/css/stats.css">
-        <script src="assets/js/include.js"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script async src="assets/js/stats.js"></script>
         <title>Statisques</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         
     </head>
     <body>
+    <?= include "./Menu.php"?>
         <h1>Satistiques</h1>
         <h2>Statisques des étudiant</h2>
         <div class="floatContainer">
@@ -53,12 +53,11 @@
 
             </div>
         </div>
-
-        <button id = "upbutton">▲</button>
+        <?php include "./Upbutton.html" ?>
         <link rel="stylesheet" href="./assets/css/upbutton.css">
         <script async src="assets/js/upbutton.js"></script>
         
-        <include src = "./Footer.html"></include>
+        <?php include "./Footer.html" ?>
         
     </body>
 </html>
