@@ -1,14 +1,38 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "" ,null, 3308);
 
 
-$conn->select_db("test");
+class SqlHandler
+{
+    private ?mysqli $Connection;
+    function __construct() 
+    {
+        $this->Connection = new mysqli("localhost", "root", "test" ,null, 3308);
+
+    }
+    function __destruct() 
+    {
+        $this->Connection->close();
+    }
+    public function GetFirstRow($sql)
+    {
+        return $this->Connection->query($sql) -> fetch_row();
+    }
+
+    public function GetArray($sql)
+    {
+        return $this->Connection->query($sql) -> fetch_all();
+    }
+    
+    
+}
+
+
 
 $sql = "SELECT * FROM `utilisateur`;";
-$r = $conn->query($sql);
+
 
 $conn->close();
 
 echo json_encode($r->fetch_all());
-?>
+?>  
