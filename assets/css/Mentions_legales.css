@@ -1,15 +1,23 @@
-*{
-    font-family: Arial;
+body{
+    font-family: Arial, sans-serif;
+    background: url(../../image/fond.jpg);
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
 }
+
 h2{
+    color: grey;
     text-align: center;
+    margin-bottom: 100px;
 }
 h4{
+    color: grey;
     font-size: large;
     font-weight: bold;
     margin-left: 20%;
 }
 p{
+    color: grey;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 10px;

@@ -29,6 +29,16 @@ input/* modifie la zone de texte */ {
     color: #2E3244;
 }
 
+select{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+}
+
 main
 {
     max-width: 1200px;
