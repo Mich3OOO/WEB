@@ -1,0 +1,170 @@
+
+body{
+    font-family: Arial, sans-serif;
+    background: url(WEB/image/fond.jpg);
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    text-align: center;
+}
+
+.test{
+    display:inline-table; /* relier avec "text-align: center;" pour mettre un div au centre */
+}
+
+h1{
+    color: grey;
+    margin-bottom: 100px;
+}
+
+label{
+    color: #C5C6C6;
+    margin-bottom: 5px; 
+    font-size: large;
+    padding-bottom: 10px ;
+    padding-top: 5px ;
+}
+
+.flex-bas button{
+    width: 20%;
+    height: 33px;
+    border: none;
+    border-radius: 4px;
+    background-color: #F1895C;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.flex-gauche button{
+    width: 50%;
+    height: 33px;
+    border: none;
+    border-radius: 4px;
+    background-color: #516079;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #E76E3B;
+}
+
+
+input /*modifie la zone de texte */ {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+}
+
+select {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+    appearance: none; /* Masque l'apparence par défaut du navigateur */
+}
+
+select:focus {
+    border-color: #F1895C;
+    outline: none;
+}
+
+.image-profil{
+    width:25%;
+    height: 200px;
+    padding-bottom: 20px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.flex-gauche{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.flex-droit{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    flex: 1;
+}
+
+
+.flex-bas{
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 100px;
+}
+
+.Importation{
+    width: fit-content;
+}
+
+.custom-file-label {
+    width: 90%;
+    padding: 10px 15px;
+    background-color: #516079;
+    color: #2E3244;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.custom-file-label:hover {
+    background-color: #E76E3B;
+}
+
+
+@media(max-width:1024px) 
+{
+    .flex-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .flex-container label{
+        text-align: left;
+    }
+    
+    .flex-gauche{
+        margin-left: 0%;
+        width: 200px;
+    }
+    .flex-droit{
+    
+        width: 200px;
+    }
+    .flex-bas{
+        margin-bottom: 200px;
+        text-align: center;
+        
+    }
+    .Description {
+        text-align: center;
+        height: 200px;
+        
+    }
+    .Description textarea{
+        width: 200px;
+        height: 100px;
+    }
+}
+
