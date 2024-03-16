@@ -1,7 +1,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" >
-    <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/recherche_pilote.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" >
     
     <title>Recherche Pilote</title>

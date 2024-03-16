@@ -1,0 +1,177 @@
+body{
+    font-family: Arial, sans-serif;
+    background: url(WEB/image/fond.jpg);
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+select{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+}
+
+label{
+    font-size: large;
+    padding-bottom: 10px ;
+    padding-top: 5px ;
+}
+
+a{
+    padding-top: 10px;
+}
+
+
+
+.image-profil{
+    width:200px;
+    height: 200px;
+}
+
+.search-bar{
+    border-radius: 100px;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    
+}
+
+.SearchBar{
+    margin-left: 200px;
+    display: list-item;
+    border: solid;
+    border-width: 1px;
+    border-radius: 100px;
+    height: 30px; 
+    width: 300px;
+    padding: 2px 30px;
+}   
+
+.liste-deroulante{
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+    border: 1px solid inherent; 
+    width: 1000px; 
+    height: 300px;
+    margin: 20px 1;
+}
+.filtre-element{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.filtre select{
+    margin-top: 20px;
+    
+}
+.compte{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 5px;
+    
+}
+
+.gauche-compte{
+    flex: 1;
+    padding-right: 20px;
+}
+
+
+.droit-compte{
+    flex: 1;
+    padding-right: 10px;
+}
+
+
+.bas-compte{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: small;
+    
+}
+
+.image-compte{
+    width: 100px; 
+    height: 100px;
+    padding-right: 10px;
+}
+
+.Importation{
+    width: fit-content;
+}
+
+.compte-gauche{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding-left: 10px;
+    padding-top: 15px;
+    width: 250px;
+    height: 125px;
+    margin-right: 10px;
+    border: #000000 2px solid;
+}
+.compte-droit{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding-left: 10px;
+    padding-top: 15px;
+    width: 250px;
+    height: 125px;
+    border: #000000 2px solid;
+}
+
+.cond_commentaire{
+    max-width: 200px;
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin: 10px 0px;
+}
+
+@media(max-width:1024px) 
+{
+    .flex-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .flex-container label{
+        text-align: left;
+    }
+    
+    .flex-gauche{
+        margin-left: 0%;
+        width: 200px;
+    }
+    .flex-droit{
+    
+        width: 200px;
+    }
+    .flex-bas{
+        margin-bottom: 200px;
+        text-align: center;
+        
+    }
+    .Description {
+        text-align: center;
+        height: 200px;
+        
+    }
+    .Description textarea{
+        width: 200px;
+        height: 100px;
+    }
+}
+
+```
