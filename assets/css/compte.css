@@ -49,6 +49,7 @@ button:hover {
     background-color: #E76E3B;
 }
 
+
 input /*modifie la zone de texte */ {
     width: 100%;
     padding: 8px;
@@ -105,7 +106,6 @@ select:focus {
 
 .flex-bas{
     text-align: center;
-    
     padding: 10px 20px;
     margin-bottom: 100px;
 }
