@@ -1,20 +1,22 @@
+window.addEventListener("DOMContentLoaded", ()=>{
+    let inputs = document.getElementsByClassName("MChoise");
 
-let inputs = document.getElementsByClassName("MChoise");
-
-for(let i = 0 ; i< inputs.length;i++)
-{
-    inputs[i].addEventListener("select",addFiltre);
-    inputs[i].addEventListener("submit",addFiltre); 
- 
-}
+    for(let i = 0 ; i< inputs.length;i++)
+    {
+        inputs[i].addEventListener("select",addFiltre);
+        inputs[i].addEventListener("submit",addFiltre); 
+    
+    }
 
 
 
-document.getElementById("Département").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/departements?nom=")});
+    document.getElementById("Département").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/departements?nom=")});
 
-document.getElementById("search").addEventListener("change",search);
+    document.getElementById("search").addEventListener("change",search);
 
-document.getElementById("Ville").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/communes?nom=") });
+    document.getElementById("Ville").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/communes?nom=") });
+
+})
 
 function updateDL(event,api)
 {

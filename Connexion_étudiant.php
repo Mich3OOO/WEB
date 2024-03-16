@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <?=include "./assets/phpScripts/redirect.php" ?>
         <title>Accueille étudiant</title>
         <meta charset="utf-8" >
         <meta charset="UTF-8">
         <meta name="keywords" content="étudiant,Stage,accueille">
         <meta name="description" content="site d'annonce de stage">
         <link rel = "StyleSheet" href = "assets/css/Connexion_étudiant.css">
-        <script async src="assets/js/Connexion_étudiant.js"></script>
+        <script src="assets/js/Connexion_étudiant.js"></script>
 
     </head>
     <body>
         <?= include "./Menu.php"?>
+        
 
         <main>
             <div class = "flexContainer">              

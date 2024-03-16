@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="assets/css/menu.css">
-<link href="dist/hamburgers.css" rel="stylesheet">
+
 <header>
     <nav>
         <div id="flex">
