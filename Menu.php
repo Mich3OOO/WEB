@@ -41,7 +41,7 @@
                             
                           ?>
                           <a>Statistiques</a>
-                          <a>Déconexion3</a>
+                          <a href="./assets/phpScripts/desconexion.php">Déconexion3</a>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 
+<?php
+    session_start();
+    if (isset($_SESSION[session_id()])) {
+        header('Location: ./connexion_étudiant.php');
+    }
+?>
+
 <html lang="fr">
   <head>
     <meta charset="utf-8" >
