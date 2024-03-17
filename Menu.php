@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="assets/css/menu.css">
 <link href="dist/hamburgers.css" rel="stylesheet">
+<script src="assets/js/more_menu.js"></script>
 <header>
     <nav>
         <div id="flex">

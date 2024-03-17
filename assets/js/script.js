@@ -1,7 +1,7 @@
 
 
 
-document.getElementById("avatar").addEventListener("click",open_image());
+// document.getElementById("avatar").addEventListener("click",open_image());
 
 document.getElementById("test").addEventListener("input",check_test);
 
