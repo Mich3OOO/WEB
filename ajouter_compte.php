@@ -52,7 +52,7 @@
         <label for="Confirmation-MDP">Confirmation mot de passe</label>
         <input type="text" required="required" id="Confirmation-MDP" name="Confirmation-MDP" placeholder="Confirmation mot de passe">
         <label for="Mail">Mail</label>
-        <input type="text" required="required" id="Mail" name="Mail" placeholder="Mail" onblur="data(/^[A-Za-z' - 0-9]+@+[A-Za-z' - 0-9]/,0,value,id,'Ce champs ne doit que contenir des lettres')">
+        <input type="email" required="required" id="Mail" name="Mail" placeholder="Mail" onblur="data(/^[A-Za-z' - 0-9]+@+[A-Za-z' - 0-9]/,0,value,id,'Ce champs ne doit que contenir des lettres')">
         <label for="Date-naissance">Date de naissance</label>
         <input type="text" required="required" id="Date-naissance" name="Date-naissance" placeholder="Date-naissance">
         <label for="Adresse">Adresse</label>
