@@ -1,7 +1,7 @@
 
 body{
     font-family: Arial, sans-serif;
-    background: url(../../image/fond.jpg);
+    background: url(WEB/image/fond.jpg);
     background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     text-align: center;
@@ -9,6 +9,11 @@ body{
 
 .test{
     display:inline-table; /* relier avec "text-align: center;" pour mettre un div au centre */
+}
+
+h1{
+    color: grey;
+    margin-bottom: 100px;
 }
 
 label{
@@ -78,7 +83,7 @@ select:focus {
 }
 
 .image-profil{
-    width:200px;
+    width:25%;
     height: 200px;
     padding-bottom: 20px;
 }

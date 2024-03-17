@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 
+<?php
+    session_start();
+    if (isset($_SESSION[session_id()])) {
+        header('Location: ./connexion_étudiant.php');
+    }
+?>
+
 <html lang="fr">
   <head>
     <meta charset="utf-8" >
@@ -9,10 +16,8 @@
   </head>
   
   <body>
-    <?= include "./Menu.php"?>
-
     <section>
-        <form>
+        <form method="get" action="./assets/phpScripts/Auth.php">
             <div class="login">
                 <label for="Email">Email</label>
                 <input type="text" required="required" id="Email" name="Email" placeholder="Email">
@@ -23,6 +28,7 @@
             </div>
         </form>
     </section>
+    
     <?= include "./Footer.html"?>
 
   </body>

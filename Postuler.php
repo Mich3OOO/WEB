@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <link rel="stylesheet" href="./assets/css/Postuler.css">
+        <link rel="stylesheet" href="assets/css/Postuler.css">
         <meta charset="utf-8" >
         <title>Postuler</title>
     </head>
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <input type="button" id="Post" value="Je postule!">
+        <center><button type="button" id="Post">Je postule</button></center>
 
         <?= include "./Footer.html"?>
 

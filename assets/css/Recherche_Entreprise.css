@@ -6,7 +6,7 @@ body{
 }
 
 label{
-    color: #C5C6C6;
+    color: black;
     margin-bottom: 5px; 
     font-size: large;
     padding-bottom: 10px ;
@@ -23,15 +23,14 @@ input/* modifie la zone de texte */ {
     color: #2E3244;
 }
 
-*{
-    font-family: Arial;
-}
-
-.FormeH{
-    margin-left: 44%;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 30px;
+select{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
 }
 
 h4{
@@ -107,7 +106,7 @@ input{
 }
 
 .Info:hover{
-    color: gold;
+    color: #F1895C;
 }
 
 .gauche{
@@ -131,7 +130,7 @@ input{
 .liste-deroulante2{
     overflow-x: hidden; 
     overflow-y: scroll; 
-    border:#000000 1px solid; 
+    border: solid 1px inherent;
     width: 600px; 
     height: 300px;
     margin: 20px auto;
@@ -140,6 +139,7 @@ input{
 
 
 .compte{
+    background-color: #F5F6F6;
     padding: 5px;
     border: solid 1px black;
     width: auto;

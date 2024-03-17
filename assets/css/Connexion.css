@@ -19,8 +19,8 @@ label{
     padding-top: 5px ;
 }
 
-input/* modifie la zone de texte */ {
-    width: 100%;
+input{
+    
     padding: 8px;
     margin-bottom: 15px;
     border: 1px solid #C5C6C6;
