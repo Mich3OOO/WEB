@@ -1,16 +1,9 @@
+
 body{
     font-family: Arial, sans-serif;
     background: url(../../image/fond.jpg);
     background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
-}
-
-label{
-    color: black;
-    margin-bottom: 5px; 
-    font-size: large;
-    padding-bottom: 10px ;
-    padding-top: 5px ;
 }
 
 input/* modifie la zone de texte */ {
@@ -23,71 +16,14 @@ input/* modifie la zone de texte */ {
     color: #2E3244;
 }
 
-select{
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #C5C6C6;
-    border-radius: 4px;
-    background-color: #F5F6F6;
-    color: #2E3244;
-}
-
-h4{
-    padding-left: 20%;
-    margin-bottom: 10px;
-}
-
-#flex-mere{
-    display: flex;
-}
-
-
-#flex-filtres{
-    padding-left: 20%;
-}
-
-#SearchBar{
-    margin-bottom: 20px;
-    border-radius: 8px;
-    margin-left: 50px;
-    width: 200px;
-}
-
-#flex-recherche{
-    flex: 1;
-    padding-right: 20%;
-    margin-left: 20px;
-}
-
-.flex-filtres select{
-    border-radius: 8px;
-    width: 70px;
-}
-
-input{
-    border-radius: 8px;
-}
-
-.selection{
-    border-radius: 8px;
-    width: 130px;
-}
-
-#Duree{
-    width: 70px;
-}
-
 #search
 {
-    display: list-item;
+    display: block;
+    margin: 20px auto;
     border: solid;
     border-width: 1px;
     border-radius: 100px;
-    height: 30px; width: 400px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 40%;
+    height: 30px; width: auto;
     padding: 2px 30px;
 }
 
@@ -103,6 +39,20 @@ input{
     margin-left: 5px;
     text-decoration: none;
     color: blue;
+    width: fit-content;
+}
+
+.plus{
+    margin-top: 10px;
+    margin-left: 50%;
+    font-family: Arial;
+    text-decoration: none;
+    border: none;
+    background-color: white;
+}
+
+.plus:hover{
+    color: #F1895C;
 }
 
 .Info:hover{
@@ -122,16 +72,18 @@ input{
     flex: 1;
     width: 100px;
     height: auto;
-    text-align: right;
     display: flex;
     flex-direction: column;
 }
 
+.droite>a{
+    margin-left: 74%;
+}
+
 .liste-deroulante2{
     overflow-x: hidden; 
-    overflow-y: scroll; 
-    border: solid 1px inherent;
-    width: 600px; 
+    overflow-y: auto;  
+    width: 50%; 
     height: 300px;
     margin: 20px auto;
     border-radius: 8px;
@@ -139,18 +91,17 @@ input{
 
 
 .compte{
-    background-color: #F5F6F6;
+    border-radius: 8px;
     padding: 5px;
-    border: solid 1px black;
+    border: solid 1px grey;
+    background-color: white;
     width: auto;
     height: auto;
     margin: 10px 10px;
-    border-radius: 8px;
 }
 
 .haut-compte{
     text-align: center;
-    display: flex;
 }
 .droit-compte{
     flex: 1;
@@ -166,17 +117,6 @@ input{
     
 }
 
-.compte-gauche{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    padding-left: 10px;
-    padding-top: 15px;
-    width: auto;
-    height: auto;
-    margin-right: 10px;
-    border: #000000 2px solid;
-}
 .compte-droit{
     display: flex;
     flex-direction: row;
@@ -186,28 +126,6 @@ input{
     width: auto;
     height: auto;
     border: #000000 2px solid;
-}
-
-
-.modif{
-    margin-top: 10px;
-    text-align: right;
-}
-
-#entre{
-text-align: right;
-flex: 1;
-margin-left: 15%;
-}
-
-.stars{
-text-align: right;
-flex: 1;
-}
-
-.NomPoste{
-    font-weight: bold;
-    font-size: 20px;
 }
 
 *::-webkit-scrollbar
@@ -222,5 +140,4 @@ flex: 1;
     border: none;
     border-radius: 30px;
     background-color: #C5C6C6;
-    
 }

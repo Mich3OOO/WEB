@@ -3,14 +3,13 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" >
-    <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/compte.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" >
     
     <title>Modifier un compte </title>
   </head>
   <body>
     <?= include "./Menu.php"?>
-    
     <h1>Modifier un compte </h1>
     <form>
     <div class="flex-container">

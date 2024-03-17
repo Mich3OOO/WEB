@@ -18,7 +18,7 @@
                 <h>Nom | Prénom</h>
                 <div class="navbar" id="nav">
                     <div class="more">
-                        <button class="btn">▽</button>
+                        <button class="btn_more" onclick="btn_plus()">▽</button>
                         <div class="more-menu">
                             <a>Mon Profile</a>
                           <?php
