@@ -22,7 +22,7 @@
                         <div class="more-menu">
                             <a>Mon Profile</a>
                           <?php
-                            session_start();
+                            
                             if($_SESSION[session_id()]["role"] == "Administrateur" or $_SESSION[session_id()]["role"]=="pilote" )
                             {
                                 echo "<a>Ajout entreprise</a>";

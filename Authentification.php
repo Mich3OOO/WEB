@@ -10,7 +10,7 @@
   
   <body>
     <section>
-        <form>
+        <form method="get" action="./assets/phpScripts/Auth.php">
             <div class="login">
                 <label for="Email">Email</label>
                 <input type="text" required="required" id="Email" name="Email" placeholder="Email">
@@ -21,6 +21,7 @@
             </div>
         </form>
     </section>
+    
     <?= include "./Footer.html"?>
 
   </body>
