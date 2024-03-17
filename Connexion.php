@@ -7,8 +7,8 @@
         <meta charset="UTF-8">
         <meta name="keywords" content="étudiant,Stage,accueille">
         <meta name="description" content="site d'annonce de stage">
-        <link rel = "StyleSheet" href = "assets/css/Connexion_étudiant.css">
-        <script src="assets/js/Connexion_étudiant.js"></script>
+        <link rel = "StyleSheet" href = "assets/css/Connexion.css">
+        <script src="assets/js/Connexion.js"></script>
 
     </head>
     <body>
