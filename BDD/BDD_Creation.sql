@@ -1,6 +1,6 @@
 CREATE TABLE utilisateur(
    IDu INT,
-   MdpU VARCHAR(50),
+   MdpU VARCHAR(100),
    NomU VARCHAR(50),
    PrenomU VARCHAR(50),
    Date_NaisU DATE,

@@ -9,8 +9,6 @@
   </head>
   
   <body>
-    <?= include "./Menu.php"?>
-
     <section>
         <form>
             <div class="login">
