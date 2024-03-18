@@ -2,6 +2,7 @@
 
 class SqlHandler
 {
+    
     private ?mysqli $Connection;
     function __construct($Security_level) 
     {
