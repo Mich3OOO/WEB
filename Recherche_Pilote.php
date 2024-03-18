@@ -207,8 +207,8 @@
     </div>
     </div>
     </div>
-    <?= include "./Footer.html"?>
 
   </body>
+  <?= include "./Footer.html"?>
 
 </html>
