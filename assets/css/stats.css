@@ -1,3 +1,9 @@
+body{
+    font-family: Arial, sans-serif;
+    background: url(../../image/fond.jpg);
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
 
 .floatContainer
 {
@@ -7,6 +13,7 @@
 }
 .Graph
 {
+    margin-bottom: 50px;
     width: 500px; height: 500px;
     float: left;
 }
