@@ -101,7 +101,109 @@
                 </div>
                 </div>
             </article>
-            </div>
+        </div>
+        <div class="compte">
+            <article class="compte-gauche">
+                <div class="gauche-compte">
+                    <img  class="image-compte" src="image/persov5.jpg" >
+                </div>
+                <div class="droit-compte">
+                    <div class="haut-compte">
+                        <label>Nom</label>
+                        <label>Prenom</label>
+                    </div>
+                    <div class="bas-compte">
+                        <a href="">Modifier</a>
+                        <a href="">Supprimer</a>
+                        <a href="">More</a>
+                    </div>
+                </div>
+            </article>
+            <article class="compte-droit">
+                <div  class="gauche-compte">
+                <img  class="image-compte" src="image/persov5.jpg" >
+                </div>
+                <div class="droit-compte">
+                <div class="haut-compte">
+                <label>Nom</label>
+                <label>Prenom</label>
+                </div>
+                <div class="bas-compte">
+                <a href="">Modifier</a>
+                <a href="">Supprimer</a>
+                <a href="">More</a>
+                </div>
+                </div>
+            </article>
+        </div>
+        <div class="compte">
+            <article class="compte-gauche">
+                <div class="gauche-compte">
+                    <img  class="image-compte" src="image/persov5.jpg" >
+                </div>
+                <div class="droit-compte">
+                    <div class="haut-compte">
+                        <label>Nom</label>
+                        <label>Prenom</label>
+                    </div>
+                    <div class="bas-compte">
+                        <a href="">Modifier</a>
+                        <a href="">Supprimer</a>
+                        <a href="">More</a>
+                    </div>
+                </div>
+            </article>
+            <article class="compte-droit">
+                <div  class="gauche-compte">
+                <img  class="image-compte" src="image/persov5.jpg" >
+                </div>
+                <div class="droit-compte">
+                <div class="haut-compte">
+                <label>Nom</label>
+                <label>Prenom</label>
+                </div>
+                <div class="bas-compte">
+                <a href="">Modifier</a>
+                <a href="">Supprimer</a>
+                <a href="">More</a>
+                </div>
+                </div>
+            </article>
+        </div>
+        <div class="compte">
+            <article class="compte-gauche">
+                <div class="gauche-compte">
+                    <img  class="image-compte" src="image/persov5.jpg" >
+                </div>
+                <div class="droit-compte">
+                    <div class="haut-compte">
+                        <label>Nom</label>
+                        <label>Prenom</label>
+                    </div>
+                    <div class="bas-compte">
+                        <a href="">Modifier</a>
+                        <a href="">Supprimer</a>
+                        <a href="">More</a>
+                    </div>
+                </div>
+            </article>
+            <article class="compte-droit">
+                <div  class="gauche-compte">
+                <img  class="image-compte" src="image/persov5.jpg" >
+                </div>
+                <div class="droit-compte">
+                <div class="haut-compte">
+                <label>Nom</label>
+                <label>Prenom</label>
+                </div>
+                <div class="bas-compte">
+                <a href="">Modifier</a>
+                <a href="">Supprimer</a>
+                <a href="">More</a>
+                </div>
+                </div>
+            </article>
+        </div>
     </div>
     </div>
     </div>
