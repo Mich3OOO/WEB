@@ -1,6 +1,6 @@
 body{
     font-family: Arial, sans-serif;
-    background: url(WEB/image/fond.jpg);
+    background: url(../../image/fond.jpg);
     background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
 }
@@ -40,7 +40,7 @@ a{
 }
 
 .SearchBar{
-    margin-left: 200px;
+    margin-left: 150px;
     display: list-item;
     border: solid;
     border-width: 1px;
@@ -54,18 +54,16 @@ a{
     overflow-x: hidden; 
     overflow-y: scroll; 
     border: 1px solid inherent; 
-    width: 1000px; 
-    height: 300px;
-    margin: 20px 1;
+    width: auto; 
+    height: 400px;
 }
 .filtre-element{
-    display: flex;
-    flex-direction: row;
-    
+    flex-direction: row;   
 }
 
 .filtre select{
     margin-top: 20px;
+    width: 100px;
     
 }
 .compte{
@@ -173,5 +171,3 @@ a{
         height: 100px;
     }
 }
-
-```
