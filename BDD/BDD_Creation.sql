@@ -1,78 +1,67 @@
 CREATE TABLE utilisateur(
-   IDu INT,
-   MdpU VARCHAR(100),
+   IDu INT AUTO_INCREMENT,
+   MdpU VARCHAR(100) NOT NULL,
    NomU VARCHAR(50),
    PrenomU VARCHAR(50),
    Date_NaisU DATE,
-   MailU VARCHAR(50),
-   role VARCHAR(14),
-   PRIMARY KEY(IDu)
-);
-
-CREATE TABLE Pilote(
-   IDu INT,
+   MailU VARCHAR(50) NOT NULL,
+   role VARCHAR(14) NOT NULL,
    PRIMARY KEY(IDu),
-   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu)
-);
-
-CREATE TABLE admin(
-   IDu INT,
-   PRIMARY KEY(IDu),
-   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu)
+   UNIQUE(MailU)
 );
 
 CREATE TABLE campus(
-   idCentre INT,
+   idCentre INT AUTO_INCREMENT,
    NomC VARCHAR(50),
    PRIMARY KEY(idCentre)
 );
 
 CREATE TABLE Secteur_d_activité(
-   IdSec INT,
+   IdSec INT AUTO_INCREMENT,
    Secteur_d_activité VARCHAR(200),
    PRIMARY KEY(IdSec)
 );
 
-CREATE TABLE departement(
-   ID_departement INT,
-   departement VARCHAR(50),
-   PRIMARY KEY(ID_departement)
+CREATE TABLE reg(
+   ID_reg INT AUTO_INCREMENT,
+   reg VARCHAR(50),
+   PRIMARY KEY(ID_reg)
 );
 
 CREATE TABLE types_de_promotions(
-   ID_Type INT,
+   IDT INT AUTO_INCREMENT,
    Nom_du_Type VARCHAR(50),
-   PRIMARY KEY(ID_Type)
+   PRIMARY KEY(IDT)
 );
 
 CREATE TABLE ville(
-   Code_Post INT,
+   idv INT AUTO_INCREMENT,
+   Code_Post INT NOT NULL,
    ville VARCHAR(50),
-   ID_departement INT NOT NULL,
-   PRIMARY KEY(Code_Post),
-   FOREIGN KEY(ID_departement) REFERENCES departement(ID_departement)
+   ID_reg INT NOT NULL,
+   PRIMARY KEY(idv),
+   FOREIGN KEY(ID_reg) REFERENCES reg(ID_reg)
 );
 
 CREATE TABLE promotion(
-   IDProm INT,
+   IDProm INT AUTO_INCREMENT,
    Promotion VARCHAR(50),
-   ID_Type INT NOT NULL,
+   IDT INT NOT NULL,
    IDu INT NOT NULL,
    idCentre INT NOT NULL,
    PRIMARY KEY(IDProm),
-   FOREIGN KEY(ID_Type) REFERENCES types_de_promotions(ID_Type),
-   FOREIGN KEY(IDu) REFERENCES Pilote(IDu),
+   FOREIGN KEY(IDT) REFERENCES types_de_promotions(IDT),
+   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu),
    FOREIGN KEY(idCentre) REFERENCES campus(idCentre)
 );
 
 CREATE TABLE adresse(
-   ID_adresse INT,
-   NumBatiment BIT,
+   ID_adresse INT AUTO_INCREMENT,
    adresseA VARCHAR(50),
    complementA VARCHAR(50),
-   Code_Post INT NOT NULL,
+   idv INT NOT NULL,
    PRIMARY KEY(ID_adresse),
-   FOREIGN KEY(Code_Post) REFERENCES ville(Code_Post)
+   FOREIGN KEY(idv) REFERENCES ville(idv)
 );
 
 CREATE TABLE etudiant(
@@ -84,7 +73,7 @@ CREATE TABLE etudiant(
 );
 
 CREATE TABLE Entreprise(
-   IDE INT,
+   IDE INT AUTO_INCREMENT,
    NomE VARCHAR(50),
    descr VARCHAR(1000),
    MailE VARCHAR(50),
@@ -92,24 +81,22 @@ CREATE TABLE Entreprise(
    Site VARCHAR(200),
    Moyenne DECIMAL(3,2),
    IDu INT NOT NULL,
-   IDu_1 INT NOT NULL,
    IdSec INT NOT NULL,
    ID_adresse INT NOT NULL,
    PRIMARY KEY(IDE),
-   FOREIGN KEY(IDu) REFERENCES Pilote(IDu),
-   FOREIGN KEY(IDu_1) REFERENCES admin(IDu),
+   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu),
    FOREIGN KEY(IdSec) REFERENCES Secteur_d_activité(IdSec),
    FOREIGN KEY(ID_adresse) REFERENCES adresse(ID_adresse)
 );
 
 CREATE TABLE Offre(
-   IDoffre INT,
-   Duree BIT,
+   IDoffre INT AUTO_INCREMENT,
+   Duree INT,
    Poste VARCHAR(200),
    Competence VARCHAR(200),
    remune SMALLINT,
    Date_Stage DATE,
-   Nb_place BIT,
+   Nb_place INT,
    Descr VARCHAR(1000),
    IDE INT NOT NULL,
    PRIMARY KEY(IDoffre),
@@ -117,25 +104,25 @@ CREATE TABLE Offre(
 );
 
 CREATE TABLE interesser(
-   IDu INT,
    IDoffre INT,
-   PRIMARY KEY(IDu, IDoffre),
-   FOREIGN KEY(IDu) REFERENCES etudiant(IDu),
-   FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre)
+   IDu INT,
+   PRIMARY KEY(IDoffre, IDu),
+   FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
+   FOREIGN KEY(IDu) REFERENCES etudiant(IDu)
 );
 
 CREATE TABLE Postuler(
-   IDu INT,
    IDoffre INT,
-   PRIMARY KEY(IDu, IDoffre),
-   FOREIGN KEY(IDu) REFERENCES etudiant(IDu),
-   FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre)
+   IDu INT,
+   PRIMARY KEY(IDoffre, IDu),
+   FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
+   FOREIGN KEY(IDu) REFERENCES etudiant(IDu)
 );
 
 CREATE TABLE Viser(
    IDoffre INT,
-   ID_Type INT,
-   PRIMARY KEY(IDoffre, ID_Type),
+   IDT INT,
+   PRIMARY KEY(IDoffre, IDT),
    FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
-   FOREIGN KEY(ID_Type) REFERENCES types_de_promotions(ID_Type)
+   FOREIGN KEY(IDT) REFERENCES types_de_promotions(IDT)
 );

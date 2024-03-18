@@ -13,4 +13,94 @@ INSERT INTO Utilisateur (IDu, MdpU, NomU, PrenomU, Date_NaisU, MailU, role) VALU
 (12, '$2y$10$kHK4MkyEMjEGMXzTB1/5Vu5GXYMVrEQ7dVsvtPB9vNxqDfpXCXaca', 'Kim', 'Brian', '1983-01-30', 'brian.kim@example.com', 'Etudiant'),
 (13, '$2y$10$oWhOCYP9fXfyDuxO9H/ueOeOhHmX9N4REtn5TzIv6vIq6nr493Gvq', 'Park', 'Jessica', '1975-07-07', 'jessica.park@example.com', 'Pilote'),
 (14, '$2y$10$fcRw9BVENrz1sL.iMc224epQi4btsxJvrnrmQxXlIO4gv6QcmuxKW', 'Chen', 'William', '1993-04-25', 'william.chen@example.com', 'Etudiant'),
-(15, '$2y$10$z0Ly1MFyvHAFXM.t5luLSeWjZ80amAlLRH.25Y0pWP2BjKZZQUhf.', 'Wang', 'Linda', '1986-10-17', 'linda.wang@example.com', 'Etudiant')
+(15, '$2y$10$z0Ly1MFyvHAFXM.t5luLSeWjZ80amAlLRH.25Y0pWP2BjKZZQUhf.', 'Wang', 'Linda', '1986-10-17', 'linda.wang@example.com', 'Etudiant');
+
+INSERT INTO campus (NomC) 
+VALUES 
+('Campus Paris'),
+('Campus Lyon'),
+('Campus Marseille');
+
+INSERT INTO Secteur_d_activité (Secteur_d_activité) 
+VALUES 
+('Technologie'),
+('Finance'),
+('Santé'),
+('Marketing');
+
+INSERT INTO reg (reg) 
+VALUES 
+('Île-de-France'),
+('Rhône-Alpes'),
+('Bouches-du-Rhône'),
+('Nouvelle-Aquitaine');
+
+
+
+INSERT INTO types_de_promotions (Nom_du_Type) 
+VALUES 
+('Informatique'),
+('Économie'),
+('Médecine'),
+('Communication');
+
+INSERT INTO ville (Code_Post,ville, ID_reg) 
+VALUES 
+(75001,'Paris', 1),
+(69001,'Lyon', 2),
+(13001,'Marseille', 3),
+(33000,'Bordeaux', 4);
+
+INSERT INTO promotion (Promotion, IDT, IDu, idCentre) 
+VALUES 
+('Promotion 2023', 1, 13, 1),
+('Promotion 2022', 2, 13, 2),
+('Promotion 2024', 3, 13, 3),
+('Promotion 2025', 4, 13, 1);
+
+INSERT INTO adresse (adresseA, complementA, idv) 
+VALUES 
+('12 Rue de la Liberté', NULL, 1),
+('8 Avenue des Roses', 'Appartement 3', 2),
+('45 Boulevard de la Santé', NULL, 3),
+('30 Rue du Commerce', NULL, 4);
+
+
+INSERT INTO etudiant (IDu, IDProm) 
+VALUES 
+(1, 1),
+(5, 2),
+(3, 3),
+(4, 4);
+
+
+INSERT INTO Entreprise (NomE, descr, MailE, TelE, `Site`, Moyenne, IDu, IdSec, ID_adresse) 
+VALUES 
+('Tech Solutions', 'Société spécialisée dans le développement logiciel.', 'contact@techsolutions.com', 1234567890, 'https://www.techsolutions.com', 4.5, 2, 1, 1),
+('Finance Corp', 'Firme de conseil financier offrant des services de gestion de patrimoine.', 'info@financecorp.com', 987654321, 'https://www.financecorp.com', 4.2, 13, 2, 2),
+('HealthCare Innovations', 'Entreprise travaillant sur des solutions technologiques pour le domaine de la santé.', 'info@healthcareinnovations.com', 654321987, 'https://www.healthcareinnovations.com', 4.8, 2, 3, 3),
+('Marketing Experts', 'Agence de marketing offrant des services de stratégie et de publicité.', 'contact@marketingexperts.com', 789456123, 'https://www.marketingexperts.com', 4.0, 13, 4, 4);
+
+
+INSERT INTO Offre (Duree, Poste, Competence, remune, Date_Stage, Nb_place, Descr, IDE) 
+VALUES 
+(3, 'Développeur Full-stack', 'HTML, CSS, JavaScript, React, Node.js', 800, '2024-04-15', 5, 'Développeur Full-stack pour projet e-commerce.', 1),
+(6, 'Analyste financier junior', 'Analyse financière, Modélisation, Reporting', 1200, '2024-05-20', 3, "Recherche d'un analyste financier junior pour notre équipe.", 2),
+(4, 'Ingénieur en biotechnologie', 'Biologie moléculaire, Génie génétique, Microbiologie', 1000, '2024-06-10', 2, "Poste d'ingénieur en biotechnologie pour développement de nouveaux médicaments.", 3),
+(5, 'Chargé de marketing digital', 'Stratégie de contenu, Réseaux sociaux, Analyse de données', 900, '2024-07-01', 4, 'Chargé de marketing digital pour campagnes publicitaires innovantes.', 4);
+
+INSERT INTO Viser (IDoffre, IDT) 
+VALUES 
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4);
+
+CREATE USER testadmin IDENTIFIED BY "MDP";
+GRANT ALL ON PROJETWEB.* TO testadmin WITH GRANT OPTION;
+CREATE USER testpilote IDENTIFIED BY "MDP";
+GRANT SELECT, INSERT, DELETE, UPDATE ON PROJETWEB.* TO testpilote;
+CREATE USER testeleve IDENTIFIED BY "MDP";
+GRANT SELECT ON PROJETWEB.* TO testeleve;
+GRANT INSERT, DELETE ON PROJETWEB.Intéresser TO testeleve;
+GRANT INSERT, DELETE ON PROJETWEB.Postuler TO testeleve;

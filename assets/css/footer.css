@@ -7,13 +7,16 @@ footer>ul>li
 
 footer
 {
+    text-align: center;
+    height: 50px;
     background-color: #516079;
     color: #C5C6C6;
     margin: 0px;
     padding: 10px;
     text-align: center;
     width: 99%;
-    
+    position:inherit;
+    bottom: 0;
 }
 
 @media(max-width:1024px) 
