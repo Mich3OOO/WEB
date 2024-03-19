@@ -32,7 +32,7 @@ class Sql
                 break;
         }
         try{
-            $this->connexion = new PDO("mysql:host=localhost;dbname=projetweb; port=3366", $user, $password);
+            $this->connexion = new PDO("mysql:host=localhost;dbname=presquauchaud; port=3366", $user, $password);
             print "Has logrado PUTO !";
         }
         catch(PDOException $e){
@@ -45,7 +45,11 @@ class Sql
         return $get->fetchAll()[0];
 
 
-        }
+    }
+    public function Set($sql){
+        $set = $this->connexion->prepare($sql);
+        $set->execute();
+    }
 }
 
 ?>  

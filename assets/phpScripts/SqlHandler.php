@@ -36,6 +36,7 @@ class SqlHandler
 
     public function SetValeur($sql)
     {
+        
        return null;
     }
 
