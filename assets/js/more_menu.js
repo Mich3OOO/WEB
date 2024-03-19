@@ -9,19 +9,19 @@
 //     console.log("no");
 // })
 
-function btn_plus() {
+function btn_plus(role) {
     if(document.getElementById("more-menu")==null){
-        // if(statut=="étudiant"){
-            // document.getElementsByClassName("more-menu")[0].insertAdjacentHTML("afterbegin","<div id='more-menu'><ul><li><a href='Profil.html'> Profil</a></li> \n <li><a href='Wishlist.html'>Wish-list</a></li> \n <li><a href='#'>Offre postulé</a></li> \n <li><a href='Authentification.htlm'>Deconnexion</a></li></div>");
+        // if(role=="étudiant"){
+            // document.getElementsByClassName("more-menu")[0].insertAdjacentHTML("afterbegin","<div id='more-menu'><ul><li><a href='./Profil.php'> Profil</a></li> \n <li><a href='./Wishlist.php'>Wish-list</a></li> \n <li><p>Offre postulé</p></li> \n <li><a href='./assets/phpScripts/desconexion.php'>Deconnexion</a></li></div>");
             // return false;
     //  }
-    //  if(statut=="pilote"){
-            document.getElementsByClassName("more-menu")[0].insertAdjacentHTML("afterbegin","<ul class='dropdown' id='more-menu'><li><a href='Profil.html'>Mon Profil</a></li> \n <li class='dropbtn' id='more_entreprise'>  <a href='#' > &#9668 Gerer Entreprise</a> <ul class='dropdown-content' id='more_more'><li><a href='#'>Ajouter Entreprise</a></li><li><a href='#'>Modifier Entreprise</a></li></ul></li> \n <a href='#'>Gerer un Stage </a> \n <a href='#'>Gerer un étudiant</a> \n <a href='Authentification.htlm'>Deconnexion</a></div>");
+    //  if(role=="pilote"){
+            document.getElementsByClassName("more-menu")[0].insertAdjacentHTML("afterbegin","<ul class='dropdown' id='more-menu'><li><a href='./Profil.php'>Mon Profil</a></li> \n <li class='dropbtn' id='more_entreprise'>  <p> &#9668 Gerer Entreprise</p> <ul class='more_more' id='entreprise'><li><a href='./Ajout_Entreprise.php'>Ajouter Entreprise</a></li><li><a href=''>Modifier Entreprise</a></li></ul></li> \n <li class='dropbtn' id='more_stage'><a href='#'>&#9668 Gerer un Stage </a> <ul  class='more_more' id='stage'><li><a href='#'>Ajouter Stage</a></li><li><a href='#'>Modifier Stage</a></li></ul></li>\n <li class='dropbtn' id='more_compte'><a href='#'>&#9668 Rechercher un étudiant</a></li> \n <li><a href='./assets/phpScripts/desconexion.php'>Deconnexion</a></li></div>");
             return false;
     //  }
-     //  if(statut=="admin"){
-        document.getElementsByClassName("more-menu")[0].insertAdjacentHTML("afterbegin","<div id='more-menu'><a href='Profil.html'>Mon Profil</a> \n <a href='#'>Gerer Entreprise</a> \n <a href='#'>Gerer un Stage </a> \n <a href='#'>Gerer un étudiant</a> \n <a href='Authentification.htlm'>Deconnexion</a></div>");
-        return false;
+     //  if(role=="admin"){
+            document.getElementsByClassName("more-menu")[0].insertAdjacentHTML("afterbegin","<ul class='dropdown' id='more-menu'><li><a href='./Profil.php'>Mon Profil</a></li> \n <li class='dropbtn' id='more_entreprise'>  <p> &#9668 Gerer Entreprise</p> <ul class='more_more' id='entreprise'><li><a href='./Ajout_Entreoruse.php'>Ajouter Entreprise</a></li><li><a href='#'>Modifier Entreprise</a></li></ul></li> \n <li class='dropbtn' id='more_stage'><a href='#'>&#9668 Gerer un Stage </a> <ul  class='more_more' id='stage'><li><a href='#'>Ajouter Stage</a></li><li><a href='#'>Modifier Stage</a></li></ul></li>\n <li class='dropbtn' id='more_compte'><a href='#'>&#9668 Gerer les utilisateurs</a><ul  class='more_more' id='compte'><li><a href='#'>Creer un compte</a></li><li><a href='#'>Modifier un compte</a></li></ul></li> \n <li><a href='./assets/phpScripts/desconexion.php'>Deconnexion</a></li></div>");
+            return false;
     //  }
     }
     document.getElementById("more-menu").remove();
