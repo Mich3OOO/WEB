@@ -12,7 +12,7 @@ class SqlHandler
         {
             case 1:
                 $user = "root";
-                $password = "alex50ab3";
+                $password = "";
                 break;
             
             case 2:
@@ -30,7 +30,7 @@ class SqlHandler
                 $password = "";
                 break;
         }
-        $this->Connection = new PDO("mysql:host=localhost;dbname=presquauchaud", $user, $password);
+        $this->Connection = new PDO("mysql:host=localhost;dbname=presquauchaud;port=3366", $user, $password);
 
     }
 
