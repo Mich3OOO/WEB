@@ -28,11 +28,3 @@ function btn_plus(role) {
     return false;
    };
 
-function btn_more_more(){
-    if(document.getElementById("more-more")==null){
-        document.getElementById('more_entreprise').insertAdjacentHTML("beforeend","<ul id='more-more'><li><a href='#'>Ajouter Entreprise</a></li><li><a href='#'>Modifier Entreprise</a></li></ul>");
-        return false;
-    }
-    document.getElementById("more-more").remove();
-}
-/* <button  id='btn_more_more' on='btn_more_more()'> </button> */

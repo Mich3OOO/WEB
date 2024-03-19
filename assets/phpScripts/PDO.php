@@ -3,17 +3,17 @@
 
 class Sql
 {
-    
+    private ?PDO $connexion;
     function __construct($Security_level) 
     {
-
+        
         $user = "";
         $password = "";
         switch ($Security_level) 
         {
             case 1:
                 $user = "root";
-                $password = "root";
+                $password = "alex50ab3";
                 break;
             
             case 2:
@@ -32,17 +32,20 @@ class Sql
                 break;
         }
         try{
-            $connexion = new PDO("mysql:host=localhost;dbname=projetweb", $user, $password);
+            $this->connexion = new PDO("mysql:host=localhost;dbname=projetweb", $user, $password);
             print "Has logrado PUTO !";
         }
         catch(PDOException $e){
             print "Erreur :". $e->getMessage() . "<br/>";
         }
+    }
+    public function GetFirstRow($sql){
+        $get = $this->connexion->prepare($sql);
+        $get->execute();
+        return $get->fetchAll()[0];
 
-        public function GetFirstRow($sql)
-    {
-        return $connexion->query($sql) -> fetch_row();
-    }
-    }
+
+        }
 }
+
 ?>  

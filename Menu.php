@@ -34,7 +34,7 @@
                             }
                             if($_SESSION[session_id()]["role"] == "etudiant")
                             {
-                                echo "<script> btn_plus('etudiant')</script>"
+                                echo "<script> btn_plus('etudiant')</script>";  
                             }
                             
                           ?>

@@ -12,7 +12,7 @@
 
         $_SESSION[session_id()]= array("MDP"=>$hash[0],"IDu"=>$hash[0],"role"=>$hash[2]);
 
-        header('Location: ../../../Connexion_étudiant.php');
+        header('Location: ../../../Connexion.php');
     }
     else
     {   
