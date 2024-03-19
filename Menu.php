@@ -21,28 +21,24 @@
                     <div class="more">
                         <button class="btn_more" onclick="btn_plus()">▽</button>
                         <div class="more-menu">
-                            <!-- <a>Mon Profil</a>
                           <?php
                             
-                            if($_SESSION[session_id()]["role"] == "Administrateur" or $_SESSION[session_id()]["role"]=="pilote" )
+                            if($_SESSION[session_id()]["role"] == "Administrateur" )
                             {
-                                echo "<a>Ajout entreprise</a>";
-                                echo "<a>Gérer les entreprise</a>";
-                            }
-                            if($_SESSION[session_id()]["role"] == "Administrateur")
-                            {
-                                
-                                echo "<a>Gérer utilisateur</a>";
+                                echo "<script> btn_plus('admin')</script>";
                             }
                             if($_SESSION[session_id()]["role"] == "pilote")
                             {
                                 
-                                echo "<a>Gérer étudiant</a>";
+                                echo "<script> btn_plus('pilote')</script>";
+                            }
+                            if($_SESSION[session_id()]["role"] == "etudiant")
+                            {
+                                echo "<script> btn_plus('etudiant')</script>"
                             }
                             
                           ?>
-                          <a>Statistiques</a>
-                          <a href="./assets/phpScripts/desconexion.php">Déconexion</a> -->
+                          <a href="./assets/phpScripts/desconexion.php">Déconexion</a>
                         </div>
                     </div>
                 </div>
