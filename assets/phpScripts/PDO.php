@@ -39,4 +39,5 @@ class PDO
             print "Erreur :". $e->getMessage() . "<br/>";
         }
     }
+}
 ?>  
