@@ -38,7 +38,6 @@
                             }
                             
                           ?>
-                          <a href="./assets/phpScripts/desconexion.php">Déconexion</a>
                         </div>
                     </div>
                 </div>
