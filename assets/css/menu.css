@@ -186,3 +186,11 @@ span{
     .more:hover .more-menu {
       display: block;
     }
+
+    @media(max-width:1024px) 
+    {
+        #block2{
+            flex-direction: column;
+            font-size: small;
+        }
+    }

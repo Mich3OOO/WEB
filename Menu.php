@@ -7,10 +7,10 @@
                 <div class="Barre">
                   <img class="NavImage" src="image/logo.png" href="...">
                   <ul>
-                    <li><a href="#">Stage</a></li>&nbsp;&nbsp;
-                    <li><a href="#">Entreprise</a></li>&nbsp;&nbsp;
-                    <li><a href="#">Mentions</a></li>&nbsp;&nbsp;
-                    <li><a href="#">F.A.Q</a></li>&nbsp;&nbsp;
+                    <li><a href="./Connexion.php">Stage</a></li>
+                    <li><a href="./Recherche_Entreprise.php">Entreprise</a></li>
+                    <li><a href="./Mentions_legales.php">Mentions</a></li>
+                    <li><a href="./FAQ.php">F.A.Q</a></li>
                   </ul>
                 </div>
             </div>
