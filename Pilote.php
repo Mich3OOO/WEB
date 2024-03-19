@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html lang="fr">
     <head>
+        <?=include "./assets/phpScripts/redirect.php" ?>
         <link rel="stylesheet" href="assets/css/Pilote.css">
         <link rel = "StyleSheet" href = "assets/css/Connexion.css">
         

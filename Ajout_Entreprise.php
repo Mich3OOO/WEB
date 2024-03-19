@@ -2,6 +2,7 @@
 
 <html lang="fr">
   <head>
+    <?=include "./assets/phpScripts/redirect.php" ?>
     <meta charset="utf-8" >
     <link href="assets/css/ajout_entreprise.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" >

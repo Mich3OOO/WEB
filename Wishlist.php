@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <?=include "./assets/phpScripts/redirect.php" ?>
         <link rel="stylesheet" href="./assets/css/Wishlist.css">
         <meta charset="utf-8" >
         <script async src="assets/js/Wishlist.js"></script>

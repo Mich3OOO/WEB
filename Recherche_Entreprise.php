@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <?=include "./assets/phpScripts/redirect.php" ?>
         <link rel="stylesheet" href="./assets/css/Recherche_Entreprise.css">
         <meta charset="utf-8" >
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">

@@ -2,6 +2,7 @@
 
 <html lang="fr">
   <head>
+    <?=include "./assets/phpScripts/redirect.php" ?>
     <meta charset="utf-8" >
     <link href="assets/css/stage.css" rel="stylesheet" type="text/css" />
    

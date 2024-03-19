@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <?=include "./assets/phpScripts/redirect.php" ?>
         <link rel="stylesheet" href="./assets/css/stats.css">
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script async src="assets/js/stats.js"></script>

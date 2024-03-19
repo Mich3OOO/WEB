@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <?=include "./assets/phpScripts/redirect.php" ?>
         <link rel="stylesheet" href="assets/css/Postuler.css">
         <meta charset="utf-8" >
         <title>Postuler</title>
