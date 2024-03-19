@@ -48,7 +48,7 @@ class Sql
     }
     public function Set($sql){
         $set = $this->connexion->prepare($sql);
-        $set->execute();
+        return $set->execute();
     }
 }
 
