@@ -1,7 +1,7 @@
 <?php
 
 
-class PDO
+class Sql
 {
     
     function __construct($Security_level) 
