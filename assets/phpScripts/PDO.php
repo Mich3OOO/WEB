@@ -38,6 +38,11 @@ class PDO
         catch(PDOException $e){
             print "Erreur :". $e->getMessage() . "<br/>";
         }
+
+        public function GetFirstRow($sql)
+    {
+        return $connexion->query($sql) -> fetch_row();
+    }
     }
 }
 ?>  
