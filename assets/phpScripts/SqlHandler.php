@@ -31,7 +31,7 @@ class SqlHandler
                 $PSW = "";
                 break;
         }
-        $this->Connection = new mysqli("localhost", $User,$PSW, "PROJETWEB", 3308);
+        $this->Connection = new mysqli("localhost", $User,$PSW, "presquauchaud", 3308);
 
     }
     function __destruct() 
@@ -63,7 +63,7 @@ class SqlHandler
 
     public function Getjson($sql)
     {
-        return $this->Connection->query($sql) -> fetch_all();# json_encoder
+        return json_encode($this->Connection->query($sql) -> fetch_all());# json_encoder
     }   
 }
 
