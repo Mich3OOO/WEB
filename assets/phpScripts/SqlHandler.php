@@ -3,67 +3,61 @@
 class SqlHandler
 {
     
-    private ?mysqli $Connection;
+    private ?PDO $Connection;
     function __construct($Security_level) 
     {
-
-        $User = "";
-        $PSW = "";
+        $user = "";
+        $password = "";
         switch ($Security_level) 
         {
             case 1:
-                $User = "root";
-                $PSW = "root";
+                $user = "root";
+                $password = "alex50ab3";
                 break;
             
             case 2:
-                $User = "root";
-                $PSW = "";
+                $user = "root";
+                $password = "";
                 break;
 
             case 3:
-                $User = "root";
-                $PSW = "";
+                $user = "root";
+                $password = "";
                 break;
             
             default:
-                $User = "root";
-                $PSW = "";
+                $user = "root";
+                $password = "";
                 break;
         }
-        $this->Connection = new mysqli("localhost", $User,$PSW, "PROJETWEB", 3308);
+        $this->Connection = new PDO("mysql:host=localhost;dbname=presquauchaud", $user, $password);
 
-    }
-    function __destruct() 
-    {
-        $this->Connection->close();
     }
 
     public function SetValeur($sql)
     {
-        try 
-        {
-            $this->connection->query($sql);
-            echo 'DONE PUTO!';
-        }
-        catch(Exception($e)){
-            echo 'ERROR PUTO!';
-        }
+       return null;
     }
 
     public function GetFirstRow($sql)
     {
-        return $this->Connection->query($sql) -> fetch_row();
+        $get = $this->Connection->prepare($sql);
+        $get->execute();
+        return $get->fetchAll()[0];
     }
 
     public function GetArray($sql)
     {
-        return $this->Connection->query($sql) -> fetch_all();
+        $get = $this->Connection->prepare($sql);
+        $get->execute();
+        return $get->fetchAll();
     }
 
     public function Getjson($sql)
     {
-        return $this->Connection->query($sql) -> fetch_all();# json_encoder
+        $get = $this->Connection->prepare($sql);
+        $get->execute();
+        return json_encode($get->fetchAll());
     }   
 }
 
