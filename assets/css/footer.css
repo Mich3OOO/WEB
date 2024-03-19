@@ -1,3 +1,7 @@
+body
+{
+    height: 100%;
+}
 footer>ul>li
 {
     margin: 10px;
@@ -8,7 +12,6 @@ footer>ul>li
 footer
 {
     text-align: center;
-    height: 50px;
     background-color: #516079;
     color: #C5C6C6;
     margin: 0px;

@@ -58,7 +58,8 @@ a{
     height: 400px;
 }
 .filtre-element{
-    flex-direction: row;   
+    flex-direction: row; 
+    min-height: 90vh;
 }
 
 .filtre select{
