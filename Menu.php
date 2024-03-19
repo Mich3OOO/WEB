@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="assets/css/menu.css">
-
+<link href="dist/hamburgers.css" rel="stylesheet">
+<script src="assets/js/more_menu.js"></script>
 <header>
     <nav>
         <div id="flex">
@@ -20,28 +21,23 @@
                     <div class="more">
                         <button class="btn_more" onclick="btn_plus()">▽</button>
                         <div class="more-menu">
-                            <a>Mon Profile</a>
                           <?php
                             
-                            if($_SESSION[session_id()]["role"] == "Administrateur" or $_SESSION[session_id()]["role"]=="pilote" )
+                            if($_SESSION[session_id()]["role"] == "Administrateur" )
                             {
-                                echo "<a>Ajout entreprise</a>";
-                                echo "<a>Gérer les entreprise</a>";
-                            }
-                            if($_SESSION[session_id()]["role"] == "Administrateur")
-                            {
-                                
-                                echo "<a>Gérer utilisateur</a>";
+                                echo "<script> btn_plus('admin')</script>";
                             }
                             if($_SESSION[session_id()]["role"] == "pilote")
                             {
                                 
-                                echo "<a>Gérer étudiant</a>";
+                                echo "<script> btn_plus('pilote')</script>";
+                            }
+                            if($_SESSION[session_id()]["role"] == "etudiant")
+                            {
+                                echo "<script> btn_plus('etudiant')</script>";  
                             }
                             
                           ?>
-                          <a>Statistiques</a>
-                          <a href="./assets/phpScripts/desconexion.php">Déconexion3</a>
                         </div>
                     </div>
                 </div>

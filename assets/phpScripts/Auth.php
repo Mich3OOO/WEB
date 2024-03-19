@@ -1,9 +1,9 @@
 <?php
-    include "SqlHandler.php";
-    $con = new SqlHandler(1);
+    include "PDO.php";
+    $connexion = new Sql(1);
 
     
-    $hash = $con->GetFirstRow("Select MdpU, IDu , role from `utilisateur` where MailU ='".$_GET["Email"]."';");
+    $hash = $connexion->GetFirstRow("Select MdpU, IDu , role from `utilisateur` where MailU ='".$_GET["Email"]."';");
 
 
     if (password_verify($_GET["Mot-de-passe"],$hash[0])== 1)

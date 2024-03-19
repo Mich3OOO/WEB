@@ -37,7 +37,7 @@ h{
 }
 
 #block1{
-    width: 150px;
+    width:200px;
     white-space : nowrap; 
     border: 2px black solid; 
     align-items: center;
@@ -63,6 +63,8 @@ span{
 .Barre li{
     float: left; /* met le texte aligner*/
 }
+
+
 
 .Barre a{
     display: block; /*Toute la surface sera cliquable*/
@@ -102,9 +104,63 @@ span{
     .more-menu {
       position: absolute;
       background-color: #f9f9f9;
-      text-align: left;
+      text-align: right;
+      right: 0px;
     }
 
+    .more-menu ul{
+        list-style: none;
+    }
+
+.dropbtn{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+ }
+#entreprise{
+    right: 150ox;
+}
+#stage{
+    right: 165px;
+}
+#compte{
+    right: 210px;
+}
+#more-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.more_more{
+    display: none;
+    position: absolute;
+    right: 183px;
+    padding: 2px 5px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+.more_more a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.more_more a:hover {background-color: #ddd;}
+
+#more_entreprise:hover { .more_more {display: block;}}
+
+.more_more a:hover {background-color: #ddd;}
+
+#more_stage:hover { .more_more {display: block;}}
+
+#more_compte:hover { .more_more {display: block;}}
+
+/* #more-menu:hover #more_entreprise {background-color: #909290;} */
+
+    
 /* Menu appuyer sur le bouton sur "a" */
     .more-menu a {
       color: black;
