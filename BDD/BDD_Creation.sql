@@ -8,6 +8,7 @@ CREATE TABLE utilisateur(
    role VARCHAR(14) NOT NULL,
    PRIMARY KEY(IDu),
    UNIQUE(MailU)
+   FOREIGN KEY(ID_adresse) REFERENCES adresse(ID_adresse)
 );
 
 CREATE TABLE campus(
