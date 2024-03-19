@@ -14,6 +14,7 @@ class Sql
             case 1:
                 $user = "root";
                 $password = "";
+                $password = "";
                 break;
             
             case 2:
