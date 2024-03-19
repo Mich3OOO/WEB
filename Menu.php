@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="assets/css/menu.css">
-<link href="dist/hamburgers.css" rel="stylesheet">
 <script src="assets/js/more_menu.js"></script>
 <header>
     <nav>
@@ -19,26 +18,26 @@
                 <h>Nom | Prénom</h>
                 <div class="navbar" id="nav">
                     <div class="more">
-                        <button class="btn_more" onclick="btn_plus()">▽</button>
-                        <div class="more-menu">
-                          <?php
+                        <button class="btn_more" onclick=<?php
                             
+                        
                             if($_SESSION[session_id()]["role"] == "Administrateur" )
                             {
-                                echo "<script> btn_plus('admin')</script>";
+                                echo "btn_plus('admin')";
                             }
-                            if($_SESSION[session_id()]["role"] == "pilote")
+                            if($_SESSION[session_id()]["role"] == "Pilote")
                             {
                                 
-                                echo "<script> btn_plus('pilote')</script>";
+                                echo "btn_plus('pilote')";
                             }
-                            if($_SESSION[session_id()]["role"] == "etudiant")
+                            if($_SESSION[session_id()]["role"] == "Etudiant")
                             {
-                                echo "<script> btn_plus('etudiant')</script>";  
+                                echo "btn_plus('etudiant')";  
                             }
                             
-                          ?>
-                          <a href="./assets/phpScripts/desconexion.php">Déconexion</a>
+                          ?>>▽</button>
+                        <div class="more-menu">
+                          
                         </div>
                     </div>
                 </div>

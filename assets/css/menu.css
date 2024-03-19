@@ -131,6 +131,13 @@ span{
     display: inline-block;
 }
 
+.p_plus{
+    cursor: pointer;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+
 .more_more{
     display: none;
     position: absolute;
@@ -141,7 +148,7 @@ span{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
 
-.more_more a {
+.more_more a{
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -149,10 +156,12 @@ span{
 }
 
 .more_more a:hover {background-color: #ddd;}
+.more_more p:hover {background-color: #ddd;}
 
 #more_entreprise:hover { .more_more {display: block;}}
 
 .more_more a:hover {background-color: #ddd;}
+.more_more p:hover {background-color: #ddd;}
 
 #more_stage:hover { .more_more {display: block;}}
 
@@ -162,13 +171,13 @@ span{
 
     
 /* Menu appuyer sur le bouton sur "a" */
-    .more-menu a {
+    .more-menu a{
       color: black;
       padding: 5px 5px;
       text-decoration: none;
       display: block;
     }
-    .navbar a:hover, .more:hover .btn {
+    .navbar a:hover,p:hover, .more:hover .btn {
       background-color: #555555;
       color: white;
     }

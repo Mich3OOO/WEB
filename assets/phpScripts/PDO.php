@@ -13,7 +13,7 @@ class Sql
         {
             case 1:
                 $user = "root";
-                $password = "alex50ab3";
+                $password = "";
                 break;
             
             case 2:
@@ -32,7 +32,7 @@ class Sql
                 break;
         }
         try{
-            $this->connexion = new PDO("mysql:host=localhost;dbname=projetweb", $user, $password);
+            $this->connexion = new PDO("mysql:host=localhost;dbname=presquauchaud; port=3366", $user, $password);
             print "Has logrado PUTO !";
         }
         catch(PDOException $e){
@@ -43,8 +43,6 @@ class Sql
         $get = $this->connexion->prepare($sql);
         $get->execute();
         return $get->fetchAll()[0];
-
-
         }
 }
 
