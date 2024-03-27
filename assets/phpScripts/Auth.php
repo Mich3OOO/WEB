@@ -1,22 +1,24 @@
 <?php
     include "PDO.php";
-    $connexion = new Sql(1);
+    $connexion = new Sql(2);
 
     
-    $hash = $connexion->GetFirstRow("Select MdpU, IDu , role from `utilisateur` where MailU ='".$_GET["Email"]."';");
+    $hash = $connexion->GetFirstRow("Select IDu,MdpU, role from `utilisateur` where MailU ='".$_GET["Email"]."';");
 
 
-    if (password_verify($_GET["Mot-de-passe"],$hash[0])== 1)
+    if (password_verify($_GET["Mot-de-passe"],$hash[1])== 1)
     {
         session_start();
 
-        $_SESSION[session_id()]= array("MDP"=>$hash[0],"IDu"=>$hash[0],"role"=>$hash[2]);
-
-        header('Location: ../../../Connexion.php');
+        $_SESSION["IDu"]= $hash[0] ;
+        $_SESSION["MDP"]= $hash[1] ;
+        $_SESSION["role"]= $hash[2] ;
+        header('Location: ../../../recherche/');
     }
     else
-    {   
-        header('Location: ../../../Authentification.php');
+    {  
+        
+        header('Location: ../../../login/');
     
     }
 

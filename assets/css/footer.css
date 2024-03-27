@@ -13,15 +13,13 @@ footer>ul>li
 footer
 {
     position: absolute;
-    bottom: 0px;
+    bottom: 0px; left: 0px;
     background-color: #516079;
     color: #C5C6C6;
     margin: 0px;
     padding: 10px;
     text-align: center;
-    width: 99%;
-    position:inherit;
-    bottom: 0;
+    width: -webkit-fill-available;
 }
 
 @media(max-width:1024px) 

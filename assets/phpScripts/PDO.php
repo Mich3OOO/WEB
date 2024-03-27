@@ -33,9 +33,7 @@ class Sql
                 break;
         }
         try{
-            $this->connexion = new PDO("mysql:host=localhost;dbname=presquauchaud; port=3366", $user, $password);
-            print "Has logrado PUTO !";
-        }
+            $this->connexion = new PDO("mysql:host=localhost;dbname=presquauchaud; port=3366", $user, $password);        }
         catch(PDOException $e){
             print "Erreur :". $e->getMessage() . "<br/>";
         }
@@ -45,6 +43,22 @@ class Sql
         $get->execute();
         return $get->fetchAll()[0];
         }
+
+    public function GetArray($sql)
+    {
+        $get = $this->connexion->prepare($sql);
+        $get->execute();
+        return $get->fetchAll();
+    }
+
+    public function Getjson($sql)
+    {
+        $get = $this->connexion->prepare($sql);
+        $get->execute();
+        return json_encode($get->fetchAll());
+    }   
+    
 }
+    
 
 ?>  
