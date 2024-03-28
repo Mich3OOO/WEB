@@ -66,7 +66,7 @@ CREATE TABLE admin(
 );
 
 CREATE TABLE Entreprise(
-   IDE CHAR(50),
+   IDE CHAR(50) NOT NULL,
    NomE VARCHAR(50),
    descr VARCHAR(1000),
    MailE VARCHAR(50),
