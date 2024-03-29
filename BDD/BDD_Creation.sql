@@ -11,7 +11,7 @@ CREATE TABLE Secteur_d_activité(
 );
 
 CREATE TABLE departement(
-   ID_departement SMALLINT,
+   ID_departement SMALLINT NOT NULL AUTO_INCREMENT,
    departement VARCHAR(50),
    PRIMARY KEY(ID_departement)
 );
@@ -23,7 +23,7 @@ CREATE TABLE types_de_promotions(
 );
 
 CREATE TABLE ville(
-   Code_Post INT,
+   Code_Post INT NOT NULL AUTO_INCREMENT,
    ville VARCHAR(50),
    ID_departement SMALLINT NOT NULL,
    PRIMARY KEY(Code_Post),
@@ -41,7 +41,7 @@ CREATE TABLE adresse(
 );
 
 CREATE TABLE utilisateur(
-   IDu INT,
+   IDu INT NOT NULL AUTO_INCREMENT,
    MdpU VARCHAR(50),
    NomU VARCHAR(50),
    PrenomU VARCHAR(50),
@@ -53,20 +53,20 @@ CREATE TABLE utilisateur(
 );
 
 CREATE TABLE Pilote(
-   IDu INT,
+   IDu INT NOT NULL AUTO_INCREMENT,
    EtudeP VARCHAR(50),
    PRIMARY KEY(IDu),
    FOREIGN KEY(IDu) REFERENCES utilisateur(IDu)
 );
 
 CREATE TABLE admin(
-   IDu INT,
+   IDu INT NOT NULL AUTO_INCREMENT,
    PRIMARY KEY(IDu),
    FOREIGN KEY(IDu) REFERENCES utilisateur(IDu)
 );
 
 CREATE TABLE Entreprise(
-   IDE CHAR(50) NOT NULL,
+   IDE CHAR(50),
    NomE VARCHAR(50),
    descr VARCHAR(1000),
    MailE VARCHAR(50),
@@ -107,7 +107,7 @@ CREATE TABLE promotion(
 );
 
 CREATE TABLE etudiant(
-   IDu INT,
+   IDu INT NOT NULL AUTO_INCREMENT,
    IDProm INT NOT NULL,
    PRIMARY KEY(IDu),
    FOREIGN KEY(IDu) REFERENCES utilisateur(IDu),
@@ -115,7 +115,7 @@ CREATE TABLE etudiant(
 );
 
 CREATE TABLE interesser(
-   IDu INT,
+   IDu INT NOT NULL AUTO_INCREMENT,
    IDoffre INT,
    PRIMARY KEY(IDu, IDoffre),
    FOREIGN KEY(IDu) REFERENCES etudiant(IDu),
@@ -123,7 +123,7 @@ CREATE TABLE interesser(
 );
 
 CREATE TABLE Postuler(
-   IDu INT,
+   IDu INT NOT NULL AUTO_INCREMENT,
    IDoffre INT,
    PRIMARY KEY(IDu, IDoffre),
    FOREIGN KEY(IDu) REFERENCES etudiant(IDu),
