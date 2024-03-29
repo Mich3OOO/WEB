@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-27 00:41:07
+/* Smarty version 4.5.1, created on 2024-03-28 13:36:15
   from 'C:\Users\User\Desktop\CESI\A2\B4\porjet\WEB\assets\html\Menu.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_66035d1384ab05_78375038',
+  'unifunc' => 'content_6605643f4fee53_14468694',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a85b2458c5a287396701ed99a1c55f59c025c172' => 
     array (
       0 => 'C:\\Users\\User\\Desktop\\CESI\\A2\\B4\\porjet\\WEB\\assets\\html\\Menu.html',
-      1 => 1711496394,
+      1 => 1711629373,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66035d1384ab05_78375038 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6605643f4fee53_14468694 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="../assets/css/menu.css">
 <?php echo '<script'; ?>
  src="../assets/js/more_menu.js"><?php echo '</script'; ?>

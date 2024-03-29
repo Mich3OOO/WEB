@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-28 00:14:19
+/* Smarty version 4.5.1, created on 2024-03-28 13:36:01
   from 'C:\Users\User\Desktop\CESI\A2\B4\porjet\WEB\assets\tpl\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6604a84bd86b74_87160490',
+  'unifunc' => 'content_66056431420f42_65920348',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac212a81f931670e0af56094e0bbb7dee2d79c56' => 
     array (
       0 => 'C:\\Users\\User\\Desktop\\CESI\\A2\\B4\\porjet\\WEB\\assets\\tpl\\main.tpl',
-      1 => 1711550924,
+      1 => 1711629125,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../html/Footer.html' => 1,
   ),
 ),false)) {
-function content_6604a84bd86b74_87160490 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66056431420f42_65920348 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -36,6 +36,9 @@ function content_6604a84bd86b74_87160490 (Smarty_Internal_Template $_smarty_tpl)
 ">
         <meta name="description" content="<?php echo $_smarty_tpl->tpl_vars['description']->value;?>
 ">
+
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
         <link href="../assets/css/<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
 .css" rel="stylesheet" type="text/css" />
         <?php echo '<script'; ?>

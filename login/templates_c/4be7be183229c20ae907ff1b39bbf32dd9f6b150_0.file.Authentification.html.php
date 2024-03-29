@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-27 09:07:48
+/* Smarty version 4.5.1, created on 2024-03-28 12:06:15
   from 'C:\Users\User\Desktop\CESI\A2\B4\porjet\WEB\assets\html\Authentification.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6603d3d4003374_17756972',
+  'unifunc' => 'content_66054f27a9b374_74609889',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4be7be183229c20ae907ff1b39bbf32dd9f6b150' => 
     array (
       0 => 'C:\\Users\\User\\Desktop\\CESI\\A2\\B4\\porjet\\WEB\\assets\\html\\Authentification.html',
-      1 => 1711495591,
+      1 => 1711623973,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603d3d4003374_17756972 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66054f27a9b374_74609889 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html lang="fr">
