@@ -4,7 +4,13 @@ require_once('../smarty/libs/Smarty.class.php');
 include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
 
-$smarty->assign('PHTML', 'pilote.html');
+$smarty->assign('name', 'pilote');
+$smarty->assign('titre', 'acceuille');
+$smarty->assign('keywords', 'algo');
+$smarty->assign('description', 'algo');
+
+$smarty->assign('_SESSION', $_SESSION);
+
 
 $smarty->display("../assets/tpl/main.tpl");
 

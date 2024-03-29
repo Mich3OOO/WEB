@@ -57,7 +57,10 @@ class Sql
         $get->execute();
         return json_encode($get->fetchAll());
     }   
-    
+    public function Set($sql){
+        $set = $this->connexion->prepare($sql);
+        return $set->execute();
+    }
 }
     
 

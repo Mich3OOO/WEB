@@ -48,7 +48,7 @@ if(isset($_GET["ville"]) and isset($_GET["reg"]) and isset($_GET["Secteur"]) and
     
     $sql = $sql . " ;";
 
-    echo $sql;
+    echo $con->Getjson($sql);
     
     
 }

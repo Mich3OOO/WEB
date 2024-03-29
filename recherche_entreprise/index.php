@@ -5,7 +5,12 @@ require_once('../smarty/libs/Smarty.class.php');
 
 $smarty = new Smarty();
 
-$smarty->assign('PHTML', 'recherche_entreprise.html');
+$smarty->assign('name', 'recherche_entreprise');
+$smarty->assign('titre', 'acceuille');
+$smarty->assign('keywords', 'algo');
+$smarty->assign('description', 'algo');
+
+$smarty->assign('_SESSION', $_SESSION);
 
 $smarty->display("../assets/tpl/main.tpl");
 

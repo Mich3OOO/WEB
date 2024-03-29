@@ -33,7 +33,7 @@ function updateDL(event,api)
     {
         fetch(api+event.target.value).then(r=> r.json()).then(data =>{
         
-        console.log(data);
+
 
         for(let i =0 ; i< data.length;i++)
         {   
@@ -99,7 +99,8 @@ function removeFiltre(event)
 
 function search(event)
 {
-    let stagesDisp = [1,2,3,4,5,6,7,8,9,11,22,33,44,55,66,77,88,99,111,222,333,444,555,666,777,888,999]
+    fetch("http://localhost/assets/phpScripts/search.php?ville[]=ar&reg[]&Secteur[]&Date&Duree=3&Contrat[]",{method: 'GET'}).then(r=> r.json()).then(data =>console.log(data));
+    let stagesDisp = [1,2,3,4,5,6]
     let OffreCon = document.getElementById("offres");
 
     for(let i = OffreCon.children.length-1; i>=0; i--)
