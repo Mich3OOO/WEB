@@ -14,5 +14,4 @@ $smarty->assign('_SESSION', $_SESSION);
 $smarty->display("../assets/tpl/main.tpl");
 
 
-
 ?>
