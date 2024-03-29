@@ -6,8 +6,10 @@ CREATE TABLE utilisateur(
    Date_NaisU DATE,
    MailU VARCHAR(50) NOT NULL,
    role VARCHAR(14) NOT NULL,
+   ID_adresse INT NOT NULL,
    PRIMARY KEY(IDu),
-   UNIQUE(MailU)
+   UNIQUE(MailU),
+    FOREIGN KEY(ID_adresse) REFERENCES adresse(ID_adresse)
 );
 
 CREATE TABLE campus(
