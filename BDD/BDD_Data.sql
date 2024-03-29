@@ -36,6 +36,13 @@ INSERT INTO Utilisateur (IDu, MdpU, NomU, PrenomU, Date_NaisU, MailU, ID_adresse
 (14, '$2y$10$fcRw9BVENrz1sL.iMc224epQi4btsxJvrnrmQxXlIO4gv6QcmuxKW', 'Chen', 'William', '1993-04-25', 'william.chen@example.com', 3),
 (15, '$2y$10$z0Ly1MFyvHAFXM.t5luLSeWjZ80amAlLRH.25Y0pWP2BjKZZQUhf.', 'Wang', 'Linda', '1986-10-17', 'linda.wang@example.com', 4);
 
+INSERT INTO pilote(IDu, EtudeP) VALUES
+(13, 'Informatique'),
+(14, 'Santé');
+
+INSERT INTO admin(IDu) VALUES
+(9);
+
 INSERT INTO campus (NomC) 
 VALUES 
 ('Campus Paris'),
@@ -58,7 +65,7 @@ VALUES
 ('Communication');
 
 
-INSERT INTO promotion (Promotion, IDT, IDu, idCentre) 
+INSERT INTO promotion (Promotion, ID_Type, IDu, idCentre) 
 VALUES 
 ('Promotion 2023', 1, 13, 1),
 ('Promotion 2022', 2, 13, 2),
@@ -74,12 +81,12 @@ VALUES
 (4, 4);
 
 
-INSERT INTO Entreprise (IDE, NomE, descr, MailE, TelE, `Site`, Moyenne, IDu, IdSec, ID_adresse) 
+INSERT INTO Entreprise (IDE, NomE, descr, MailE, TelE, Site, Moyenne, IdSec, ID_adresse) 
 VALUES 
-('1', 'Tech Solutions', 'Société spécialisée dans le développement logiciel.', 'contact@techsolutions.com', 1234567890, 'https://www.techsolutions.com', 4.5, 2, 1, 1),
-('2', 'Finance Corp', 'Firme de conseil financier offrant des services de gestion de patrimoine.', 'info@financecorp.com', 987654321, 'https://www.financecorp.com', 4.2, 13, 2, 2),
-('3', 'HealthCare Innovations', 'Entreprise travaillant sur des solutions technologiques pour le domaine de la santé.', 'info@healthcareinnovations.com', 654321987, 'https://www.healthcareinnovations.com', 4.8, 2, 3, 3),
-('4', 'Marketing Experts', 'Agence de marketing offrant des services de stratégie et de publicité.', 'contact@marketingexperts.com', 789456123, 'https://www.marketingexperts.com', 4.0, 13, 4, 4);
+('1', 'Tech Solutions', 'Société spécialisée dans le développement logiciel.', 'contact@techsolutions.com', 1234567890, 'https://www.techsolutions.com', 4.5, 1, 1),
+('2', 'Finance Corp', 'Firme de conseil financier offrant des services de gestion de patrimoine.', 'info@financecorp.com', 987654321, 'https://www.financecorp.com', 4.2, 2, 2),
+('3', 'HealthCare Innovations', 'Entreprise travaillant sur des solutions technologiques pour le domaine de la santé.', 'info@healthcareinnovations.com', 654321987, 'https://www.healthcareinnovations.com', 4.8, 3, 3),
+('4', 'Marketing Experts', 'Agence de marketing offrant des services de stratégie et de publicité.', 'contact@marketingexperts.com', 789456123, 'https://www.marketingexperts.com', 4.0, 4, 4);
 
 
 INSERT INTO Offre (Duree, Poste, Competence, remune, Date_Stage, Nb_place, Descr, IDE) 
@@ -89,12 +96,17 @@ VALUES
 (4, 'Ingénieur en biotechnologie', 'Biologie moléculaire, Génie génétique, Microbiologie', 1000, '2024-06-10', 2, "Poste d'ingénieur en biotechnologie pour développement de nouveaux médicaments.", 3),
 (5, 'Chargé de marketing digital', 'Stratégie de contenu, Réseaux sociaux, Analyse de données', 900, '2024-07-01', 4, 'Chargé de marketing digital pour campagnes publicitaires innovantes.', 4);
 
-INSERT INTO Viser (IDoffre, IDT) 
+INSERT INTO interesser (IDu, IDoffre) 
 VALUES 
 (1, 1),
-(2, 2),
+(5, 2),
 (3, 3),
 (4, 4);
+
+INSERT INTO postuler (IDu, IDoffre) 
+VALUES 
+(5, 1),
+(1, 2); 
 
 CREATE USER testadmin IDENTIFIED BY "MDP";
 GRANT ALL ON PROJETWEB.* TO testadmin WITH GRANT OPTION;
@@ -102,5 +114,5 @@ CREATE USER testpilote IDENTIFIED BY "MDP";
 GRANT SELECT, INSERT, DELETE, UPDATE ON PROJETWEB.* TO testpilote;
 CREATE USER testeleve IDENTIFIED BY "MDP";
 GRANT SELECT ON PROJETWEB.* TO testeleve;
-GRANT INSERT, DELETE ON PROJETWEB.Intéresser TO testeleve;
-GRANT INSERT, DELETE ON PROJETWEB.Postuler TO testeleve;
+GRANT INSERT, DELETE ON PROJETWEB.interesser TO testeleve;
+GRANT INSERT, DELETE ON PROJETWEB.postuler TO testeleve;
