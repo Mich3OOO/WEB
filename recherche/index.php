@@ -8,6 +8,8 @@ $smarty->assign('name', 'connexion');
 $smarty->assign('titre', 'acceuille');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
+session_start();
+$smarty->assign('_SESSION', $_SESSION);
 
 $smarty->display("../assets/tpl/main.tpl");
 

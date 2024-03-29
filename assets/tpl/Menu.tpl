@@ -19,24 +19,22 @@
                 <div class="navbar" id="nav">
                     <div class="more">
                         
-                        <button class="btn_more" onclick="">▽</button><!--<?php
+                        <button class="btn_more" onclick={if $_SESSION["role"] == "Administrateur" }
+                        btn_plus('admin');
+                    {/if}
+                    {if $_SESSION["role"] == "Pilote" }
+                        btn_plus('pilote');
+                    
+                    {/if}
+                    {if $_SESSION["role"] == "Etudiant" }
+                        btn_plus('etudiant');  
+                    {/if}>  ▽</button>
+                        
                             
                         
-                            if($_SESSION[session_id()]["role"] == "Administrateur" )
-                            {
-                                echo "btn_plus('admin')";
-                            }
-                            if($_SESSION[session_id()]["role"] == "Pilote")
-                            {
-                                
-                                echo "btn_plus('pilote')";
-                            }
-                            if($_SESSION[session_id()]["role"] == "Etudiant")
-                            {
-                                echo "btn_plus('etudiant')";  
-                            }
                             
-                          ?> -->
+                            
+                          
                         <div class="more-menu">
                           
                         </div>

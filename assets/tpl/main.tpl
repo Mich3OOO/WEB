@@ -13,7 +13,7 @@
         <script src="../assets/js/sw.js"></script>
     </head>
     <body>
-        {include "../html/Menu.html"}
+        {include "../tpl/Menu.tpl"}
         {include "../html/`$name`.html" }
 
 
