@@ -4,7 +4,7 @@ include "../assets/phpScripts/redirect.php";
 
 $smarty = new Smarty();
 
-$smarty->assign('name', 'mentions_legales.html');
+$smarty->assign('name', 'mentions_legales');
 
 $smarty->assign('titre', 'acceuille');
 $smarty->assign('keywords', 'algo');
