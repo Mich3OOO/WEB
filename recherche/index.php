@@ -4,12 +4,13 @@ require_once('../smarty/libs/Smarty.class.php');
 include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
 
-$smarty->assign('name', 'connexion');
+$smarty->assign('dirfile', '../assets/html/connexion.html');
+$smarty->assign('dircss', '../assets/css/connexion.css');
+$smarty->assign('dirjs', '../assets/js/connexion.js');
 $smarty->assign('titre', 'acceuille');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 
-$smarty->assign('_SESSION', $_SESSION);
 
 $smarty->assign('_SESSION', $_SESSION);
 

@@ -1,30 +1,29 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-30 13:28:37
+/* Smarty version 4.5.1, created on 2024-03-30 13:45:06
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660805754d01d4_82908150',
+  'unifunc' => 'content_660809528bcc21_43825391',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a821dad9c599db6e56b273aed19dce10e2cbab2b' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\main.tpl',
-      1 => 1711801645,
+      1 => 1711802636,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:../tpl/Menu.tpl' => 1,
-    'file:../html/".((string)$_smarty_tpl->tpl_vars[\'name\']->value).".html' => 1,
     'file:../html/Footer.html' => 1,
     'file:../html/Upbutton.html' => 1,
   ),
 ),false)) {
-function content_660805754d01d4_82908150 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660809528bcc21_43825391 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -39,11 +38,11 @@ function content_660805754d01d4_82908150 (Smarty_Internal_Template $_smarty_tpl)
 
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
-        <link href="../assets/css/<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
-.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $_smarty_tpl->tpl_vars['dircss']->value;?>
+" rel="stylesheet" type="text/css" />
         <?php echo '<script'; ?>
- src="../assets/js/<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
-.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['dirjs']->value;?>
+"><?php echo '</script'; ?>
 >
         
         <link rel="manifest" href="../manifest.json">
@@ -54,7 +53,7 @@ function content_660805754d01d4_82908150 (Smarty_Internal_Template $_smarty_tpl)
     <body>
         <?php $_smarty_tpl->_subTemplateRender("file:../tpl/Menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-        <?php $_smarty_tpl->_subTemplateRender("file:../html/".((string)$_smarty_tpl->tpl_vars['name']->value).".html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+        <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['dirfile']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
 
         <?php $_smarty_tpl->_subTemplateRender("file:../html/Footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
