@@ -1,6 +1,6 @@
 <?php
     include "PDO.php";
-    $connexion = new Sql(2);
+    $connexion = new Sql(1);
 
     
     $hash = $connexion->GetFirstRow("Select IDu,MdpU, role from `utilisateur` where MailU ='".$_GET["Email"]."';");

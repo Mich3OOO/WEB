@@ -30,14 +30,14 @@
             <li>
                 <input id = "SécteurA" list="DLSécteurA" class="MChoise">
                 <datalist id = "DLSécteurA">
-                    <!--PHp-->
+                    
                 </datalist>
                 <div id = "SécteurAList" class="tagcontent">
                 </div>
             </li>
 
             <li>
-                <label for="Date_début">Date début</label>
+                <label for="Date_début">Offres à partir du :</label>
             </li>
             <li>
                 <input type="date" id="Date_début">
@@ -49,28 +49,12 @@
             <li>
                 <input type = "number" id="durée">
             </li>
-
-            
-            <li>
-                <label for="TypeContrat">Type de contrat</label>
-            </li>
-            <li>
-                <input id = "TypeContrat" list="DLTypeContrat" class="MChoise">
-                <datalist id = "DLTypeContrat">
-                    <option value="CDD"></option>
-                    <option value="CDI"></option>
-                    <option value="Stage"></option>
-                    <option value="Alternance"></option>
-                </datalist>
-                <div id = "TypeContratList" class="tagcontent">
-                </div>
-            </li>
             
         </ul>
         <div id = "RechercheOffre">
-            <input list="Stages" id="search" placeholder="🔎︎ search">
+            <input list="DLsearch" id="search" placeholder="🔎︎ search">
 
-            <datalist id = "Stages">
+            <datalist id = "DLsearch">
 
             </datalist>
 
