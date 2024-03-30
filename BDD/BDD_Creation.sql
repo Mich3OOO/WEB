@@ -74,12 +74,12 @@ CREATE TABLE Entreprise(
 
 CREATE TABLE Offre(
    IDoffre INT AUTO_INCREMENT,
-   Duree smallint,
+   Duree SMALLINT,
    Poste VARCHAR(200),
    Competence VARCHAR(200),
    remune SMALLINT,
    Date_Stage DATE,
-   Nb_place smallint,
+   Nb_place SMALLINT,
    Descr VARCHAR(1000),
    IDE INT NOT NULL,
    PRIMARY KEY(IDoffre),
@@ -106,6 +106,12 @@ CREATE TABLE etudiant(
    FOREIGN KEY(IDProm) REFERENCES promotion(IDProm)
 );
 
+CREATE TABLE Admin(
+   IDu INT,
+   PRIMARY KEY(IDu),
+   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu)
+);
+
 CREATE TABLE interesser(
    IDoffre INT,
    IDu INT,
@@ -128,4 +134,20 @@ CREATE TABLE Viser(
    PRIMARY KEY(IDoffre, IDT),
    FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
    FOREIGN KEY(IDT) REFERENCES types_de_promotions(IDT)
+);
+
+CREATE TABLE interesserA(
+   IDoffre INT,
+   IDu INT,
+   PRIMARY KEY(IDoffre, IDu),
+   FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
+   FOREIGN KEY(IDu) REFERENCES Admin(IDu)
+);
+
+CREATE TABLE PostulerA(
+   IDoffre INT,
+   IDu INT,
+   PRIMARY KEY(IDoffre, IDu),
+   FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
+   FOREIGN KEY(IDu) REFERENCES Admin(IDu)
 );
