@@ -1,15 +1,15 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-29 13:07:54
+/* Smarty version 4.5.1, created on 2024-03-30 22:44:57
   from 'C:\Users\User\Desktop\CESI\A2\B4\porjet\WEB\assets\tpl\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6606af1a8926a2_15139365',
+  'unifunc' => 'content_660887d9698d72_85942094',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '71aad82755ef97eee8375a61d1cb5fc20540982d' => 
+    'f7fa2479aef18059e2f4048e77fa5c9f2a3eedba' => 
     array (
       0 => 'C:\\Users\\User\\Desktop\\CESI\\A2\\B4\\porjet\\WEB\\assets\\tpl\\main.tpl',
       1 => 1711709663,
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../html/Upbutton.html' => 1,
   ),
 ),false)) {
-function content_6606af1a8926a2_15139365 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660887d9698d72_85942094 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
     <head>
