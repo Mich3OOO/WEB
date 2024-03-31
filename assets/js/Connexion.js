@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", ()=>{
-    let inputs = document.getElementsByClassName("  ");
+    let inputs = document.getElementsByClassName("MChoise");
 
     for(let i = 0 ; i< inputs.length;i++)
     {
