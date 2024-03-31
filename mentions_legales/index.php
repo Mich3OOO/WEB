@@ -4,9 +4,10 @@ include "../assets/phpScripts/redirect.php";
 
 $smarty = new Smarty();
 
-$smarty->assign('name', 'mentions_legales');
-
-$smarty->assign('titre', 'acceuille');
+$smarty->assign('dirfile', '../html/mentions_legales.html');
+$smarty->assign('dircss', '../assets/css/mentions_legales.css');
+$smarty->assign('dirjs', '#');
+$smarty->assign('titre', 'accueille');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 

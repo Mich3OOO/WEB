@@ -4,7 +4,9 @@ require_once('../smarty/libs/Smarty.class.php');
 include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
 
-$smarty->assign('name', 'recherche_etudiant');
+$smarty->assign('dirfile', '../html/recherche_Etudiant.html');
+$smarty->assign('dircss', '../assets/css/recherche_pilote.css');
+$smarty->assign('dirjs', '#');
 $smarty->assign('titre', 'acceuille');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');

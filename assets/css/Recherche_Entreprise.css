@@ -2,6 +2,7 @@ body{
     font-family: Arial, sans-serif;
     background: url(../../image/fond.jpg);
     background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-size: auto;
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
 }
 
@@ -131,8 +132,8 @@ input{
     overflow-x: hidden; 
     overflow-y: scroll; 
     border: solid 1px inherent;
-    width: 600px; 
-    height: 300px;
+    width: 800px; 
+    height: 500px;
     margin: 20px auto;
     border-radius: 8px;
 }
