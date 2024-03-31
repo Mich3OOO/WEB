@@ -4,8 +4,10 @@ require_once('../smarty/libs/Smarty.class.php');
 include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
 
-$smarty->assign('name', 'stats');
-$smarty->assign('titre', 'acceuille');
+$smarty->assign('dirfile', '../html/stats.html');
+$smarty->assign('dircss', '../assets/css/stats.css');
+$smarty->assign('dirjs', '#');
+$smarty->assign('titre', 'Statistique');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 
