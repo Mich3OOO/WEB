@@ -1,8 +1,8 @@
 
 INSERT INTO campus (NomC) 
 VALUES 
-('Santé'),
-('Marketing');
+('Pau'),
+('Assat');
 
 INSERT INTO reg (reg) 
 VALUES 
@@ -13,8 +13,8 @@ VALUES
 
 INSERT INTO types_de_promotions (Nom_du_Type) 
 VALUES 
-('Médecine'),
-('Communication');
+('Informatique'),
+('General');
 
 INSERT INTO ville (Code_Post,ville, ID_reg) 
 VALUES 
@@ -55,6 +55,17 @@ VALUES
 INSERT INTO etudiant (IDu, IDProm) 
 VALUES 
 (4, 1);
+(1, 1);
+(3, 2);
+(5, 1);
+(7, 2);
+(8, 1);
+(9, 2);
+(10, 2);
+(11, 2);
+(12, 1);
+(14, 1);
+(15, 2);
 
 INSERT INTO Secteur_d_activité (Secteur_d_activité) VALUES
 ('Marketing');
