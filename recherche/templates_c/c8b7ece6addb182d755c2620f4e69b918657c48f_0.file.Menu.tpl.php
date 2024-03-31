@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-28 13:36:15
-  from 'C:\Users\User\Desktop\CESI\A2\B4\porjet\WEB\assets\html\Menu.html' */
+/* Smarty version 4.5.1, created on 2024-03-31 11:33:49
+  from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\Menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6605643f4fee53_14468694',
+  'unifunc' => 'content_66092dfd37f3e6_73982516',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'a85b2458c5a287396701ed99a1c55f59c025c172' => 
+    'c8b7ece6addb182d755c2620f4e69b918657c48f' => 
     array (
-      0 => 'C:\\Users\\User\\Desktop\\CESI\\A2\\B4\\porjet\\WEB\\assets\\html\\Menu.html',
-      1 => 1711629373,
+      0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\Menu.tpl',
+      1 => 1711877625,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6605643f4fee53_14468694 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66092dfd37f3e6_73982516 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="../assets/css/menu.css">
 <?php echo '<script'; ?>
  src="../assets/js/more_menu.js"><?php echo '</script'; ?>
@@ -40,30 +40,24 @@ function content_6605643f4fee53_14468694 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div>
             <div id="block1">
-                <h>Nom | Prénom</h>
+                <h><?php echo $_smarty_tpl->tpl_vars['_SESSION']->value["Nom"];?>
+ | <?php echo $_smarty_tpl->tpl_vars['_SESSION']->value["Prenom"];?>
+</h>
                 <div class="navbar" id="nav">
                     <div class="more">
                         
-                        <button class="btn_more" onclick="">▽</button><!--<?php echo '<?php'; ?>
-
-                            
+                        <button class="btn_more" onclick=<?php if (($_smarty_tpl->tpl_vars['_SESSION']->value["role"] == "Administrateur")) {?>
+                        "btn_plus('admin')"
+                    <?php }?>
+                    <?php if (($_smarty_tpl->tpl_vars['_SESSION']->value["role"] == "Pilote")) {?>
+                        "btn_plus('pilote')"
+                    
+                    <?php }?>
+                    <?php if (($_smarty_tpl->tpl_vars['_SESSION']->value["role"] == "Etudiant")) {?>
+                        "btn_plus('etudiant')"
+                    <?php }?>>  ▽</button>
                         
-                            if($_SESSION[session_id()]["role"] == "Administrateur" )
-                            {
-                                echo "btn_plus('admin')";
-                            }
-                            if($_SESSION[session_id()]["role"] == "Pilote")
-                            {
-                                
-                                echo "btn_plus('pilote')";
-                            }
-                            if($_SESSION[session_id()]["role"] == "Etudiant")
-                            {
-                                echo "btn_plus('etudiant')";  
-                            }
                             
-                          <?php echo '?>'; ?>
- -->
                         <div class="more-menu">
                           
                         </div>

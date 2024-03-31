@@ -4,8 +4,10 @@ require_once('../smarty/libs/Smarty.class.php');
 
 $smarty = new Smarty();
 
-$smarty->assign('name', 'wishlist');
-$smarty->assign('titre', 'acceuille');
+$smarty->assign('dirfile', '../html/wishlist.html');
+$smarty->assign('dircss', '../assets/css/wishlist.css');
+$smarty->assign('dirjs', '#');
+$smarty->assign('titre', 'accueille');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 

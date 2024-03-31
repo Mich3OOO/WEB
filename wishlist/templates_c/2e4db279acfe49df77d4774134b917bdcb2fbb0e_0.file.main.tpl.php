@@ -1,30 +1,30 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-28 13:36:01
-  from 'C:\Users\User\Desktop\CESI\A2\B4\porjet\WEB\assets\tpl\main.tpl' */
+/* Smarty version 4.5.1, created on 2024-03-29 11:23:57
+  from 'C:\Users\fabie\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_66056431420f42_65920348',
+  'unifunc' => 'content_660696bd0cea78_06928800',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'ac212a81f931670e0af56094e0bbb7dee2d79c56' => 
+    '2e4db279acfe49df77d4774134b917bdcb2fbb0e' => 
     array (
-      0 => 'C:\\Users\\User\\Desktop\\CESI\\A2\\B4\\porjet\\WEB\\assets\\tpl\\main.tpl',
-      1 => 1711629125,
+      0 => 'C:\\Users\\fabie\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\main.tpl',
+      1 => 1711707240,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:../html/Menu.html' => 1,
+    'file:../tpl/Menu.tpl' => 1,
     'file:../html/".((string)$_smarty_tpl->tpl_vars[\'name\']->value).".html' => 1,
-    'file:../html/Upbutton.html' => 1,
     'file:../html/Footer.html' => 1,
+    'file:../html/Upbutton.html' => 1,
   ),
 ),false)) {
-function content_66056431420f42_65920348 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660696bd0cea78_06928800 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -52,16 +52,16 @@ function content_66056431420f42_65920348 (Smarty_Internal_Template $_smarty_tpl)
 >
     </head>
     <body>
-        <?php $_smarty_tpl->_subTemplateRender("file:../html/Menu.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+        <?php $_smarty_tpl->_subTemplateRender("file:../tpl/Menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
         <?php $_smarty_tpl->_subTemplateRender("file:../html/".((string)$_smarty_tpl->tpl_vars['name']->value).".html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
 
-
-        <?php $_smarty_tpl->_subTemplateRender("file:../html/Upbutton.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
         <?php $_smarty_tpl->_subTemplateRender("file:../html/Footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+        <?php $_smarty_tpl->_subTemplateRender("file:../html/Upbutton.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+        
     </body>
 
 </html><?php }

@@ -48,7 +48,7 @@ class Sql
     {
         $get = $this->connexion->prepare($sql);
         $get->execute();
-        return $get->fetchAll();
+        return $get->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function Getjson($sql)

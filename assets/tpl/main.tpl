@@ -9,15 +9,15 @@
 
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
-        <link href="../assets/css/{$name}.css" rel="stylesheet" type="text/css" />
-        <script src="../assets/js/{$name}.js"></script>
+        <link href="{$dircss}" rel="stylesheet" type="text/css" />
+        <script src="{$dirjs}"></script>
         
         <link rel="manifest" href="../manifest.json">
         <script src="../assets/js/sw.js"></script>
     </head>
     <body>
         {include "../tpl/Menu.tpl"}
-        {include "../html/`$name`.html" }
+        {include "`$dirfile`" }
 
         {include "../html/Footer.html"}
         {include "../html/Upbutton.html"}

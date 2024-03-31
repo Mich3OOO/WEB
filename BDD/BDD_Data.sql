@@ -67,7 +67,7 @@ VALUES
 (14, 1);
 (15, 2);
 
-INSERT INTO Secteur_d_activité (Secteur_d_activité) VALUES
+INSERT INTO Secteur_Activite (Secteur_Act) VALUES
 ('Marketing');
 
 

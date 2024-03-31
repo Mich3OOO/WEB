@@ -3,8 +3,10 @@ include "../assets/phpScripts/redirect.php";
 require_once('../smarty/libs/Smarty.class.php');
 $smarty = new Smarty();
 
-$smarty->assign('name', 'FAQ');
-$smarty->assign('titre', 'acceuille');
+$smarty->assign('dirfile', '../html/FAQ.html');
+$smarty->assign('dircss', '../assets/css/FAQ.css');
+$smarty->assign('dirjs', '#');
+$smarty->assign('titre', 'accueille');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 
