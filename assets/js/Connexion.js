@@ -14,6 +14,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
     document.getElementById("search").addEventListener("change",(event)=>{search();});
     document.getElementById("Ville").addEventListener("input",(event)=>{ updateDL(true,event,"https://geo.api.gouv.fr/communes?nom=") });
     document.getElementById("SécteurA").addEventListener("input",(event)=>{ updateDL(true,event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=") });
+    document.getElementById("Prom").addEventListener("input",(event)=>{ updateDL(true,event,"http://localhost/assets/phpscripts/TypePromotion.php?TypePromotion=") });
     
 
     document.getElementById("durée").addEventListener("change",search);
@@ -196,6 +197,16 @@ function getfiltres()
     }
     for (let i = 1; i < tmp.length; i++) {
         r+= "&Secteur[]="+ tmp[i].id.replace("tag","");
+    }
+
+    r+= "&Prom[]";
+    tmp = document.getElementById("PromList").children
+    if(tmp.length>0)
+    {
+        r+="="+ tmp[0].id.replace("tag","");
+    }
+    for (let i = 1; i < tmp.length; i++) {  
+        r+= "&Prom[]="+ tmp[i].id.replace("tag","");
     }
 
     r+="&Duree";

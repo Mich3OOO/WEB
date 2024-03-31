@@ -12,8 +12,7 @@
         $_SESSION["IDu"]= $hash[0] ;
         $_SESSION["MDP"]= $hash[1] ;
         $_SESSION["role"]= $hash[2] ;
-        //header('Location: ../../../recherche/');
-        echo "done";
+        header('Location: ../../../recherche/');
     }
     else
     {  

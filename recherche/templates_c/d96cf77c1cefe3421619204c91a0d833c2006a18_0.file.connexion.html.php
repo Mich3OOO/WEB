@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-30 19:39:20
+/* Smarty version 4.5.1, created on 2024-04-01 00:35:59
   from 'C:\Users\User\Desktop\CESI\A2\B4\porjet\WEB\assets\html\connexion.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_66085c58bcf802_80743020',
+  'unifunc' => 'content_6609e54f765881_28739315',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd96cf77c1cefe3421619204c91a0d833c2006a18' => 
     array (
       0 => 'C:\\Users\\User\\Desktop\\CESI\\A2\\B4\\porjet\\WEB\\assets\\html\\connexion.html',
-      1 => 1711823715,
+      1 => 1711923936,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66085c58bcf802_80743020 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6609e54f765881_28739315 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <main>
     <div class = "flexContainer">              
@@ -56,6 +56,17 @@ function content_66085c58bcf802_80743020 (Smarty_Internal_Template $_smarty_tpl)
                     
                 </datalist>
                 <div id = "SécteurAList" class="tagcontent">
+                </div>
+            </li>
+            <li>
+                <label for="Prom">Promotion visé</label>
+            </li>
+            <li>
+                <input id = "Prom" list="DLProm" class="MChoise">
+                <datalist id = "DLProm">
+                    
+                </datalist>
+                <div id = "PromList" class="tagcontent">
                 </div>
             </li>
 
