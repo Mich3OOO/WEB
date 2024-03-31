@@ -4,8 +4,10 @@ require_once('../smarty/libs/Smarty.class.php');
 
 $smarty = new Smarty();
 
-$smarty->assign('name', 'Gerer_user');
-$smarty->assign('titre', 'acceuille');
+$smarty->assign('dirfile', '../html/gerer_user.html');
+$smarty->assign('dircss', '../assets/css/.css');
+$smarty->assign('dirjs', '#');
+$smarty->assign('titre', 'Gerer user');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 
