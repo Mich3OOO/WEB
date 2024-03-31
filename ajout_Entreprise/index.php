@@ -4,8 +4,10 @@ require_once('../smarty/libs/Smarty.class.php');
 include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
 
-$smarty->assign('name', 'ajout_Entreprise');
-$smarty->assign('titre', 'acceuille');
+$smarty->assign('dirfile', '../html/Ajout_Entreprise.html');
+$smarty->assign('dircss', '../assets/css/ajout_entreprise.css');
+$smarty->assign('dirjs', '#');
+$smarty->assign('titre', 'Ajouter une entreprise');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 

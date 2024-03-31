@@ -1,4 +1,27 @@
+<?php
+/* Smarty version 4.5.1, created on 2024-03-31 16:11:54
+  from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\ajouter_compte.html' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.5.1',
+  'unifunc' => 'content_66096f2a1ae612_70841700',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '12e6eb2447900e11a1bd91bf0326b88bb987a5da' => 
+    array (
+      0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\html\\ajouter_compte.html',
+      1 => 1711894309,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_66096f2a1ae612_70841700 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <form action="../assets/phpScripts/AjoutCompte.php" method="post get">
 <div class="test">
 <div class="flex-container">
@@ -55,3 +78,5 @@
 </div>
 
 </form>
+<?php }
+}
