@@ -13,12 +13,12 @@
     </div>
     <div class="flex-droit">
         
-      <label for="Nom">Nom :</label>
-      <label for="Prenom">Prenom :</label>
-      <label for="Mot-de-passe">Mot de passe :</label>
-      <label for="Mail">Mail :</label>
-      <label for="Date-naissance">Date de naissance :</label>
-      <label for="Adresse">Adresse :</label>
+      <label for="Nom">Nom : $_SESSION["Nom"]</label>
+      <label for="Prenom">Prenom : $_SESSION["Prenom"]</label>
+      <label for="Mot-de-passe">Mot de passe : *****</label>
+      <label for="Mail">Mail : $_SESSION["Mail"]</label>
+      <label for="Date-naissance">Date de naissance : $_SESSION["Date_Nais"]</label>
+      <label for="Adresse">Adresse :$_SESSION["Adresse"]</label>
         
     </div>
       

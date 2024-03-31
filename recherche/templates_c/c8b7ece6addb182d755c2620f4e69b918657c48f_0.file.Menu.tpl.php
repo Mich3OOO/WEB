@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-30 13:28:37
+/* Smarty version 4.5.1, created on 2024-03-30 15:09:52
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\Menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6608057561ba18_87451562',
+  'unifunc' => 'content_66081d30ef1fc7_25750226',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c8b7ece6addb182d755c2620f4e69b918657c48f' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\Menu.tpl',
-      1 => 1711801645,
+      1 => 1711807762,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6608057561ba18_87451562 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66081d30ef1fc7_25750226 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="../assets/css/menu.css">
 <?php echo '<script'; ?>
  src="../assets/js/more_menu.js"><?php echo '</script'; ?>
@@ -40,7 +40,7 @@ function content_6608057561ba18_87451562 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div>
             <div id="block1">
-                <h>Nom | Prénom</h>
+                <h>$_SESSION["Nom"] | $_SESSION["Prenom"]</h>
                 <div class="navbar" id="nav">
                     <div class="more">
                         
@@ -56,10 +56,6 @@ function content_6608057561ba18_87451562 (Smarty_Internal_Template $_smarty_tpl)
                     <?php }?>>  ▽</button>
                         
                             
-                        
-                            
-                            
-                          
                         <div class="more-menu">
                           
                         </div>

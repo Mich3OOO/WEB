@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div id="block1">
-                <h>Nom | Prénom</h>
+                <h>$_SESSION["Nom"] | $_SESSION["Prenom"]</h>
                 <div class="navbar" id="nav">
                     <div class="more">
                         
@@ -31,10 +31,6 @@
                     {/if}>  ▽</button>
                         
                             
-                        
-                            
-                            
-                          
                         <div class="more-menu">
                           
                         </div>

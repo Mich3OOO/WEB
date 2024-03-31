@@ -4,7 +4,7 @@ require_once('../smarty/libs/Smarty.class.php');
 include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
 
-$smarty->assign('dirfile', '../assets/html/profil.html');
+$smarty->assign('dirfile', '../assets/html/profil.tpl');
 $smarty->assign('dircss', '../assets/css/profil.css');
 $smarty->assign('dirjs', '#');
 $smarty->assign('titre', 'accueille');

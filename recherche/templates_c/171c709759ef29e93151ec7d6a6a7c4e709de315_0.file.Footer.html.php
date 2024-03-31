@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-30 13:28:37
+/* Smarty version 4.5.1, created on 2024-03-30 15:08:08
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\Footer.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660805756f1321_22940657',
+  'unifunc' => 'content_66081cc815ade1_15635372',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660805756f1321_22940657 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66081cc815ade1_15635372 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel = "StyleSheet" href = "../assets/css/footer.css">
 
 <footer>
