@@ -11,7 +11,7 @@ VALUES
 ('Bouches-du-Rhône'),
 ('Nouvelle-Aquitaine');
 
-INSERT INTO types_de_promotions (Nom_du_Type) 
+INSERT INTO types_promotions (Nom_du_Type) 
 VALUES 
 ('Informatique'),
 ('General');
@@ -49,8 +49,8 @@ INSERT INTO Utilisateur (IDu, MdpU, NomU, PrenomU, Date_NaisU, MailU, role, ID_a
 
 INSERT INTO promotion (Promotion, IDT, IDu, idCentre) 
 VALUES 
-('Promotion 2024', 1, 13, 2),
-('Promotion 2025', 2, 13, 1);
+('A1', 1, 13, 2),
+('A2', 2, 13, 1);
 
 INSERT INTO etudiant (IDu, IDProm) 
 VALUES 
