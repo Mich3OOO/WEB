@@ -15,19 +15,19 @@
                 </div>
             </div>
             <div id="block1">
-                <h>$_SESSION["Nom"] | $_SESSION["Prenom"]</h>
+                <h>{$_SESSION["Nom"]} | {$_SESSION["Prenom"]}</h>
                 <div class="navbar" id="nav">
                     <div class="more">
                         
-                        <button class="btn_more" onclick={if $_SESSION["role"] == "Administrateur" }
-                        btn_plus('admin');
+                        <button class="btn_more" onclick={if ($_SESSION["role"] == "Administrateur") }
+                        "btn_plus('admin')"
                     {/if}
-                    {if $_SESSION["role"] == "Pilote" }
-                        btn_plus('pilote');
+                    {if ($_SESSION["role"] == "Pilote") }
+                        "btn_plus('pilote')"
                     
                     {/if}
-                    {if $_SESSION["role"] == "Etudiant" }
-                        btn_plus('etudiant');  
+                    {if ($_SESSION["role"] == "Etudiant") }
+                        "btn_plus('etudiant')"
                     {/if}>  ▽</button>
                         
                             

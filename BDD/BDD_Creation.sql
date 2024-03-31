@@ -4,9 +4,9 @@ CREATE TABLE campus(
    PRIMARY KEY(idCentre)
 );
 
-CREATE TABLE Secteur_d_activité(
+CREATE TABLE Secteur_Activite(
    IdSec INT AUTO_INCREMENT,
-   Secteur_d_activité VARCHAR(200),
+   Secteur_Act VARCHAR(200),
    PRIMARY KEY(IdSec)
 );
 
@@ -68,7 +68,7 @@ CREATE TABLE Entreprise(
    ID_adresse INT NOT NULL,
    PRIMARY KEY(IDE),
    FOREIGN KEY(IDu) REFERENCES utilisateur(IDu),
-   FOREIGN KEY(IdSec) REFERENCES Secteur_d_activité(IdSec),
+   FOREIGN KEY(IdSec) REFERENCES Secteur_Activite(IdSec),
    FOREIGN KEY(ID_adresse) REFERENCES adresse(ID_adresse)
 );
 

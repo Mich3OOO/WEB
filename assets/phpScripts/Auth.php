@@ -3,7 +3,7 @@
     $connexion = new Sql(2);
 
     
-    $hash = $connexion->GetFirstRow("Select IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role from `utilisateur` where MailU ='".$_GET["Email"]."';");
+    $hash = $connexion->GetFirstRow("Select IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA from `utilisateur` inner join adresse on utilisateur.ID_adresse=adresse.ID_adresse where MailU ='".$_GET["Email"]."';");
     
 
     if (password_verify($_GET["Mot-de-passe"],$hash[1])== 1)
@@ -16,8 +16,8 @@
         $_SESSION["Prenom"]= $hash[3] ;
         $_SESSION["Date_Nais"]= $hash[4] ;
         $_SESSION["Mail"]= $hash[5] ;
-        $_SESSION["Adresse"]= $hash[6] ;
-        $_SESSION["role"]= $hash[7] ;
+        $_SESSION["Adresse"]= $hash[7];
+        $_SESSION["role"]= $hash[6] ;
 
         header('Location: ../../recherche/');
     }

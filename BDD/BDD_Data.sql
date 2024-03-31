@@ -56,7 +56,7 @@ INSERT INTO etudiant (IDu, IDProm)
 VALUES 
 (4, 1);
 
-INSERT INTO Secteur_d_activité (Secteur_d_activité) VALUES
+INSERT INTO Secteur_Activite (Secteur_Act) VALUES
 ('Marketing');
 
 

@@ -5,7 +5,7 @@
     <div class="flex-gauche">
       <center><img class="image-profil" src="image/persov5.jpg" alt="image profil"></center>
       
-      <label for="Role">Statut :</label>
+      <label for="Role">Statut : {$_SESSION["role"]}</label>
       
       <label for="Promotion">Promotion :</label>
 
@@ -13,12 +13,11 @@
     </div>
     <div class="flex-droit">
         
-      <label for="Nom">Nom : $_SESSION["Nom"]</label>
-      <label for="Prenom">Prenom : $_SESSION["Prenom"]</label>
-      <label for="Mot-de-passe">Mot de passe : *****</label>
-      <label for="Mail">Mail : $_SESSION["Mail"]</label>
-      <label for="Date-naissance">Date de naissance : $_SESSION["Date_Nais"]</label>
-      <label for="Adresse">Adresse :$_SESSION["Adresse"]</label>
+      <label for="Nom">Nom : {$_SESSION["Nom"]}</label>
+      <label for="Prenom">Prenom : {$_SESSION["Prenom"]}</label>
+      <label for="Mail">Mail : {$_SESSION["Mail"]}</label>
+      <label for="Date-naissance">Date de naissance : {$_SESSION["Date_Nais"]}</label>
+      <label for="Adresse">Adresse :{$_SESSION["Adresse"]}</label>
         
     </div>
       
