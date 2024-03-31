@@ -11,15 +11,13 @@ window.addEventListener("DOMContentLoaded", ()=>{
 
 
     document.getElementById("Département").addEventListener("input",(event)=>{ updateDL(true,event,"https://geo.api.gouv.fr/departements?nom=")});
-    document.getElementById("search").addEventListener("change",(event)=>{search();event.target.placeholder ="🔎︎ search "+ event.target.value;event.target.value="";});
-    document.getElementById("search").addEventListener("input",(event)=>{ updateDL(false,event,"http://localhost/assets/phpscripts/Poste.php?Poste=") });
+    document.getElementById("search").addEventListener("change",(event)=>{search();});
     document.getElementById("Ville").addEventListener("input",(event)=>{ updateDL(true,event,"https://geo.api.gouv.fr/communes?nom=") });
     document.getElementById("SécteurA").addEventListener("input",(event)=>{ updateDL(true,event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=") });
-
+    
 
     document.getElementById("durée").addEventListener("change",search);
     search();
-    //TODO : wish list
 })
 
 function updateDL(MFiltre,event,api)
@@ -64,7 +62,6 @@ function ShowOffre(event)
        
     fetch("http://localhost/assets/phpScripts/search.php?ID="+tmp.id,{method: 'GET'}).then(r=> r.json()).then(data =>{
         
-        
         document.body.insertAdjacentHTML("beforeend",getPopupHtml(data[0].Poste,data[0].Descr,data[0].Competence,data[0].Nom_du_Type,data[0].remune,data[0].Date_Stage,data[0].Duree,data[0].Nb_place,data[0].post,data[0].NomE,data[0].Site,data[0].descr));
         document.getElementById("BGPopup").addEventListener("click",closePopup);
         document.getElementById("Close").addEventListener("click",closePopup);
@@ -76,9 +73,19 @@ function closePopup()
     document.getElementById("BGPopup").remove();
     document.getElementById("StagePopUp").remove();
 }
-function addToWishList()
+function WishList(event)
 {
-    console.log("element");
+    let tmp = new FormData();
+    tmp.append("IDo",event.target.parentNode.parentNode.id)
+    if (event.target.checked == 1)
+    {
+        
+        fetch("http://localhost/assets/phpScripts/AddToWhislist.php",{method: 'POST',body: tmp });
+    }
+    else 
+    {
+        fetch("http://localhost/assets/phpScripts/removeFromWhislist.php",{method: 'POST',body: tmp});
+    }
 }
 
 function getPopupHtml(NomPoste,SumUp,Comp,Prom,EUR,PubDate,duree,places,Postule,NameEnt,Location,SumUpEnt)
@@ -122,10 +129,8 @@ function removeFiltre(event)
 
 function search(event)
 {
-    console.log("http://localhost/assets/phpScripts/search.php"+getfiltres());
      fetch("http://localhost/assets/phpScripts/search.php"+getfiltres(),{method: 'GET'}).then(r=> r.json()).then(data =>{
 
-        
         let OffreCon = document.getElementById("offres");
 
         for(let i = OffreCon.children.length-1; i>=0; i--)
@@ -142,7 +147,11 @@ function search(event)
                 OffreCon.insertAdjacentHTML("beforeend",getStageHtml(data[i].IDoffre,data[i].Poste,data[i].NomE,data[i].Ville))
                 let Offre = document.getElementById(data[i].IDoffre);
                 Offre.children[0].children[0].onclick = ShowOffre;
-                Offre.children[0].children[1].addEventListener("click",addToWishList);
+                Offre.children[0].children[1].addEventListener("click",WishList);
+                if (data[i].IDu != null)
+                {
+                    Offre.children[0].children[1].checked =true;
+                }
             }
         }
         else
