@@ -10,7 +10,7 @@
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
         <link href="{$dircss}" rel="stylesheet" type="text/css" />
-        <script src="{$dirjs}"></script>
+        <script async src="{$dirjs}"></script>
         
         <link rel="manifest" href="../manifest.json">
         <script src="../assets/js/sw.js"></script>
