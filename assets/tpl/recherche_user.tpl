@@ -49,8 +49,8 @@
                         <p class="mail">{$user.MailU}</p>
                         <p class="mail">{$user.AdresseA}</p>
                         {if ($_SESSION["role"] == "Administrateur")}
-                        <a class="Info suppr" href="#">Supprimer</a>
-                        <button  class="modif">✎</button>
+                        <a class="Info suppr" href="../assets/phpScripts/deleteUser.php">Supprimer</a>
+                        <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email={$user.MailU}'">✎</button>
                         {/if}
                         <a class="Info" href="">Plus d'information</a>
                     </div>
