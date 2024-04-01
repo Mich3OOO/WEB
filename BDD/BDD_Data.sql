@@ -50,27 +50,30 @@ INSERT INTO Utilisateur (IDu, MdpU, NomU, PrenomU, Date_NaisU, MailU, role, ID_a
 INSERT INTO promotion (Promotion, IDT, IDu, idCentre) 
 VALUES 
 ('A1', 1, 13, 2),
-('A2', 2, 13, 1);
+('A2', 2, 13, 1),
+('A2', 1, 13, 2),
+('A1', 1, 4, 2),
+('A1', 1, 5, 1);
 
 INSERT INTO etudiant (IDu, IDProm) 
 VALUES 
-(4, 1);
-(1, 1);
-(3, 2);
-(5, 1);
-(7, 2);
-(8, 1);
-(9, 2);
-(10, 2);
-(11, 2);
-(12, 1);
-(14, 1);
+(4, 1),
+(1, 1),
+(3, 2),
+(5, 1),
+(7, 2),
+(8, 3),
+(9, 3),
+(10, 3),
+(11, 2),
+(12, 1),
+(14, 1),
 (15, 2);
 
 INSERT INTO Secteur_Activite (Secteur_Act) VALUES
-('Marketing');
-('Informatique');
-('Finance');
+('Marketing'),
+('Informatique'),
+('Finance'),
 ('Medecine');
 
 
