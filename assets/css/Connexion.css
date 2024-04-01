@@ -338,7 +338,7 @@ article>p
 }
 
 
-#infoEntreprise>#Postuler
+#infoEntreprise>a>#Postuler
 {
     border: none;
     max-height: 50px;
@@ -350,7 +350,7 @@ article>p
     
 
 }
-#infoEntreprise>#Postuler:hover
+#infoEntreprise>a>#Postuler:hover
 {
     transition: linear 200ms;
     border-radius: 20px;

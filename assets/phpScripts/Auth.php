@@ -1,6 +1,6 @@
 <?php
     include "PDO.php";
-    $connexion = new Sql(2);
+    $connexion = new Sql(1);
 
     
     $hash = $connexion->GetFirstRow("Select IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA from `utilisateur` inner join adresse on utilisateur.ID_adresse=adresse.ID_adresse where MailU ='".$_GET["Email"]."';");
