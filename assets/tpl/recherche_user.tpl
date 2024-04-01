@@ -14,7 +14,7 @@
               <label for="Pilote">Pilote</label>
             </div>
           </fieldset>
-          {/if}
+        {/if}
 
 
         <select name="Promotion">
@@ -24,10 +24,9 @@
         </select>
 
         <select name="Campus">
-
-            <option value="Pau">Pau</option>
-            <option value="Nantaire">Nantaire</option>
-            
+            {foreach from=$allcampus item=campus}
+                <option value={$campus.NomC}>{$campus.NomC}</option>
+            {/foreach}
         </select>
             
     </div>

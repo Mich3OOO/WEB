@@ -51,6 +51,7 @@ INSERT INTO promotion (Promotion, IDT, IDu, idCentre)
 VALUES 
 ('A1', 1, 13, 2),
 ('A2', 2, 13, 1);
+('A2', 1, 13, 2);
 
 INSERT INTO etudiant (IDu, IDProm) 
 VALUES 
