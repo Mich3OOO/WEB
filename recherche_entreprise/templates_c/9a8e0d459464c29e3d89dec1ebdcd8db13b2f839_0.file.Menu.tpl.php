@@ -1,15 +1,15 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-29 13:07:54
+/* Smarty version 4.5.1, created on 2024-03-29 13:28:09
   from 'C:\Users\User\Desktop\CESI\A2\B4\porjet\WEB\assets\tpl\Menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6606af1aa164e3_47553398',
+  'unifunc' => 'content_6606b3d9004bc6_54813068',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'f603e8e2a6816c15b686008acfd5a94d5a2eef6e' => 
+    '9a8e0d459464c29e3d89dec1ebdcd8db13b2f839' => 
     array (
       0 => 'C:\\Users\\User\\Desktop\\CESI\\A2\\B4\\porjet\\WEB\\assets\\tpl\\Menu.tpl',
       1 => 1711709663,
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6606af1aa164e3_47553398 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6606b3d9004bc6_54813068 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="../assets/css/menu.css">
 <?php echo '<script'; ?>
  src="../assets/js/more_menu.js"><?php echo '</script'; ?>

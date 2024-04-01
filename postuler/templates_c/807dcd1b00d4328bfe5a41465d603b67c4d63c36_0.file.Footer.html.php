@@ -1,15 +1,15 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-29 13:07:54
+/* Smarty version 4.5.1, created on 2024-03-30 22:44:57
   from 'C:\Users\User\Desktop\CESI\A2\B4\porjet\WEB\assets\html\Footer.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6606af1ac363e2_60604275',
+  'unifunc' => 'content_660887d9a6e607_66614906',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '43c5c53253e17c0ee19dcc141646b75ea4939279' => 
+    '807dcd1b00d4328bfe5a41465d603b67c4d63c36' => 
     array (
       0 => 'C:\\Users\\User\\Desktop\\CESI\\A2\\B4\\porjet\\WEB\\assets\\html\\Footer.html',
       1 => 1711703505,
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6606af1ac363e2_60604275 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660887d9a6e607_66614906 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel = "StyleSheet" href = "../assets/css/footer.css">
 
 <footer>

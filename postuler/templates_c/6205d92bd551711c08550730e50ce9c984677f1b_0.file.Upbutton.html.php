@@ -1,15 +1,15 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-29 13:28:09
+/* Smarty version 4.5.1, created on 2024-03-30 22:44:57
   from 'C:\Users\User\Desktop\CESI\A2\B4\porjet\WEB\assets\html\Upbutton.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6606b3d9225776_43845918',
+  'unifunc' => 'content_660887d9b07417_10454615',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '22e64419168984195c69a2bd00cbd9c6ea838bf9' => 
+    '6205d92bd551711c08550730e50ce9c984677f1b' => 
     array (
       0 => 'C:\\Users\\User\\Desktop\\CESI\\A2\\B4\\porjet\\WEB\\assets\\html\\Upbutton.html',
       1 => 1711629023,
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6606b3d9225776_43845918 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660887d9b07417_10454615 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <button id = "upbutton">▲</button>
 <link rel="stylesheet" href="./../assets/css/upbutton.css">
