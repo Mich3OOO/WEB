@@ -93,7 +93,7 @@ CREATE TABLE promotion(
    IDu INT NOT NULL,
    idCentre INT NOT NULL,
    PRIMARY KEY(IDProm),
-   FOREIGN KEY(IDT) REFERENCES types_de_promotions(IDT),
+   FOREIGN KEY(IDT) REFERENCES types_promotions(IDT),
    FOREIGN KEY(IDu) REFERENCES utilisateur(IDu),
    FOREIGN KEY(idCentre) REFERENCES campus(idCentre)
 );
@@ -133,7 +133,7 @@ CREATE TABLE Viser(
    IDT INT,
    PRIMARY KEY(IDoffre, IDT),
    FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
-   FOREIGN KEY(IDT) REFERENCES types_de_promotions(IDT)
+   FOREIGN KEY(IDT) REFERENCES types_promotions(IDT)
 );
 
 CREATE TABLE interesserA(
