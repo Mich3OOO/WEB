@@ -16,7 +16,7 @@ CREATE TABLE reg(
    PRIMARY KEY(ID_reg)
 );
 
-CREATE TABLE types_de_promotions(
+CREATE TABLE types_promotions(
    IDT INT AUTO_INCREMENT,
    Nom_du_Type VARCHAR(50),
    PRIMARY KEY(IDT)
