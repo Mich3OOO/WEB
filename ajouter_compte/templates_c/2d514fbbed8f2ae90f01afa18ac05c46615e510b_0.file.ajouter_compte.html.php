@@ -1,4 +1,27 @@
+<?php
+/* Smarty version 4.5.1, created on 2024-04-01 23:16:14
+  from 'C:\Users\alexa\Desktop\Cours\Activitées\BLOC 4\PROJET\WEB\assets\html\ajouter_compte.html' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.5.1',
+  'unifunc' => 'content_660b241ea85e73_93136207',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '2d514fbbed8f2ae90f01afa18ac05c46615e510b' => 
+    array (
+      0 => 'C:\\Users\\alexa\\Desktop\\Cours\\Activitées\\BLOC 4\\PROJET\\WEB\\assets\\html\\ajouter_compte.html',
+      1 => 1712006173,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_660b241ea85e73_93136207 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <form action="../assets/phpScripts/AjoutCompte.php" method="get">
     <div class="test">
     <div class="flex-container">
@@ -61,3 +84,5 @@
     </div>
 
 </form>
+<?php }
+}

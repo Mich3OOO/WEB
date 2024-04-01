@@ -47,6 +47,7 @@ main
 
 .liste
 {
+    padding-top: 100px;
     list-style: none;
 }
 
@@ -125,6 +126,7 @@ main
 
 #RechercheOffre
 {
+    padding-top: 100px;
     flex: 2;
 }
 

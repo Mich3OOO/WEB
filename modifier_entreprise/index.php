@@ -5,7 +5,7 @@ include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../html/modifier_entreprise.html');
-$smarty->assign('dircss', '../assets/css/postuler.css');
+$smarty->assign('dircss', '../assets/css/ajout_entreprise.css');
 $smarty->assign('dirjs', '#');
 $smarty->assign('titre', 'acceuille');
 $smarty->assign('keywords', 'algo');
