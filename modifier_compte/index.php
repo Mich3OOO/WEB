@@ -9,7 +9,7 @@ $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../tpl/modifier_compte.tpl');
 $smarty->assign('dircss', '../assets/css/modifier_compte.css');
-$smarty->assign('dirjs', '#');
+$smarty->assign('dirjs', '../assets/js/areyousure.js');
 $smarty->assign('titre', 'Modifier Compte');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');

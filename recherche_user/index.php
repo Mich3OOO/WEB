@@ -9,7 +9,7 @@ $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../tpl/recherche_user.tpl');
 $smarty->assign('dircss', '../assets/css/user.css');
-$smarty->assign('dirjs', '#');
+$smarty->assign('dirjs', '../assets/js/areyousure.js');
 $smarty->assign('titre', 'Recherche de compte');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');

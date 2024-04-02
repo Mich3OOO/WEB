@@ -1,5 +1,6 @@
 <input list="Satages" id="search" placeholder="🔎︎ search">
-    <div class="filtre-element">
+
+<div class="flex-container">
     <div class="filtre">
         {if ($_SESSION["role"] == "Administrateur")}
         <fieldset>
@@ -49,7 +50,7 @@
                         <p class="mail">{$user.MailU}</p>
                         <p class="mail">{$user.AdresseA}</p>
                         {if ($_SESSION["role"] == "Administrateur")}
-                        <a class="Info suppr" href="../assets/phpScripts/deleteUser.php">Supprimer</a>
+                        <button id="sure" onclick="sure()">Supprimer</button>
                         <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email={$user.MailU}'">✎</button>
                         {/if}
                         <a class="Info" href="">Plus d'information</a>
@@ -59,4 +60,5 @@
 
         </div>
     {/foreach}
+    </div>
 </div>
