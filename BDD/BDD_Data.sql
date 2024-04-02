@@ -1,12 +1,3 @@
-
-INSERT INTO campus (NomC) 
-VALUES 
-('Pau'),
-('Assat'),
-('Marseille'),
-('Lyon'),
-('Paris');
-
 INSERT INTO reg (reg) 
 VALUES 
 ('Île-de-France'),
@@ -66,15 +57,31 @@ INSERT INTO Utilisateur (IDu, MdpU, NomU, PrenomU, Date_NaisU, MailU, role, ID_a
 (14, '$2y$10$fcRw9BVENrz1sL.iMc224epQi4btsxJvrnrmQxXlIO4gv6QcmuxKW', 'Chen', 'William', '1993-04-25', 'william.chen@example.com', 'Etudiant',14),
 (15, '$2y$10$z0Ly1MFyvHAFXM.t5luLSeWjZ80amAlLRH.25Y0pWP2BjKZZQUhf.', 'Wang', 'Linda', '1986-10-17', 'linda.wang@example.com', 'Etudiant',15);
 
-INSERT INTO promotion (Promotion, IDT, IDu, idCentre) 
+INSERT INTO promotion (Promotion) 
 VALUES 
-('A1', 1, 13, 2),
-('A2', 2, 13, 1),
-('A2', 1, 13, 2),
-('A1', 1, 4, 2),
-('A1', 1, 5, 1);
+('A1'),
+('A2'),
+('A3'),
+('A4'),
+('A5');
 
-INSERT INTO etudiant (IDu, IDProm) 
+INSERT INTO pilote(IDu)
+VALUES
+(6),
+(13);
+
+INSERT INTO Admin(IDu)
+VALUES 
+(2);
+
+INSERT INTO Classe(idv, IDT, IDProm, IDu)
+VALUES
+(5, 1, 2, 6),
+(1, 2, 3, 13),
+(5, 2, 1, 6),
+(2, 1, 1, 13);
+
+INSERT INTO etudiant (IDu, IDClasse) 
 VALUES 
 (4, 1),
 (1, 1),
@@ -85,8 +92,8 @@ VALUES
 (9, 3),
 (10, 3),
 (11, 2),
-(12, 1),
-(14, 1),
+(12, 4),
+(14, 4),
 (15, 2);
 
 INSERT INTO Secteur_Activite (Secteur_Act) VALUES
@@ -96,12 +103,12 @@ INSERT INTO Secteur_Activite (Secteur_Act) VALUES
 ('Medecine');
 
 
-INSERT INTO Entreprise (NomE, descr, MailE, TelE, `Site`, Moyenne, N_Siret, IDu, IdSec, ID_adresse) 
+INSERT INTO Entreprise (NomE, descr, MailE, TelE, `Site`, Moyenne, N_Siret, IdSec, ID_adresse) 
 VALUES 
-('Tech Solutions', 'Société spécialisée dans le développement logiciel.', 'contact@techsolutions.com', 1234567890, 'https://www.techsolutions.com', 4.5, 55546744350650, 2, 2, 1),
-('Finance Corp', 'Firme de conseil financier offrant des services de gestion de patrimoine.', 'info@financecorp.com', 987654321, 'https://www.financecorp.com', 4.2, 97524575421984, 13, 3, 2),
-('HealthCare Innovations', 'Entreprise travaillant sur des solutions technologiques pour le domaine de la santé.', 'info@healthcareinnovations.com', 654321987, 'https://www.healthcareinnovations.com', 4.8, 75483295574856, 2, 4, 3),
-('Marketing Experts', 'Agence de marketing offrant des services de stratégie et de publicité.', 'contact@marketingexperts.com', 789456123, 'https://www.marketingexperts.com', 4.0, 89654887875432, 13, 1, 4);
+('Tech Solutions', 'Société spécialisée dans le développement logiciel.', 'contact@techsolutions.com', 1234567890, 'https://www.techsolutions.com', 4.5, 55546744350650, 2, 1),
+('Finance Corp', 'Firme de conseil financier offrant des services de gestion de patrimoine.', 'info@financecorp.com', 987654321, 'https://www.financecorp.com', 4.2, 97524575421984, 3, 2),
+('HealthCare Innovations', 'Entreprise travaillant sur des solutions technologiques pour le domaine de la santé.', 'info@healthcareinnovations.com', 654321987, 'https://www.healthcareinnovations.com', 4.8, 75483295574856, 4, 3),
+('Marketing Experts', 'Agence de marketing offrant des services de stratégie et de publicité.', 'contact@marketingexperts.com', 789456123, 'https://www.marketingexperts.com', 4.0, 89654887875432, 1, 4);
 
 
 INSERT INTO Competences(Comp)
@@ -156,7 +163,7 @@ VALUES
 (3, 2),
 (4, 1);
 
-INSERT INTO noter(IDu, NoteU, IDE)
+INSERT INTO note(IDu, NoteU, IDE)
 VALUES
 (11, 3, 1),
 (12, 3, 1),
