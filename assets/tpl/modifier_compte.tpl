@@ -16,7 +16,7 @@
             {/foreach}
     </select>
 
-    <label for="Promotion">Promotions</label>
+    <label for="Promotion">Promotion</label>
     <select multiple name="Promotion">
             {foreach from=$allpromotion item=promo}
             <option value={$usermodif["promotion"]}>{$promo.promotion}</option>

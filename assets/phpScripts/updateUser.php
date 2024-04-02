@@ -8,8 +8,8 @@ $connexion = new Sql(1);
 
 
 if($_GET["Mot-de-passe"]!=""){
-    $connexion->Update("UPDATE utilisateur,promotion,campus,adresse,ville,reg  SET MdpU='".$_GET["Mot-de-passe"]."',
-    NomU='".$_GET["Nom"]."',
+    $connexion->Update("UPDATE utilisateur INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg INNER JOIN promotion ON utilisateur.IDu=promotion.IDu INNER JOIN campus ON promotion.idCentre=campus.idCentre SET MdpU='".$_GET["Mot-de-passe"]."',
+     NomU='".$_GET["Nom"]."',
     PrenomU='".$_GET["Prenom"]."',
     Date_NaisU='".$_GET["Date-naissance"]."',
     MailU='".$_GET["Mail"]."',
@@ -19,7 +19,8 @@ if($_GET["Mot-de-passe"]!=""){
     NomC='".$_GET["Campus"]."',
     Code_Post='".$_GET["CP"]."',
     ville='".$_GET["Ville"]."',
-    reg='".$_GET["Region"]."' WHERE utilisateur.IDu ='".$_GET["IDu"]."' AND utilisateur.ID_adresse=adresse.ID_adresse AND ville.idv=adresse.idv AND reg.ID_reg=ville.ID_reg AND utilisateur.IDu=promotion.IDu AND promotion.idCentre=campus.idCentre ;");
+    reg='".$_GET["Region"]."' WHERE utilisateur.IDu ='".$_GET["IDu"]."';");
+ 
 }
 else{
     $connexion->Update("UPDATE utilisateur INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg INNER JOIN promotion ON utilisateur.IDu=promotion.IDu INNER JOIN campus ON promotion.idCentre=campus.idCentre SET NomU='".$_GET["Nom"]."',
@@ -33,18 +34,7 @@ else{
     Code_Post='".$_GET["CP"]."',
     ville='".$_GET["Ville"]."',
     reg='".$_GET["Region"]."' WHERE utilisateur.IDu ='".$_GET["IDu"]."';");
-    // $connexion->Update("UPDATE utilisateur,promotion,campus,adresse,ville,reg  SET NomU='".$_GET["Nom"]."',
-    // PrenomU='".$_GET["Prenom"]."',
-    // Date_NaisU='".$_GET["Date-naissance"]."',
-    // MailU='".$_GET["Mail"]."',
-    // role='".$_GET["Role"]."',
-    // adresseA='".$_GET["Adresse"]."',
-    // promotion='".$_GET["Promotion"]."',
-    // NomC='".$_GET["Campus"]."',
-    // Code_Post='".$_GET["CP"]."',
-    // ville='".$_GET["Ville"]."',
-    // reg='".$_GET["Region"]."' WHERE utilisateur.IDu ='".$_GET["IDu"]."' AND utilisateur.ID_adresse=adresse.ID_adresse AND ville.idv=adresse.idv AND reg.ID_reg=ville.ID_reg AND '".$_GET["IDu"]."'=promotion.IDu AND promotion.idCentre=campus.idCentre ;");
-
+ 
 }
 
-//header('Location: ../../recherche_user/');
+header('Location: ../../recherche_user/');

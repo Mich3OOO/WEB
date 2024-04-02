@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-02 11:49:09
+/* Smarty version 4.5.1, created on 2024-04-02 12:09:34
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\modifier_compte.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660bd495414658_52990757',
+  'unifunc' => 'content_660bd95e16bdc7_16822126',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd476a4dcf364ccc8d0a45c68e05a3a823825d18a' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\modifier_compte.tpl',
-      1 => 1712051347,
+      1 => 1712052528,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660bd495414658_52990757 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660bd95e16bdc7_16822126 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1>Modifier un compte </h1>
 <form action="../assets/phpScripts/updateUser.php" methode="get">
@@ -48,7 +48,7 @@ $_smarty_tpl->tpl_vars['role']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </select>
 
-    <label for="Promotion">Promotions</label>
+    <label for="Promotion">Promotion</label>
     <select multiple name="Promotion">
             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['allpromotion']->value, 'promo');

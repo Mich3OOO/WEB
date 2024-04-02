@@ -7,8 +7,9 @@
     } 
     else {
         if($connexion->GetArray("SELECT adresseA FROM adresse WHERE adresseA ='".$_GET['Adresse']."';")==!null){
-            $StockAdresse = $connexion->GetArray("SELECT ID_adresse FROM adresse WHERE adresseA = '".$_GET['Adresse']."';");
-            $requêteUtilisateur = $connexion->GetArray("INSERT INTO utilisateur (MdpU, NomU, PrenomU, Date_NaisU, MailU, role, ID_adresse) VALUES('".$_POST['Mot-de-passe']."','".$_POST['Nom']."', '".$_POST['Prenom']."', '".$_POST['Date-naissance']."', '".$_POST['Mail']."', '".$_POST['Role']."',  '".$StockAdresse[0]."');");
+            $StockAdresse = $connexion->GetFirstRow("SELECT ID_adresse FROM adresse WHERE adresseA = '".$_GET['Adresse']."';");
+            var_dump($StockAdresse["ID_adresse"]);
+            $requêteUtilisateur = $connexion->GetArray("INSERT INTO utilisateur (MdpU, NomU, PrenomU, Date_NaisU, MailU, role, ID_adresse) VALUES('".$_GET['Mot-de-passe']."','".$_GET['Nom']."', '".$_GET['Prenom']."', '".$_GET['Date-naissance']."', '".$_GET['Mail']."', '".$_GET['Role']."',  '".$StockAdresse[0]."');");
             
         } 
         else {
