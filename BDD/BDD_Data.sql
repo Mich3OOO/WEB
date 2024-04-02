@@ -104,12 +104,46 @@ VALUES
 ('Marketing Experts', 'Agence de marketing offrant des services de stratégie et de publicité.', 'contact@marketingexperts.com', 789456123, 'https://www.marketingexperts.com', 4.0, 13, 1, 4);
 
 
-INSERT INTO Offre (Duree, Poste, Competence, remune, Date_Stage, Nb_place, Descr, IDE) 
+INSERT INTO Competences(Comp)
+VALUES
+('HTML'),
+('CSS'),
+('JS'),
+('React'),
+('Node.JS'),
+('Analyse financière'),
+('Modelisation'),
+('Reporting'),
+('Biologie moleculaire'),
+('Genie genetique'),
+('Microbiologie'),
+('Stratégie de contenu'),
+('Réseaux sociaux'),
+('Analyse de données');
+
+INSERT INTO Offre (Duree, Poste, remune, Date_Stage, Nb_place, Descr, IDE) 
 VALUES 
-(3, 'Développeur Full-stack', 'HTML, CSS, JavaScript, React, Node.js', 800, '2024-04-15', 5, 'Développeur Full-stack pour projet e-commerce.', 1),
-(6, 'Analyste financier junior', 'Analyse financière, Modélisation, Reporting', 1200, '2024-05-20', 3, "Recherche d'un analyste financier junior pour notre équipe.", 2),
-(4, 'Ingénieur en biotechnologie', 'Biologie moléculaire, Génie génétique, Microbiologie', 1000, '2024-06-10', 2, "Poste d'ingénieur en biotechnologie pour développement de nouveaux médicaments.", 3),
-(5, 'Chargé de marketing digital', 'Stratégie de contenu, Réseaux sociaux, Analyse de données', 900, '2024-07-01', 4, 'Chargé de marketing digital pour campagnes publicitaires innovantes.', 4);
+(3, 'Développeur Full-stack', 800, '2024-04-15', 5, 'Développeur Full-stack pour projet e-commerce.', 1),
+(6, 'Analyste financier junior', 1200, '2024-05-20', 3, "Recherche d'un analyste financier junior pour notre équipe.", 2),
+(4, 'Ingénieur en biotechnologie', 1000, '2024-06-10', 2, "Poste d'ingénieur en biotechnologie pour développement de nouveaux médicaments.", 3),
+(5, 'Chargé de marketing digital', 900, '2024-07-01', 4, 'Chargé de marketing digital pour campagnes publicitaires innovantes.', 4);
+
+INSERT INTO necessite(IDoffre, IDComp)
+VALUES 
+(1,1),
+(1,2),
+(1,3),
+(1,4),
+(1,5),
+(2,6),
+(2,7),
+(2,8),
+(3,9),
+(3,10),
+(3,11),
+(4,12),
+(4,13),
+(4,14);
 
 INSERT INTO Viser (IDoffre, IDT) 
 VALUES 

@@ -76,7 +76,6 @@ CREATE TABLE Offre(
    IDoffre INT AUTO_INCREMENT,
    Duree SMALLINT,
    Poste VARCHAR(200),
-   Competence VARCHAR(200),
    remune SMALLINT,
    Date_Stage DATE,
    Nb_place SMALLINT,
@@ -84,6 +83,20 @@ CREATE TABLE Offre(
    IDE INT NOT NULL,
    PRIMARY KEY(IDoffre),
    FOREIGN KEY(IDE) REFERENCES Entreprise(IDE)
+);
+
+CREATE TABLE Competences(
+   IDComp SMALLINT NOT NULL AUTO_INCREMENT,
+   Comp VARCHAR(50) NOT NULL,
+   PRIMARY KEY(IDComp)
+);
+
+CREATE TABLE necessite(
+   IDoffre INT,
+   IDComp SMALLINT,
+   PRIMARY KEY(IDoffre, IDComp),
+   FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
+   FOREIGN KEY(IDComp) REFERENCES Competences(IDComp)
 );
 
 CREATE TABLE promotion(
