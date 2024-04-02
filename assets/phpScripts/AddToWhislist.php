@@ -12,7 +12,7 @@
     if(isset($_POST["IDo"]) and isset($_SESSION["IDu"]) and $_POST["IDo"]!="")
     {
         
-        $connexion->set("INSERT into interesser(IDoffre,IDu) VALUE('".$_POST["IDo"]."','".$_SESSION["IDu"]."');");//INSERT into interesser VALUE(1,1);DELETE FROM interesser;
+        $connexion->set("INSERT into interesser(IDoffre,IDu) VALUE(".$_POST["IDo"].",".$_SESSION["IDu"].");");//INSERT into interesser VALUE(1,1);DELETE FROM interesser;
         echo "done";
     }
     else

@@ -84,6 +84,7 @@ function closePopup()
 }
 function WishList(event)
 {
+    
     let tmp = new FormData();
     tmp.append("IDo",event.target.parentNode.parentNode.id)
     if (event.target.checked == 1)
@@ -164,9 +165,11 @@ function search(event)
                 OffreCon.insertAdjacentHTML("beforeend",getStageHtml(data[i].IDoffre,data[i].Poste,data[i].NomE,data[i].Ville))
                 let Offre = document.getElementById(data[i].IDoffre);
                 Offre.children[0].children[0].onclick = ShowOffre;
-                if(Offre.children[0].length>1)
+                
+                if(Offre.children[0].children.length>1 && Offre.children[0].children[1].classList[0] == "StarButon")
                 {
                     Offre.children[0].children[1].addEventListener("click",WishList);
+                    
                 }
                 
                 if (data[i].IDu != null)

@@ -13,6 +13,28 @@ const layout = {title:"World Wide Wine Production",
 autosize: true
 };
 
+/*
+CentresEtudiant:
+PromotionsEtudiant:SELECT Promotion,COUNT(etudiant.IDu) from promotion INNER join etudiant on etudiant.IDProm =Promotion.IDProm GROUP by promotion;
+Competences: 
+Localitee:SELECT COUNT(IDoffre),ville from offre INNER join entreprise on entreprise.IDE = offre.IDE INNER join adresse on entreprise.ID_adresse = adresse.ID_adresse INNER join ville on ville.idv = adresse.idv GROUP by ville.idv;
+TopWhishList: SELECT offre.IDoffre, count(IDu) as nb from offre INNER JOIN interesser on offre.IDoffre = interesser.IDoffre GROUP by offre.IDoffre LIMIT 5;
+PromotionsConcernees:
+DureeStage: SELECT duree ,COUNT(IDoffre) from offre GROUP by duree;
+LocaliteeEnt: SELECT COUNT(IDE),ville from entreprise INNER join adresse on entreprise.ID_adresse = adresse.ID_adresse INNER join ville on ville.idv = adresse.idv GROUP by ville.idv;
+SecteurAct:SELECT secteur_Act ,COUNT(IDE) from secteur_activite INNER join entreprise on entreprise.IdSec = secteur_activite.IdSec GROUP by secteur_Act;
+TopAnnonces: SELECT offre.IDoffre, count(IDu) as nb from offre INNER JOIN postuler on offre.IDoffre = postuler.IDoffre GROUP by offre.IDoffre LIMIT 5;
+
+
+
+
+
+*/
+
+
+
+
+
 Plotly.newPlot("CentresEtudiant", data, layout);
 Plotly.newPlot("PromotionsEtudiant", data, layout);
 Plotly.newPlot("Competences", data, layout);
