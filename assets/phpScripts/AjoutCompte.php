@@ -14,7 +14,8 @@
         else {
             if($connexion->GetArray("SELECT ville FROM ville WHERE ville ='".$_GET['Ville']."';")==!null){
                 $StockVille = $connexion->GetArray("SELECT idv FROM ville WHERE ville = '".$_GET['Ville']."';");
-                $requêteAdresse = $connexion->add("INSERT INTO adresse (adresseA, idv) VALUES('".$_POST['Adresse']."','".$StockVille[0]."');");
+                var_dump($StockVille[0]);
+                $requêteAdresse = $connexion->add("INSERT INTO adresse (adresseA, idv) VALUES('".$_GET['Adresse']."','".$StockVille[0]."');");
             
             }
             else{

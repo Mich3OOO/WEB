@@ -9,20 +9,49 @@
         <button type="submit" class="Importation" >Importer un image</button>
     </div>
     <div class="flex-droit">
-    <label for="Role">Role:</label>
-    <input type="text" id="Role" name="Role" value={$usermodif["role"]}>
-    <label for="Promotion">Promotions:</label>
-    <input type="text" id="Promotion" name="Promotion" value={$usermodif["promotion"]}>
+    <label for="Role">Role</label>
+    <select name="Role">
+            {foreach from=$allrole item=role}
+                <option value={$usermodif["role"]}>{$role.role}</option>
+            {/foreach}
+    </select>
+
+    <label for="Promotion">Promotions</label>
+    <select multiple name="Promotion">
+            {foreach from=$allpromotion item=promo}
+            <option value={$usermodif["promotion"]}>{$promo.promotion}</option>
+            {/foreach}
+    </select>
+
     <label for="Campus">Campus</label>
-    <input type="text" required="required" id="Campus" name="Campus" value={$usermodif["campus"]}>
+    <select name="Campus">
+            {foreach from=$allcampus item=campus}
+            <option value={$usermodif["campus"]}>{$campus.NomC}</option>
+            {/foreach}
+    </select>
+   
     </div>
     </div>
     <label for="CP">Code Postale</label>
-    <input type="text" required="required" id="CP" name="CP" value="{$usermodif["CP"]}">
+    <select name="CP">
+            {foreach from=$allCP item=CP}
+            <option value={$usermodif["CP"]}>{$CP.Code_Post}</option>
+            {/foreach}
+    </select>
+
     <label for="Ville">Ville</label>
-    <input type="text" required="required" id="Ville" name="Ville" value="{$usermodif["Ville"]}">
+    <select name="Ville">
+            {foreach from=$allVille item=Ville}
+            <option value={$usermodif["Ville"]}>{$Ville.ville}</option>
+            {/foreach}
+    </select>
+
     <label for="Region">Région</label>
-    <input type="text" required="required" id="Region" name="Region" value="{$usermodif["Region"]}">
+    <select name="Region">
+            {foreach from=$allRegion item=region}
+            <option value={$usermodif["Region"]}>{$region.reg}</option>
+            {/foreach}
+    </select>
     
 </div>
 <div class="flex-droit">
