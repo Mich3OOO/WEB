@@ -1,5 +1,4 @@
 
-<h2 class="FormeH">Recherche d'entreprise</h2>
 <input list="Satages" id="search" placeholder="🔎︎ search">
 <div id="flex-mere">
     <div id="flex-filtres">
