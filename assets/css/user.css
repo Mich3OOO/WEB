@@ -1,4 +1,9 @@
 
+
+h1{
+    color:white;
+}
+
 body{
     font-family: Arial, sans-serif;
     background: url(../../image/fond.jpg);
@@ -6,7 +11,7 @@ body{
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
 }
 
-input/* modifie la zone de texte */ {
+input select/* modifie la zone de texte */ {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
