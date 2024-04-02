@@ -41,10 +41,12 @@ label{
     color: #FFFFFF;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     text-align: center;
 }
-
+.IDu{
+    display: none;
+}
 button:hover {
     background-color: #E76E3B;
 }

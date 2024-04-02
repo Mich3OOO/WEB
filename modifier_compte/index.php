@@ -17,7 +17,7 @@ $smarty->assign('description', 'algo');
 
 
 
-$hash = $connexion->GetFirstRow("Select utilisateur.IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA,promotion,NomC from `utilisateur` inner join adresse on utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN promotion ON utilisateur.IDu=promotion.IDu INNER JOIN campus ON promotion.idCentre=campus.idCentre where MailU ='".$_GET["email"]."';");
+$hash = $connexion->GetFirstRow("Select utilisateur.IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA,promotion,NomC,Code_Post,ville,reg from `utilisateur` INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg INNER JOIN promotion ON utilisateur.IDu=promotion.IDu INNER JOIN campus ON promotion.idCentre=campus.idCentre where MailU ='".$_GET["email"]."';");
 
 
 $usermodif["IDu"]= $hash[0] ;
@@ -30,6 +30,9 @@ $usermodif["role"]= $hash[6] ;
 $usermodif["Adresse"]= $hash[7];
 $usermodif["promotion"]= $hash[8] ;
 $usermodif["campus"]= $hash[9] ;
+$usermodif["CP"]= $hash[10];
+$usermodif["Ville"]= $hash[11] ;
+$usermodif["Region"]= $hash[12] ;
 
 //var_dump($usermodif);
       

@@ -72,6 +72,17 @@ class Sql
             }
 
     }
+    public function Update($sql)
+    {
+        try {
+            $update = $this->connexion->exec($sql);
+            return ($update);
+            } catch (Exception $e) {
+                echo "Problème de connexion à la base de donnée     ...".$e;
+                die();
+            }
+
+    }
 }
     
 

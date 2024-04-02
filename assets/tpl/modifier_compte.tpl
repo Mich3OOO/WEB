@@ -3,14 +3,26 @@
 <form action="../assets/phpScripts/updateUser.php" methode="get">
 <div class="flex-container">
 <div class="flex-gauche">
-    <img class="image-profil" src="image/persov5.jpg" alt="image profil">
-    <button type="submit" class="Importation" >Importer un image</button>
+    <div class="flex-container">
+    <div class="flex-gauche">
+        <img class="image-profil" src="image/persov5.jpg" alt="image profil">
+        <button type="submit" class="Importation" >Importer un image</button>
+    </div>
+    <div class="flex-droit">
     <label for="Role">Role:</label>
     <input type="text" id="Role" name="Role" value={$usermodif["role"]}>
     <label for="Promotion">Promotions:</label>
-    <input type="text" id="Promotions" name="Promotions" value={$usermodif["promotion"]}>
+    <input type="text" id="Promotion" name="Promotion" value={$usermodif["promotion"]}>
     <label for="Campus">Campus</label>
     <input type="text" required="required" id="Campus" name="Campus" value={$usermodif["campus"]}>
+    </div>
+    </div>
+    <label for="CP">Code Postale</label>
+    <input type="text" required="required" id="CP" name="CP" value="{$usermodif["CP"]}">
+    <label for="Ville">Ville</label>
+    <input type="text" required="required" id="Ville" name="Ville" value="{$usermodif["Ville"]}">
+    <label for="Region">Région</label>
+    <input type="text" required="required" id="Region" name="Region" value="{$usermodif["Region"]}">
     
 </div>
 <div class="flex-droit">
@@ -27,7 +39,7 @@
     <input type="text" required="required" id="Date-naissance" name="Date-naissance" value={$usermodif["Date_Nais"]}>
     <label for="Adresse">Adresse</label>
     <input type="text" required="required" id="Adresse" name="Adresse" value="{$usermodif["Adresse"]}">
-    
+    <input type="text" required="required" id="IDu" name="IDu" value="{$usermodif["IDu"]}">
 </div>
     
 </div>
