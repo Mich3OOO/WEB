@@ -151,3 +151,12 @@ CREATE TABLE PostulerA(
    FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
    FOREIGN KEY(IDu) REFERENCES Admin(IDu)
 );
+
+CREATE TABLE noter(
+   IDu INT,
+   IDE INT,
+   NoteU SMALLINT,
+   PRIMARY KEY(IDu, IDE),
+   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu),
+   FOREIGN KEY(IDE) REFERENCES Entreprise(IDE)
+);
