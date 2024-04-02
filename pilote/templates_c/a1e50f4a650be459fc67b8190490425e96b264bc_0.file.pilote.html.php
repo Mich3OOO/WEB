@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-01 22:50:47
+/* Smarty version 4.5.1, created on 2024-04-02 11:47:52
   from 'C:\Users\alexa\Desktop\Cours\Activitées\BLOC 4\PROJET\WEB\assets\html\pilote.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660b1e27849da8_23268000',
+  'unifunc' => 'content_660bd448a7bf53_63380059',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a1e50f4a650be459fc67b8190490425e96b264bc' => 
     array (
       0 => 'C:\\Users\\alexa\\Desktop\\Cours\\Activitées\\BLOC 4\\PROJET\\WEB\\assets\\html\\pilote.html',
-      1 => 1711706139,
+      1 => 1712008356,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660b1e27849da8_23268000 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660bd448a7bf53_63380059 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2 class="FormeH">Recherche d'offre de stage</h2>
 <input list="Satages" id="search" placeholder="🔎︎ search">
 <div id="flex-mere">
@@ -88,7 +88,7 @@ function content_660b1e27849da8_23268000 (Smarty_Internal_Template $_smarty_tpl)
                     <input class="StarButon" type="checkbox">
                     <button  class="modif">✎</button>
                 </div>
-            </div>
+            </div>  
             <div class="Offre" id ="3">
                 <div>
                     <button >

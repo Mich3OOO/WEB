@@ -43,7 +43,7 @@
                     <div class="bas-compte">
                         <div class="gauche">
                             <p class="mail">Adresse mail: {$entreprise.MailE}</p>
-                            <a class="Info More" href="">Site WEB : {$entreprise.Site}</a>
+                            <a class="Info taille" href="">Site WEB : {$entreprise.Site}</a>
                             <p class="mail">Secteur d'activité : {$entreprise.Secteur_Act}</p>
                         </div>
                         <div class="droite">

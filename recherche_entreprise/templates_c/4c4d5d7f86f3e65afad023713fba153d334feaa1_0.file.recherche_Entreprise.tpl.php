@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-01 22:42:45
+/* Smarty version 4.5.1, created on 2024-04-02 11:08:57
   from 'C:\Users\alexa\Desktop\Cours\Activitées\BLOC 4\PROJET\WEB\assets\tpl\recherche_Entreprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660b1c45401d48_10945671',
+  'unifunc' => 'content_660bcb291a2148_94802236',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4c4d5d7f86f3e65afad023713fba153d334feaa1' => 
     array (
       0 => 'C:\\Users\\alexa\\Desktop\\Cours\\Activitées\\BLOC 4\\PROJET\\WEB\\assets\\tpl\\recherche_Entreprise.tpl',
-      1 => 1712004032,
+      1 => 1712048927,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660b1c45401d48_10945671 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660bcb291a2148_94802236 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h2 class="FormeH">Recherche d'entreprise</h2>
 <input list="Satages" id="search" placeholder="🔎︎ search">
@@ -73,7 +73,7 @@ $_smarty_tpl->tpl_vars['entreprise']->do_else = false;
                         <div class="gauche">
                             <p class="mail">Adresse mail: <?php echo $_smarty_tpl->tpl_vars['entreprise']->value['MailE'];?>
 </p>
-                            <a class="Info More" href="">Site WEB : <?php echo $_smarty_tpl->tpl_vars['entreprise']->value['Site'];?>
+                            <a class="Info taille" href="">Site WEB : <?php echo $_smarty_tpl->tpl_vars['entreprise']->value['Site'];?>
 </a>
                             <p class="mail">Secteur d'activité : <?php echo $_smarty_tpl->tpl_vars['entreprise']->value['Secteur_Act'];?>
 </p>

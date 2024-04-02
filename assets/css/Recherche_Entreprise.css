@@ -270,7 +270,7 @@ flex: 1;
     }
 }
 
-/* Media queries pour les écrans très petits (smartphones) */
+/*smartphones*/
 @media screen and (max-width: 480px) {
     #search {
         width: 200px;
@@ -286,6 +286,11 @@ flex: 1;
 
     .liste-deroulante2 {
         width: 300px;
+    }
+
+    .taille{
+        margin-top: 80px;
+        margin-bottom: 10px;
     }
 
     #entre {
