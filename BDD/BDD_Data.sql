@@ -126,7 +126,8 @@ VALUES
 (3, 'Développeur Full-stack', 800, '2024-04-15', 5, 'Développeur Full-stack pour projet e-commerce.', 1),
 (6, 'Analyste financier junior', 1200, '2024-05-20', 3, "Recherche d'un analyste financier junior pour notre équipe.", 2),
 (4, 'Ingénieur en biotechnologie', 1000, '2024-06-10', 2, "Poste d'ingénieur en biotechnologie pour développement de nouveaux médicaments.", 3),
-(5, 'Chargé de marketing digital', 900, '2024-07-01', 4, 'Chargé de marketing digital pour campagnes publicitaires innovantes.', 4);
+(5, 'Chargé de marketing digital', 900, '2024-07-01', 4, 'Chargé de marketing digital pour campagnes publicitaires innovantes.', 4),
+(3, 'Front-end DEV', 650, '2024-06-10', 2, 'Déceloppeur Front-end pour un site web', 1);
 
 INSERT INTO necessite(IDoffre, IDComp)
 VALUES 
@@ -143,7 +144,10 @@ VALUES
 (3,11),
 (4,12),
 (4,13),
-(4,14);
+(4,14),
+(5,1),
+(5,2),
+(5,4);
 
 INSERT INTO Viser (IDoffre, IDT) 
 VALUES 
