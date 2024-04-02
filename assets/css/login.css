@@ -33,7 +33,7 @@ h1{
     margin-bottom: 5px; 
 }
 
-.login input[type="text"] /* modifie la zone de texte */ {
+.login input/* modifie la zone de texte */ {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
@@ -43,7 +43,7 @@ h1{
     color: #2E3244;
 }
 
-.login input[type="text"]:focus {
+.login input:focus {
     border-color: #F1895C;
 }
 

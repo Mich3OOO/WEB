@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-01 21:23:23
-  from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\Authentification.html' */
+/* Smarty version 4.5.1, created on 2024-04-01 22:25:15
+  from 'C:\Users\alexa\Desktop\Cours\Activitées\BLOC 4\PROJET\WEB\assets\html\Authentification.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660b09abbaee37_74027828',
+  'unifunc' => 'content_660b182b034a81_38862281',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '052ae690589b9909c97a0bcf3330b3e145250558' => 
+    'e0c2ff63caca1babec5b78577391609b113b99b0' => 
     array (
-      0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\html\\Authentification.html',
-      1 => 1711883608,
+      0 => 'C:\\Users\\alexa\\Desktop\\Cours\\Activitées\\BLOC 4\\PROJET\\WEB\\assets\\html\\Authentification.html',
+      1 => 1712002536,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660b09abbaee37_74027828 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660b182b034a81_38862281 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html lang="fr">

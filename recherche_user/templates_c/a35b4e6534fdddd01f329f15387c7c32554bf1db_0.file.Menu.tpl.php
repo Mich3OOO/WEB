@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-31 18:35:26
+/* Smarty version 4.5.1, created on 2024-04-01 20:44:58
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\Menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660990ced20997_54670010',
+  'unifunc' => 'content_660b00aaf0fad4_04401779',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660990ced20997_54670010 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660b00aaf0fad4_04401779 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="../assets/css/menu.css">
 <?php echo '<script'; ?>
  src="../assets/js/more_menu.js"><?php echo '</script'; ?>

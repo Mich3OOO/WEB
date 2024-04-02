@@ -61,6 +61,17 @@ class Sql
         $set = $this->connexion->prepare($sql);
         return $set->execute();
     }
+    public function Add($sql)
+    {
+        try {
+            $insert = $this->connexion->exec($sql);
+            return ($insert);
+            } catch (Exception $e) {
+                echo "Problème de connexion à la base de donnée     ...";
+                die();
+            }
+
+    }
 }
     
 

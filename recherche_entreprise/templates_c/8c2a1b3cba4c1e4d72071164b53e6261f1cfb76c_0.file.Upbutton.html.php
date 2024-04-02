@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-31 11:14:44
+/* Smarty version 4.5.1, created on 2024-04-01 21:22:32
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\Upbutton.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_66092984500174_70181644',
+  'unifunc' => 'content_660b09783337f8_83229425',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66092984500174_70181644 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660b09783337f8_83229425 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <button id = "upbutton">▲</button>
 <link rel="stylesheet" href="./../assets/css/upbutton.css">

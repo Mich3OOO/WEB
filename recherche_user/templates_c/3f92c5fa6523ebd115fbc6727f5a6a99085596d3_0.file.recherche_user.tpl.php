@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-31 19:50:47
+/* Smarty version 4.5.1, created on 2024-04-01 23:08:30
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\recherche_user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6609a27745d4a2_06522676',
+  'unifunc' => 'content_660b224e9e2e14_84003974',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3f92c5fa6523ebd115fbc6727f5a6a99085596d3' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\recherche_user.tpl',
-      1 => 1711907418,
+      1 => 1712005660,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6609a27745d4a2_06522676 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660b224e9e2e14_84003974 (Smarty_Internal_Template $_smarty_tpl) {
 ?><input list="Satages" id="search" placeholder="🔎︎ search">
     <div class="filtre-element">
     <div class="filtre">
@@ -37,7 +37,7 @@ function content_6609a27745d4a2_06522676 (Smarty_Internal_Template $_smarty_tpl)
               <label for="Pilote">Pilote</label>
             </div>
           </fieldset>
-          <?php }?>
+        <?php }?>
 
 
         <select name="Promotion">
@@ -56,10 +56,18 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </select>
 
         <select name="Campus">
-
-            <option value="Pau">Pau</option>
-            <option value="Nantaire">Nantaire</option>
-            
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['allcampus']->value, 'campus');
+$_smarty_tpl->tpl_vars['campus']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['campus']->value) {
+$_smarty_tpl->tpl_vars['campus']->do_else = false;
+?>
+                <option value=<?php echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];?>
+><?php echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];?>
+</option>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </select>
             
     </div>
@@ -95,8 +103,9 @@ $_smarty_tpl->tpl_vars['user']->do_else = false;
                         <p class="mail"><?php echo $_smarty_tpl->tpl_vars['user']->value['AdresseA'];?>
 </p>
                         <?php if (($_smarty_tpl->tpl_vars['_SESSION']->value["role"] == "Administrateur")) {?>
-                        <a class="Info suppr" href="#">Supprimer</a>
-                        <button  class="modif">✎</button>
+                        <a class="Info suppr" href="../assets/phpScripts/deleteUser.php">Supprimer</a>
+                        <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email=<?php echo $_smarty_tpl->tpl_vars['user']->value['MailU'];?>
+'">✎</button>
                         <?php }?>
                         <a class="Info" href="">Plus d'information</a>
                     </div>

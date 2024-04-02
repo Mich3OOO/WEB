@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-31 15:15:10
+/* Smarty version 4.5.1, created on 2024-04-01 22:21:44
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660961de95fba4_37201325',
+  'unifunc' => 'content_660b1758eafbb5_08518238',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../html/Upbutton.html' => 1,
   ),
 ),false)) {
-function content_660961de95fba4_37201325 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660b1758eafbb5_08518238 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
     <head>

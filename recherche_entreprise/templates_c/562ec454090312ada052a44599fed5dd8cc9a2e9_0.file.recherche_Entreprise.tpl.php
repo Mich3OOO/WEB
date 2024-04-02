@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-31 13:09:57
+/* Smarty version 4.5.1, created on 2024-04-01 21:22:32
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\recherche_Entreprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6609448551dff7_73710989',
+  'unifunc' => 'content_660b0978218085_93599336',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '562ec454090312ada052a44599fed5dd8cc9a2e9' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\recherche_Entreprise.tpl',
-      1 => 1711883395,
+      1 => 1711883608,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6609448551dff7_73710989 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660b0978218085_93599336 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h2 class="FormeH">Recherche d'entreprise</h2>
 <input list="Satages" id="search" placeholder="🔎︎ search">

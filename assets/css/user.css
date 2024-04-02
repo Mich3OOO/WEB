@@ -74,6 +74,7 @@ input/* modifie la zone de texte */ {
     height: auto;
     display: flex;
     flex-direction: column;
+    align-items: end;
 }
 
 .droite>a{
@@ -115,6 +116,11 @@ input/* modifie la zone de texte */ {
     text-align: left;
     font-size: small;
     
+}
+
+.modif{
+    width: fit-content;
+    height: fit-content;
 }
 
 .compte-droit{

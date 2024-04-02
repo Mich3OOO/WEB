@@ -14,7 +14,7 @@
               <label for="Pilote">Pilote</label>
             </div>
           </fieldset>
-          {/if}
+        {/if}
 
 
         <select name="Promotion">
@@ -24,10 +24,9 @@
         </select>
 
         <select name="Campus">
-
-            <option value="Pau">Pau</option>
-            <option value="Nantaire">Nantaire</option>
-            
+            {foreach from=$allcampus item=campus}
+                <option value={$campus.NomC}>{$campus.NomC}</option>
+            {/foreach}
         </select>
             
     </div>
@@ -50,8 +49,8 @@
                         <p class="mail">{$user.MailU}</p>
                         <p class="mail">{$user.AdresseA}</p>
                         {if ($_SESSION["role"] == "Administrateur")}
-                        <a class="Info suppr" href="#">Supprimer</a>
-                        <button  class="modif">✎</button>
+                        <a class="Info suppr" href="../assets/phpScripts/deleteUser.php">Supprimer</a>
+                        <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email={$user.MailU}'">✎</button>
                         {/if}
                         <a class="Info" href="">Plus d'information</a>
                     </div>

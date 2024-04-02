@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-31 12:06:58
+/* Smarty version 4.5.1, created on 2024-04-01 22:21:03
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\mentions_legales.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660935c20ee663_77807059',
+  'unifunc' => 'content_660b172fae1b28_05393095',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660935c20ee663_77807059 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660b172fae1b28_05393095 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h2>Mentions Légales</h2>
 <div>

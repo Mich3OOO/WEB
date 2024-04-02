@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-31 11:48:02
+/* Smarty version 4.5.1, created on 2024-04-01 22:28:53
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\profil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6609315262ded9_45156998',
+  'unifunc' => 'content_660b19058bcc98_91603952',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '49db9a9848c121506cb07a43f2b297352640f8d4' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\profil.tpl',
-      1 => 1711878478,
+      1 => 1711883608,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6609315262ded9_45156998 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660b19058bcc98_91603952 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1>Profil </h1>
 <form>

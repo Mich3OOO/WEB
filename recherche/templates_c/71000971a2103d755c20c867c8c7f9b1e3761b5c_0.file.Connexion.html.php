@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-30 15:08:08
+/* Smarty version 4.5.1, created on 2024-04-01 15:49:30
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\Connexion.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_66081cc81018b4_27824618',
+  'unifunc' => 'content_660abb6a37ca08_67405293',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '71000971a2103d755c20c867c8c7f9b1e3761b5c' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\html\\Connexion.html',
-      1 => 1711707240,
+      1 => 1711979115,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66081cc81018b4_27824618 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660abb6a37ca08_67405293 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <main>
     <div class = "flexContainer">              
@@ -53,14 +53,25 @@ function content_66081cc81018b4_27824618 (Smarty_Internal_Template $_smarty_tpl)
             <li>
                 <input id = "SécteurA" list="DLSécteurA" class="MChoise">
                 <datalist id = "DLSécteurA">
-                    <!--PHp-->
+                    
                 </datalist>
                 <div id = "SécteurAList" class="tagcontent">
                 </div>
             </li>
+            <li>
+                <label for="Prom">Promotion visé</label>
+            </li>
+            <li>
+                <input id = "Prom" list="DLProm" class="MChoise">
+                <datalist id = "DLProm">
+                    
+                </datalist>
+                <div id = "PromList" class="tagcontent">
+                </div>
+            </li>
 
             <li>
-                <label for="Date_début">Date début</label>
+                <label for="Date_début">Offres à partir du :</label>
             </li>
             <li>
                 <input type="date" id="Date_début">
@@ -72,28 +83,12 @@ function content_66081cc81018b4_27824618 (Smarty_Internal_Template $_smarty_tpl)
             <li>
                 <input type = "number" id="durée">
             </li>
-
-            
-            <li>
-                <label for="TypeContrat">Type de contrat</label>
-            </li>
-            <li>
-                <input id = "TypeContrat" list="DLTypeContrat" class="MChoise">
-                <datalist id = "DLTypeContrat">
-                    <option value="CDD"></option>
-                    <option value="CDI"></option>
-                    <option value="Stage"></option>
-                    <option value="Alternance"></option>
-                </datalist>
-                <div id = "TypeContratList" class="tagcontent">
-                </div>
-            </li>
             
         </ul>
         <div id = "RechercheOffre">
-            <input list="Stages" id="search" placeholder="🔎︎ search">
+            <input list="DLsearch" id="search" placeholder="🔎︎ search">
 
-            <datalist id = "Stages">
+            <datalist id = "DLsearch">
 
             </datalist>
 
