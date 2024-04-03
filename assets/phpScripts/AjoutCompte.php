@@ -29,13 +29,12 @@
         }
         $requêteUtilisateur = $connexion->add("INSERT INTO utilisateur (MdpU, NomU, PrenomU, Date_NaisU, MailU, role, ID_adresse) VALUES('".$_GET['Mot-de-passe']."','".$_GET['Nom']."', '".$_GET['Prenom']."', '".$_GET['Date-naissance']."', '".$_GET['Mail']."', '".$_GET['Role']."',  '".$StockAdresse[0]."');");
         $StockUtilisateur = $connexion->GetFirstRow("SELECT IDu FROM Utilisateur WHERE NomU = '".$_GET['Nom']."' AND PrenomU = '".$_GET['Prenom']."';");
-
+        $StockIDu = $connexion->GetFirstRow("SELECT IDu FROM utilisateur WHERE NomU = '".$_GET['Nom']."' AND PrenomU ='".$_GET['Prenom']."';");
         if ($_GET['Role'] == 'Etudiant'){
             $StockClasse = $connexion->GetFirstRow("SELECT IDClasse FROM Classe INNER JOIN types_promotions ON Classe.IDT = types_promotions.IDT INNER JOIN promotion ON promotion.IDProm = Classe.IDProm WHERE Promotion = '".$_GET['Promotion']."' AND Nom_du_Type = '".$_GET['Typepromo']."';");
-            $StockIDu = $connexion->GetFirstRow("SELECT IDu FROM utilisateur WHERE NomU = '".$_GET['Nom']."' AND PrenomU ='".$_GET['Prenom']."';");
             $requeteEtudiant = $connexion->add("INSERT INTO etudiant(IDu,IDClasse) VALUES ('".$StockIDu[0]."', '".$StockClasse[0]."' );");
         } else {
-            $requetePilote = $connexion->add("INSERT INTO pilote(IDu) VALUES ('".$_GET['IDu']."');");
+            $requetePilote = $connexion->add("INSERT INTO pilote(IDu) VALUES ('".$StockIDu[0]."');");
         }
     }
 
