@@ -1,80 +1,170 @@
-.FormeH{
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: large;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background: url(fond.jpg);
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
 }
 
-h4{
-    padding-left: 20%;
-    margin-bottom: 10px;
+label{
+    color: #C5C6C6;
 }
 
-#flex-mere{
+
+#flex-mere {
     display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
 }
 
-
-#flex-filtres{
-    padding-left: 20%;
-}
-
-#SearchBar{
-    margin-bottom: 20px;
+#flex-recherche {
+    border: solid 1px inherent;
+    width: 800px; 
+    height: 500px;
+    margin: 20px auto;
     border-radius: 8px;
-    margin-left: 50px;
-    width: 200px;
+    overflow-x: hidden; 
+    overflow-y: scroll;
+    margin-top: 50px;
 }
 
-#flex-recherche{
-    flex: 1;
-    padding-right: 20%;
-    margin-left: 20px;
-}
 
-.flex-filtres select{
+.selection {
     border-radius: 8px;
-    width: 70px;
-}
-
-input{
-    border-radius: 8px;
-}
-
-.selection{
-    border-radius: 8px;
-    width: 130px;
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 10px;
 }
 
 #Duree{
-    width: 70px;
+    border-radius: 8px;
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#date{
+    border-radius: 8px;
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#offres {
+    background-color: inehrit;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.Offre {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 3;
+    margin-right: 10px;
+}
+
+.Offre > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Offre button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.Offre .liste {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.StarButon {
+    cursor: pointer;
+}
+
+.modif {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
 }
 
 #search
 {
-    display: list-item;
+    display: block;
+    margin: 0 auto;
     border: solid;
     border-width: 1px;
     border-radius: 100px;
-    height: 30px; width: 400px;
-    margin-top: 30px;
+    max-width:400px ;
+    height: 30px; width: 80%;
     margin-bottom: 20px;
-    margin-left: 40%;
     padding: 2px 30px;
 }
 
-.Offre>div>.modif
+*::-webkit-scrollbar
 {
-    position: relative;
-    bottom: 25%; left: 72%;
-    border: hidden;
-    width: 25px;
-    border-radius: 8px;
-    background-color: none;
-    background-color: white;
+    border: none;
+    background-color:#eeeeee;
+    border-radius: 30px;
+    width: 10px;
+}
+*::-webkit-scrollbar-thumb
+{
+    border: none;
+    border-radius: 30px;
+    background-color: #C5C6C6;
+    
 }
 
-.modif:hover{
-    font-weight: bold;
-    color: gold;
+@media only screen and (max-width: 1024px) {
+
+    #flex-mere {
+        flex-direction: column; /* Change la direction de la disposition des éléments en colonne */
+        align-items: center; /* Centre les éléments horizontalement */
+    }
+
+    #flex-recherche {
+        width: 90%; /* Ajuste la largeur du conteneur pour s'adapter à l'écran plus petit */
+        height: auto; /* Supprime la hauteur fixe pour que la hauteur s'ajuste automatiquement en fonction du contenu */
+        margin: 20px auto; /* Centre le conteneur horizontalement */
+    }
+
+    .selection, #Duree, #date, #search {
+        width: 100%; /* Ajuste la largeur des éléments de formulaire pour occuper toute la largeur du conteneur */
+    }
+
+    .Offre {
+        flex: 1 0 100%; /* Fait en sorte que les offres occupent toute la largeur du conteneur */
+        
+    }
+
+    .Offre button.modif {
+        font-size: 1em; /* Ajuste la taille de la police pour les boutons de modification */
+    }
+    
+    .modif{
+        margin-right: 30px;
+    }
 }
