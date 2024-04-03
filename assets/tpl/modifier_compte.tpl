@@ -12,6 +12,12 @@
     <label for="Role">Role</label>
     <select name="Role">
             {foreach from=$allrole item=role}
+             {if ({$role.role}=={$usermodif["role"]})}
+            <option selected>{$role.role}</option>
+            
+            {else}
+                <option >{$role.role}</option>
+            {/if}
                 <option value={$usermodif["role"]}>{$role.role}</option>
             {/foreach}
     </select>
@@ -19,14 +25,25 @@
     <label for="Promotion">Promotion</label>
     <select multiple name="Promotion">
             {foreach from=$allpromotion item=promo}
-            <option value={$usermodif["promotion"]}>{$promo.promotion}</option>
+            {if ({$promo.promotion}=={$usermodif["promotion"]})}
+            <option selected>{$promo.promotion}</option>
+            
+            {else}
+                <option >{$promo.promotion}</option>
+            {/if}
             {/foreach}
     </select>
 
     <label for="Campus">Campus</label>
     <select name="Campus">
             {foreach from=$allcampus item=campus}
-            <option value={$usermodif["campus"]}>{$campus.NomC}</option>
+            {if ({$campus.NomC}=={$usermodif["campus"]})}
+            <option selected>{$campus.NomC}</option>
+            
+            {else}
+                <option >{$campus.NomC}</option>
+            {/if}
+           
             {/foreach}
     </select>
    
@@ -35,21 +52,39 @@
     <label for="CP">Code Postale</label>
     <select name="CP">
             {foreach from=$allCP item=CP}
-            <option value={$usermodif["CP"]}>{$CP.Code_Post}</option>
+            {if ({$CP.Code_Post}=={$usermodif["CP"]})}
+            <option selected>{$CP.Code_Post}</option>
+            
+            {else}
+                <option >{$CP.Code_Post}</option>
+            {/if}
+            
             {/foreach}
     </select>
 
     <label for="Ville">Ville</label>
     <select name="Ville">
             {foreach from=$allVille item=Ville}
-            <option value={$usermodif["Ville"]}>{$Ville.ville}</option>
+            {if ({$Ville.ville}=={$usermodif["Ville"]})}
+            <option selected>{$Ville.ville}</option>
+            
+            {else}
+                <option >{$Ville.ville}</option>
+            {/if}
+        
             {/foreach}
     </select>
 
     <label for="Region">Région</label>
     <select name="Region">
             {foreach from=$allRegion item=region}
-            <option value={$usermodif["Region"]}>{$region.reg}</option>
+            
+            {if ({$region.reg}=={$usermodif["Region"]})}
+            <option selected>{$region.reg}</option>
+            
+            {else}
+                <option >{$region.reg}</option>
+            {/if}
             {/foreach}
     </select>
     
@@ -74,9 +109,10 @@
 </div>
 <div class="flex-bas">
     <button type="submit" class="Valider">Valider</button>
-    <form action="../assets/phpScripts/deleteUser.php" methode="get">
-        <button type="submit" class="Reinitialiser">Supprimer</button> 
-    </form>
+    <button type="submit" class="Reinitialiser">Supprimer</button> 
+   
+    
 
 </div>
 </form>
+

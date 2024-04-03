@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-02 12:09:34
+/* Smarty version 4.5.1, created on 2024-04-02 20:03:36
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\modifier_compte.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660bd95e16bdc7_16822126',
+  'unifunc' => 'content_660c487853dba8_99738534',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd476a4dcf364ccc8d0a45c68e05a3a823825d18a' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\modifier_compte.tpl',
-      1 => 1712052528,
+      1 => 1712081013,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660bd95e16bdc7_16822126 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660c487853dba8_99738534 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1>Modifier un compte </h1>
 <form action="../assets/phpScripts/updateUser.php" methode="get">
@@ -40,6 +40,20 @@ $_smarty_tpl->tpl_vars['role']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['role']->value) {
 $_smarty_tpl->tpl_vars['role']->do_else = false;
 ?>
+             <?php ob_start();
+echo $_smarty_tpl->tpl_vars['role']->value['role'];
+$_prefixVariable1 = ob_get_clean();
+ob_start();
+echo $_smarty_tpl->tpl_vars['usermodif']->value["role"];
+$_prefixVariable2 = ob_get_clean();
+if (($_prefixVariable1 == $_prefixVariable2)) {?>
+            <option selected><?php echo $_smarty_tpl->tpl_vars['role']->value['role'];?>
+</option>
+            
+            <?php } else { ?>
+                <option ><?php echo $_smarty_tpl->tpl_vars['role']->value['role'];?>
+</option>
+            <?php }?>
                 <option value=<?php echo $_smarty_tpl->tpl_vars['usermodif']->value["role"];?>
 ><?php echo $_smarty_tpl->tpl_vars['role']->value['role'];?>
 </option>
@@ -56,9 +70,20 @@ $_smarty_tpl->tpl_vars['promo']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['promo']->value) {
 $_smarty_tpl->tpl_vars['promo']->do_else = false;
 ?>
-            <option value=<?php echo $_smarty_tpl->tpl_vars['usermodif']->value["promotion"];?>
-><?php echo $_smarty_tpl->tpl_vars['promo']->value['promotion'];?>
+            <?php ob_start();
+echo $_smarty_tpl->tpl_vars['promo']->value['promotion'];
+$_prefixVariable3 = ob_get_clean();
+ob_start();
+echo $_smarty_tpl->tpl_vars['usermodif']->value["promotion"];
+$_prefixVariable4 = ob_get_clean();
+if (($_prefixVariable3 == $_prefixVariable4)) {?>
+            <option selected><?php echo $_smarty_tpl->tpl_vars['promo']->value['promotion'];?>
 </option>
+            
+            <?php } else { ?>
+                <option ><?php echo $_smarty_tpl->tpl_vars['promo']->value['promotion'];?>
+</option>
+            <?php }?>
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -72,9 +97,21 @@ $_smarty_tpl->tpl_vars['campus']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['campus']->value) {
 $_smarty_tpl->tpl_vars['campus']->do_else = false;
 ?>
-            <option value=<?php echo $_smarty_tpl->tpl_vars['usermodif']->value["campus"];?>
-><?php echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];?>
+            <?php ob_start();
+echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];
+$_prefixVariable5 = ob_get_clean();
+ob_start();
+echo $_smarty_tpl->tpl_vars['usermodif']->value["campus"];
+$_prefixVariable6 = ob_get_clean();
+if (($_prefixVariable5 == $_prefixVariable6)) {?>
+            <option selected><?php echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];?>
 </option>
+            
+            <?php } else { ?>
+                <option ><?php echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];?>
+</option>
+            <?php }?>
+           
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -90,9 +127,21 @@ $_smarty_tpl->tpl_vars['CP']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['CP']->value) {
 $_smarty_tpl->tpl_vars['CP']->do_else = false;
 ?>
-            <option value=<?php echo $_smarty_tpl->tpl_vars['usermodif']->value["CP"];?>
-><?php echo $_smarty_tpl->tpl_vars['CP']->value['Code_Post'];?>
+            <?php ob_start();
+echo $_smarty_tpl->tpl_vars['CP']->value['Code_Post'];
+$_prefixVariable7 = ob_get_clean();
+ob_start();
+echo $_smarty_tpl->tpl_vars['usermodif']->value["CP"];
+$_prefixVariable8 = ob_get_clean();
+if (($_prefixVariable7 == $_prefixVariable8)) {?>
+            <option selected><?php echo $_smarty_tpl->tpl_vars['CP']->value['Code_Post'];?>
 </option>
+            
+            <?php } else { ?>
+                <option ><?php echo $_smarty_tpl->tpl_vars['CP']->value['Code_Post'];?>
+</option>
+            <?php }?>
+            
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -106,9 +155,21 @@ $_smarty_tpl->tpl_vars['Ville']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['Ville']->value) {
 $_smarty_tpl->tpl_vars['Ville']->do_else = false;
 ?>
-            <option value=<?php echo $_smarty_tpl->tpl_vars['usermodif']->value["Ville"];?>
-><?php echo $_smarty_tpl->tpl_vars['Ville']->value['ville'];?>
+            <?php ob_start();
+echo $_smarty_tpl->tpl_vars['Ville']->value['ville'];
+$_prefixVariable9 = ob_get_clean();
+ob_start();
+echo $_smarty_tpl->tpl_vars['usermodif']->value["Ville"];
+$_prefixVariable10 = ob_get_clean();
+if (($_prefixVariable9 == $_prefixVariable10)) {?>
+            <option selected><?php echo $_smarty_tpl->tpl_vars['Ville']->value['ville'];?>
 </option>
+            
+            <?php } else { ?>
+                <option ><?php echo $_smarty_tpl->tpl_vars['Ville']->value['ville'];?>
+</option>
+            <?php }?>
+        
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -122,9 +183,21 @@ $_smarty_tpl->tpl_vars['region']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['region']->value) {
 $_smarty_tpl->tpl_vars['region']->do_else = false;
 ?>
-            <option value=<?php echo $_smarty_tpl->tpl_vars['usermodif']->value["Region"];?>
-><?php echo $_smarty_tpl->tpl_vars['region']->value['reg'];?>
+            
+            <?php ob_start();
+echo $_smarty_tpl->tpl_vars['region']->value['reg'];
+$_prefixVariable11 = ob_get_clean();
+ob_start();
+echo $_smarty_tpl->tpl_vars['usermodif']->value["Region"];
+$_prefixVariable12 = ob_get_clean();
+if (($_prefixVariable11 == $_prefixVariable12)) {?>
+            <option selected><?php echo $_smarty_tpl->tpl_vars['region']->value['reg'];?>
 </option>
+            
+            <?php } else { ?>
+                <option ><?php echo $_smarty_tpl->tpl_vars['region']->value['reg'];?>
+</option>
+            <?php }?>
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -157,11 +230,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
 <div class="flex-bas">
     <button type="submit" class="Valider">Valider</button>
-    <form action="../assets/phpScripts/deleteUser.php" methode="get">
-        <button type="submit" class="Reinitialiser">Supprimer</button> 
-    </form>
+    <button type="submit" class="Reinitialiser">Supprimer</button> 
+   
+    
 
 </div>
 </form>
+
 <?php }
 }
