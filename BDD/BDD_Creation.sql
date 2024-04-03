@@ -179,6 +179,8 @@ CREATE TABLE necessite(
    FOREIGN KEY(IDComp) REFERENCES Competences(IDComp)
 );
 
+
+
 CREATE USER admin IDENTIFIED BY 'mdp2';
 GRANT ALL PRIVILEGES ON presquauchaud TO admin;
 CREATE USER pilote IDENTIFIED BY 'mdp';

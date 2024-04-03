@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-03 13:36:29
+/* Smarty version 4.5.1, created on 2024-04-03 15:49:38
   from 'C:\Users\Utilisateur\Desktop\CPI A2\Cours\WEB\Projet\WEB\assets\tpl\modifier_compte.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660d3f3dcde674_33444810',
+  'unifunc' => 'content_660d5e72a64867_18304645',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '873bf6e168e809efdc0b3c78fdba65a7039a3a1e' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\Desktop\\CPI A2\\Cours\\WEB\\Projet\\WEB\\assets\\tpl\\modifier_compte.tpl',
-      1 => 1712127430,
+      1 => 1712152174,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660d3f3dcde674_33444810 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660d5e72a64867_18304645 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1>Modifier un compte </h1>
 <form action="../assets/phpScripts/updateUser.php" methode="get">
@@ -40,23 +40,21 @@ $_smarty_tpl->tpl_vars['role']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['role']->value) {
 $_smarty_tpl->tpl_vars['role']->do_else = false;
 ?>
-             <?php ob_start();
+            <?php ob_start();
 echo $_smarty_tpl->tpl_vars['role']->value['role'];
 $_prefixVariable1 = ob_get_clean();
 ob_start();
 echo $_smarty_tpl->tpl_vars['usermodif']->value["role"];
 $_prefixVariable2 = ob_get_clean();
 if (($_prefixVariable1 == $_prefixVariable2)) {?>
-            <option selected><?php echo $_smarty_tpl->tpl_vars['role']->value['role'];?>
+                <option selected><?php echo $_smarty_tpl->tpl_vars['role']->value['role'];?>
 </option>
             
             <?php } else { ?>
                 <option ><?php echo $_smarty_tpl->tpl_vars['role']->value['role'];?>
 </option>
             <?php }?>
-                <option value=<?php echo $_smarty_tpl->tpl_vars['usermodif']->value["role"];?>
-><?php echo $_smarty_tpl->tpl_vars['role']->value['role'];?>
-</option>
+               
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -98,17 +96,17 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['campus']->value)
 $_smarty_tpl->tpl_vars['campus']->do_else = false;
 ?>
             <?php ob_start();
-echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];
+echo $_smarty_tpl->tpl_vars['campus']->value['ville'];
 $_prefixVariable5 = ob_get_clean();
 ob_start();
-echo $_smarty_tpl->tpl_vars['usermodif']->value["campus"];
+echo $_smarty_tpl->tpl_vars['usermodif']->value["ville"];
 $_prefixVariable6 = ob_get_clean();
 if (($_prefixVariable5 == $_prefixVariable6)) {?>
-            <option selected><?php echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];?>
+            <option selected><?php echo $_smarty_tpl->tpl_vars['campus']->value['ville'];?>
 </option>
             
             <?php } else { ?>
-                <option ><?php echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];?>
+                <option ><?php echo $_smarty_tpl->tpl_vars['campus']->value['ville'];?>
 </option>
             <?php }?>
            

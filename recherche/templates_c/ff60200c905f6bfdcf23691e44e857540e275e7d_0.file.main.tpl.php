@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-03 10:26:03
+/* Smarty version 4.5.1, created on 2024-04-03 15:43:25
   from 'C:\Users\Utilisateur\Desktop\CPI A2\Cours\WEB\Projet\WEB\assets\tpl\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660d129beb44d9_38042492',
+  'unifunc' => 'content_660d5cfdd1e046_59426143',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ff60200c905f6bfdcf23691e44e857540e275e7d' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\Desktop\\CPI A2\\Cours\\WEB\\Projet\\WEB\\assets\\tpl\\main.tpl',
-      1 => 1711906505,
+      1 => 1712148497,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../html/Upbutton.html' => 1,
   ),
 ),false)) {
-function content_660d129beb44d9_38042492 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660d5cfdd1e046_59426143 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -41,7 +41,7 @@ function content_660d129beb44d9_38042492 (Smarty_Internal_Template $_smarty_tpl)
         <link href="<?php echo $_smarty_tpl->tpl_vars['dircss']->value;?>
 " rel="stylesheet" type="text/css" />
         <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['dirjs']->value;?>
+ async src="<?php echo $_smarty_tpl->tpl_vars['dirjs']->value;?>
 "><?php echo '</script'; ?>
 >
         

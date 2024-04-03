@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-03 10:26:04
+/* Smarty version 4.5.1, created on 2024-04-03 15:43:25
   from 'C:\Users\Utilisateur\Desktop\CPI A2\Cours\WEB\Projet\WEB\assets\html\Connexion.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660d129c0a8e19_19156128',
+  'unifunc' => 'content_660d5cfde047a9_18033162',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58ea47ca653904cc92f75bdc27b5aa683ce19616' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\Desktop\\CPI A2\\Cours\\WEB\\Projet\\WEB\\assets\\html\\Connexion.html',
-      1 => 1711971532,
+      1 => 1712148497,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660d129c0a8e19_19156128 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660d5cfde047a9_18033162 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <main>
     <div class = "flexContainer">              
@@ -37,7 +37,7 @@ function content_660d129c0a8e19_19156128 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </li>
             <li>
-                <label for="Département">Département</label>
+                <label for="Département">Région</label>
             </li>
             <li>
                 <input id = "Département" list="DLDépartement" class="MChoise">
