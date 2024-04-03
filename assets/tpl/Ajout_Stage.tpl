@@ -23,25 +23,27 @@
             <input type="text" required="required" id="Renumeration" name="Renumeration" placeholder="Renumeration en €">
             <label for="NB_Places">Nombre de places :</label>
             <input type="number" id="NB_Places" name="NB_Places" min="1" max="20" placeholder="Nombre de place disponible">
+            <label for="date">Date de début prévu :</label>
+            <input type="number" id="date" name="date" min="1" max="20" placeholder="Date de début prévu">
         </div>
         <div class="flex-droit">
             <label for="Promotion">Promotions concernés :</label>
             <select name="Promotion" id="Promotion" required="required" multiple>
-                <option value="A1">A1</option>
-                <option value="A2-Info">A2 Info</option>
-                <option value="A2-Géné">A2-Géné</option>
-                <option value="A3-Info">A3-Info</option>
-                <option value="A3-Géné">A2 Info</option>
-                <option value="A4-Info">A4-Info</option>
-                <option value="A4-Géné">A4-Géné</option>  
+                {foreach from=$allpromotion item=promotion}
+                    <option>{$promotion.promotion}</option>
+                {/foreach}
+            </select>
+            <label for="TypePromo">Type de promotions concernés :</label>
+            <select name="TypePromo" id="TypePromo" required="required" multiple>
+                {foreach from=$alltypepromo item=promo}
+                    <option>{$promo.Nom_du_Type}</option>
+                {/foreach}
             </select>
             <label for="Competences">Compétences necessaire :</label>
             <select name="Competences" id="Competences" required="required" multiple>
-                <option value="C++">C++</option>
-                <option value="Mecanique">Mécanique</option>
-                <option value="Industrie">Industrie</option>
-                <option value="HTML">HTML</option>
-                <option value="Python">Python</option>
+                {foreach from=$allcomp item=comp}
+                    <option>{$comp.comp}</option>
+                {/foreach}
             </select>
     </div>
     <div class="flex-bas">
