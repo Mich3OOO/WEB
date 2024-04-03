@@ -2,9 +2,9 @@
 include "PDO.php";
 $connexion = new Sql(1);
 
-$idsect=$connexion->GetFirstRow("SELECT idSec FROM secteur_activite WHERE Secteur_Act='".$_GET["Secteur_Act"]."';");
+$idsect=$connexion->GetFirstRow("SELECT IdSec FROM secteur_activite WHERE Secteur_Act='".$_GET["Secteur_Act"]."';");
 
-$connexion->Update("UPDATE entreprise INNER JOIN adresse ON entreprise.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg INNER JOIN Secteur_activite ON Secteur_activite.idSec=entreprise.idSec SET NomE='".$_GET["Nom"]."',
+$connexion->Update("UPDATE entreprise INNER JOIN adresse ON entreprise.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg INNER JOIN Secteur_activite ON Secteur_activite.IdSec=entreprise.IdSec SET NomE='".$_GET["Nom"]."',
 AdresseA='".$_GET["Adresse"]."',
 Code_Post='".$_GET["CP"]."',
 ville='".$_GET["Ville"]."',

@@ -2,8 +2,7 @@
     include "PDO.php";
     $connexion = new Sql(1);
     if($connexion->GetArray("SELECT NomU FROM utilisateur WHERE NomU = '".$_GET['Nom']."' AND PrenomU ='".$_GET['Prenom']."';")==!null){
-        echo 'Etudiant déjà existante';
-        
+        echo 'Etudiant déjà existante'; 
     } 
     else {
         if($connexion->GetArray("SELECT adresseA FROM adresse INNER JOIN ville ON ville.idv = adresse.idv WHERE adresseA ='".$_GET['Adresse']."' AND ville = '".$_GET['Ville']."';")==!null){
