@@ -178,3 +178,26 @@ CREATE TABLE necessite(
    FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
    FOREIGN KEY(IDComp) REFERENCES Competences(IDComp)
 );
+
+CREATE USER admin IDENTIFIED BY 'mdp2';
+GRANT ALL PRIVILEGES ON presquauchaud TO admin;
+CREATE USER pilote IDENTIFIED BY 'mdp';
+GRANT SELECT ON presquauchaud.* TO pilote;
+GRANT UPDATE, DELETE, INSERT ON utilisateur TO pilote;
+GRANT UPDATE, DELETE, INSERT ON adresse TO pilote;
+GRANT UPDATE, DELETE, INSERT ON ville TO pilote;
+GRANT UPDATE, DELETE, INSERT ON reg TO pilote;
+GRANT UPDATE, DELETE, INSERT ON entreprise TO pilote;
+GRANT UPDATE, DELETE, INSERT ON secteur_activite TO pilote;
+GRANT UPDATE, DELETE, INSERT ON offre TO pilote; 
+GRANT UPDATE, DELETE, INSERT ON Competences TO pilote;
+GRANT UPDATE, DELETE, INSERT ON necessite TO pilote;
+GRANT UPDATE, DELETE, INSERT ON promotion TO pilote;
+GRANT UPDATE, DELETE, INSERT ON types_promotions TO pilote;
+GRANT UPDATE, DELETE, INSERT ON Viser TO pilote;
+GRANT UPDATE, DELETE, INSERT ON Classe TO pilote;
+CREATE USER etudiant IDENTIFIED BY 'mdp';
+GRANT SELECT ON presquauchaud.* TO etudiant;
+GRANT INSERT, UPDATE, DELETE ON note TO etudiant;
+GRANT INSERT, UPDATE, DELETE ON Postuler TO etudiant;
+GRANT INSERT, UPDATE, DELETE ON interesser TO etudiant;
