@@ -24,7 +24,6 @@ if($_SESSION["role"]=="Administrateur"){
 }
 $allpromotion=$connexion->GetArray("SELECT DISTINCT promotion FROM promotion;");
 $allcampus=$connexion->GetArray("SELECT DISTINCT ville,ville.idv FROM ville INNER JOIN Classe ON ville.idv = Classe.idv;");
-//$campus=$connexion->GetArray("SELECT DISTINCT ville FROM ville INNER JOIN Classe ON ville.idv = Classe.idv INNER JOIN etudiant ON etudiant.IDClasse = Classe.IDClasse INNER JOIN utilisateur ON utilisateur.IDu = etudiant.IDu;");
 
 $smarty->assign('allutilisateur', $allutilisateur);
 $smarty->assign('allcampus', $allcampus);

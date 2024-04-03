@@ -5,13 +5,8 @@ include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
 $connexion = new Sql(1);
 
-<<<<<<< HEAD
-$smarty->assign('dirfile', '../html/modifier_entreprise.html');
-$smarty->assign('dircss', '../assets/css/ajout_entreprise.css');
-=======
 $smarty->assign('dirfile', '../tpl/modifier_entreprise.tpl');
-$smarty->assign('dircss', '../assets/css/postuler.css');
->>>>>>> 2c9605af96966503669864aa5d04a37c13bcb7f8
+$smarty->assign('dircss', '../assets/css/ajout_entreprise.css');
 $smarty->assign('dirjs', '#');
 $smarty->assign('titre', 'acceuille');
 $smarty->assign('keywords', 'algo');

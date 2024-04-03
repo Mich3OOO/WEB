@@ -9,7 +9,7 @@ $smarty = new Smarty();
 $smarty->assign('dirfile', '../tpl/recherche_Entreprise.tpl');
 $smarty->assign('dircss', '../assets/css/recherche_Entreprise.css');
 $smarty->assign('dirjs', '#');
-$smarty->assign('titre', 'acceuille');
+$smarty->assign('titre', 'Recherche une entreprise');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 
