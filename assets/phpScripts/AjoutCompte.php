@@ -11,7 +11,7 @@
             if($connexion->GetArray("SELECT ville FROM ville WHERE ville ='".$_GET['Ville']."';")==!null){
                 $StockVille = $connexion->GetArray("SELECT idv FROM ville WHERE ville = '".$_GET['Ville']."';");
                 $requêteAdresse = $connexion->add("INSERT INTO adresse (adresseA, idv) VALUES('".$_GET['Adresse']."','".$StockVille[0]."');");
-                $StockAdresse = $connexion->GetArray("SELECT ID_adresse FROM adresse INNER JOIN ville ON Adresse.idv = ville.idv WHERE adresseA = '".$_GET['adresseA']."' AND '".$_GET['Ville']"';");
+                $StockAdresse = $connexion->GetArray("SELECT ID_adresse FROM adresse INNER JOIN ville ON Adresse.idv = ville.idv WHERE adresseA = '".$_GET['adresseA']."' AND '".$_GET['Ville']."';");
             }
             else{
                 $StockRegion=$connexion->GetArray("SELECT ID_reg FROM reg WHERE reg = '".$_GET['Region']."';");
