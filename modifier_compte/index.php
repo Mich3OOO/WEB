@@ -3,8 +3,11 @@ require_once('../smarty/libs/Smarty.class.php');
 include "../assets/phpScripts/PDO.php";
     
 include "../assets/phpScripts/redirect.php";
-
-$connexion = new Sql(2);
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
+$connexion = new Sql($_SESSION["role"]);
 $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../tpl/modifier_compte.tpl');

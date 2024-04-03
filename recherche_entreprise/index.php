@@ -2,8 +2,12 @@
 include "../assets/phpScripts/redirect.php";
 include "../assets/phpScripts/PDO.php";
 require_once('../smarty/libs/Smarty.class.php');
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
 
-$connexion = new Sql(2);
+$connexion = new Sql($_SESSION["role"]);
 $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../tpl/recherche_Entreprise.tpl');

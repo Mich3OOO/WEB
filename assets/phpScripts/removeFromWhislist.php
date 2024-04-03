@@ -1,13 +1,12 @@
 <?php
     include "./PDO.php";
-    $connexion = new Sql(1);
-    
-    
-        
     if(!isset($_SESSION))
     {
         session_start();
     }
+    $connexion = new Sql($_SESSION["role"]);
+    
+    
 
     if(isset($_POST["IDo"]) and isset($_SESSION["IDu"]) and $_POST["IDo"]!="")
     {

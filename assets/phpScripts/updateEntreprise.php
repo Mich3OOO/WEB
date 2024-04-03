@@ -1,6 +1,10 @@
 <?php
 include "PDO.php";
-$connexion = new Sql(1);
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
+$connexion = new Sql($_SESSION["role"]);
 
 $idsect=$connexion->GetFirstRow("SELECT IdSec FROM secteur_activite WHERE Secteur_Act='".$_GET["Secteur_Act"]."';");
 

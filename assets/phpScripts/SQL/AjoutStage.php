@@ -1,6 +1,10 @@
 <?php
     include "PDO.php";
-    $connexion = new Sql(1);
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+    $connexion = new Sql($_SESSION["role"]);
 
     if($connexion->Set("IF EXIST (SELECT IDE from entreprise WHERE NomE = '".$_POST['Nom_Entreprise']."');")){
         $requête = $connexion->Set("SELECT IDE from entreprise WHERE NomE = '".$_POST['Nom_Entreprise']."' ");

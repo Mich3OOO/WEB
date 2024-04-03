@@ -1,126 +1,212 @@
-body {
+body{
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    background: url(fond.jpg);
+    background: url(../../image/fond.jpg);
     background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-size: auto;
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
 }
 
 label{
-    color: #C5C6C6;
+    color: black;
+    margin-bottom: 5px; 
+    font-size: large;
+    padding-bottom: 10px ;
+    padding-top: 5px ;
 }
 
+input/* modifie la zone de texte */ {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+}
 
-#flex-mere {
+select{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C6C6;
+    border-radius: 4px;
+    background-color: #F5F6F6;
+    color: #2E3244;
+}
+
+h4{
+    padding-left: 20%;
+    margin-bottom: 10px;
+}
+
+#flex-mere{
     display: flex;
-    justify-content: space-between;
-    margin: 20px auto;
-    max-width: 1200px;
 }
 
-#flex-recherche {
+
+#flex-filtres{
+    padding-left: 20%;
+}
+
+#SearchBar{
+    margin-bottom: 20px;
+    border-radius: 8px;
+    margin-left: 50px;
+    width: 200px;
+}
+
+#flex-recherche{
+    flex: 1;
+    padding-right: 20%;
+    margin-left: 20px;
+}
+
+.flex-filtres select{
+    border-radius: 8px;
+    width: 70px;
+}
+
+input{
+    border-radius: 8px;
+}
+
+.selection{
+    border-radius: 8px;
+    width: 130px;
+}
+
+#Duree{
+    width: 70px;
+}
+
+#search
+{
+    display: list-item;
+    border: solid;
+    border-width: 1px;
+    border-radius: 100px;
+    height: 30px; width: 400px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 40%;
+    padding: 2px 30px;
+}
+
+.mail{
+    font-size: small;
+    color: black;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+
+.Info{
+    margin-top: 10px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: blue;
+}
+
+.Info:hover{
+    color: #F1895C;
+}
+
+.gauche{
+    flex: 1;
+    width: 100px;
+    height: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.droite{
+    flex: 1;
+    width: 100px;
+    height: auto;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.liste-deroulante2{
+    overflow-x: hidden; 
+    overflow-y: scroll; 
     border: solid 1px inherent;
     width: 800px; 
     height: 500px;
     margin: 20px auto;
     border-radius: 8px;
-    overflow-x: hidden; 
-    overflow-y: scroll;
-    margin-top: 50px;
 }
 
 
-.selection {
+.compte{
+    background-color: #F5F6F6;
+    padding: 5px;
+    border: solid 1px black;
+    width: auto;
+    height: auto;
+    margin: 10px 10px;
     border-radius: 8px;
-    width: 80%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-top: 10px;
 }
 
-#Duree{
-    border-radius: 8px;
-    width: 80%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-top: 10px;
-}
-
-#date{
-    border-radius: 8px;
-    width: 80%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-top: 10px;
-}
-
-#offres {
-    background-color: inehrit;
+.haut-compte{
+    text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+}
+.droit-compte{
+    flex: 1;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-.Offre {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    flex: 3;
+.bas-compte{
+    display: flex;
+    text-align: left;
+    font-size: small;
+    
+}
+
+.compte-gauche{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding-left: 10px;
+    padding-top: 15px;
+    width: auto;
+    height: auto;
     margin-right: 10px;
+    border: #000000 2px solid;
 }
-
-.Offre > div {
+.compte-droit{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    flex: 1;
+    padding-left: 10px;
+    padding-top: 15px;
+    width: auto;
+    height: auto;
+    border: #000000 2px solid;
 }
 
-.Offre button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+.modif{
+    width: 10%;
 }
 
-.Offre .liste {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+#entre{
+text-align: right;
+flex: 1;
+margin-left: 15%;
 }
 
-.StarButon {
-    cursor: pointer;
+.stars{
+text-align: right;
+flex: 1;
 }
 
-.modif {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2em;
-}
-
-#search
-{
-    display: block;
-    margin: 0 auto;
-    border: solid;
-    border-width: 1px;
-    border-radius: 100px;
-    max-width:400px ;
-    height: 30px; width: 80%;
-    margin-bottom: 20px;
-    padding: 2px 30px;
+.NomPoste{
+    font-weight: bold;
+    font-size: 20px;
 }
 
 *::-webkit-scrollbar
@@ -138,33 +224,29 @@ label{
     
 }
 
-@media only screen and (max-width: 1024px) {
-
+@media screen and (max-width: 1024px) {
     #flex-mere {
-        flex-direction: column; /* Change la direction de la disposition des éléments en colonne */
-        align-items: center; /* Centre les éléments horizontalement */
+        flex-direction: column;
+    }
+
+    #flex-filtres {
+        padding-left: 0;
     }
 
     #flex-recherche {
-        width: 90%; /* Ajuste la largeur du conteneur pour s'adapter à l'écran plus petit */
-        height: auto; /* Supprime la hauteur fixe pour que la hauteur s'ajuste automatiquement en fonction du contenu */
-        margin: 20px auto; /* Centre le conteneur horizontalement */
+        padding-right: 0;
+        margin-left: 0;
     }
 
-    .selection, #Duree, #date, #search {
-        width: 100%; /* Ajuste la largeur des éléments de formulaire pour occuper toute la largeur du conteneur */
+    #search {
+        margin-left: 20%;
     }
 
-    .Offre {
-        flex: 1 0 100%; /* Fait en sorte que les offres occupent toute la largeur du conteneur */
-        margin-right: 0; /* Supprime la marge à droite */
+    .liste-deroulante2 {
+        width: auto;
+        margin: 20px;
     }
-
-    .Offre button.modif {
-        font-size: 1em; /* Ajuste la taille de la police pour les boutons de modification */
-    }
-    
-    .modif{
-        margin-right: 15px;
+    .taille{
+        margin-top: 50px;
     }
 }

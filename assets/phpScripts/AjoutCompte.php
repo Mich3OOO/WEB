@@ -1,6 +1,12 @@
 <?php
     include "PDO.php";
-    $connexion = new Sql(1);
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+
+    $connexion = new Sql($_SESSION["role"]);
+
     if($connexion->GetArray("SELECT NomU FROM utilisateur WHERE NomU = '".$_GET['Nom']."' AND PrenomU ='".$_GET['Prenom']."';")==!null){
         echo 'Utilisateur déjà existant'; 
     } else {

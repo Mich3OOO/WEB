@@ -3,7 +3,12 @@ include "../assets/phpScripts/redirect.php";
 include "../assets/phpScripts/PDO.php";
 require_once('../smarty/libs/Smarty.class.php');
 
-$connexion = new Sql(2);
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
+
+$connexion = new Sql($_SESSION["role"]);
 $smarty = new Smarty();
 
 

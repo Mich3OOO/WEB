@@ -3,7 +3,12 @@ require_once('../smarty/libs/Smarty.class.php');
 include "../assets/phpScripts/PDO.php";
 include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
-$connexion = new Sql(1);
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
+
+$connexion = new Sql($_SESSION["role"]);
 
 $smarty->assign('dirfile', '../tpl/modifier_entreprise.tpl');
 $smarty->assign('dircss', '../assets/css/ajout_entreprise.css');
