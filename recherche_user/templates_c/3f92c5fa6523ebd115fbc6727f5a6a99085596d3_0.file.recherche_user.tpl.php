@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-03-31 20:40:27
+/* Smarty version 4.5.1, created on 2024-04-02 17:20:50
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\recherche_user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6609ae1bac9116_25063669',
+  'unifunc' => 'content_660c2252529363_08704622',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3f92c5fa6523ebd115fbc6727f5a6a99085596d3' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\recherche_user.tpl',
-      1 => 1711910424,
+      1 => 1712071249,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6609ae1bac9116_25063669 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660c2252529363_08704622 (Smarty_Internal_Template $_smarty_tpl) {
 ?><input list="Satages" id="search" placeholder="🔎︎ search">
-    <div class="filtre-element">
+
+<div class="flex-container">
     <div class="filtre">
         <?php if (($_smarty_tpl->tpl_vars['_SESSION']->value["role"] == "Administrateur")) {?>
         <fieldset>
@@ -103,8 +104,9 @@ $_smarty_tpl->tpl_vars['user']->do_else = false;
                         <p class="mail"><?php echo $_smarty_tpl->tpl_vars['user']->value['AdresseA'];?>
 </p>
                         <?php if (($_smarty_tpl->tpl_vars['_SESSION']->value["role"] == "Administrateur")) {?>
-                        <a class="Info suppr" href="#">Supprimer</a>
-                        <button  class="modif">✎</button>
+                        <button id="sure" onclick="sure()">Supprimer</button>
+                        <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email=<?php echo $_smarty_tpl->tpl_vars['user']->value['MailU'];?>
+'">✎</button>
                         <?php }?>
                         <a class="Info" href="">Plus d'information</a>
                     </div>
@@ -115,5 +117,6 @@ $_smarty_tpl->tpl_vars['user']->do_else = false;
     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+    </div>
 </div><?php }
 }

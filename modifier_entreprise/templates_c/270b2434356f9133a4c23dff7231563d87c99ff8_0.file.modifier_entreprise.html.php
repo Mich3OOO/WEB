@@ -1,4 +1,27 @@
+<?php
+/* Smarty version 4.5.1, created on 2024-04-01 22:21:45
+  from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\modifier_entreprise.html' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.5.1',
+  'unifunc' => 'content_660b17591233d8_71511859',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '270b2434356f9133a4c23dff7231563d87c99ff8' => 
+    array (
+      0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\html\\modifier_entreprise.html',
+      1 => 1711707240,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_660b17591233d8_71511859 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <div class="flex-container">
     <div class="flex-gauche">
         <label for="Nom_Entreprise">Nom  Entreprise :</label>
@@ -47,4 +70,5 @@
 <div class="flex-bas">
     <button type="submit" class="button" value="Valider">Valider</button> 
     <button type="submit" class="button" value="Annuler">Annuler</button> 
-</div>
+</div><?php }
+}

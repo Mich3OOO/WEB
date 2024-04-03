@@ -72,6 +72,28 @@ class Sql
             }
 
     }
+    public function Delete($sql)
+    {
+        try {
+            $delte = $this->connexion->exec($sql);
+            return ($delete);
+            } catch (Exception $e) {
+                echo "Problème de connexion à la base de donnée     ...". $e;
+                die();
+            }
+
+    }
+    public function Update($sql)
+    {
+        try {
+            $update = $this->connexion->exec($sql);
+            return ($update);
+            } catch (Exception $e) {
+                echo "Problème de connexion à la base de donnée     ...".$e;
+                die();
+            }
+
+    }
 }
     
 
