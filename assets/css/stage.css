@@ -113,4 +113,43 @@ textarea{
     margin-bottom: 50px;
 }
 
+@media screen and (max-width: 1024px) {
+    .flex-container input,
+    textarea,
+    select {
+        width: 70%;
+    }
+
+    .flex-gauche {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-gauche label,
+    .flex-gauche input {
+        width: 50%;
+        margin: 5px;
+    }
+
+    .flex-droit {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .flex-droit select {
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .flex-droit label {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
 

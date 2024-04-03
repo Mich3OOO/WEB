@@ -1,4 +1,28 @@
+<?php
+/* Smarty version 4.5.1, created on 2024-04-02 11:08:57
+  from 'C:\Users\alexa\Desktop\Cours\Activitées\BLOC 4\PROJET\WEB\assets\tpl\recherche_Entreprise.tpl' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.5.1',
+  'unifunc' => 'content_660bcb291a2148_94802236',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '4c4d5d7f86f3e65afad023713fba153d334feaa1' => 
+    array (
+      0 => 'C:\\Users\\alexa\\Desktop\\Cours\\Activitées\\BLOC 4\\PROJET\\WEB\\assets\\tpl\\recherche_Entreprise.tpl',
+      1 => 1712048927,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_660bcb291a2148_94802236 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<h2 class="FormeH">Recherche d'entreprise</h2>
 <input list="Satages" id="search" placeholder="🔎︎ search">
 <div id="flex-mere">
     <div id="flex-filtres">
@@ -24,12 +48,18 @@
     </div>
     <div id="flex-recherche">
         <div class="liste-deroulante2">
-            {foreach from=$allentreprise item=entreprise}
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['allentreprise']->value, 'entreprise');
+$_smarty_tpl->tpl_vars['entreprise']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['entreprise']->value) {
+$_smarty_tpl->tpl_vars['entreprise']->do_else = false;
+?>
             <div class="compte">
                 <div class="droit-compte">
                     <div class="haut-compte">
                         <div id="entre">
-                            <label class="NomEntreprise">{$entreprise.NomE}</label>
+                            <label class="NomEntreprise"><?php echo $_smarty_tpl->tpl_vars['entreprise']->value['NomE'];?>
+</label>
                         </div>
                         <div class="stars">
                             <i class="star stargrey fas fa-star" data-index="0"></i>
@@ -41,27 +71,32 @@
                     </div>
                     <div class="bas-compte">
                         <div class="gauche">
-                            <p class="mail">Adresse mail: {$entreprise.MailE}</p>
-                            <a class="Info taille" href="">Site WEB : {$entreprise.Site}</a>
-                            <p class="mail">Secteur d'activité : {$entreprise.Secteur_Act}</p>
+                            <p class="mail">Adresse mail: <?php echo $_smarty_tpl->tpl_vars['entreprise']->value['MailE'];?>
+</p>
+                            <a class="Info taille" href="">Site WEB : <?php echo $_smarty_tpl->tpl_vars['entreprise']->value['Site'];?>
+</a>
+                            <p class="mail">Secteur d'activité : <?php echo $_smarty_tpl->tpl_vars['entreprise']->value['Secteur_Act'];?>
+</p>
                         </div>
                         <div class="droite">
-                            <p class="mail" >Numéro de téléphone : {$entreprise.TelE}</p>
-                            <a class="Info More" href="">Adresse : {$entreprise.AdresseA}</a>
-                            {if ($_SESSION["role"] == "Administrateur")}
-                            <button id="sure" onclick="sure()">Supprimer</button>
-                            <button class="modif" onclick="window.location.href='../modifier_entreprise/index.php?IDE={$entreprise.IDE}'">✎</button>
-                            {/if}
+                            <p class="mail" >Numéro de téléphone : <?php echo $_smarty_tpl->tpl_vars['entreprise']->value['TelE'];?>
+</p>
+                            <a class="Info More" href="">Adresse : <?php echo $_smarty_tpl->tpl_vars['entreprise']->value['AdresseA'];?>
+</a>
                             <a class="Info More" href="">Plus d'information</a>
                         </div>
                     </div>
                 </div>
 
             </div>
-            {/foreach}
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
         </div>
 
     </div>
 
 </div>
+<?php }
+}
