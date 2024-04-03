@@ -1,6 +1,5 @@
 <?php
 
-
 class Sql
 {
     private ?PDO $connexion;
@@ -11,25 +10,24 @@ class Sql
         $password = "";
         switch ($Security_level) 
         {
-            case 1:
-                $user = "root";
-                $password = "";
-                $password = "";
+            case "Administrateur":
+                $user = "admin";
+                $password = "mdp2";
                 break;
             
-            case 2:
-                $user = "root";
-                $password = "";
+            case "Pilote":
+                $user = "pilote";
+                $password = "mdp";
                 break;
 
-            case 3:
-                $user = "root";
-                $password = "";
+            case "Etudiant":
+                $user = "etudiant";
+                $password = "mdp";
                 break;
             
             default:
-                $user = "root";
-                $password = "";
+                $user = "etudiant";
+                $password = "mdp";
                 break;
         }
         try{
@@ -75,7 +73,7 @@ class Sql
     public function Delete($sql)
     {
         try {
-            $delte = $this->connexion->exec($sql);
+            $delete = $this->connexion->exec($sql);
             return ($delete);
             } catch (Exception $e) {
                 echo "Problème de connexion à la base de donnée     ...". $e;

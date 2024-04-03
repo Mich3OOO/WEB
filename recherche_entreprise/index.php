@@ -2,14 +2,18 @@
 include "../assets/phpScripts/redirect.php";
 include "../assets/phpScripts/PDO.php";
 require_once('../smarty/libs/Smarty.class.php');
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
 
-$connexion = new Sql(2);
+$connexion = new Sql($_SESSION["role"]);
 $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../tpl/recherche_Entreprise.tpl');
 $smarty->assign('dircss', '../assets/css/recherche_Entreprise.css');
 $smarty->assign('dirjs', '#');
-$smarty->assign('titre', 'acceuille');
+$smarty->assign('titre', 'Recherche une entreprise');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 

@@ -26,7 +26,7 @@
 
         <select name="Campus">
             {foreach from=$allcampus item=campus}
-                <option value={$campus.NomC}>{$campus.NomC}</option>
+                <option value={$campus.ville}>{$campus.ville}</option>
             {/foreach}
         </select>
             
@@ -43,7 +43,7 @@
                         <img  class="image-compte" src="image/persov5.jpg" >
                         <p class="mail">{$user.promotion}</p>
                         <p class="mail">{$user.role}</p>
-                        <p class="mail">{$user.NomC}</p>
+                        <p class="mail">{if ({$user.idv}=={$allcampus.idv})}{$allcampus.ville}{/if}</p>
                     </div>
                     <div class="droite">
                         <p class="mail">{$user.Date_NaisU}</p>

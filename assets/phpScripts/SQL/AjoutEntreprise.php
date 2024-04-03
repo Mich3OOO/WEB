@@ -1,8 +1,12 @@
 <?php
     include "PDO.php";
-    $connexion = new Sql(1);
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+    $connexion = new Sql($_SESSION["role"]);
 
-    if($connexion->Set("IF EXIST (SELECT NomE FROM entreprise WHERE NomE = '"$_GET['NomE']"');")){
+    if($connexion->Set("SELECT EXISTS (SELECT NomE FROM entreprise WHERE NomE = '"$_GET['NomE']"');") !== null){
         echo 'Entreprise déjà existante';
     } else {
         if($connexion->set("IF EXISTS (SELECT adresseA FROM adresse WHERE adresseA ='"$_GET['adresseA']"')")){

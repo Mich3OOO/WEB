@@ -1,25 +1,32 @@
-window.addEventListener("DOMContentLoaded", ()=>{
+var role = "";
+if (document.readyState !== 'loading') {
+    init();
+}
+window.addEventListener("DOMContentLoaded",init)
+ 
+function init()
+{
+    role =document.cookie.split(";")[0].split("=")[1];
+    
     let inputs = document.getElementsByClassName("MChoise");
 
     for(let i = 0 ; i< inputs.length;i++)
     {
-
+        
         inputs[i].addEventListener("submit",addFiltre); 
-    
+
     }
-
-
 
     document.getElementById("Département").addEventListener("input",(event)=>{ updateDL(true,event,"https://geo.api.gouv.fr/departements?nom=")});
     document.getElementById("search").addEventListener("change",(event)=>{search();});
     document.getElementById("Ville").addEventListener("input",(event)=>{ updateDL(true,event,"https://geo.api.gouv.fr/communes?nom=") });
     document.getElementById("SécteurA").addEventListener("input",(event)=>{ updateDL(true,event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=") });
     document.getElementById("Prom").addEventListener("input",(event)=>{ updateDL(true,event,"http://localhost/assets/phpscripts/TypePromotion.php?TypePromotion=") });
-    
+
 
     document.getElementById("durée").addEventListener("change",search);
     search();
-})
+}
 
 function updateDL(MFiltre,event,api)
 {
@@ -62,8 +69,8 @@ function ShowOffre(event)
     }
        
     fetch("http://localhost/assets/phpScripts/search.php?ID="+tmp.id,{method: 'GET'}).then(r=> r.json()).then(data =>{
-        
-        document.body.insertAdjacentHTML("beforeend",getPopupHtml(tmp.id,data[0].Poste,data[0].Descr,data[0].Competence,data[0].Nom_du_Type,data[0].remune,data[0].Date_Stage,data[0].Duree,data[0].Nb_place,data[0].post,data[0].NomE,data[0].Site,data[0].descr,data[0].TelE));
+        console.log(data);
+        document.body.insertAdjacentHTML("beforeend",getPopupHtml(data[0].canpost==null,tmp.id,data[0].Poste,data[0].Descr,data[0].Competence,data[0].Nom_du_Type,data[0].remune,data[0].Date_Stage,data[0].Duree,data[0].Nb_place,data[0].post,data[0].NomE,data[0].Site,data[0].descr,data[0].TelE));
         document.getElementById("BGPopup").addEventListener("click",closePopup);
         document.getElementById("Close").addEventListener("click",closePopup);
 
@@ -77,6 +84,7 @@ function closePopup()
 }
 function WishList(event)
 {
+    
     let tmp = new FormData();
     tmp.append("IDo",event.target.parentNode.parentNode.id)
     if (event.target.checked == 1)
@@ -85,14 +93,22 @@ function WishList(event)
         fetch("http://localhost/assets/phpScripts/AddToWhislist.php",{method: 'POST',body: tmp });
     }
     else 
-    {
+    {   
         fetch("http://localhost/assets/phpScripts/removeFromWhislist.php",{method: 'POST',body: tmp});
     }
 }
 
-function getPopupHtml(IDoffre,NomPoste,SumUp,Comp,Prom,EUR,PubDate,duree,places,Postule,NameEnt,Location,SumUpEnt,tel)
+function getPopupHtml(canpost,IDoffre,NomPoste,SumUp,Comp,Prom,EUR,PubDate,duree,places,Postule,NameEnt,Location,SumUpEnt,tel)
 {
-    return "<div id='BGPopup'></div><div id = 'StagePopUp'><div class = 'scrollContainer'><button id = 'Close'>x</button><div id='infostage'><h2>"+NomPoste+"</h2><article><h3>Résumé</h3><p>"+SumUp+"</p></article><article><h3>compétences</h3><p>"+Comp+"</p></article><p><strong>promotions concernées:</strong>"+Prom+"</p><p><strong>rémunération:</strong>"+EUR+"</p><div class = 'flexContainer'><div id='PopUpTimeInfo'><strong>Date de publication:</strong><p>"+PubDate+"</p><strong>durée:</strong><p>"+ duree+ "</p></div><div id = 'PopUpSpotsInfo'><strong>nombre de places:</strong><p>"+places+"</p><strong>élèves postulés :</strong><p> "+Postule+"</p></div></div></div><div id='infoEntreprise'><h3>"+NameEnt+"</h3><h4>"+Location+"</h4><p>"+SumUpEnt+"</p><p>Tel: "+tel+"</p><a href = '../postuler/?IDoffre="+IDoffre+"'><button id = 'Postuler'>Postuler</button></a></div></div></div>";
+    r = "<div id='BGPopup'></div><div id = 'StagePopUp'><div class = 'scrollContainer'><button id = 'Close'>x</button><div id='infostage'><h2>"+NomPoste+"</h2><article><h3>Résumé</h3><p>"+SumUp+"</p></article><article><h3>compétences</h3><p>"+Comp+"</p></article><p><strong>promotions concernées:</strong>"+Prom+"</p><p><strong>rémunération:</strong>"+EUR+"€</p><div class = 'flexContainer'><div id='PopUpTimeInfo'><strong>Date de publication:</strong><p>"+PubDate+"</p><strong>durée:</strong><p>"+ duree+ " mois</p></div><div id = 'PopUpSpotsInfo'><strong>nombre de places:</strong><p>"+places+"</p><strong>élèves postulés :</strong><p> "+Postule+"</p></div></div></div><div id='infoEntreprise'><h3>"+NameEnt+"</h3><h4>"+Location+"</h4><p>"+SumUpEnt+"</p><p>Tel: "+tel+"</p>";
+    if(role!="Pilote" && canpost)
+    {
+        r+="<a href = '../postuler/?IDoffre="+IDoffre+"'><button id = 'Postuler'>Postuler</button></a>"
+    }
+    
+    r+="</div></div></div>";
+
+    return r;
 }   
 
 
@@ -149,7 +165,13 @@ function search(event)
                 OffreCon.insertAdjacentHTML("beforeend",getStageHtml(data[i].IDoffre,data[i].Poste,data[i].NomE,data[i].Ville))
                 let Offre = document.getElementById(data[i].IDoffre);
                 Offre.children[0].children[0].onclick = ShowOffre;
-                Offre.children[0].children[1].addEventListener("click",WishList);
+                
+                if(Offre.children[0].children.length>1 && Offre.children[0].children[1].classList[0] == "StarButon")
+                {
+                    Offre.children[0].children[1].addEventListener("click",WishList);
+                    
+                }
+                
                 if (data[i].IDu != null)
                 {
                     Offre.children[0].children[1].checked =true;
@@ -239,6 +261,16 @@ function getfiltres()
 
 function getStageHtml(StageId,Poste,Ent,Ville)
 {
-    return "<div class='Offre' id ="+StageId+"><div><button><ul class='liste'><li>"+Poste+"</li><li>"+Ent+"</li><li>"+ Ville +"</li> </ul></button><input class='StarButon' type='checkbox'></div></div>" ; 
-
+    r = "<div class='Offre' id ="+StageId+"><div><button><ul class='liste'><li>"+Poste+"</li><li>"+Ent+"</li><li>"+ Ville +"</li> </ul></button>";
+    if(role != "Pilote")
+    {
+        r+= "<input class='StarButon' type='checkbox'>";
+    }
+    if(role != "Etudiant")
+    {
+        r+= "<a class='edit' href='../modifier_Stage/?ID="+StageId+"' type='checkbox'>edit</a>"; 
+    }
+    
+    r += "</div></div>" ; 
+    return r;
 }

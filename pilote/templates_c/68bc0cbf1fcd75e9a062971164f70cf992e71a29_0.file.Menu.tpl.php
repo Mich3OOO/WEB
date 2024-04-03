@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-01 22:50:47
+/* Smarty version 4.5.1, created on 2024-04-03 16:05:01
   from 'C:\Users\alexa\Desktop\Cours\Activitées\BLOC 4\PROJET\WEB\assets\tpl\Menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660b1e2783b5a9_62597306',
+  'unifunc' => 'content_660d620ded46d4_83532047',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660b1e2783b5a9_62597306 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660d620ded46d4_83532047 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="../assets/css/menu.css">
 <?php echo '<script'; ?>
  src="../assets/js/more_menu.js"><?php echo '</script'; ?>

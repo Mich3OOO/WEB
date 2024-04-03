@@ -7,7 +7,7 @@ $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../html/wishlist.html');
 $smarty->assign('dircss', '../assets/css/wishlist.css');
-$smarty->assign('dirjs', '#');
+$smarty->assign('dirjs', '../assets/js/wishlist.js');
 $smarty->assign('titre', 'accueille');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');

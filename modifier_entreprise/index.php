@@ -3,15 +3,15 @@ require_once('../smarty/libs/Smarty.class.php');
 include "../assets/phpScripts/PDO.php";
 include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
-$connexion = new Sql(1);
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
 
-<<<<<<< HEAD
-$smarty->assign('dirfile', '../html/modifier_entreprise.html');
-$smarty->assign('dircss', '../assets/css/ajout_entreprise.css');
-=======
+$connexion = new Sql($_SESSION["role"]);
+
 $smarty->assign('dirfile', '../tpl/modifier_entreprise.tpl');
-$smarty->assign('dircss', '../assets/css/postuler.css');
->>>>>>> 2c9605af96966503669864aa5d04a37c13bcb7f8
+$smarty->assign('dircss', '../assets/css/ajout_entreprise.css');
 $smarty->assign('dirjs', '#');
 $smarty->assign('titre', 'acceuille');
 $smarty->assign('keywords', 'algo');
