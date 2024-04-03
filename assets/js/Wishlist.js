@@ -1,4 +1,15 @@
 search();
+document.getElementById("search").addEventListener("change",(event) =>{
+
+    let container = document.getElementsByClassName("liste-deroulante2")[0];
+    
+    for (let i = container.children.length-1; i >=0 ; i--) {
+        container.children[i].remove();
+        console.log(i);
+    }
+    search(event);
+
+})
 function search(event)
 {
     fetch("http://localhost/assets/phpScripts/getWishlist.php?Nom="+document.getElementById("search").value,{method: 'GET'}).then(r=> r.json()).then(data =>{
@@ -7,13 +18,18 @@ function search(event)
             document.getElementsByClassName("liste-deroulante2")[0].insertAdjacentHTML("beforeend",getStaghtml(data[i].IDoffre,data[i].Poste,data[i].NomE,data[i].adresseA+","+data[i].ville));
             
         }
+        console.log(data);
+        if(data.length<1)
+        {
+            document.getElementsByClassName("liste-deroulante2")[0].insertAdjacentHTML("beforeend","<h2>Not Foud</h2>");
+        }
 
     })
 }
 
 function getStaghtml(IDoffre,Poste,ENT,Lieu)
 {
-    return "'<div class='compte' id='"+ IDoffre +"'><div class='droit-compte'><div class='haut-compte'><label class='NomPoste'>"+Poste+"</label></div><div class='bas-compte'><div class='gauche'><a class='Info' href='../'>"+ENT+"</a><p class='mail'>"+Lieu+"</p></div><div class='droite'><button onclick = 'removeFromWhishlist(event)' class='plus'>supprimer</button><button class='plus' onclick = 'plus(event)'>Plus d'information ⇓ </button></div></div></div></div>";
+    return "<div class='compte' id='"+ IDoffre +"'><div class='droit-compte'><div class='haut-compte'><label class='NomPoste'>"+Poste+"</label></div><div class='bas-compte'><div class='gauche'><a class='Info' href='../'>"+ENT+"</a><p class='mail'>"+Lieu+"</p></div><div class='droite'><button onclick = 'removeFromWhishlist(event)' class='plus'>supprimer</button><button class='plus' onclick = 'plus(event)'>Plus d'information ⇓ </button></div></div></div></div>";
 }
 
 function removeFromWhishlist(event)

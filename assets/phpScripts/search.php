@@ -79,7 +79,7 @@ if(isset($_GET["ville"]) and isset($_GET["reg"]) and isset($_GET["Secteur"]) and
 }
 elseif(isset($_GET["ID"]))
 {
-    echo $con->Getjson("SELECT *,COUNT(postuler.IDu) as post FROM  OFFRE INNER JOIN Viser ON OFFRE.IDoffre = Viser.IDoffre INNER JOIN types_promotions ON Viser.IDT = types_promotions.IDT INNER JOIN entreprise ON Offre.IDE = entreprise.IDE INNER JOIN secteur_activite ON Entreprise.IdSec = secteur_activite.IdSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv = ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg LEFT JOIN postuler on postuler.IDoffre =offre.IDoffre where Offre.IDoffre = " . $_GET["ID"] . ";"); 
+    echo $con->Getjson("SELECT *,COUNT(postuler.IDu) as post,GROUP_CONCAT(competences.Comp) as Competence FROM  OFFRE INNER JOIN Viser ON OFFRE.IDoffre = Viser.IDoffre INNER JOIN types_promotions ON Viser.IDT = types_promotions.IDT INNER JOIN entreprise ON Offre.IDE = entreprise.IDE INNER JOIN secteur_activite ON Entreprise.IdSec = secteur_activite.IdSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv = ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg LEFT JOIN postuler on postuler.IDoffre =offre.IDoffre INNER JOIN necessite on necessite.IDoffre = offre.IDoffre INNER JOIN competences on competences.IDComp = necessite.IDComp where Offre.IDoffre = " . $_GET["ID"] . ";"); 
 }
 else
 {
