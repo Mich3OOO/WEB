@@ -1,16 +1,25 @@
 <?php
 include './PDO.php';
 $con = new Sql(1);
-if(isset($_GET["ville"]) and isset($_GET["reg"]) and isset($_GET["Secteur"]) and isset($_GET["Date"]) and isset($_GET["Duree"]) and isset($_GET["Poste"]) and isset($_GET["Prom"]) )
-{
-    if(!isset($_SESSION["IDu"]))
+
+if(!isset($_SESSION["IDu"]))
     {
         session_start();
     }
 
+$table = "interesser";
+if($_SESSION["role"] == "Administrateur")
+{
+    $table = "interessera";
+}
+
+if(isset($_GET["ville"]) and isset($_GET["reg"]) and isset($_GET["Secteur"]) and isset($_GET["Date"]) and isset($_GET["Duree"]) and isset($_GET["Poste"]) and isset($_GET["Prom"]) )
+{
+    
+
 
     $setand = false;
-    $sql = "SELECT n1.IDu as IDu ,offre.IDoffre as IDoffre, Poste, Ville, NomE FROM  OFFRE INNER JOIN entreprise ON Offre.IDE = entreprise.IDE INNER JOIN secteur_activite ON Entreprise.IdSec = secteur_activite.IdSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv = ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg LEFT join ((SELECT * from interesser WHERE IDu = ".$_SESSION["IDu"].") as n1) on n1.IDoffre = offre.IDoffre INNER JOIN viser on offre.IDoffre = viser.IDoffre inner join types_promotions on types_promotions.IDT = viser.IDT";
+    $sql = "SELECT n1.IDu as IDu ,offre.IDoffre as IDoffre, Poste, Ville, NomE FROM  OFFRE INNER JOIN entreprise ON Offre.IDE = entreprise.IDE INNER JOIN secteur_activite ON Entreprise.IdSec = secteur_activite.IdSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv = ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg LEFT join ((SELECT * from ".$table." WHERE IDu = ".$_SESSION["IDu"].") as n1) on n1.IDoffre = offre.IDoffre INNER JOIN viser on offre.IDoffre = viser.IDoffre inner join types_promotions on types_promotions.IDT = viser.IDT";
     if($_GET["ville"][0] != "" or $_GET["reg"][0] != "" or $_GET["Secteur"][0] != "" or $_GET["Date"] != "" or $_GET["Duree"] != "" or $_GET["Poste"] != "" or $_GET["Prom"][0] !="")
     {
         $sql = $sql . " WHERE" ;

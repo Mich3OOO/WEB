@@ -1,4 +1,16 @@
-search();
+if (document.readyState !== 'loading') {
+    init();
+  }
+  window.addEventListener("DOMContentLoaded",init)
+
+function init()
+{
+    search();
+}
+
+
+
+
 document.getElementById("search").addEventListener("change",(event) =>{
 
     let container = document.getElementsByClassName("liste-deroulante2")[0];

@@ -1,13 +1,4 @@
-var dataGraph;
 
-var dat = [{
-  values:[55, 49, 44],
-  labels:['Italy', 'France', "Spain"],
-  type: 'pie'//pie
-}];
-
-var lay = {height: 400,
-  width: 400,}
 if (document.readyState !== 'loading') {
   init();
 }
