@@ -10,25 +10,24 @@ class Sql
         $password = "";
         switch ($Security_level) 
         {
-            case 1:
-                $user = "root";
-                $password = "";
-                $password = "";
+            case "Administrateur":
+                $user = "admin";
+                $password = "mdp2";
                 break;
             
-            case 2:
-                $user = "root";
-                $password = "";
+            case "Pilote":
+                $user = "pilote";
+                $password = "mdp";
                 break;
 
-            case 3:
-                $user = "root";
-                $password = "";
+            case "Etudiant":
+                $user = "etudiant";
+                $password = "mdp";
                 break;
             
             default:
-                $user = "root";
-                $password = "";
+                $user = "etudiant";
+                $password = "mdp";
                 break;
         }
         try{

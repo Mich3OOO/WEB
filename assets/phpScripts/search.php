@@ -1,11 +1,11 @@
 <?php
 include './PDO.php';
-$con = new Sql(1);
-
-if(!isset($_SESSION["IDu"]))
+if(!isset($_SESSION))
     {
         session_start();
     }
+$con = new Sql($_SESSION["role"]);
+
 
 
 

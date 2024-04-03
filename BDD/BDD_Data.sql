@@ -72,11 +72,14 @@ VALUES
 
 INSERT INTO Admin(IDu)
 VALUES 
-('A1', 1, 13, 2),
-('A2', 2, 13, 1),
-('A3', 1, 13, 2),
-('A4', 1, 4, 2),
-('A5', 1, 5, 1);
+(2);
+
+INSERT INTO Classe(idv, IDT, IDProm, IDu)
+VALUES
+(5, 1, 2, 6),
+(1, 2, 3, 13),
+(5, 2, 1, 6),
+(2, 1, 1, 13);
 
 INSERT INTO etudiant (IDu, IDClasse) 
 VALUES 

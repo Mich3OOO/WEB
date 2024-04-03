@@ -1,6 +1,10 @@
 <?php
 include './PDO.php';
-$con = new Sql(1);
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
+$con = new Sql($_SESSION["role"]);
 $CentresEtudiant= array( "data" => flip($con->GetArray("SELECT ville as x,count(etudiant.IDu) as y from ville INNER join classe on classe.idv = ville.idv INNER join etudiant on etudiant.IDClasse = classe.IDClasse GROUP by ville;")),"Title"=> "Répartition des étudiants par centre");
 $PromotionsEtudiant= array( "data" => flip($con->GetArray("SELECT Promotion as x,COUNT(etudiant.IDu) as y from classe INNER join etudiant on etudiant.IDClasse =classe.IDClasse INNER join promotion on promotion.IDProm = classe.IDProm GROUP by classe.IDprom;")),"Title"=> "Répartition des étudiants par Promotion");
 $Competences= array( "data" => flip($con->GetArray("SELECT comp as x, COUNT(IDoffre) as y from competences INNer JOIN necessite on necessite.IDComp = competences.IDComp GROUP by competences.IDComp;")),"Title"=> "Taux de compétences demandées");

@@ -2,8 +2,11 @@
 include "../assets/phpScripts/redirect.php";
 require_once('../smarty/libs/Smarty.class.php');
 include "../assets/phpScripts/PDO.php";
-
-$connexion = new Sql(2);
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
+$connexion = new Sql($_SESSION["role"]);
 $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../tpl/ajouter_compte.tpl');
