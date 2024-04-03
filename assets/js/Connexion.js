@@ -69,8 +69,8 @@ function ShowOffre(event)
     }
        
     fetch("http://localhost/assets/phpScripts/search.php?ID="+tmp.id,{method: 'GET'}).then(r=> r.json()).then(data =>{
-        
-        document.body.insertAdjacentHTML("beforeend",getPopupHtml(tmp.id,data[0].Poste,data[0].Descr,data[0].Competence,data[0].Nom_du_Type,data[0].remune,data[0].Date_Stage,data[0].Duree,data[0].Nb_place,data[0].post,data[0].NomE,data[0].Site,data[0].descr,data[0].TelE));
+        console.log(data);
+        document.body.insertAdjacentHTML("beforeend",getPopupHtml(data[0].canpost==null,tmp.id,data[0].Poste,data[0].Descr,data[0].Competence,data[0].Nom_du_Type,data[0].remune,data[0].Date_Stage,data[0].Duree,data[0].Nb_place,data[0].post,data[0].NomE,data[0].Site,data[0].descr,data[0].TelE));
         document.getElementById("BGPopup").addEventListener("click",closePopup);
         document.getElementById("Close").addEventListener("click",closePopup);
 
@@ -98,10 +98,10 @@ function WishList(event)
     }
 }
 
-function getPopupHtml(IDoffre,NomPoste,SumUp,Comp,Prom,EUR,PubDate,duree,places,Postule,NameEnt,Location,SumUpEnt,tel)
+function getPopupHtml(canpost,IDoffre,NomPoste,SumUp,Comp,Prom,EUR,PubDate,duree,places,Postule,NameEnt,Location,SumUpEnt,tel)
 {
     r = "<div id='BGPopup'></div><div id = 'StagePopUp'><div class = 'scrollContainer'><button id = 'Close'>x</button><div id='infostage'><h2>"+NomPoste+"</h2><article><h3>Résumé</h3><p>"+SumUp+"</p></article><article><h3>compétences</h3><p>"+Comp+"</p></article><p><strong>promotions concernées:</strong>"+Prom+"</p><p><strong>rémunération:</strong>"+EUR+"€</p><div class = 'flexContainer'><div id='PopUpTimeInfo'><strong>Date de publication:</strong><p>"+PubDate+"</p><strong>durée:</strong><p>"+ duree+ " mois</p></div><div id = 'PopUpSpotsInfo'><strong>nombre de places:</strong><p>"+places+"</p><strong>élèves postulés :</strong><p> "+Postule+"</p></div></div></div><div id='infoEntreprise'><h3>"+NameEnt+"</h3><h4>"+Location+"</h4><p>"+SumUpEnt+"</p><p>Tel: "+tel+"</p>";
-    if(role!="Pilote")
+    if(role!="Pilote" && canpost)
     {
         r+="<a href = '../postuler/?IDoffre="+IDoffre+"'><button id = 'Postuler'>Postuler</button></a>"
     }
