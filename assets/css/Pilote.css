@@ -3,7 +3,7 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background: url(fond.jpg);
+    background: url(../../image/fond.jpg);
     background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
 }
