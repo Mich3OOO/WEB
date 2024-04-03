@@ -3,7 +3,7 @@
     $connexion = new Sql(1);
 
     
-    $hash = $connexion->GetFirstRow("Select IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA from `utilisateur` inner join adresse on utilisateur.ID_adresse=adresse.ID_adresse where MailU ='".$_GET["Email"]."';");
+    $hash = $connexion->GetFirstRow("SELECT IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA from `utilisateur` inner join adresse on utilisateur.ID_adresse=adresse.ID_adresse where MailU ='".$_GET["Email"]."';");
     
 
     if (password_verify($_GET["Mot-de-passe"],$hash[1])== 1)

@@ -1,6 +1,5 @@
 <?php
 
-
 class Sql
 {
     private ?PDO $connexion;
