@@ -17,10 +17,10 @@ $smarty->assign('description', 'algo');
 
 
 
-$hash = $connexion->GetFirstRow("Select utilisateur.IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA,promotion,NomC,Code_Post,ville,reg from `utilisateur` INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg INNER JOIN promotion ON utilisateur.IDu=promotion.IDu INNER JOIN campus ON promotion.idCentre=campus.idCentre where MailU ='".$_GET["email"]."';");
+//$hash = $connexion->GetFirstRow("Select utilisateur.IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA,promotion,Code_Post,ville,reg from `utilisateur` INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg INNER JOIN promotion ON utilisateur.IDu=promotion.IDu INNER JOIN campus ON promotion.idCentre=campus.idCentre where MailU ='".$_GET["email"]."';");
 
 $allpromotion=$connexion->GetArray("SELECT DISTINCT promotion FROM promotion;");
-$allcampus=$connexion->GetArray("SELECT DISTINCT NomC FROM campus;");
+$allcampus=$connexion->GetArray("SELECT DISTINCT ville FROM Ville INNER JOIN Classe ON Classe.idv = ville.idv;");
 $allVille=$connexion->GetArray("SELECT DISTINCT ville FROM ville;");
 $allRegion=$connexion->GetArray("SELECT DISTINCT reg FROM reg;");
 $allCP=$connexion->GetArray("SELECT DISTINCT Code_Post FROM ville;");

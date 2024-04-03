@@ -24,27 +24,43 @@ if ($connexion->GetFirstRow("SELECT EXISTS ID_adresse FROM adresse INNER JOIN vi
 }
 $roleUti = $connexion->GetFirstRow("SELECT role FROM utilisateur WHERE NomU = '".$_GET['Nom']."' AND PrenomU = '".$_GET['Prenom']."';");
 if($roleUti[0] == 'etudiant'){
-
-}
-
-if($_GET["Mot-de-passe"]!=""){
-    $connexion->Update("UPDATE utilisateur INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg INNER JOIN promotion ON utilisateur.IDu=promotion.IDu INNER JOIN campus ON promotion.idCentre=campus.idCentre SET MdpU='".$_GET["Mot-de-passe"]."',
-     NomU='".$_GET["Nom"]."',
-    PrenomU='".$_GET["Prenom"]."',
-    Date_NaisU='".$_GET["Date-naissance"]."',
-    MailU='".$_GET["Mail"]."',
-    role='".$_GET["Role"]."',
-    utilisateur.ID_adresse='".$StockAdresse[0]."' WHERE utilisateur.IDu ='".$_GET["IDu"]."';");
- 
-}
-else{
-    $connexion->Update("UPDATE utilisateur INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg INNER JOIN promotion ON utilisateur.IDu=promotion.IDu INNER JOIN campus ON promotion.idCentre=campus.idCentre SET NomU='".$_GET["Nom"]."',
-    PrenomU='".$_GET["Prenom"]."',
-    Date_NaisU='".$_GET["Date-naissance"]."',
-    MailU='".$_GET["Mail"]."',
-    role='".$_GET["Role"]."',
-    adresseA='".$_GET["Adresse"]."',
-    utilisateur.ID_adresse='".$StockAdresse[0]."' WHERE utilisateur.IDu ='".$_GET["IDu"]."';");
+    if($_GET["Mot-de-passe"]!=""){
+        $connexion->Update("UPDATE utilisateur INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg  SET MdpU='".$_GET["Mot-de-passe"]."',
+        NomU='".$_GET["Nom"]."',
+        PrenomU='".$_GET["Prenom"]."',
+        Date_NaisU='".$_GET["Date-naissance"]."',
+        MailU='".$_GET["Mail"]."',
+        role='".$_GET["Role"]."',
+        utilisateur.ID_adresse='".$StockAdresse[0]."' WHERE utilisateur.IDu ='".$_GET["IDu"]."';");
+    
+    }
+    else{
+        $connexion->Update("UPDATE utilisateur INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg SET NomU='".$_GET["Nom"]."',
+        PrenomU='".$_GET["Prenom"]."',
+        Date_NaisU='".$_GET["Date-naissance"]."',
+        MailU='".$_GET["Mail"]."',
+        role='".$_GET["Role"]."',
+        utilisateur.ID_adresse='".$StockAdresse[0]."' WHERE utilisateur.IDu ='".$_GET["IDu"]."';");
+    }
+} else {
+    if($_GET["Mot-de-passe"]!=""){
+        $connexion->Update("UPDATE utilisateur INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg SET MdpU='".$_GET["Mot-de-passe"]."',
+        NomU='".$_GET["Nom"]."',
+        PrenomU='".$_GET["Prenom"]."',
+        Date_NaisU='".$_GET["Date-naissance"]."',
+        MailU='".$_GET["Mail"]."',
+        role='".$_GET["Role"]."',
+        utilisateur.ID_adresse='".$StockAdresse[0]."' WHERE utilisateur.IDu ='".$_GET["IDu"]."';");
+    
+    }
+    else{
+        $connexion->Update("UPDATE utilisateur INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg  SET NomU='".$_GET["Nom"]."',
+        PrenomU='".$_GET["Prenom"]."',
+        Date_NaisU='".$_GET["Date-naissance"]."',
+        MailU='".$_GET["Mail"]."',
+        role='".$_GET["Role"]."',
+        utilisateur.ID_adresse='".$StockAdresse[0]."' WHERE utilisateur.IDu ='".$_GET["IDu"]."';");
+    }
 }
 
 header('Location: ../../recherche_user/');
