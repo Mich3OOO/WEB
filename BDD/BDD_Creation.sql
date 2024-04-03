@@ -180,7 +180,7 @@
    );
 
    CREATE USER admin IDENTIFIED BY 'mdp2';
-   GRANT ALL PRIVILEGES ON presquauchaud TO admin;
+   GRANT ALL PRIVILEGES ON *.* TO admin;
    CREATE USER pilote IDENTIFIED BY 'mdp';
    GRANT SELECT ON presquauchaud.* TO pilote;
    GRANT UPDATE, DELETE, INSERT ON utilisateur TO pilote;
