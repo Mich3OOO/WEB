@@ -24,7 +24,7 @@ function btn_plus(role) {
             return false;
         }
         else{
-            document.getElementsByClassName("more-menu")[0].insertAdjacentHTML("afterbegin","<div id='more-menu'><ul><li><a href='../profil/'> Profil</a></li> \n <li><a href='../wishlist/'>Wish-list</a></li> \n <li><a href='#'>Offre postulé</a></li> \n <li><a href='../assets/phpScripts/desconexion.php'>Deconnexion</a></li></div>");
+            document.getElementsByClassName("more-menu")[0].insertAdjacentHTML("afterbegin","<div id='more-menu'><ul><li><a href='../profil/'> Profil</a></li> \n <li><a href='../wishlist/'>Wish-list</a></li> \n <li><a href='#'>Offre postulé</a></li> \n <li><a href='../wishlist/'>Wish-list</a></li> \n  <li><a href='../assets/phpScripts/desconexion.php'>Deconnexion</a></li></div>");
             return false;
         }
     }

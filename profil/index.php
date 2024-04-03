@@ -7,7 +7,7 @@ $smarty = new Smarty();
 $smarty->assign('dirfile', '../tpl/profil.tpl');
 $smarty->assign('dircss', '../assets/css/profil.css');
 $smarty->assign('dirjs', '#');
-$smarty->assign('titre', 'accueille');
+$smarty->assign('titre', 'Profil ');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 

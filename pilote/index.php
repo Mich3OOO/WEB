@@ -5,7 +5,7 @@ include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../html/pilote.html');
-$smarty->assign('dircss', '../assets/css/pilote.css');
+$smarty->assign('dircss', '../assets/css/Pilote.css');
 $smarty->assign('dirjs', '#');
 $smarty->assign('titre', 'Recherche Offre Stage');
 $smarty->assign('keywords', 'algo');

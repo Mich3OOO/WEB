@@ -1,7 +1,7 @@
 
 body{
     font-family: Arial, sans-serif;
-    background: url(WEB/image/fond.jpg);
+    background: url(../../image/fond.jpg);
     background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     text-align: center;
@@ -46,7 +46,6 @@ label{
     color: #FFFFFF;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 50px;
     text-align: center;
 }
 

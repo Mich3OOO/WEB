@@ -47,13 +47,15 @@ main
 
 .liste
 {
+    padding-top: 100px;
     list-style: none;
 }
 
 .flexContainer
 {
-    display: flex;;
+    display: flex;
 }
+
 
 #Filtres>*
 {
@@ -125,6 +127,7 @@ main
 
 #RechercheOffre
 {
+    padding-top: 100px;
     flex: 2;
 }
 
@@ -388,3 +391,5 @@ article>p
     }
     
 }
+
+

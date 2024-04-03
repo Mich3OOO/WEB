@@ -1,5 +1,6 @@
 <input list="Satages" id="search" placeholder="🔎︎ search">
-    <div class="filtre-element">
+
+<div class="flex-container">
     <div class="filtre">
         {if ($_SESSION["role"] == "Administrateur")}
         <fieldset>
@@ -14,7 +15,7 @@
               <label for="Pilote">Pilote</label>
             </div>
           </fieldset>
-          {/if}
+        {/if}
 
 
         <select name="Promotion">
@@ -24,10 +25,9 @@
         </select>
 
         <select name="Campus">
-
-            <option value="Pau">Pau</option>
-            <option value="Nantaire">Nantaire</option>
-            
+            {foreach from=$allcampus item=campus}
+                <option value={$campus.ville}>{$campus.ville}</option>
+            {/foreach}
         </select>
             
     </div>
@@ -43,15 +43,15 @@
                         <img  class="image-compte" src="image/persov5.jpg" >
                         <p class="mail">{$user.promotion}</p>
                         <p class="mail">{$user.role}</p>
-                        <p class="mail">{$user.NomC}</p>
+                        <p class="mail">{if ({$user.idv}=={$allcampus.idv})}{$allcampus.ville}{/if}</p>
                     </div>
                     <div class="droite">
                         <p class="mail">{$user.Date_NaisU}</p>
                         <p class="mail">{$user.MailU}</p>
                         <p class="mail">{$user.AdresseA}</p>
                         {if ($_SESSION["role"] == "Administrateur")}
-                        <a class="Info suppr" href="#">Supprimer</a>
-                        <button  class="modif">✎</button>
+                        <button id="sure" onclick="sure()">Supprimer</button>
+                        <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email={$user.MailU}'">✎</button>
                         {/if}
                         <a class="Info" href="">Plus d'information</a>
                     </div>
@@ -60,4 +60,5 @@
 
         </div>
     {/foreach}
+    </div>
 </div>

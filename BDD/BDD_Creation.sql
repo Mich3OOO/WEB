@@ -1,13 +1,13 @@
-CREATE TABLE campus(
-   idCentre INT AUTO_INCREMENT,
-   NomC VARCHAR(50),
-   PRIMARY KEY(idCentre)
-);
-
-CREATE TABLE Secteur_Activite(
+CREATE TABLE Secteur_activite(
    IdSec INT AUTO_INCREMENT,
    Secteur_Act VARCHAR(200),
    PRIMARY KEY(IdSec)
+);
+
+CREATE TABLE promotion(
+   IDProm INT AUTO_INCREMENT,
+   Promotion VARCHAR(50),
+   PRIMARY KEY(IDProm)
 );
 
 CREATE TABLE reg(
@@ -20,6 +20,12 @@ CREATE TABLE types_promotions(
    IDT INT AUTO_INCREMENT,
    Nom_du_Type VARCHAR(50),
    PRIMARY KEY(IDT)
+);
+
+CREATE TABLE Competences(
+   IDComp SMALLINT NOT NULL AUTO_INCREMENT,
+   Comp VARCHAR(50) NOT NULL,
+   PRIMARY KEY(IDComp)
 );
 
 CREATE TABLE ville(
@@ -63,12 +69,10 @@ CREATE TABLE Entreprise(
    Site VARCHAR(200),
    Moyenne DECIMAL(3,2),
    N_siret SMALLINT NOT NULL,
-   IDu INT NOT NULL,
    IdSec INT NOT NULL,
    ID_adresse INT NOT NULL,
    PRIMARY KEY(IDE),
-   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu),
-   FOREIGN KEY(IdSec) REFERENCES Secteur_Activite(IdSec),
+   FOREIGN KEY(IdSec) REFERENCES Secteur_activite(IdSec),
    FOREIGN KEY(ID_adresse) REFERENCES adresse(ID_adresse)
 );
 
@@ -76,7 +80,6 @@ CREATE TABLE Offre(
    IDoffre INT AUTO_INCREMENT,
    Duree SMALLINT,
    Poste VARCHAR(200),
-   Competence VARCHAR(200),
    remune SMALLINT,
    Date_Stage DATE,
    Nb_place SMALLINT,
@@ -86,30 +89,37 @@ CREATE TABLE Offre(
    FOREIGN KEY(IDE) REFERENCES Entreprise(IDE)
 );
 
-CREATE TABLE promotion(
-   IDProm INT AUTO_INCREMENT,
-   Promotion VARCHAR(50),
-   IDT INT NOT NULL,
-   IDu INT NOT NULL,
-   idCentre INT NOT NULL,
-   PRIMARY KEY(IDProm),
-   FOREIGN KEY(IDT) REFERENCES types_promotions(IDT),
-   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu),
-   FOREIGN KEY(idCentre) REFERENCES campus(idCentre)
-);
-
-CREATE TABLE etudiant(
-   IDu INT,
-   IDProm INT NOT NULL,
-   PRIMARY KEY(IDu),
-   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu),
-   FOREIGN KEY(IDProm) REFERENCES promotion(IDProm)
-);
-
 CREATE TABLE Admin(
    IDu INT,
    PRIMARY KEY(IDu),
    FOREIGN KEY(IDu) REFERENCES utilisateur(IDu)
+);
+
+CREATE TABLE pilote(
+   IDu INT,
+   PRIMARY KEY(IDu),
+   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu)
+);
+
+CREATE TABLE Classe(
+   IDClasse SMALLINT NOT NULL AUTO_INCREMENT,
+   idv INT NOT NULL,
+   IDT INT NOT NULL,
+   IDProm INT NOT NULL,
+   IDu INT NOT NULL,
+   PRIMARY KEY(IDClasse),
+   FOREIGN KEY(idv) REFERENCES ville(idv),
+   FOREIGN KEY(IDT) REFERENCES types_promotions(IDT),
+   FOREIGN KEY(IDProm) REFERENCES promotion(IDProm),
+   FOREIGN KEY(IDu) REFERENCES pilote(IDu)
+);
+
+CREATE TABLE etudiant(
+   IDu INT,
+   IDClasse SMALLINT NOT NULL,
+   PRIMARY KEY(IDu),
+   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu),
+   FOREIGN KEY(IDClasse) REFERENCES Classe(IDClasse)
 );
 
 CREATE TABLE interesser(
@@ -151,3 +161,43 @@ CREATE TABLE PostulerA(
    FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
    FOREIGN KEY(IDu) REFERENCES Admin(IDu)
 );
+
+CREATE TABLE note(
+   IDu INT,
+   IDE INT,
+   NoteU SMALLINT,
+   PRIMARY KEY(IDu, IDE),
+   FOREIGN KEY(IDu) REFERENCES utilisateur(IDu),
+   FOREIGN KEY(IDE) REFERENCES Entreprise(IDE)
+);
+
+CREATE TABLE necessite(
+   IDoffre INT,
+   IDComp SMALLINT,
+   PRIMARY KEY(IDoffre, IDComp),
+   FOREIGN KEY(IDoffre) REFERENCES Offre(IDoffre),
+   FOREIGN KEY(IDComp) REFERENCES Competences(IDComp)
+);
+
+CREATE USER admin IDENTIFIED BY 'mdp2';
+GRANT ALL PRIVILEGES ON presquauchaud TO admin;
+CREATE USER pilote IDENTIFIED BY 'mdp';
+GRANT SELECT ON presquauchaud.* TO pilote;
+GRANT UPDATE, DELETE, INSERT ON utilisateur TO pilote;
+GRANT UPDATE, DELETE, INSERT ON adresse TO pilote;
+GRANT UPDATE, DELETE, INSERT ON ville TO pilote;
+GRANT UPDATE, DELETE, INSERT ON reg TO pilote;
+GRANT UPDATE, DELETE, INSERT ON entreprise TO pilote;
+GRANT UPDATE, DELETE, INSERT ON secteur_activite TO pilote;
+GRANT UPDATE, DELETE, INSERT ON offre TO pilote; 
+GRANT UPDATE, DELETE, INSERT ON Competences TO pilote;
+GRANT UPDATE, DELETE, INSERT ON necessite TO pilote;
+GRANT UPDATE, DELETE, INSERT ON promotion TO pilote;
+GRANT UPDATE, DELETE, INSERT ON types_promotions TO pilote;
+GRANT UPDATE, DELETE, INSERT ON Viser TO pilote;
+GRANT UPDATE, DELETE, INSERT ON Classe TO pilote;
+CREATE USER etudiant IDENTIFIED BY 'mdp';
+GRANT SELECT ON presquauchaud.* TO etudiant;
+GRANT INSERT, UPDATE, DELETE ON note TO etudiant;
+GRANT INSERT, UPDATE, DELETE ON Postuler TO etudiant;
+GRANT INSERT, UPDATE, DELETE ON interesser TO etudiant;

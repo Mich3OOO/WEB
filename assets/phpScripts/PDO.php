@@ -1,6 +1,5 @@
 <?php
 
-
 class Sql
 {
     private ?PDO $connexion;
@@ -60,6 +59,39 @@ class Sql
     public function Set($sql){
         $set = $this->connexion->prepare($sql);
         return $set->execute();
+    }
+    public function Add($sql)
+    {
+        try {
+            $insert = $this->connexion->exec($sql);
+            return ($insert);
+            } catch (Exception $e) {
+                echo "Problème de connexion à la base de donnée     ...";
+                die();
+            }
+
+    }
+    public function Delete($sql)
+    {
+        try {
+            $delete = $this->connexion->exec($sql);
+            return ($delete);
+            } catch (Exception $e) {
+                echo "Problème de connexion à la base de donnée     ...". $e;
+                die();
+            }
+
+    }
+    public function Update($sql)
+    {
+        try {
+            $update = $this->connexion->exec($sql);
+            return ($update);
+            } catch (Exception $e) {
+                echo "Problème de connexion à la base de donnée     ...".$e;
+                die();
+            }
+
     }
 }
     

@@ -1,5 +1,4 @@
 
-<h2 class="FormeH">Recherche d'entreprise</h2>
 <input list="Satages" id="search" placeholder="🔎︎ search">
 <div id="flex-mere">
     <div id="flex-filtres">
@@ -43,12 +42,16 @@
                     <div class="bas-compte">
                         <div class="gauche">
                             <p class="mail">Adresse mail: {$entreprise.MailE}</p>
-                            <a class="Info More" href="">Site WEB : {$entreprise.Site}</a>
+                            <a class="Info taille" href="">Site WEB : {$entreprise.Site}</a>
                             <p class="mail">Secteur d'activité : {$entreprise.Secteur_Act}</p>
                         </div>
                         <div class="droite">
                             <p class="mail" >Numéro de téléphone : {$entreprise.TelE}</p>
                             <a class="Info More" href="">Adresse : {$entreprise.AdresseA}</a>
+                            {if ($_SESSION["role"] == "Administrateur")}
+                            <button id="sure" onclick="sure()">Supprimer</button>
+                            <button class="modif" onclick="window.location.href='../modifier_entreprise/index.php?IDE={$entreprise.IDE}'">✎</button>
+                            {/if}
                             <a class="Info More" href="">Plus d'information</a>
                         </div>
                     </div>
