@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-04 15:55:10
+/* Smarty version 4.5.1, created on 2024-04-04 18:09:14
   from 'C:\Users\Utilisateur\Desktop\CPI A2\Cours\WEB\Projet\WEB\assets\tpl\recherche_user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660eb13e271b07_41147276',
+  'unifunc' => 'content_660ed0aa1d5d35_00269545',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8ac1e3260fee51c47295a97c0384fe96585cffcd' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\Desktop\\CPI A2\\Cours\\WEB\\Projet\\WEB\\assets\\tpl\\recherche_user.tpl',
-      1 => 1712238907,
+      1 => 1712246893,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660eb13e271b07_41147276 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660ed0aa1d5d35_00269545 (Smarty_Internal_Template $_smarty_tpl) {
 ?><input list="Satages" id="search" placeholder="🔎︎ search">
 
 <div class="flex-container">
@@ -116,7 +116,7 @@ echo $_smarty_tpl->tpl_vars['allcampus']->value['ville'];
                             <input type="text" required="required" id="IDu" name="IDu" value="<?php echo $_smarty_tpl->tpl_vars['user']->value["IDu"];?>
 ">
                             <button type="submit">Supprimer</button>
-                            </form>
+                        </form>
                             <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email=<?php echo $_smarty_tpl->tpl_vars['user']->value['MailU'];?>
 '">✎</button>
                         

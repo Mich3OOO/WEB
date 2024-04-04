@@ -1,5 +1,4 @@
 
-<h5>Postuler</h5>
 <article id="RappelOffre">
     <div id = 'StagePopUp'>
         <div class = 'scrollContainer'>

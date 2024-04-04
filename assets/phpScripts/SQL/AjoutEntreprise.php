@@ -1,21 +1,30 @@
 <?php
-    include "PDO.php";
-    if(!isset($_SESSION))
+include "../PDO.php";
+if(!isset($_SESSION))
     {
         session_start();
     }
-    $connexion = new Sql($_SESSION["role"]);
+$connexion = new Sql($_SESSION["role"]);
 
-    if($connexion->Set("SELECT EXISTS (SELECT NomE FROM entreprise WHERE NomE = '"$_GET['NomE']"');") !== null){
-        echo 'Entreprise déjà existante';
-    } else {
-        if($connexion->set("IF EXISTS (SELECT adresseA FROM adresse WHERE adresseA ='"$_GET['adresseA']"')")){
-            $Stock = $connexion->set("SELECT ID_adresse FROM adresse WHERE adresseA = '"$_GET['adresseA']"';");
-            $requête = $connexion->Set("INSERT INTO entreprise (NomE, descr, MailE, TelE, Site, moyenne,N_siret, IDu, ID_adresse, Secteur_d_activite) VALUES('".$_POST['Nom_Entreprise']."', '".$_POST['Description']."', '".$_POST['Mail']."', '".$_POST['Num_Tel']."', '".$_POST['Site_Internet']."', 0, 6, '".$_POST['Sect_Activite']."', '".$stock."');");
-        }
-
+$test = $connexion->GetFirstRow("SELECT IF( EXISTS ( SELECT * FROM adresse WHERE nomA = '".$_GET['Nom']."' OR N_siret = '".$_GET['Siret']."'),1,0);");
+if ($test[0] == 1){
+    $message = "Entreprise déjà existante";
+    echo "<script>console.log('$message');</script>"; 
+}
+else{
+    $test2 = $connexion->GetFirstRow("SELECT IF( EXISTS ( SELECT ID_adresse FROM adresse INNER JOIN ville ON ville.idv = adresse.idv WHERE ville = '".$_GET['Ville']."' AND adresseA='".$_GET['Adresse']."'),1,0);");
+    if ($test2[0] == 0){
+        $test3 = $connexion->GetFirstRow("SELECT IF( EXISTS ( SELECT idv FROM ville WHERE ville = '".$_GET['Ville']."'),1,0);");
+    if($test3[0]== 1){
+        $StockVille = $connexion->GetFirstRow("SELECT idv FROM ville WHERE ville = '".$_GET['Ville']."';");
+        $requeteAdresse = $connexion->add("INSERT INTO Adresse(adresseA, complementA, idv) VALUES ('".$_POST['Adresse']."', '".$_POST['Complement']."', '".$StockVille[0]."')");
+    } else { 
+        $StockRegion = $connexion->GetFirstRow("SELECT ID_reg FROM reg WHERE reg = '".$_GET['Region']."';");
+        $requeteVille = $connexion->add("INSERT INTO ville(ville, Code_Post, ID_adresse) VALUES ('".$_POST['Ville']."','".$_POST['CP']."','".$StockRegion[0]."');");
+        $StockVille = $connexion->GetFirstRow("SELECT idv FROM ville WHERE ville = '".$_GET['Ville']."';");
+        $requeteAdresse = $connexion->add("INSERT INTO Adresse(adresseA, complementA, idv) VALUES ('".$_POST['Adresse']."', '".$_POST['Complement']."', '".$StockVille[0]."')");
     }
-
-
-    //$requête2 = $connexion->Set("INSERT INTO adresse (adresseA) VALUES ('".$_POST['Adresse']."');");
-    //$requête3 = $connexion->Set("INSERT INTO ville (Code_Post, ville) VALUES ('".$_POST['CP']."', '".$_POST['Ville']."');");
+    }
+}
+$Secteur = $connexion->GetFirstRow("SELECT idSec FROM Secteur_activite WHERE Secteur_Act = '".$_GET['Secteur_Act']."';")
+$Entreprise = $connexion->add("INSERT INTO entreprise (NomE, descr, MailE, TelE, Site, N_siret, IdSec, ID_adresse VALUES ('".$_GET['Nom']."', '".$_GET['Description']."', '".$_GET['Mail']."', '".$_GET['Num_Tel']."', '".$_GET['Site_Internet']."', '".$_GET['Siret']."', '".$Secteur."', '".$requeteAdresse[0]."');");

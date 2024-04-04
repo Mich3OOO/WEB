@@ -1,4 +1,4 @@
-<form action="../assets/phpScripts/AjoutEntreprise.php" method="get">
+<form action="../assets/phpScripts/SQL/AjoutEntreprise.php" method="get post">
     <div class="flex-container">
         <div class="flex-gauche">
             <label for="Nom">Nom  Entreprise :</label>
