@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-03 18:20:19
+/* Smarty version 4.5.1, created on 2024-04-04 13:50:14
   from 'C:\Users\Utilisateur\Desktop\CPI A2\Cours\WEB\Projet\WEB\assets\tpl\recherche_user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660d81c3f22ce4_86527536',
+  'unifunc' => 'content_660e93f6f18bb6_58184045',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8ac1e3260fee51c47295a97c0384fe96585cffcd' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\Desktop\\CPI A2\\Cours\\WEB\\Projet\\WEB\\assets\\tpl\\recherche_user.tpl',
-      1 => 1712135982,
+      1 => 1712231338,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660d81c3f22ce4_86527536 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660e93f6f18bb6_58184045 (Smarty_Internal_Template $_smarty_tpl) {
 ?><input list="Satages" id="search" placeholder="🔎︎ search">
 
 <div class="flex-container">
@@ -111,9 +111,14 @@ echo $_smarty_tpl->tpl_vars['allcampus']->value['ville'];
                         <p class="mail"><?php echo $_smarty_tpl->tpl_vars['user']->value['AdresseA'];?>
 </p>
                         <?php if (($_smarty_tpl->tpl_vars['_SESSION']->value["role"] == "Administrateur")) {?>
-                        <button id="sure" onclick="sure()">Supprimer</button>
-                        <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email=<?php echo $_smarty_tpl->tpl_vars['user']->value['MailU'];?>
+                        <form action='../assets/phpScripts/deleteUser.php?IDu=<?php echo $_smarty_tpl->tpl_vars['user']->value['IDu'];?>
+' method="get">
+                            <input type="text" required="required" id="IDu" name="IDu" value="<?php echo $_smarty_tpl->tpl_vars['user']->value["IDu"];?>
+">
+                            <button type="submit">Supprimer</button>
+                            <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email=<?php echo $_smarty_tpl->tpl_vars['user']->value['MailU'];?>
 '">✎</button>
+                        </form>
                         <?php }?>
                         <a class="Info" href="">Plus d'information</a>
                     </div>
