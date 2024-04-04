@@ -1,4 +1,27 @@
-<form action="../assets/phpScripts/SQL/AjoutEntreprise.php" method="get post">
+<?php
+/* Smarty version 4.5.1, created on 2024-04-04 16:00:57
+  from 'C:\Users\alexa\Desktop\Cours\Activitées\BLOC 4\PROJET\WEB\assets\tpl\Ajout_Entreprise.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.5.1',
+  'unifunc' => 'content_660eb2991debb8_03828762',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'd2c18c38dfa1d497ac1f33ca0a928eb37a9d2b08' => 
+    array (
+      0 => 'C:\\Users\\alexa\\Desktop\\Cours\\Activitées\\BLOC 4\\PROJET\\WEB\\assets\\tpl\\Ajout_Entreprise.tpl',
+      1 => 1712239217,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_660eb2991debb8_03828762 (Smarty_Internal_Template $_smarty_tpl) {
+?><form action="../assets/phpScripts/SQL/AjoutEntreprise.php" method="get post">
     <div class="flex-container">
         <div class="flex-gauche">
             <label for="Nom">Nom  Entreprise :</label>
@@ -30,9 +53,17 @@
 
             <label for="Secteur_Act">Secteur d'activité :</label>
             <select name="Secteur_Act" id="Secteur_Act" required="required">
-                {foreach from=$alltypesect item=typesect}
-                    <option>{$typesect.Secteur_Act}</option>
-                {/foreach}
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['alltypesect']->value, 'typesect');
+$_smarty_tpl->tpl_vars['typesect']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['typesect']->value) {
+$_smarty_tpl->tpl_vars['typesect']->do_else = false;
+?>
+                    <option><?php echo $_smarty_tpl->tpl_vars['typesect']->value['Secteur_Act'];?>
+</option>
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </select>
            
         </div>
@@ -43,3 +74,5 @@
         <button type="submit" class="button" value="Annuler">Annuler</button> 
     </div>
 </form>
+<?php }
+}
