@@ -1,7 +1,10 @@
-<input list="Satages" id="search" placeholder="🔎︎ search">
+
 
 <div class="flex-container">
+<form action = '../recherche_user/' methode= 'GET' onkeydown="return event.key != 'Enter';">
     <div class="filtre">
+    <input id="search" placeholder="🔎︎ search">
+        
         {if ($_SESSION["role"] == "Administrateur")}
         <fieldset>
             <legend>Rôle:</legend>
@@ -11,26 +14,34 @@
               <label for="etudiant">Etudiant</label>
           
             <div>
-              <input type="checkbox" id="Pilote" name="Pilote" />
+              <input type="checkbox" id="Pilote" name="Pilote" checked/>
               <label for="Pilote">Pilote</label>
+            </div>
+            <div>
+              <input type="checkbox" id="Admin" name="Admin"  checked/>
+              <label for="Admin">Administrateur</label>
             </div>
           </fieldset>
         {/if}
 
-
         <select name="Promotion">
+            <option value=''>Tout</option>
             {foreach from=$allpromotion item=promo}
             <option value={$promo.promotion}>{$promo.promotion}</option>
             {/foreach}
+
         </select>
 
         <select name="Campus">
+            <option value=''>Tout</option>
             {foreach from=$allcampus item=campus}
                 <option value={$campus.ville}>{$campus.ville}</option>
             {/foreach}
         </select>
+        <input type = 'submit' value = 'search'>
             
     </div>
+</form>
     <div class="liste-deroulante2">
     {foreach from=$allutilisateur item=user}
         <div class="compte">

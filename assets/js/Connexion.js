@@ -7,81 +7,27 @@ window.addEventListener("DOMContentLoaded",init)
 function init()
 {
     role =document.cookie.split(";")[0].split("=")[1];
-    
-    let inputs = document.getElementsByClassName("MChoise");
 
-    for(let i = 0 ; i< inputs.length;i++)
-    {
-        
-        inputs[i].addEventListener("submit",addFiltre); 
+    document.getElementById("KeyWord").addEventListener("change",() =>search("http://localhost/assets/phpScripts/search.php"));
 
-    }
+    document.getElementById("Département").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/regions?nom=")});
+    document.getElementById("Ville").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/communes?nom=") });
+    document.getElementById("SécteurA").addEventListener("input",(event)=>{ updateDL(event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=") });
+    document.getElementById("Prom").addEventListener("input",(event)=>{ updateDL(event,"http://localhost/assets/phpscripts/TypePromotion.php?TypePromotion=") });
 
-    document.getElementById("Département").addEventListener("input",(event)=>{ updateDL(true,event,"https://geo.api.gouv.fr/departements?nom=")});
-    document.getElementById("search").addEventListener("change",(event)=>{search();});
-    document.getElementById("Ville").addEventListener("input",(event)=>{ updateDL(true,event,"https://geo.api.gouv.fr/communes?nom=") });
-    document.getElementById("SécteurA").addEventListener("input",(event)=>{ updateDL(true,event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=") });
-    document.getElementById("Prom").addEventListener("input",(event)=>{ updateDL(true,event,"http://localhost/assets/phpscripts/TypePromotion.php?TypePromotion=") });
+    document.getElementById("Département").addEventListener("change",(event => {addFiltre(event,"https://geo.api.gouv.fr/regions?nom=")}));
+    document.getElementById("Ville").addEventListener("change",(event => {addFiltre(event,"https://geo.api.gouv.fr/communes?nom=")}));
+    document.getElementById("SécteurA").addEventListener("change",(event => {addFiltre(event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=")}));
+    document.getElementById("Prom").addEventListener("change",(event => {addFiltre(event,"http://localhost/assets/phpscripts/TypePromotion.php?TypePromotion=")}));
 
-
-    document.getElementById("durée").addEventListener("change",search);
-    search();
+    document.getElementById("Date_début").addEventListener("change",() =>search("http://localhost/assets/phpScripts/search.php"));
+    document.getElementById("durée").addEventListener("change",() =>search("http://localhost/assets/phpScripts/search.php"));
+    search("http://localhost/assets/phpScripts/search.php");
 }
 
-function updateDL(MFiltre,event,api)
-{
-    let Opt= document.getElementById("DL" + event.target.id);
-        
 
-    for(let i = Opt.children.length-1;i>=0;i--)
-    {
-        Opt.children[i].remove();
-
-    }
-    
-    if(event.target.value.length >= 2)
-    {
-        fetch(api+event.target.value).then(r=> r.json()).then(data =>{
-        
-
-
-        for(let i =0 ; i< data.length;i++)
-        {   
-            Opt.insertAdjacentHTML("beforeend","<option value= '"+data[i].nom+"'></option>")    ;
-        }
-        if (MFiltre)
-        {
-            addFiltre(event);
-        }
-        
-        } );    
-
-    }
-}
-
-function ShowOffre(event)
-{
-    let tmp =event.target.parentNode;
-    while(tmp.classList[0]!="Offre")
-    {
-        tmp = tmp.parentNode;
-        
-    }
-       
-    fetch("http://localhost/assets/phpScripts/search.php?ID="+tmp.id,{method: 'GET'}).then(r=> r.json()).then(data =>{
-        console.log(data);
-        document.body.insertAdjacentHTML("beforeend",getPopupHtml(data[0].canpost==null,tmp.id,data[0].Poste,data[0].Descr,data[0].Competence,data[0].Nom_du_Type,data[0].remune,data[0].Date_Stage,data[0].Duree,data[0].Nb_place,data[0].post,data[0].NomE,data[0].Site,data[0].descr,data[0].TelE));
-        document.getElementById("BGPopup").addEventListener("click",closePopup);
-        document.getElementById("Close").addEventListener("click",closePopup);
-
-    })
-}
-
-function closePopup()
-{
-    document.getElementById("BGPopup").remove();
-    document.getElementById("StagePopUp").remove();
-}
+// to define : getPopupHtml GetBlock, search
+//specific
 function WishList(event)
 {
     
@@ -97,180 +43,41 @@ function WishList(event)
         fetch("http://localhost/assets/phpScripts/removeFromWhislist.php",{method: 'POST',body: tmp});
     }
 }
-
-function getPopupHtml(canpost,IDoffre,NomPoste,SumUp,Comp,Prom,EUR,PubDate,duree,places,Postule,NameEnt,Location,SumUpEnt,tel)
+function getPopupHtml(data)
 {
-    r = "<div id='BGPopup'></div><div id = 'StagePopUp'><div class = 'scrollContainer'><button id = 'Close'>x</button><div id='infostage'><h2>"+NomPoste+"</h2><article><h3>Résumé</h3><p>"+SumUp+"</p></article><article><h3>compétences</h3><p>"+Comp+"</p></article><p><strong>promotions concernées:</strong>"+Prom+"</p><p><strong>rémunération:</strong>"+EUR+"€</p><div class = 'flexContainer'><div id='PopUpTimeInfo'><strong>Date de publication:</strong><p>"+PubDate+"</p><strong>durée:</strong><p>"+ duree+ " mois</p></div><div id = 'PopUpSpotsInfo'><strong>nombre de places:</strong><p>"+places+"</p><strong>élèves postulés :</strong><p> "+Postule+"</p></div></div></div><div id='infoEntreprise'><h3>"+NameEnt+"</h3><h4>"+Location+"</h4><p>"+SumUpEnt+"</p><p>Tel: "+tel+"</p>";
-    if(role!="Pilote" && canpost)
+    r = "<div id='BGPopup' onclick = 'closePopup()'></div><div id = 'MainPopUp'><div class = 'scrollContainer'><button id = 'Close' onclick = 'closePopup()'>x</button><div id='infostage'><h2>"+data[0].Poste+"</h2><article><h3>Résumé</h3><p>"+data[0].Descr+"</p></article><article><h3>compétences</h3><p>"+data[0].Competence+"</p></article><p><strong>promotions concernées:</strong>"+data[0].Nom_du_Type+"</p><p><strong>rémunération:</strong>"+data[0].remune+"€</p><div class = 'flexContainer'><div id='PopUpTimeInfo'><strong>Date de publication:</strong><p>"+data[0].Date_Stage+"</p><strong>durée:</strong><p>"+ data[0].Duree+ " mois</p></div><div id = 'PopUpSpotsInfo'><strong>nombre de places:</strong><p>"+data[0].Nb_place+"</p><strong>élèves postulés :</strong><p> "+data[0].post+"</p></div></div></div><div id='infoEntreprise'><h3>"+data[0].NomE+"</h3><h4>"+data[0].Site+"</h4><p>"+data[0].descr+"</p><p>Tel: "+data[0].TelE+"</p>";
+    if(role!="Pilote" && data[0].canpost==null)
     {
-        r+="<a href = '../postuler/?IDoffre="+IDoffre+"'><button id = 'Postuler'>Postuler</button></a>"
+        r+="<a href = '../postuler/?IDoffre="+data.IDoffre+"'><button id = 'Postuler'>Postuler</button></a>"
     }
     
     r+="</div></div></div>";
 
     return r;
-}   
+} 
 
-
-function addFiltre(event)     
+function GetBlock(data)
 {
     
-    if (document.getElementById(event.target.id + "List")!="" )
-    {
-    let DL = document.getElementById("DL"+event.target.id);
     
-        for( let i = 0 ; i < DL.children.length ; i++ )
-        {
-            if (document.getElementById("tag"+ DL.children[i].value) == null && DL.children[i].value.toUpperCase() == event.target.value.toUpperCase()) 
-            {
-                document.getElementById(event.target.id + "List").insertAdjacentHTML("beforeend",getTagHtml(DL.children[i].value));
-                document.getElementById("tag"+ DL.children[i].value).children[0].addEventListener("click",removeFiltre);
-                event.target.value = "";
-                search();
-                break;
-                
-            }
-        }    
-    }
-}
-
-function getTagHtml(name)
-{
-    return "<div id = 'tag"+ name +"' class='tag'><button>x</button><p>"+ name + "</p></div>";
-}
-
-function removeFiltre(event)
-{
-    event.target.parentNode.remove();
-    search();
-}
-
-function search(event)
-{
-     fetch("http://localhost/assets/phpScripts/search.php"+getfiltres(),{method: 'GET'}).then(r=> r.json()).then(data =>{
-
-        let OffreCon = document.getElementById("offres");
-
-        for(let i = OffreCon.children.length-1; i>=0; i--)
-        {
-            OffreCon.children[i].remove();
-
-        }
-
-        if(data.length>0)
-        {   
-            
-            for(let i = 0 ; i<data.length;i++)
-            {
-                OffreCon.insertAdjacentHTML("beforeend",getStageHtml(data[i].IDoffre,data[i].Poste,data[i].NomE,data[i].Ville))
-                let Offre = document.getElementById(data[i].IDoffre);
-                Offre.children[0].children[0].onclick = ShowOffre;
-                
-                if(Offre.children[0].children.length>1 && Offre.children[0].children[1].classList[0] == "StarButon")
-                {
-                    Offre.children[0].children[1].addEventListener("click",WishList);
-                    
-                }
-                
-                if (data[i].IDu != null)
-                {
-                    Offre.children[0].children[1].checked =true;
-                }
-            }
-        }
-        else
-        {
-            OffreCon.insertAdjacentHTML("beforeend","<h2>Pas de offres pour le moment </h2>");
-        }
-
-     
-     });
-    
-
-}
-
-function getfiltres()
-{
-    r ="?ville[]"
-    
-    let tmp = document.getElementById("VilleList").children
-    if(tmp.length>0)
-    {
-        r+="="+ tmp[0].id.replace("tag","");
-    }
-    for (let i = 1; i < tmp.length; i++) {
-        r+= "&ville[]="+ tmp[i].id.replace("tag","");
-    }
-
-    r+= "&reg[]";
-    tmp = document.getElementById("DépartementList").children
-    if(tmp.length>0)
-    {
-        r+="="+ tmp[0].id.replace("tag","");
-    }
-    for (let i = 1; i < tmp.length; i++) {
-        r+= "&reg[]="+ tmp[i].id.replace("tag","");
-    }
-    
-    r+= "&Secteur[]";
-    tmp = document.getElementById("SécteurAList").children
-    if(tmp.length>0)
-    {
-        r+="="+ tmp[0].id.replace("tag","");
-    }
-    for (let i = 1; i < tmp.length; i++) {
-        r+= "&Secteur[]="+ tmp[i].id.replace("tag","");
-    }
-
-    r+= "&Prom[]";
-    tmp = document.getElementById("PromList").children
-    if(tmp.length>0)
-    {
-        r+="="+ tmp[0].id.replace("tag","");
-    }
-    for (let i = 1; i < tmp.length; i++) {  
-        r+= "&Prom[]="+ tmp[i].id.replace("tag","");
-    }
-
-    r+="&Duree";
-
-    tmp = document.getElementById("durée").value;
-    if(tmp != "")
-    {
-        r+= "="+tmp;
-    }
-
-    r+="&Date";
-
-    tmp = document.getElementById("Date_début").value;
-    if(tmp != "")
-    {
-        r+= "="+tmp;
-    }
-
-    r+="&Poste";
-    tmp = document.getElementById("search").value;
-
-    if(tmp != "")
-    {
-        r+= "="+tmp;
-    }
-    return r;
-
-}
-
-function getStageHtml(StageId,Poste,Ent,Ville)
-{
-    r = "<div class='Offre' id ="+StageId+"><div><button><ul class='liste'><li>"+Poste+"</li><li>"+Ent+"</li><li>"+ Ville +"</li> </ul></button>";
+    r = "<div class='Block' id ="+data.IDoffre+"><div><button onclick = \"ShowPopUp(event,'http://localhost/assets/phpScripts/search.php?ID=')\"><ul class='liste'><li>"+data.Poste+"</li><li>"+data.NomE+"</li><li>"+ data.Ville +"</li> </ul></button>";
     if(role != "Pilote")
     {
-        r+= "<input class='StarButon' type='checkbox'>";
+        r+= "<input class='StarButon' type='checkbox' onclick = 'WishList(event)' ";
+        if(data.IDu != null)
+        {
+            r+= "checked";
+        }
+        r+= ">";
     }
     if(role != "Etudiant")
     {
-        r+= "<a class='edit' href='../modifier_Stage/?ID="+StageId+"' type='checkbox'>edit</a>"; 
+        r+= "<a class='edit' href='../modifier_Stage/?ID="+data.IDoffre+"' type='checkbox'>edit</a>"; 
     }
     
     r += "</div></div>" ; 
     return r;
 }
+
+  
+
