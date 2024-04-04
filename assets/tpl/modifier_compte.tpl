@@ -103,7 +103,7 @@
     <input type="text" required="required" id="Date-naissance" name="Date-naissance" value={$usermodif["Date_Nais"]}>
     <label for="Adresse">Adresse</label>
     <input type="text" required="required" id="Adresse" name="Adresse" value="{$usermodif["Adresse"]}">
-    <input type="text" required="required" id="IDu" name="IDu" value="{$usermodif["IDu"]}">
+    <input type="hidden" required="required" id="IDu" name="IDu" value="{$usermodif["IDu"]}">
 </div>
     
 </div>

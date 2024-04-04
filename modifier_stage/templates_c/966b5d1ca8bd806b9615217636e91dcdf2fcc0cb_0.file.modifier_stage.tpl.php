@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-04 18:11:13
+/* Smarty version 4.5.1, created on 2024-04-04 20:29:20
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\modifier_stage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660ed1212d0f62_95805976',
+  'unifunc' => 'content_660ef180e6fea9_17454641',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '966b5d1ca8bd806b9615217636e91dcdf2fcc0cb' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\modifier_stage.tpl',
-      1 => 1712246931,
+      1 => 1712255357,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660ed1212d0f62_95805976 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660ef180e6fea9_17454641 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html lang="fr">
@@ -42,7 +42,7 @@ function content_660ed1212d0f62_95805976 (Smarty_Internal_Template $_smarty_tpl)
             <input type="text" required="required" id="Poste" name="Poste" value="<?php echo $_smarty_tpl->tpl_vars['offre']->value["Poste"];?>
 ">
             <label for="Nom_Entreprise">Nom Entreprise :</label>
-            <input type="text" required="required" id="Nom_Entreprise" name="Nom_Entreprise" value="<?php echo $_smarty_tpl->tpl_vars['entreprise']->value[0];?>
+            <input type="text" required="required" id="Nom_Entreprise" name="Nom_Entreprise" value="<?php echo $_smarty_tpl->tpl_vars['entreprise']->value["NomE"];?>
 ">
             <label for="Renumeration">Rénumération :</label>
             <input type="text" required="required" id="Renumeration" name="Renumeration" value=<?php echo $_smarty_tpl->tpl_vars['offre']->value["Remune"];?>
@@ -107,7 +107,7 @@ if (($_prefixVariable3 == $_prefixVariable4)) {?>
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </select>
-            <input type="text" required="required" id="ID" name="ID" value=<?php echo $_smarty_tpl->tpl_vars['offre']->value["ID"];?>
+            <input type="hidden" required="required" id="ID" name="ID" value=<?php echo $_smarty_tpl->tpl_vars['offre']->value["ID"];?>
 >
     </div>
     <div class="flex-bas">
@@ -118,7 +118,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </textarea>
     </div>
         <button type="submit" class="button" value="Valider">Valider</button> 
-        <button type="submit" class="button" value="Annuler">Annuler</button> 
+        </form>
+        <form action="../assets/phpScripts/deleteOffre.php?" method="get">
+            <input type="hidden" required="required" id="ID" name="ID" value=<?php echo $_smarty_tpl->tpl_vars['offre']->value["ID"];?>
+>
+            <button type="submit" class="button" value="Supprimer">Supprimer</button> 
     </div>
 </form>
 <?php }

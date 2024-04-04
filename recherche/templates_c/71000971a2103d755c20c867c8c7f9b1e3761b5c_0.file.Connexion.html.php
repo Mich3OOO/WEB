@@ -1,19 +1,11 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.5.1, created on 2024-04-03 17:24:08
-=======
-/* Smarty version 4.5.1, created on 2024-04-03 21:29:04
->>>>>>> main
+/* Smarty version 4.5.1, created on 2024-04-04 20:09:09
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\Connexion.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-<<<<<<< HEAD
-  'unifunc' => 'content_660d7498ca0b28_52622849',
-=======
-  'unifunc' => 'content_660dae004d07d8_55923393',
->>>>>>> main
+  'unifunc' => 'content_660eecc591dc99_60834629',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -28,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_660d7498ca0b28_52622849 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_660dae004d07d8_55923393 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> main
+function content_660eecc591dc99_60834629 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <main>
     <div class = "flexContainer">              

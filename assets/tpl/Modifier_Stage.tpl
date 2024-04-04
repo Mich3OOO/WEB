@@ -18,7 +18,7 @@
             <label for="Nom_Poste">Nom  Poste :</label>
             <input type="text" required="required" id="Poste" name="Poste" value="{$offre["Poste"]}">
             <label for="Nom_Entreprise">Nom Entreprise :</label>
-            <input type="text" required="required" id="Nom_Entreprise" name="Nom_Entreprise" value="{$entreprise[0]}">
+            <input type="text" required="required" id="Nom_Entreprise" name="Nom_Entreprise" value="{$entreprise["NomE"]}">
             <label for="Renumeration">Rénumération :</label>
             <input type="text" required="required" id="Renumeration" name="Renumeration" value={$offre["Remune"]}>
             <label for="NB_Places">Nombre de places :</label>
@@ -49,7 +49,7 @@
                     {/if}
                 {/foreach}
             </select>
-            <input type="text" required="required" id="ID" name="ID" value={$offre["ID"]}>
+            <input type="hidden" required="required" id="ID" name="ID" value={$offre["ID"]}>
     </div>
     <div class="flex-bas">
     <div class="Description">
@@ -57,7 +57,10 @@
         <br>
         <textarea name="Description" rows="10" cols="50">{$offre["Descr"]}</textarea>
     </div>
-        <button type="submit" class="button" value="Valider">Valider</button> 
-        <button type="submit" class="button" value="Annuler">Annuler</button> 
+        <button type="submit" class="button" value="Modifier">Modifier</button> 
+        </form>
+        <form action="../assets/phpScripts/deleteOffre.php?" method="get">
+            <input type="hidden" required="required" id="ID" name="ID" value={$offre["ID"]}>
+            <button type="submit" class="button" value="Supprimer">Supprimer</button> 
     </div>
 </form>

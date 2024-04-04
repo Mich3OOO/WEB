@@ -8,15 +8,10 @@
     }
     $connexion = new Sql($_SESSION["role"]);
     $v=$connexion->GetFirstRow("SELECT IF( EXISTS (SELECT IDE from entreprise WHERE NomE = '".$_GET['Nom_Entreprise']."'),1,0);");
-    var_dump($_GET);
-    // var_dump($v[0]);
-    foreach($_GET["Competences"] as $comp ){
-        var_dump($comp);
-    }
-     var_dump($_GET["TypePromo"]);
+    
     
     if($v[0]!=0){
-        var_dump($v);
+
         $requêteIDE = $connexion->GetFirstRow("SELECT IDE from entreprise WHERE NomE = '".$_GET['Nom_Entreprise']."' ;");
         
         $requêteOffre = $connexion->Add("INSERT INTO offre (Duree,Poste, remune, Nb_place, Descr, IDE) VALUES('".$_GET['Duree']."','".$_GET['Poste']."', '".$_GET['Renumeration']."', '".$_GET['NB_Places']."', '".$_GET['Description']."', '".$requêteIDE["IDE"]."');");
@@ -36,10 +31,12 @@
             }
         }
        
+       
 
         
     } 
     else {
         echo "L'entreprise n'existe pas ! Veuillez d'abord la créer !";
     }
+    header('Location: ../../../recherche/');
 ?>
