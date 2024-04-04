@@ -8,7 +8,8 @@ $connexion = new Sql($_SESSION["role"]);
 
 $test = $connexion->GetFirstRow("SELECT IF( EXISTS ( SELECT * FROM adresse WHERE nomA = '".$_GET['Nom']."' OR N_siret = '".$_GET['Siret']."'),1,0);");
 if ($test[0] == 1){
-    echo "Entreprise déjà existante";
+    $message = "Entreprise déjà existante";
+    echo "<script>console.log('$message');</script>"; 
 }
 else{
     $test2 = $connexion->GetFirstRow("SELECT IF( EXISTS ( SELECT ID_adresse FROM adresse INNER JOIN ville ON ville.idv = adresse.idv WHERE ville = '".$_GET['Ville']."' AND adresseA='".$_GET['Adresse']."'),1,0);");

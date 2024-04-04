@@ -93,3 +93,24 @@ button:hover {
     margin-right: 20%;
 }
 
+@media only screen and (max-width: 1024px) {
+    #RappelOffre {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    #msg,
+    #TextMail {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .CVLM {
+        margin-right: 5%;
+    }
+
+    button {
+        width: 80%;
+        margin-left: 10%;
+    }
+}

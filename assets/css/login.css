@@ -68,3 +68,10 @@ h1{
 .login button:hover {
     background-color: #E76E3B;
 }
+
+@media only screen and (min-width: 1024px) {
+    .login {
+        width: 300px;
+        margin: 300px auto;
+    }
+}
