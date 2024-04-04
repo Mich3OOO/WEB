@@ -109,10 +109,12 @@
 </div>
 <div class="flex-bas">
     <button type="submit" class="Valider">Valider</button>
-    <button type="submit" class="Reinitialiser">Supprimer</button> 
-   
+    </form>
+    <form action="../assets/phpScripts/deleteUser.php">
+        <button type="submit" class="Reinitialiser">Supprimer</button> 
+   </form>
     
 
 </div>
-</form>
+
 
