@@ -74,12 +74,12 @@ INSERT INTO Admin(IDu)
 VALUES 
 (2);
 
-INSERT INTO Classe(idv, IDT, IDProm, IDu)
+INSERT INTO Classe(idv, IDT, IDProm,IDu)
 VALUES
-(5, 1, 2, 6),
-(1, 2, 3, 13),
-(5, 2, 1, 6),
-(2, 1, 1, 13);
+(5,1,2,6),
+(1,2,3,13),
+(5,2,1,6),
+(2,1,1,13);
 
 INSERT INTO etudiant (IDu, IDClasse) 
 VALUES 
@@ -169,3 +169,12 @@ VALUES
 (12, 3, 1),
 (14, 5, 3),
 (15, 2, 4);
+
+INSERT INTO postuler(IDu,IDoffre)
+VALUES 
+(11,1),
+(12,2);
+
+INSERT INTO interesser(IDu,IDoffre)
+VALUES
+(11,1);

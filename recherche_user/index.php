@@ -21,7 +21,7 @@ $smarty->assign('description', 'algo');
 
 //var_dump($_SESSION);
 if($_SESSION["role"]=="Administrateur"){
-    $allutilisateur=$connexion->GetArray("SELECT utilisateur.IDu,NomU,PrenomU,Date_NaisU,MailU,role,AdresseA,promotion,ville.idv FROM utilisateur INNER JOIN adresse ON Utilisateur.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv= ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg INNER JOIN Classe ON ville.idv = Classe.idv INNER JOIN promotion ON Classe.IDProm = promotion.IDProm;");
+    $allutilisateur=$connexion->GetArray("SELECT utilisateur.IDu,NomU,PrenomU,Date_NaisU,MailU,role,AdresseA,promotion,ville.idv FROM utilisateur INNER JOIN adresse ON Utilisateur.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv= ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg LEFT JOIN Classe ON ville.idv = Classe.idv LEFT JOIN promotion ON Classe.IDProm = promotion.IDProm;");
 
 }else{
     $allutilisateur=$connexion->GetArray("SELECT  utilisateur.IDu,NomU,PrenomU,Date_NaisU,MailU,role,AdresseA,promotion,ville.idv FROM utilisateur INNER JOIN etudiant ON utilisateur.IDu=etudiant.IDu  INNER JOIN Classe ON etudiant.IDClasse = Classe.IDClasse INNER JOIN promotion ON promotion.IDProm=Classe.IDProm INNER JOIN adresse ON Utilisateur.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv= ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg;");

@@ -1,26 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.5.1, created on 2024-04-03 17:36:29
-=======
-/* Smarty version 4.5.1, created on 2024-04-03 21:22:39
->>>>>>> main
-  from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\ajouter_compte.tpl' */
+/* Smarty version 4.5.1, created on 2024-04-03 21:19:15
+  from 'C:\Users\Utilisateur\Desktop\CPI A2\Cours\WEB\Projet\WEB\assets\tpl\ajouter_compte.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-<<<<<<< HEAD
-  'unifunc' => 'content_660d777de1be75_41381823',
-=======
-  'unifunc' => 'content_660dac7f1de621_63339946',
->>>>>>> main
+  'unifunc' => 'content_660dabb3497225_76412098',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '11e5472115948e0ff22445de7c44e6df6d58eb82' => 
+    'bb03ae565c6e964fd0f8fdec037372faba791395' => 
     array (
-      0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\ajouter_compte.tpl',
-      1 => 1712151632,
+      0 => 'C:\\Users\\Utilisateur\\Desktop\\CPI A2\\Cours\\WEB\\Projet\\WEB\\assets\\tpl\\ajouter_compte.tpl',
+      1 => 1712148497,
       2 => 'file',
     ),
   ),
@@ -28,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_660d777de1be75_41381823 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_660dac7f1de621_63339946 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> main
+function content_660dabb3497225_76412098 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h1>Creer un compte</h1>
 <form action="../assets/phpScripts/AjoutCompte.php" method="get">
     <div class="test">

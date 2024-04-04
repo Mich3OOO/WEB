@@ -1,26 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.5.1, created on 2024-04-03 17:22:09
-=======
-/* Smarty version 4.5.1, created on 2024-04-03 21:29:04
->>>>>>> main
-  from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\Authentification.html' */
+/* Smarty version 4.5.1, created on 2024-04-03 15:43:20
+  from 'C:\Users\Utilisateur\Desktop\CPI A2\Cours\WEB\Projet\WEB\assets\html\Authentification.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-<<<<<<< HEAD
-  'unifunc' => 'content_660d742101f1a8_72373254',
-=======
-  'unifunc' => 'content_660dae00664d99_25793658',
->>>>>>> main
+  'unifunc' => 'content_660d5cf8240ad2_75164023',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '052ae690589b9909c97a0bcf3330b3e145250558' => 
+    '07fbbbb393709a20a8daf90cb3deccabec22250b' => 
     array (
-      0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\html\\Authentification.html',
-      1 => 1711883608,
+      0 => 'C:\\Users\\Utilisateur\\Desktop\\CPI A2\\Cours\\WEB\\Projet\\WEB\\assets\\html\\Authentification.html',
+      1 => 1711906505,
       2 => 'file',
     ),
   ),
@@ -28,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_660d742101f1a8_72373254 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_660dae00664d99_25793658 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> main
+function content_660d5cf8240ad2_75164023 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html lang="fr">

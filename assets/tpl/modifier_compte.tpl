@@ -12,13 +12,13 @@
     <label for="Role">Role</label>
     <select name="Role">
             {foreach from=$allrole item=role}
-             {if ({$role.role}=={$usermodif["role"]})}
-            <option selected>{$role.role}</option>
+            {if ({$role.role}=={$usermodif["role"]})}
+                <option selected>{$role.role}</option>
             
             {else}
                 <option >{$role.role}</option>
             {/if}
-                <option value={$usermodif["role"]}>{$role.role}</option>
+               
             {/foreach}
     </select>
 
@@ -37,11 +37,11 @@
     <label for="Campus">Campus</label>
     <select name="Campus">
             {foreach from=$allcampus item=campus}
-            {if ({$campus.NomC}=={$usermodif["campus"]})}
-            <option selected>{$campus.NomC}</option>
+            {if ({$campus.ville}=={$usermodif["ville"]})}
+            <option selected>{$campus.ville}</option>
             
             {else}
-                <option >{$campus.NomC}</option>
+                <option >{$campus.ville}</option>
             {/if}
            
             {/foreach}

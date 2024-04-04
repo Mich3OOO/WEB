@@ -1,26 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.5.1, created on 2024-04-03 17:36:29
-=======
-/* Smarty version 4.5.1, created on 2024-04-03 21:22:39
->>>>>>> main
-  from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\Menu.tpl' */
+/* Smarty version 4.5.1, created on 2024-04-03 18:20:19
+  from 'C:\Users\Utilisateur\Desktop\CPI A2\Cours\WEB\Projet\WEB\assets\tpl\Menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-<<<<<<< HEAD
-  'unifunc' => 'content_660d777dcb4b85_66288033',
-=======
-  'unifunc' => 'content_660dac7f11eb65_13720092',
->>>>>>> main
+  'unifunc' => 'content_660d81c3dffd87_79160909',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '7778fe0fd9b4d9e5250ab39740e0378ffb4d9dd0' => 
+    '487c033692b599d36e0e2e78b4d6a3c260b4924f' => 
     array (
-      0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\Menu.tpl',
-      1 => 1711883608,
+      0 => 'C:\\Users\\Utilisateur\\Desktop\\CPI A2\\Cours\\WEB\\Projet\\WEB\\assets\\tpl\\Menu.tpl',
+      1 => 1711906505,
       2 => 'file',
     ),
   ),
@@ -28,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_660d777dcb4b85_66288033 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_660dac7f11eb65_13720092 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> main
+function content_660d81c3dffd87_79160909 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="../assets/css/menu.css">
 <?php echo '<script'; ?>
  src="../assets/js/more_menu.js"><?php echo '</script'; ?>
