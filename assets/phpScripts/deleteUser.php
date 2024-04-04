@@ -6,15 +6,15 @@ if(!isset($_SESSION))
         session_start();
     }
 $connexion = new Sql($_SESSION["role"]);
+$role=$connexion->GetFirstRow("SELECT role FROM utilisateur WHERE IDu='".$_GET["IDu"]."'; ");
 
-
-if($_GET["role"]=="Etudiant"){
+if($role=="Etudiant"){
     $DeleteInteresser = $connexion->delete("DELETE FROM interesser WHERE IDu = '".$_GET['IDu']."';");
     $DeletePostuler = $connexion->delete("DELETE FROM Postuler WHERE IDu = '".$_GET['IDu']."';");
     $DeleteNote = $connexion->delete("DELETE FROM note WHERE IDu = '".$_GET['IDu']."';");
     $DeleteEtudiant = $connexion->delete("DELETE FROM etudiant WHERE IDu = '".$_GET['IDu']."';");
     $DeleteUtilisateur = $connexion->delete("DELETE FROM Utilisateur WHERE IDu = '".$_GET['IDu']."';");
-} else if($_GET["role"] == "Pilote") {
+} else if($role == "Pilote") {
     $DeleteClasse = $connexion->delete("DELETE IDu FROM Classe WHERE IDu = '".$_GET['IDu']."';");
     $DeletePilote = $connexion->delete("DELETE FROM pilote WHERE IDu = '".$_GET['IDu']."';");
     $DeleteUtilisateur = $connexion->delete("DELETE FROM Utilisateur WHERE IDu = '".$_GET['IDu']."';");
