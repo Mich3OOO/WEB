@@ -8,7 +8,8 @@
     $connexion = new Sql($_SESSION["role"]);
     $ExisteU = $connexion->GetFirstRow("SELECT IF ( EXISTS (SELECT NomU FROM utilisateur WHERE NomU = '".$_GET['Nom']."' AND PrenomU ='".$_GET['Prenom']."'),1,0);");
     if($ExisteU[0]!=0){
-        echo 'Utilisateur déjà existant'; 
+        $message = "Utilisateur déjà existant";
+        echo "<script>console.log('$message');</script>"; 
     } else {
         $test = $connexion->GetFirstRow("SELECT IF( EXISTS ( SELECT ID_adresse FROM adresse INNER JOIN ville ON ville.idv = adresse.idv WHERE ville = '".$_GET['Ville']."' AND adresseA='".$_GET['Adresse']."'),1,0);");
         if ($test[0] == 0){

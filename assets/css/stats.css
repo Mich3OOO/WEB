@@ -23,3 +23,10 @@ h1
     text-align: center;
     margin: 10px 0px;
 }
+
+@media only screen and (max-width: 800px) {
+    .Graph {
+        width: 100%; /* Changer la largeur pour qu'elle occupe toute la largeur de l'écran */
+        max-width: 100%; /* S'assurer que la largeur maximale est de 100% */
+    }
+}
