@@ -45,8 +45,10 @@
 
 </div>
 <div class="flex-bas">
-    <button type="submit" class="button" value="Valider">Valider</button> 
-    <button type="submit" class="Reinitialiser">Supprimer</button> 
+    <button type="submit" class="button" value="Valider">Valider</button>
+     </form>
+    <form action="../assets/phpScripts/deleteEntreprise.php" method="get">
+        <button type="submit" class="Reinitialiser">Supprimer</button> 
     
 </div>
 </form>
