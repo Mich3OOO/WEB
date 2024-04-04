@@ -1,21 +1,23 @@
 <?php
-    include "PDO.php";
-    if(!isset($_SESSION))
+include "../PDO.php";
+if(!isset($_SESSION))
     {
         session_start();
     }
-    $connexion = new Sql($_SESSION["role"]);
+$connexion = new Sql($_SESSION["role"]);
 
-    if($connexion->Set("SELECT EXISTS (SELECT NomE FROM entreprise WHERE NomE = '"$_GET['NomE']"');") !== null){
-        echo 'Entreprise déjà existante';
-    } else {
-        if($connexion->set("IF EXISTS (SELECT adresseA FROM adresse WHERE adresseA ='"$_GET['adresseA']"')")){
-            $Stock = $connexion->set("SELECT ID_adresse FROM adresse WHERE adresseA = '"$_GET['adresseA']"';");
-            $requête = $connexion->Set("INSERT INTO entreprise (NomE, descr, MailE, TelE, Site, moyenne,N_siret, IDu, ID_adresse, Secteur_d_activite) VALUES('".$_POST['Nom_Entreprise']."', '".$_POST['Description']."', '".$_POST['Mail']."', '".$_POST['Num_Tel']."', '".$_POST['Site_Internet']."', 0, 6, '".$_POST['Sect_Activite']."', '".$stock."');");
-        }
-
+$test = $connexion->GetFirstRow("SELECT IF( EXISTS (SELECT * FROM entreprise  WHERE NomE = '".$_GET['Nom']."' OR N_siret = '".$_GET['Siret']."'),1,0);");
+if ($test == 1){
+    echo 'Entreprise existe déjà';
+}else {
+    $test = $connexion->GetFirstRow("SELECT adresseA FROM adresse INNER JOIN ville ON ville.idv = adresse.idv WHERE adresseA ='".$_GET['Adresse']."' AND ville = '".$_GET['Ville']."';");
+    if ($test == 1){
+        $StockAdresse = $connexion->GetFirstRow("SELECT ID_adresse FROM adresse INNER JOIN ville ON ville.idv = adresse.idv WHERE ville = '".$_GET['Ville']."' AND adresseA = '".$_GET['Adresse']."';"); 
+        $Ville = $connexion->add("INSER INTO ville (ville, Code_Post) VALUES('".$_POST['Ville']."','".$_POST['CP']."');");  
+        $StockVille = $$connexion->GetFirstRow("SELECT idv FROM ville WHERE ville = '".$_GET['Ville']."';");
+        INSERT INTO adresse (idv) VALUES ($StockVille )
     }
-
-
-    //$requête2 = $connexion->Set("INSERT INTO adresse (adresseA) VALUES ('".$_POST['Adresse']."');");
-    //$requête3 = $connexion->Set("INSERT INTO ville (Code_Post, ville) VALUES ('".$_POST['CP']."', '".$_POST['Ville']."');");
+    else{
+        $test = $connexion->GetFirstRow("SELECT adresseA FROM adresse INNER JOIN ville ON ville.idv = adresse.idv WHERE adresseA ='".$_GET['Adresse']."' AND ville = '".$_GET['Ville']."';");
+    }
+    
