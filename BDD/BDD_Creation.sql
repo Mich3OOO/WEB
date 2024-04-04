@@ -30,7 +30,7 @@
 
    CREATE TABLE ville(
       idv INT AUTO_INCREMENT,
-      Code_Post SMALLINT NOT NULL,
+      Code_Post INT NOT NULL,
       ville VARCHAR(50),
       ID_reg INT NOT NULL,
       PRIMARY KEY(idv),
@@ -106,7 +106,7 @@
       idv INT NOT NULL,
       IDT INT NOT NULL,
       IDProm INT NOT NULL,
-      IDu INT NOT NULL,
+      IDu INT ,
       PRIMARY KEY(IDClasse),
       FOREIGN KEY(idv) REFERENCES ville(idv),
       FOREIGN KEY(IDT) REFERENCES types_promotions(IDT),
@@ -180,7 +180,7 @@
    );
 
    CREATE USER admin IDENTIFIED BY 'mdp2';
-   GRANT ALL PRIVILEGES ON presquauchaud TO admin;
+   GRANT ALL PRIVILEGES ON *.* TO admin;
    CREATE USER pilote IDENTIFIED BY 'mdp';
    GRANT SELECT ON presquauchaud.* TO pilote;
    GRANT UPDATE, DELETE, INSERT ON utilisateur TO pilote;
