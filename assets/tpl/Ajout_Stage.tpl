@@ -15,7 +15,7 @@
 <form action="../assets/phpScripts/SQL/AjoutStage.php" method="get">
     <div class="flex-container">
         <div class="flex-gauche">
-            <label for="Nom_Poste">Nom  Poste :</label>
+            <label for="Poste">Nom  Poste :</label>
             <input type="text" required="required" id="Poste" name="Poste" placeholder="Nom du Poste">
             <label for="Nom_Entreprise">Nom Entreprise :</label>
             <input type="text" required="required" id="Nom_Entreprise" name="Nom_Entreprise" placeholder="Nom de l'entreprise">
@@ -25,16 +25,18 @@
             <input type="number" id="NB_Places" name="NB_Places" min="1" max="20" placeholder="Nombre de place disponible">
             <label for="date">Date de début prévu :</label>
             <input type="date" id="date" name="date" min="1" max="20" placeholder="Date de début prévu">
+            <label for="Duree">Durée du stage (en mois):</label>
+            <input type="number" id="Duree" name="Duree" placeholder="Durée du stage">
         </div>
         <div class="flex-droit">
             <label for="TypePromo">Type de promotions concernés :</label>
-            <select name="TypePromo" id="TypePromo" required="required" multiple>
+            <select name="TypePromo[]" id="TypePromo" required="required" multiple="multiple">
                 {foreach from=$alltypepromo item=promo}
                     <option>{$promo.Nom_du_Type}</option>
                 {/foreach}
             </select>
             <label for="Competences">Compétences necessaire :</label>
-            <select name="Competences" id="Competences" required="required" multiple>
+            <select name="Competences[]" id="Competences" required="required" multiple="multiple">
                 {foreach from=$allcomp item=comp}
                     <option>{$comp.comp}</option>
                 {/foreach}

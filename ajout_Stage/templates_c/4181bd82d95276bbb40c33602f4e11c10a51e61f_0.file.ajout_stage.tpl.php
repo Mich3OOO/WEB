@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-04 18:14:01
+/* Smarty version 4.5.1, created on 2024-04-04 19:35:31
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\ajout_stage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660ed1c9872763_89028937',
+  'unifunc' => 'content_660ee4e39ada11_05096082',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4181bd82d95276bbb40c33602f4e11c10a51e61f' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\ajout_stage.tpl',
-      1 => 1712247237,
+      1 => 1712252119,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660ed1c9872763_89028937 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660ee4e39ada11_05096082 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html lang="fr">
@@ -38,7 +38,7 @@ function content_660ed1c9872763_89028937 (Smarty_Internal_Template $_smarty_tpl)
 <form action="../assets/phpScripts/SQL/AjoutStage.php" method="get">
     <div class="flex-container">
         <div class="flex-gauche">
-            <label for="Nom_Poste">Nom  Poste :</label>
+            <label for="Poste">Nom  Poste :</label>
             <input type="text" required="required" id="Poste" name="Poste" placeholder="Nom du Poste">
             <label for="Nom_Entreprise">Nom Entreprise :</label>
             <input type="text" required="required" id="Nom_Entreprise" name="Nom_Entreprise" placeholder="Nom de l'entreprise">
@@ -48,10 +48,12 @@ function content_660ed1c9872763_89028937 (Smarty_Internal_Template $_smarty_tpl)
             <input type="number" id="NB_Places" name="NB_Places" min="1" max="20" placeholder="Nombre de place disponible">
             <label for="date">Date de début prévu :</label>
             <input type="date" id="date" name="date" min="1" max="20" placeholder="Date de début prévu">
+            <label for="Duree">Durée du stage (en mois):</label>
+            <input type="number" id="Duree" name="Duree" placeholder="Durée du stage">
         </div>
         <div class="flex-droit">
             <label for="TypePromo">Type de promotions concernés :</label>
-            <select name="TypePromo" id="TypePromo" required="required" multiple>
+            <select name="TypePromo[]" id="TypePromo" required="required" multiple="multiple">
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['alltypepromo']->value, 'promo');
 $_smarty_tpl->tpl_vars['promo']->do_else = true;
@@ -65,7 +67,7 @@ $_smarty_tpl->tpl_vars['promo']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </select>
             <label for="Competences">Compétences necessaire :</label>
-            <select name="Competences" id="Competences" required="required" multiple>
+            <select name="Competences[]" id="Competences" required="required" multiple="multiple">
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['allcomp']->value, 'comp');
 $_smarty_tpl->tpl_vars['comp']->do_else = true;
