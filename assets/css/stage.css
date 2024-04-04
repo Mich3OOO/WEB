@@ -13,6 +13,13 @@ label{
     padding-top: 5px ;
 }
 
+.cond_commentaire{
+    color: black;
+    background-color: lightsteelblue;
+    margin: 10px 0px;
+    padding: 5px 0px;
+}
+
 input /*modifie la zone de texte */ {
     width: 100%;
     padding: 8px;

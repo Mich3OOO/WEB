@@ -1,26 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.5.1, created on 2024-04-03 17:36:29
-=======
-/* Smarty version 4.5.1, created on 2024-04-03 21:22:39
->>>>>>> main
+/* Smarty version 4.5.1, created on 2024-04-04 21:13:48
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\ajouter_compte.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-<<<<<<< HEAD
-  'unifunc' => 'content_660d777de1be75_41381823',
-=======
-  'unifunc' => 'content_660dac7f1de621_63339946',
->>>>>>> main
+  'unifunc' => 'content_660efbeccc8df7_94844628',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '11e5472115948e0ff22445de7c44e6df6d58eb82' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\ajouter_compte.tpl',
-      1 => 1712151632,
+      1 => 1712258023,
       2 => 'file',
     ),
   ),
@@ -28,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_660d777de1be75_41381823 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_660dac7f1de621_63339946 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> main
+function content_660efbeccc8df7_94844628 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h1>Creer un compte</h1>
 <form action="../assets/phpScripts/AjoutCompte.php" method="get">
     <div class="test">
@@ -101,26 +89,26 @@ $_smarty_tpl->tpl_vars['role']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </select>
         <label for="Adresse">Adresse</label>
-        <input type="text" required="required" id="Adresse" name="Adresse" placeholder="Adresse" onblur="data(/^[A-Za-z' - 0-9]+$/,0,value,id,'Ce champs ne doit que contenir des lettres')">
+        <input type="text" required="required" id="Adresse" name="Adresse" placeholder="Adresse" onblur="data(/^[A-Za-z' - 0-9]+$/,0,value,id,'Mauvaise Adresse ?')">
         
 
     </div>
     <div class="flex-droit">
         
         <label for="Nom">Nom</label>
-        <input type="text" required="required" id="Nom" name="Nom" placeholder="Nom" onblur="data(/^[A-Z]+[A-Za-z'-]/,0,value,id,'Ce champs ne doit que contenir des lettres')">
+        <input type="text" required="required" id="Nom" name="Nom" placeholder="Nom" onblur="data(/^[A-Z]+[A-Za-z'-]/,0,value,id,'Ce champs ne doit que contenir des lettres et commence par une majuscule')">
         <label for="Prenom">Prénom</label>
-        <input type="text" required="required" id="Prenom" name="Prenom" placeholder="Prenom" onblur="data(/^[A-Z]+[A-Za-z'-]/,0,value,id,'Ce champs ne doit que contenir des lettres')">
+        <input type="text" required="required" id="Prenom" name="Prenom" placeholder="Prenom" onblur="data(/^[A-Z]+[A-Za-z'-]/,0,value,id,'Ce champs ne doit que contenir des lettres et commence par une majuscule')">
         <label for="Mot-de-passe">Mot de passe</label>
-        <input type="text" required="required" id="Mot-de-passe" name="Mot-de-passe" placeholder="Mot de passe">
+        <input type="password" required="required" id="Mot-de-passe" name="Mot-de-passe" placeholder="Mot de passe">
         <label for="Confirmation-MDP">Confirmation mot de passe</label>
-        <input type="text" required="required" id="Confirmation-MDP" name="Confirmation-MDP" placeholder="Confirmation mot de passe">
+        <input type="password" required="required" id="Confirmation-MDP" name="Confirmation-MDP" placeholder="Confirmation mot de passe">
         <label for="Mail">Mail</label>
-        <input type="email" required="required" id="Mail" name="Mail" placeholder="Mail" onblur="data(/^[A-Za-z' - 0-9]+@+[A-Za-z' - 0-9]/,0,value,id,'Ce champs ne doit que contenir des lettres')">
+        <input type="email" required="required" id="Mail" name="Mail" placeholder="Mail" onblur="data(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i,0,value,id,'Email mal renseigné ')">
         <label for="Date-naissance">Date de naissance</label>
-        <input type="text" required="required" id="Date-naissance" name="Date-naissance" placeholder="Date-naissance">
+        <input type="date" required="required" id="Date-naissance" name="Date-naissance" placeholder="Date-naissance">
         <label for="CP">Code Postal</label>
-        <input type="text" required="required" id="CP" name="CP" placeholder="CP" onblur="data(/^[A-Za-z' - 0-9]+$/,0,value,id,'Ce champs ne doit que contenir des lettres')">
+        <input type="text" required="required" id="CP" name="CP" placeholder="CP" onblur="data(/^[A-Za-z' - 0-9]+$/,5,value,id,'Ce champs ne doit que contenir des lettres')">
         <label for="Ville">Ville</label>
         <input type="text" required="required" id="Ville" name="Ville" placeholder="Ville" onblur="data(/^[A-Za-z' -]+$/,0,value,id,'Ce champs ne doit que contenir des lettres')">
         <label for="Region">Region</label>

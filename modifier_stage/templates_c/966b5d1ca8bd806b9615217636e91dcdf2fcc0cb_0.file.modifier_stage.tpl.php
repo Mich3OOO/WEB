@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-04 20:29:20
+/* Smarty version 4.5.1, created on 2024-04-04 22:47:38
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\modifier_stage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660ef180e6fea9_17454641',
+  'unifunc' => 'content_660f11ea3195c5_74228241',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '966b5d1ca8bd806b9615217636e91dcdf2fcc0cb' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\modifier_stage.tpl',
-      1 => 1712255357,
+      1 => 1712263554,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660ef180e6fea9_17454641 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660f11ea3195c5_74228241 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html lang="fr">
@@ -35,7 +35,7 @@ function content_660ef180e6fea9_17454641 (Smarty_Internal_Template $_smarty_tpl)
   <body>
     
 
-<form action="../assets/phpScripts/Updatetage.php" method="post">
+<form action="../assets/phpScripts/UpdateOffre.php" method="get">
     <div class="flex-container">
         <div class="flex-gauche">
             <label for="Nom_Poste">Nom  Poste :</label>
@@ -53,10 +53,13 @@ function content_660ef180e6fea9_17454641 (Smarty_Internal_Template $_smarty_tpl)
             <label for="date">Date de début prévu :</label>
             <input type="date" id="date" name="date" min="1" max="20" value=<?php echo $_smarty_tpl->tpl_vars['offre']->value["Date_Stage"];?>
 >
+             <label for="Duree">Durée du stage (en mois):</label>
+            <input type="number" id="Duree" name="Duree" placeholder="Durée du stage"  value=<?php echo $_smarty_tpl->tpl_vars['offre']->value["Duree"];?>
+>
         </div>
         <div class="flex-droit">
             <label for="TypePromo">Type de promotions concernés :</label>
-            <select name="TypePromo" id="TypePromo" required="required" multiple>
+            <select name="TypePromo[]" id="TypePromo" required="required" multiple="multiple">
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['alltypepromo']->value, 'typepromo');
 $_smarty_tpl->tpl_vars['typepromo']->do_else = true;
@@ -82,7 +85,7 @@ if (($_prefixVariable1 == $_prefixVariable2)) {?>
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </select>
             <label for="Comp">Compétences necessaire :</label>
-            <select name="Competences" id="Comp" required="required" multiple>
+            <select name="Competences[]" id="Comp" required="required" multiple="multiple">
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['allcomp']->value, 'Comp');
 $_smarty_tpl->tpl_vars['Comp']->do_else = true;
@@ -107,6 +110,8 @@ if (($_prefixVariable3 == $_prefixVariable4)) {?>
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </select>
+            
+           
             <input type="hidden" required="required" id="ID" name="ID" value=<?php echo $_smarty_tpl->tpl_vars['offre']->value["ID"];?>
 >
     </div>
@@ -117,9 +122,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <textarea name="Description" rows="10" cols="50"><?php echo $_smarty_tpl->tpl_vars['offre']->value["Descr"];?>
 </textarea>
     </div>
-        <button type="submit" class="button" value="Valider">Valider</button> 
+        <button type="submit" class="button" value="Modifier">Modifier</button> 
         </form>
-        <form action="../assets/phpScripts/deleteOffre.php?" method="get">
+        <form action="../assets/phpScripts/deleteOffre.php" method="get">
             <input type="hidden" required="required" id="ID" name="ID" value=<?php echo $_smarty_tpl->tpl_vars['offre']->value["ID"];?>
 >
             <button type="submit" class="button" value="Supprimer">Supprimer</button> 

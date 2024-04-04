@@ -16,11 +16,11 @@
     <div class="flex-container">
         <div class="flex-gauche">
             <label for="Poste">Nom  Poste :</label>
-            <input type="text" required="required" id="Poste" name="Poste" placeholder="Nom du Poste">
+            <input type="text" required="required" id="Poste" name="Poste" placeholder="Nom du Poste" onblur="data(/^[A-Za-z' -]+$/,0,value,id,'Ce champs ne doit contenir que des lettres ')>
             <label for="Nom_Entreprise">Nom Entreprise :</label>
-            <input type="text" required="required" id="Nom_Entreprise" name="Nom_Entreprise" placeholder="Nom de l'entreprise">
+            <input type="text" required="required" id="Nom_Entreprise" name="Nom_Entreprise" placeholder="Nom de l'entreprise" onblur="data(/^[A-Za-z' -]+$/,0,value,id,'Ce champs ne doit contenir que des lettres ')>
             <label for="Renumeration">Rénumération :</label>
-            <input type="text" required="required" id="Renumeration" name="Renumeration" placeholder="Renumeration en €">
+            <input type="number" required="required" id="Renumeration" name="Renumeration" placeholder="Renumeration en €">
             <label for="NB_Places">Nombre de places :</label>
             <input type="number" id="NB_Places" name="NB_Places" min="1" max="20" placeholder="Nombre de place disponible">
             <label for="date">Date de début prévu :</label>

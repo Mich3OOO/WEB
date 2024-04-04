@@ -12,7 +12,7 @@ $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../tpl/ajout_stage.tpl');
 $smarty->assign('dircss', '../assets/css/stage.css');
-$smarty->assign('dirjs', '#');
+$smarty->assign('dirjs', '../assets/js/script.js');
 $smarty->assign('titre', 'Ajouter une offre de stage');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');

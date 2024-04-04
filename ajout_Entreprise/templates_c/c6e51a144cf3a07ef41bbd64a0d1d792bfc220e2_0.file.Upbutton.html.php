@@ -1,15 +1,15 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-04 20:46:10
+/* Smarty version 4.5.1, created on 2024-04-04 21:14:46
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\Upbutton.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660ef572cc44a9_37068491',
+  'unifunc' => 'content_660efc263b9499_64273198',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '282b5592b186af49a336f4fa95ad0e920b1a1758' => 
+    'c6e51a144cf3a07ef41bbd64a0d1d792bfc220e2' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\html\\Upbutton.html',
       1 => 1711707240,
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660ef572cc44a9_37068491 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660efc263b9499_64273198 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <button id = "upbutton">▲</button>
 <link rel="stylesheet" href="./../assets/css/upbutton.css">

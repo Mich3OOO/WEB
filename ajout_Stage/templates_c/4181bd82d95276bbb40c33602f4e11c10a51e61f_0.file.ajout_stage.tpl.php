@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-04 19:35:31
+/* Smarty version 4.5.1, created on 2024-04-04 21:00:40
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\ajout_stage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660ee4e39ada11_05096082',
+  'unifunc' => 'content_660ef8d8d17488_84544738',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4181bd82d95276bbb40c33602f4e11c10a51e61f' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\ajout_stage.tpl',
-      1 => 1712252119,
+      1 => 1712257223,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660ee4e39ada11_05096082 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660ef8d8d17488_84544738 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html lang="fr">
@@ -39,11 +39,11 @@ function content_660ee4e39ada11_05096082 (Smarty_Internal_Template $_smarty_tpl)
     <div class="flex-container">
         <div class="flex-gauche">
             <label for="Poste">Nom  Poste :</label>
-            <input type="text" required="required" id="Poste" name="Poste" placeholder="Nom du Poste">
+            <input type="text" required="required" id="Poste" name="Poste" placeholder="Nom du Poste" onblur="data(/^[A-Za-z' -]+$/,0,value,id,'Ce champs ne doit contenir que des lettres ')>
             <label for="Nom_Entreprise">Nom Entreprise :</label>
-            <input type="text" required="required" id="Nom_Entreprise" name="Nom_Entreprise" placeholder="Nom de l'entreprise">
+            <input type="text" required="required" id="Nom_Entreprise" name="Nom_Entreprise" placeholder="Nom de l'entreprise" onblur="data(/^[A-Za-z' -]+$/,0,value,id,'Ce champs ne doit contenir que des lettres ')>
             <label for="Renumeration">Rénumération :</label>
-            <input type="text" required="required" id="Renumeration" name="Renumeration" placeholder="Renumeration en €">
+            <input type="number" required="required" id="Renumeration" name="Renumeration" placeholder="Renumeration en €">
             <label for="NB_Places">Nombre de places :</label>
             <input type="number" id="NB_Places" name="NB_Places" min="1" max="20" placeholder="Nombre de place disponible">
             <label for="date">Date de début prévu :</label>

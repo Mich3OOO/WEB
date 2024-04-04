@@ -11,6 +11,13 @@ body{
     display:inline-table; /* relier avec "text-align: center;" pour mettre un div au centre */
 }
 
+.cond_commentaire{
+    color: black;
+    background-color: lightsteelblue;
+    margin: 10px 0px;
+    padding: 5px 0px;
+}
+
 h1{
     color: grey;
     margin-bottom: 100px;
