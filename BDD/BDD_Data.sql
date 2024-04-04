@@ -105,10 +105,10 @@ INSERT INTO Secteur_Activite (Secteur_Act) VALUES
 
 INSERT INTO Entreprise (NomE, descr, MailE, TelE, `Site`, Moyenne, N_Siret, IdSec, ID_adresse) 
 VALUES 
-('Tech Solutions', 'Société spécialisée dans le développement logiciel.', 'contact@techsolutions.com', 1234567890, 'https://www.techsolutions.com', 4.5, 55546744350650, 2, 1),
-('Finance Corp', 'Firme de conseil financier offrant des services de gestion de patrimoine.', 'info@financecorp.com', 987654321, 'https://www.financecorp.com', 4.2, 97524575421984, 3, 2),
-('HealthCare Innovations', 'Entreprise travaillant sur des solutions technologiques pour le domaine de la santé.', 'info@healthcareinnovations.com', 654321987, 'https://www.healthcareinnovations.com', 4.8, 75483295574856, 4, 3),
-('Marketing Experts', 'Agence de marketing offrant des services de stratégie et de publicité.', 'contact@marketingexperts.com', 789456123, 'https://www.marketingexperts.com', 4.0, 89654887875432, 1, 4);
+('Tech Solutions', 'Société spécialisée dans le développement logiciel.', 'contact@techsolutions.com', 1234567890, 'https://www.techsolutions.com', 4.5, "55546744350650", 2, 1),
+('Finance Corp', 'Firme de conseil financier offrant des services de gestion de patrimoine.', 'info@financecorp.com', 987654321, 'https://www.financecorp.com', 4.2, "97524575421984", 3, 2),
+('HealthCare Innovations', 'Entreprise travaillant sur des solutions technologiques pour le domaine de la santé.', 'info@healthcareinnovations.com', 654321987, 'https://www.healthcareinnovations.com', 4.8, "75483295574856", 4, 3),
+('Marketing Experts', 'Agence de marketing offrant des services de stratégie et de publicité.', 'contact@marketingexperts.com', 789456123, 'https://www.marketingexperts.com', 4.0, "89654887875432", 1, 4);
 
 
 INSERT INTO Competences(Comp)

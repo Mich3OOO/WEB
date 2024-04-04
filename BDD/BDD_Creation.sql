@@ -30,7 +30,7 @@
 
    CREATE TABLE ville(
       idv INT AUTO_INCREMENT,
-      Code_Post SMALLINT NOT NULL,
+      Code_Post INT NOT NULL,
       ville VARCHAR(50),
       ID_reg INT NOT NULL,
       PRIMARY KEY(idv),
@@ -68,7 +68,7 @@
       TelE INT,
       Site VARCHAR(200),
       Moyenne DECIMAL(3,2),
-      N_siret SMALLINT NOT NULL,
+      N_siret VARCHAR(14) NOT NULL,
       IdSec INT NOT NULL,
       ID_adresse INT NOT NULL,
       PRIMARY KEY(IDE),
