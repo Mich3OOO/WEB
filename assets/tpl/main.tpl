@@ -14,6 +14,16 @@
         
         <link rel="manifest" href="../manifest.json">
         <script src="../assets/js/sw.js"></script>
+
+        <!-- PWA -->
+
+        <link rel="manifest" href="../BDD/manifest.json">
+        <link rel="apple-touch-icon" href="../image/96x96.png">
+        <meta name="apple-mobile-web-app-status-bar" content="white">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="theme-color" content="white">
+
+        <!-- PWA -->
     </head>
     <body>
         {include "../tpl/Menu.tpl"}
