@@ -42,6 +42,12 @@ class Sql
         return $get->fetchAll()[0];
         }
 
+    public function GetLazy($sql){
+        $get = $this->connexion->prepare($sql);
+        $get->execute();
+        return $get->fetch(PDO::FETCH_LAZY);
+    }
+
     public function GetArray($sql)
     {
         $get = $this->connexion->prepare($sql);
