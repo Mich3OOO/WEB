@@ -25,4 +25,4 @@ else{
     }
 }
 $Secteur = $connexion->GetFirstRow("SELECT idSec FROM Secteur_activite WHERE Secteur_Act = '".$_GET['Secteur_Act']."';")
-$Entreprise = $connexion->add("INSERT INTO entreprise (NomE, descr, MailE, TelE, Site, N_siret, IdSec, ID_adresse VALUES ('".$_GET['Nom']."', '".$_GET['Description']."', '".$_GET['Mail']."', '".$_GET['Num_Tel']."', '".$_GET['Site_Internet']."', '".$_GET['Siret']."', '".$Secteur."', '".$requeteAdresse[0]."';");
+$Entreprise = $connexion->add("INSERT INTO entreprise (NomE, descr, MailE, TelE, Site, N_siret, IdSec, ID_adresse VALUES ('".$_GET['Nom']."', '".$_GET['Description']."', '".$_GET['Mail']."', '".$_GET['Num_Tel']."', '".$_GET['Site_Internet']."', '".$_GET['Siret']."', '".$Secteur."', '".$requeteAdresse[0]."');");
