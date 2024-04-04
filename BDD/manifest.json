@@ -1,0 +1,52 @@
+{
+  "name": "Presqau'Chaud",
+  "short_name": "PC",
+  "start_url": "../assets/html/Authentification.html",
+  "display": "standalone",
+  "background_color": "black",
+  "theme_color": "black",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "../image/72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "../image/96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "../image/128x128x72.png.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "../image/144x144.png.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "../image/152x152.png.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "../image/192x192.png.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../image/384x384.png.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "../image/512x512.png.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
