@@ -11,25 +11,10 @@ body{
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
 }
 
-<<<<<<< HEAD
-=======
-input select/* modifie la zone de texte */ {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #C5C6C6;
-    border-radius: 4px;
-    background-color: #F5F6F6;
-    color: #2E3244;
+.IDu{
+    display: none;
 }
 
-.checkbox{
-    width: fit-content;
-    height: fit-content;
-    color: white;
-}
-
->>>>>>> 2c9605af96966503669864aa5d04a37c13bcb7f8
 #search
 {
     display: block;
