@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="fr">
-  <head>
-    
-    <meta charset="utf-8" >
-    <link href="../css/stage.css" rel="stylesheet" type="text/css" />
-   
-    <meta name="viewport" content="width=device-width" >
-    <title>Modifier un Stage </title>
-  </head>
-  <body>
-    
-
 <form action="../assets/phpScripts/UpdateOffre.php" method="get">
     <div class="flex-container">
         <div class="flex-gauche">
