@@ -1,25 +1,17 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.5.1, created on 2024-04-03 17:24:08
-=======
-/* Smarty version 4.5.1, created on 2024-04-03 21:29:04
->>>>>>> main
-  from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\Connexion.html' */
+/* Smarty version 4.5.1, created on 2024-04-04 15:45:42
+  from 'C:\Users\fabie\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\Connexion.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-<<<<<<< HEAD
-  'unifunc' => 'content_660d7498ca0b28_52622849',
-=======
-  'unifunc' => 'content_660dae004d07d8_55923393',
->>>>>>> main
+  'unifunc' => 'content_660eaf06c0d537_16502385',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '71000971a2103d755c20c867c8c7f9b1e3761b5c' => 
+    '5f75e03dff06eb4f71dec01350b9f5b7e00d2f34' => 
     array (
-      0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\html\\Connexion.html',
+      0 => 'C:\\Users\\fabie\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\html\\Connexion.html',
       1 => 1712157681,
       2 => 'file',
     ),
@@ -28,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_660d7498ca0b28_52622849 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_660dae004d07d8_55923393 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> main
+function content_660eaf06c0d537_16502385 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <main>
     <div class = "flexContainer">              

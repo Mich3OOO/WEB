@@ -53,7 +53,7 @@
                         <form action='../assets/phpScripts/deleteUser.php?IDu={$user.IDu}' method="get">
                             <input type="text" required="required" id="IDu" name="IDu" value="{$user["IDu"]}">
                             <button type="submit">Supprimer</button>
-                            </form>
+                        </form>
                             <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email={$user.MailU}'">✎</button>
                         
                         {/if}

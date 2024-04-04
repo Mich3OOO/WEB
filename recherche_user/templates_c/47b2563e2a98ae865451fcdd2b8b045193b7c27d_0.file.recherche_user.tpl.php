@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.5.1, created on 2024-04-03 17:37:30
-=======
-/* Smarty version 4.5.1, created on 2024-04-03 21:34:54
->>>>>>> main
-  from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\recherche_user.tpl' */
+/* Smarty version 4.5.1, created on 2024-04-04 15:54:01
+  from 'C:\Users\fabie\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\recherche_user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-<<<<<<< HEAD
-  'unifunc' => 'content_660d77bad29ef3_33820508',
-=======
-  'unifunc' => 'content_660daf5e2c6d28_95542201',
->>>>>>> main
+  'unifunc' => 'content_660eb0f9a658d3_21509142',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '3f92c5fa6523ebd115fbc6727f5a6a99085596d3' => 
+    '47b2563e2a98ae865451fcdd2b8b045193b7c27d' => 
     array (
-      0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\recherche_user.tpl',
-<<<<<<< HEAD
-      1 => 1712140002,
-=======
-      1 => 1712172892,
->>>>>>> main
+      0 => 'C:\\Users\\fabie\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\recherche_user.tpl',
+      1 => 1712237580,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_660d77bad29ef3_33820508 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_660daf5e2c6d28_95542201 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> main
+function content_660eb0f9a658d3_21509142 (Smarty_Internal_Template $_smarty_tpl) {
 ?><input list="Satages" id="search" placeholder="🔎︎ search">
 
 <div class="flex-container">
@@ -127,11 +111,6 @@ echo $_smarty_tpl->tpl_vars['allcampus']->value['ville'];
                         <p class="mail"><?php echo $_smarty_tpl->tpl_vars['user']->value['AdresseA'];?>
 </p>
                         <?php if (($_smarty_tpl->tpl_vars['_SESSION']->value["role"] == "Administrateur")) {?>
-<<<<<<< HEAD
-                        <button id="sure" onclick="sure()">Supprimer</button>
-                        <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email=<?php echo $_smarty_tpl->tpl_vars['user']->value['MailU'];?>
-'">✎</button>
-=======
                         <form action='../assets/phpScripts/deleteUser.php?IDu=<?php echo $_smarty_tpl->tpl_vars['user']->value['IDu'];?>
 ' method="get">
                             <input type="text" required="required" id="IDu" name="IDu" value="<?php echo $_smarty_tpl->tpl_vars['user']->value["IDu"];?>
@@ -140,7 +119,6 @@ echo $_smarty_tpl->tpl_vars['allcampus']->value['ville'];
                             <button class="modif" onclick="window.location.href='../modifier_compte/index.php?email=<?php echo $_smarty_tpl->tpl_vars['user']->value['MailU'];?>
 '">✎</button>
                         </form>
->>>>>>> main
                         <?php }?>
                         <a class="Info" href="">Plus d'information</a>
                     </div>
