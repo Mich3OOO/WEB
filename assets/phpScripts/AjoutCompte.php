@@ -16,7 +16,7 @@
             $test2 = $connexion->GetFirstRow("SELECT IF( EXISTS ( SELECT idv FROM ville WHERE ville = '".$_GET['Ville']."'),1,0);");
             if($test2[0]== 0){
                 $StockRegion = $connexion->GetFirstRow("SELECT ID_reg FROM reg WHERE reg = '".$_GET['Region']."';");
-                $requeteVille = $connexion->add("INSERT INTO ville(ville, Code_Post, ID_adresse) VALUES ('".$_GET['Ville']."','".$_GET['CP']."','".$StockRegion[0]."');");
+                $requeteVille = $connexion->add("INSERT INTO ville(ville, Code_Post, ID_reg) VALUES ('".$_GET['Ville']."','".$_GET['CP']."','".$StockRegion[0]."');");
             }
         }
         $StockVille = $connexion->GetFirstRow("SELECT idv FROM ville WHERE ville = '".$_GET['Ville']."';");
