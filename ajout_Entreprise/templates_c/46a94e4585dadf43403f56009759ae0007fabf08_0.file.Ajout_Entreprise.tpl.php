@@ -1,4 +1,27 @@
-<form action="../assets/phpScripts/SQL/AjoutEntreprise.php" method="get post">
+<?php
+/* Smarty version 4.5.1, created on 2024-04-04 21:57:46
+  from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\Ajout_Entreprise.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.5.1',
+  'unifunc' => 'content_660f063a9bd509_72815502',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '46a94e4585dadf43403f56009759ae0007fabf08' => 
+    array (
+      0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\Ajout_Entreprise.tpl',
+      1 => 1712260664,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_660f063a9bd509_72815502 (Smarty_Internal_Template $_smarty_tpl) {
+?><form action="../assets/phpScripts/AjoutEntreprise.php" method="get">
     <div class="flex-container">
         <div class="flex-gauche">
             <label for="Nom">Nom  Entreprise :</label>
@@ -26,13 +49,21 @@
             <label for="Num_Tel">Numéro de Téléphone :</label>
             <input type="text" required="required" id="Num_Tel" name="Num_Tel" placeholder="Nom de l'entreprise" onblur="data(/^[0-9]+$/,10,value,id,' Numéro de Téléphone mal renseigné')">
             <label for="Siret">Siret :</label>
-            <input type="text" required="required" id="Siret" name="Siret" placeholder="Siret de l'entreprise" onblur="data(/^[0-9]+$/,15,value,id,' Numéro de SIRET mal renseigné')">
+            <input type="text" required="required" id="Siret" name="Siret" placeholder="Siret de l'entreprise" onblur="data(/^[0-9]+[ -]-[0-9]/,15,value,id,' Numéro de SIRET mal renseigné')">
 
             <label for="Secteur_Act">Secteur d'activité :</label>
             <select name="Secteur_Act" id="Secteur_Act" required="required">
-                {foreach from=$alltypesect item=typesect}
-                    <option>{$typesect.Secteur_Act}</option>
-                {/foreach}
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['alltypesect']->value, 'typesect');
+$_smarty_tpl->tpl_vars['typesect']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['typesect']->value) {
+$_smarty_tpl->tpl_vars['typesect']->do_else = false;
+?>
+                    <option><?php echo $_smarty_tpl->tpl_vars['typesect']->value['Secteur_Act'];?>
+</option>
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </select>
            
         </div>
@@ -43,3 +74,5 @@
         <button type="submit" class="button" value="Annuler">Annuler</button> 
     </div>
 </form>
+<?php }
+}

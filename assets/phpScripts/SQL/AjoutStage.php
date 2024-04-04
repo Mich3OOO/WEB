@@ -1,18 +1,42 @@
 <?php
-    include "PDO.php";
+
+
+    include "../PDO.php";
     if(!isset($_SESSION))
     {
         session_start();
     }
     $connexion = new Sql($_SESSION["role"]);
+    $v=$connexion->GetFirstRow("SELECT IF( EXISTS (SELECT IDE from entreprise WHERE NomE = '".$_GET['Nom_Entreprise']."'),1,0);");
+    
+    
+    if($v[0]!=0){
 
-    if($connexion->Set("IF EXIST (SELECT IDE from entreprise WHERE NomE = '".$_POST['Nom_Entreprise']."');")){
-        $requête = $connexion->Set("SELECT IDE from entreprise WHERE NomE = '".$_POST['Nom_Entreprise']."' ");
-        $requête2 = $connexion->Set("INSERT INTO offre (Poste, remune, Nb_place, Descr, IDE) VALUES('".$_POST['Poste']."', '".$_POST['Renumeration']."', '".$_POST['NB_Places']."', '".$_POST['Description']."', '".$requête."');");
-        $requête3 = $connexion->Set("SELECT IDoffre from offre WHERE Poste = '".$_POST['Poste']."' ");
-        $requête4 = $connexion->Set("SELECT IDT from types_de_promotions WHERE Nom_du_Type = '".$_POST['Promotion']."' ");
-        $requête5 = $connexion->Set("INSERT INTO viser (IDoffre, IDT) VALUES('".$requête3."', '".$requête4."');");
-    } else {
+        $requêteIDE = $connexion->GetFirstRow("SELECT IDE from entreprise WHERE NomE = '".$_GET['Nom_Entreprise']."' ;");
+        
+        $requêteOffre = $connexion->Add("INSERT INTO offre (Duree,Poste, remune, Nb_place, Descr, IDE) VALUES('".$_GET['Duree']."','".$_GET['Poste']."', '".$_GET['Renumeration']."', '".$_GET['NB_Places']."', '".$_GET['Description']."', '".$requêteIDE["IDE"]."');");
+        $requêteIDoffre = $connexion->GetFirstRow("SELECT IDoffre from offre WHERE Poste = '".$_GET['Poste']."'; ");
+        foreach($_GET["TypePromo"] as $promo ){
+            $requêteIDT = $connexion->GetFirstRow("SELECT IDT from types_promotions WHERE Nom_du_Type = '".$promo."'; ");
+            $idviser=$connexion->GetFirstRow("SELECT IF( EXISTS (SELECT IDoffre, IDT from viser WHERE IDoffre = '".$requêteIDoffre["IDoffre"]."' AND IDT = '".$requêteIDT["IDT"]."'),1,0);");
+            if($idviser[0]==0){
+                $requête5 = $connexion->Set("INSERT INTO viser (IDoffre, IDT) VALUES('".$requêteIDoffre["IDoffre"]."', '".$requêteIDT["IDT"]."');");
+            }
+        }
+        foreach($_GET["Competences"] as $comp ){
+            $requêteIDComp = $connexion->GetFirstRow("SELECT IDComp from Competences WHERE Comp = '".$comp."'; ");
+            $idnecessite=$connexion->GetFirstRow("SELECT IF( EXISTS (SELECT IDoffre, IDComp from necessite WHERE IDoffre = '".$requêteIDoffre["IDoffre"]."' AND IDComp = '".$requêteIDComp["IDComp"]."'),1,0);");
+            if($idnecessite[0]==0){
+                $requête5 = $connexion->Set("INSERT INTO necessite (IDoffre, IDComp) VALUES('".$requêteIDoffre["IDoffre"]."', '".$requêteIDComp["IDComp"]."');");
+            }
+        }
+       
+       
+
+        
+    } 
+    else {
         echo "L'entreprise n'existe pas ! Veuillez d'abord la créer !";
     }
+    header('Location: ../../../recherche/');
 ?>

@@ -1,16 +1,7 @@
 
 
 
-// document.getElementById("avatar").addEventListener("click",open_image());
 
-document.getElementById("test").addEventListener("input",check_test);
-
-function check_test(){
-    if ((data(/^[A-Za-z]+$/,0,document.getElementById('test').value))==false){
-        document.getElementById("test").insertAdjacentHTML("afterend","<p id='testmsg'>Ce champs ne doit contenir uniquement que des lettres</p>");
-    }
-    return true;
-}
 
 function data(cond,longueur,valeur,id,commentaire){
     if(longueur!=0)
@@ -20,13 +11,13 @@ function data(cond,longueur,valeur,id,commentaire){
                 if(document.getElementById("cond_"+id)!=null){
                     return false;
                 }
-                document.getElementById(id).insertAdjacentHTML("beforebegin","<div class='cond_commentaire' id=cond_"+id+">"+"⚠️"+commentaire+"⚠️"+"</div>");
+                document.getElementById(id).insertAdjacentHTML("beforebegin","<div class='cond_commentaire' id=cond_"+id+">"+"⚠️"+commentaire+"⚠️"+cond+"</div>");
                     
                 return false;
         }
         }
         else{
-            alert("Champs incorrect");
+            document.getElementById(id).insertAdjacentHTML("beforebegin","<div class='cond_commentaire' id=cond_"+id+">"+"⚠️"+commentaire+"⚠️"+"</div>");("Ce champs doit contenir : "+ longuer + "termes");
             return false;
         }
     }    
@@ -49,5 +40,5 @@ function retrait(id){
     document.getElementById(id).remove();
 }
 function open_image(){
-    alert("yo bg")
+    alert("yo ")
 }

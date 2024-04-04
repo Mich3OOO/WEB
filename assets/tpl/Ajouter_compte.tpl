@@ -34,26 +34,26 @@
             {/foreach}
         </select>
         <label for="Adresse">Adresse</label>
-        <input type="text" required="required" id="Adresse" name="Adresse" placeholder="Adresse" onblur="data(/^[A-Za-z' - 0-9]+$/,0,value,id,'Ce champs ne doit que contenir des lettres')">
+        <input type="text" required="required" id="Adresse" name="Adresse" placeholder="Adresse" onblur="data(/^[A-Za-z' - 0-9]+$/,0,value,id,'Mauvaise Adresse ?')">
         
 
     </div>
     <div class="flex-droit">
         
         <label for="Nom">Nom</label>
-        <input type="text" required="required" id="Nom" name="Nom" placeholder="Nom" onblur="data(/^[A-Z]+[A-Za-z'-]/,0,value,id,'Ce champs ne doit que contenir des lettres')">
+        <input type="text" required="required" id="Nom" name="Nom" placeholder="Nom" onblur="data(/^[A-Z]+[A-Za-z'-]/,0,value,id,'Ce champs ne doit que contenir des lettres et commence par une majuscule')">
         <label for="Prenom">Prénom</label>
-        <input type="text" required="required" id="Prenom" name="Prenom" placeholder="Prenom" onblur="data(/^[A-Z]+[A-Za-z'-]/,0,value,id,'Ce champs ne doit que contenir des lettres')">
+        <input type="text" required="required" id="Prenom" name="Prenom" placeholder="Prenom" onblur="data(/^[A-Z]+[A-Za-z'-]/,0,value,id,'Ce champs ne doit que contenir des lettres et commence par une majuscule')">
         <label for="Mot-de-passe">Mot de passe</label>
-        <input type="text" required="required" id="Mot-de-passe" name="Mot-de-passe" placeholder="Mot de passe">
+        <input type="password" required="required" id="Mot-de-passe" name="Mot-de-passe" placeholder="Mot de passe">
         <label for="Confirmation-MDP">Confirmation mot de passe</label>
-        <input type="text" required="required" id="Confirmation-MDP" name="Confirmation-MDP" placeholder="Confirmation mot de passe">
+        <input type="password" required="required" id="Confirmation-MDP" name="Confirmation-MDP" placeholder="Confirmation mot de passe">
         <label for="Mail">Mail</label>
-        <input type="email" required="required" id="Mail" name="Mail" placeholder="Mail" onblur="data(/^[A-Za-z' - 0-9]+@+[A-Za-z' - 0-9]/,0,value,id,'Ce champs ne doit que contenir des lettres')">
+        <input type="email" required="required" id="Mail" name="Mail" placeholder="Mail" onblur="data(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i,0,value,id,'Email mal renseigné ')">
         <label for="Date-naissance">Date de naissance</label>
-        <input type="text" required="required" id="Date-naissance" name="Date-naissance" placeholder="Date-naissance">
+        <input type="date" required="required" id="Date-naissance" name="Date-naissance" placeholder="Date-naissance">
         <label for="CP">Code Postal</label>
-        <input type="text" required="required" id="CP" name="CP" placeholder="CP" onblur="data(/^[A-Za-z' - 0-9]+$/,0,value,id,'Ce champs ne doit que contenir des lettres')">
+        <input type="text" required="required" id="CP" name="CP" placeholder="CP" onblur="data(/^[A-Za-z' - 0-9]+$/,5,value,id,'Ce champs ne doit que contenir des lettres')">
         <label for="Ville">Ville</label>
         <input type="text" required="required" id="Ville" name="Ville" placeholder="Ville" onblur="data(/^[A-Za-z' -]+$/,0,value,id,'Ce champs ne doit que contenir des lettres')">
         <label for="Region">Region</label>

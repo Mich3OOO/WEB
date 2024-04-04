@@ -44,9 +44,7 @@ label{
     /* margin-bottom: 50px; */
     text-align: center;
 }
-.IDu{
-    display: none;
-}
+
 
 #StagePopUp
 {
@@ -132,6 +130,8 @@ select:focus {
     text-align: center;
     padding: 10px 20px;
     margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
 }
 
 .Importation{

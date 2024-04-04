@@ -1,19 +1,11 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.5.1, created on 2024-04-03 17:37:30
-=======
-/* Smarty version 4.5.1, created on 2024-04-03 21:22:44
->>>>>>> main
+/* Smarty version 4.5.1, created on 2024-04-04 23:09:47
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\Menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-<<<<<<< HEAD
-  'unifunc' => 'content_660d77bac95b55_27524192',
-=======
-  'unifunc' => 'content_660dac849678a1_29350581',
->>>>>>> main
+  'unifunc' => 'content_660f171bef5b13_82139489',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -28,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_660d77bac95b55_27524192 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_660dac849678a1_29350581 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> main
+function content_660f171bef5b13_82139489 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="../assets/css/menu.css">
 <?php echo '<script'; ?>
  src="../assets/js/more_menu.js"><?php echo '</script'; ?>

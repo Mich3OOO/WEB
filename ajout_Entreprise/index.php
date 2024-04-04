@@ -12,7 +12,7 @@ $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../tpl/Ajout_Entreprise.tpl');
 $smarty->assign('dircss', '../assets/css/ajout_entreprise.css');
-$smarty->assign('dirjs', '#');
+$smarty->assign('dirjs', '../assets/js/script.js');
 $smarty->assign('titre', 'Ajouter une entreprise');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');

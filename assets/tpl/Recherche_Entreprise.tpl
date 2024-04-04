@@ -49,8 +49,12 @@
                             <p class="mail" >Numéro de téléphone : {$entreprise.TelE}</p>
                             <a class="Info More" href="">Adresse : {$entreprise.AdresseA}</a>
                             {if ($_SESSION["role"] == "Administrateur")}
-                            <button id="sure" onclick="sure()">Supprimer</button>
-                            <button class="modif" onclick="window.location.href='../modifier_entreprise/index.php?IDE={$entreprise.IDE}'">✎</button>
+                            <form action="../assets/phpScripts/deleteEntreprise.php" method="get">
+                                <button id="sure" type="submit">Supprimer</button>
+                            </form>
+                            <form action="../modifier_entreprise/">
+                                 <button class="modif" type="submit">✎</button>
+                            </form>
                             {/if}
                             <a class="Info More" href="">Plus d'information</a>
                         </div>

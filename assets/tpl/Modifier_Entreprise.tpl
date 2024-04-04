@@ -40,7 +40,7 @@
             <br>
             <textarea name="descr" rows="10" cols="50" >{$entreprise.descr}</textarea>
         </div>
-        <input type="text" required="required" id="ID" name="ID" value={$entreprise["ID"]}>
+        <input type="hidden" required="required" id="ID" name="ID" value={$entreprise["ID"]}>
     </div>
 
 </div>

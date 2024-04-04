@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.5.1, created on 2024-04-03 17:37:32
-=======
-/* Smarty version 4.5.1, created on 2024-04-03 21:22:33
->>>>>>> main
+/* Smarty version 4.5.1, created on 2024-04-04 23:11:39
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\modifier_compte.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-<<<<<<< HEAD
-  'unifunc' => 'content_660d77bcbff0d5_09682936',
-=======
-  'unifunc' => 'content_660dac7906a369_45788518',
->>>>>>> main
+  'unifunc' => 'content_660f178b8a3e49_16160323',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd476a4dcf364ccc8d0a45c68e05a3a823825d18a' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\modifier_compte.tpl',
-<<<<<<< HEAD
-      1 => 1712081097,
-=======
-      1 => 1712171844,
->>>>>>> main
+      1 => 1712265087,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_660d77bcbff0d5_09682936 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_660dac7906a369_45788518 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> main
+function content_660f178b8a3e49_16160323 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1>Modifier un compte </h1>
 <form action="../assets/phpScripts/updateUser.php" methode="get">
@@ -56,35 +40,21 @@ $_smarty_tpl->tpl_vars['role']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['role']->value) {
 $_smarty_tpl->tpl_vars['role']->do_else = false;
 ?>
-<<<<<<< HEAD
-             <?php ob_start();
-=======
             <?php ob_start();
->>>>>>> main
 echo $_smarty_tpl->tpl_vars['role']->value['role'];
 $_prefixVariable1 = ob_get_clean();
 ob_start();
 echo $_smarty_tpl->tpl_vars['usermodif']->value["role"];
 $_prefixVariable2 = ob_get_clean();
 if (($_prefixVariable1 == $_prefixVariable2)) {?>
-<<<<<<< HEAD
-            <option selected><?php echo $_smarty_tpl->tpl_vars['role']->value['role'];?>
-=======
                 <option selected><?php echo $_smarty_tpl->tpl_vars['role']->value['role'];?>
->>>>>>> main
 </option>
             
             <?php } else { ?>
                 <option ><?php echo $_smarty_tpl->tpl_vars['role']->value['role'];?>
 </option>
             <?php }?>
-<<<<<<< HEAD
-                <option value=<?php echo $_smarty_tpl->tpl_vars['usermodif']->value["role"];?>
-><?php echo $_smarty_tpl->tpl_vars['role']->value['role'];?>
-</option>
-=======
                
->>>>>>> main
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -126,19 +96,6 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['campus']->value)
 $_smarty_tpl->tpl_vars['campus']->do_else = false;
 ?>
             <?php ob_start();
-<<<<<<< HEAD
-echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];
-$_prefixVariable5 = ob_get_clean();
-ob_start();
-echo $_smarty_tpl->tpl_vars['usermodif']->value["campus"];
-$_prefixVariable6 = ob_get_clean();
-if (($_prefixVariable5 == $_prefixVariable6)) {?>
-            <option selected><?php echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];?>
-</option>
-            
-            <?php } else { ?>
-                <option ><?php echo $_smarty_tpl->tpl_vars['campus']->value['NomC'];?>
-=======
 echo $_smarty_tpl->tpl_vars['campus']->value['ville'];
 $_prefixVariable5 = ob_get_clean();
 ob_start();
@@ -150,7 +107,6 @@ if (($_prefixVariable5 == $_prefixVariable6)) {?>
             
             <?php } else { ?>
                 <option ><?php echo $_smarty_tpl->tpl_vars['campus']->value['ville'];?>
->>>>>>> main
 </option>
             <?php }?>
            
@@ -265,19 +221,21 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <label for="Adresse">Adresse</label>
     <input type="text" required="required" id="Adresse" name="Adresse" value="<?php echo $_smarty_tpl->tpl_vars['usermodif']->value["Adresse"];?>
 ">
-    <input type="text" required="required" id="IDu" name="IDu" value="<?php echo $_smarty_tpl->tpl_vars['usermodif']->value["IDu"];?>
+    <input type="hidden" required="required" id="IDu" name="IDu" value="<?php echo $_smarty_tpl->tpl_vars['usermodif']->value["IDu"];?>
 ">
 </div>
     
 </div>
 <div class="flex-bas">
     <button type="submit" class="Valider">Valider</button>
-    <button type="submit" class="Reinitialiser">Supprimer</button> 
-   
+    </form>
+    <form action="../assets/phpScripts/deleteUser.php">
+        <button type="submit" class="Reinitialiser">Supprimer</button> 
+   </form>
     
 
 </div>
-</form>
+
 
 <?php }
 }

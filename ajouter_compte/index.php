@@ -11,7 +11,7 @@ $smarty = new Smarty();
 
 $smarty->assign('dirfile', '../tpl/ajouter_compte.tpl');
 $smarty->assign('dircss', '../assets/css/profil.css');
-$smarty->assign('dirjs', '#');
+$smarty->assign('dirjs', '../assets/js/script.js');
 $smarty->assign('titre', 'Creer un compte');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
