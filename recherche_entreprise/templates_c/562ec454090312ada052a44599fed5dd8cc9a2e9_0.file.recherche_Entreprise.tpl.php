@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-04 18:06:35
+/* Smarty version 4.5.1, created on 2024-04-04 23:34:23
   from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\tpl\recherche_Entreprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660ed00b495253_08145929',
+  'unifunc' => 'content_660f1cdfd20313_44201272',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '562ec454090312ada052a44599fed5dd8cc9a2e9' => 
     array (
       0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\tpl\\recherche_Entreprise.tpl',
-      1 => 1712133659,
+      1 => 1712266460,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660ed00b495253_08145929 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660f1cdfd20313_44201272 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <input list="Satages" id="search" placeholder="🔎︎ search">
 <div id="flex-mere">
@@ -83,9 +83,14 @@ $_smarty_tpl->tpl_vars['entreprise']->do_else = false;
                             <a class="Info More" href="">Adresse : <?php echo $_smarty_tpl->tpl_vars['entreprise']->value['AdresseA'];?>
 </a>
                             <?php if (($_smarty_tpl->tpl_vars['_SESSION']->value["role"] == "Administrateur")) {?>
-                            <button id="sure" onclick="sure()">Supprimer</button>
-                            <button class="modif" onclick="window.location.href='../modifier_entreprise/index.php?IDE=<?php echo $_smarty_tpl->tpl_vars['entreprise']->value['IDE'];?>
+                            <form action="../assets/phpScripts/deleteEntreprise.php" method="get">
+                            <input type="hidden" required="required" id="IDE" name="IDE" value="<?php echo $_smarty_tpl->tpl_vars['entreprise']->value["IDE"];?>
+">
+                                <button id="sure" type="submit">Supprimer</button>
+                            </form>
+                                 <button class="modif" type="submit" onclick="window.location.href='../modifier_entreprise/index.php?IDE=<?php echo $_smarty_tpl->tpl_vars['entreprise']->value['IDE'];?>
 '">✎</button>
+                           
                             <?php }?>
                             <a class="Info More" href="">Plus d'information</a>
                         </div>

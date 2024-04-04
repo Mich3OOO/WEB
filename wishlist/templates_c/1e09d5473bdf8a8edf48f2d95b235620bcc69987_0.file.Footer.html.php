@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-04-04 13:29:39
-  from 'C:\Users\Utilisateur\Desktop\CPI A2\Cours\WEB\Projet\WEB\assets\html\Footer.html' */
+/* Smarty version 4.5.1, created on 2024-04-04 23:24:32
+  from 'C:\Users\Utilisateur\OneDrive - Association Cesi Viacesi mail\CESI\CPI-A2\BLOC 4\PROJET\site web\WEB\assets\html\Footer.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_660e8f235bc9d1_29820724',
+  'unifunc' => 'content_660f1a901ee169_16114371',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '16739278c7aa471c550413a96175338fd80dcec4' => 
+    '1e09d5473bdf8a8edf48f2d95b235620bcc69987' => 
     array (
-      0 => 'C:\\Users\\Utilisateur\\Desktop\\CPI A2\\Cours\\WEB\\Projet\\WEB\\assets\\html\\Footer.html',
-      1 => 1711706086,
+      0 => 'C:\\Users\\Utilisateur\\OneDrive - Association Cesi Viacesi mail\\CESI\\CPI-A2\\BLOC 4\\PROJET\\site web\\WEB\\assets\\html\\Footer.html',
+      1 => 1711707240,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660e8f235bc9d1_29820724 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660f1a901ee169_16114371 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel = "StyleSheet" href = "../assets/css/footer.css">
 
 <footer>

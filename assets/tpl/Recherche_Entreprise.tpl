@@ -50,11 +50,11 @@
                             <a class="Info More" href="">Adresse : {$entreprise.AdresseA}</a>
                             {if ($_SESSION["role"] == "Administrateur")}
                             <form action="../assets/phpScripts/deleteEntreprise.php" method="get">
+                            <input type="hidden" required="required" id="IDE" name="IDE" value="{$entreprise["IDE"]}">
                                 <button id="sure" type="submit">Supprimer</button>
                             </form>
-                            <form action="../modifier_entreprise/">
-                                 <button class="modif" type="submit">✎</button>
-                            </form>
+                                 <button class="modif" type="submit" onclick="window.location.href='../modifier_entreprise/index.php?IDE={$entreprise.IDE}'">✎</button>
+                           
                             {/if}
                             <a class="Info More" href="">Plus d'information</a>
                         </div>

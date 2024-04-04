@@ -7,7 +7,7 @@ if(!isset($_SESSION))
     }
 $connexion = new Sql($_SESSION["role"]);
 
-var_dump($_GET);
+
 
 $DeleteNecessite = $connexion->delete("DELETE FROM necessite WHERE IDOffre = '".$_GET['ID']."';");
 $DeleteViser = $connexion->delete("DELETE FROM viser WHERE IDOffre = '".$_GET['ID']."';");

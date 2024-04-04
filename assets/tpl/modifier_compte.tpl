@@ -111,6 +111,7 @@
     <button type="submit" class="Valider">Valider</button>
     </form>
     <form action="../assets/phpScripts/deleteUser.php">
+        <input type="hidden" required="required" id="IDu" name="IDu" value="{$usermodif["IDu"]}">
         <button type="submit" class="Reinitialiser">Supprimer</button> 
    </form>
     
