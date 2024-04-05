@@ -45,10 +45,11 @@ function WishList(event)
 }
 function getPopupHtml(data)
 {
+    console.log(data);
     r = "<div id='BGPopup' onclick = 'closePopup()'></div><div id = 'MainPopUp'><div class = 'scrollContainer'><button id = 'Close' onclick = 'closePopup()'>x</button><div id='infostage'><h2>"+data[0].Poste+"</h2><article><h3>Résumé</h3><p>"+data[0].Descr+"</p></article><article><h3>compétences</h3><p>"+data[0].Competence+"</p></article><p><strong>promotions concernées:</strong>"+data[0].Nom_du_Type+"</p><p><strong>rémunération:</strong>"+data[0].remune+"€</p><div class = 'flexContainer'><div id='PopUpTimeInfo'><strong>Date de publication:</strong><p>"+data[0].Date_Stage+"</p><strong>durée:</strong><p>"+ data[0].Duree+ " mois</p></div><div id = 'PopUpSpotsInfo'><strong>nombre de places:</strong><p>"+data[0].Nb_place+"</p><strong>élèves postulés :</strong><p> "+data[0].post+"</p></div></div></div><div id='infoEntreprise'><h3>"+data[0].NomE+"</h3><h4>"+data[0].Site+"</h4><p>"+data[0].descr+"</p><p>Tel: "+data[0].TelE+"</p>";
     if(role!="Pilote" && data[0].canpost==null)
     {
-        r+="<a href = '../postuler/?IDoffre="+data.IDoffre+"'><button id = 'Postuler'>Postuler</button></a>"
+        r+="<a href = '../postuler/?IDoffre="+data[0].IDoffre+"'><button id = 'Postuler'>Postuler</button></a>"
     }
     
     r+="</div></div></div>";
