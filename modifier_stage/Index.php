@@ -11,7 +11,7 @@ if(!isset($_SESSION))
 $connexion = new Sql($_SESSION["role"]);
 
 $smarty->assign('dirfile', '../tpl/modifier_stage.tpl');
-$smarty->assign('dircss', '../assets/css/pilote.css');
+$smarty->assign('dircss', '../assets/css/stage.css');
 $smarty->assign('dirjs', '#');
 $smarty->assign('titre', 'Modifer un Stage');
 $smarty->assign('keywords', 'algo');

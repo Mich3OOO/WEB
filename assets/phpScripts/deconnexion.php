@@ -9,5 +9,5 @@
     session_unset();
     session_gc();
     //var_dump($_COOKIE);
-    header("Location: ../../")
+    header("Location: http://presquauchaud.ddns.net")
 ?>  

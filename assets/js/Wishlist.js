@@ -24,7 +24,7 @@ document.getElementById("search").addEventListener("change",(event) =>{
 })
 function search(event)
 {
-    fetch("http://localhost/assets/phpScripts/getWishlist.php?Nom="+document.getElementById("search").value,{method: 'GET'}).then(r=> r.json()).then(data =>{
+    fetch("http://presquauchaud.ddns.net/assets/phpScripts/getWishlist.php?Nom="+document.getElementById("search").value,{method: 'GET'}).then(r=> r.json()).then(data =>{
         for(let i = 0;i<data.length;i++)
         {
             document.getElementsByClassName("liste-deroulante2")[0].insertAdjacentHTML("beforeend",getStaghtml(data[i].IDoffre,data[i].Poste,data[i].NomE,data[i].adresseA+","+data[i].ville));
@@ -50,14 +50,14 @@ function removeFromWhishlist(event)
     let div = event.target.parentNode.parentNode.parentNode.parentNode
     
     tmp.append("IDo",div.id);
-    fetch("http://localhost/assets/phpScripts/removeFromWhislist.php",{method: 'POST',body: tmp});
+    fetch("http://presquauchaud.ddns.net/assets/phpScripts/removeFromWhislist.php",{method: 'POST',body: tmp});
     div.remove();
  
 }
 
 function plus(event){   
     let Parent = event.target.parentNode.parentNode.parentNode.parentNode;
-    fetch("http://localhost/assets/phpScripts/getWishlist.php?ID="+Parent.id,{method: 'GET'}).then(r=>r.json()).then(data =>{
+    fetch("http://presquauchaud.ddns.net/assets/phpScripts/getWishlist.php?ID="+Parent.id,{method: 'GET'}).then(r=>r.json()).then(data =>{
         if(document.getElementById("ID_"+Parent.id) != null){
             document.getElementById("ID_"+Parent.id).remove();
         } else {

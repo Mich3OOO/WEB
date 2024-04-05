@@ -1,41 +1,28 @@
+
 <?php
-include "../assets/phpScripts/redirect.php";
-include "../assets/phpScripts/PDO.php";
 require_once('../smarty/libs/Smarty.class.php');
 
-if(!isset($_SESSION))
-    {
-        session_start();
-    }
-
-$connexion = new Sql($_SESSION["role"]);
+include "../assets/phpScripts/redirect.php";
 $smarty = new Smarty();
 
+$Uchoise = array();
+if ($_SESSION["role"] == "Administrateur")
+{
+    $Uchoise = array(array("ID" => "etudiant","nom"=>"Étudiants","type"=> "checkbox"),array("ID" => "Pilote","nom"=>"Pilotes","type"=> "checkbox"),array("ID" => "Admin","nom"=>"Administrateur","type"=> "checkbox"));
+}
 
-$smarty->assign('dirfile', '../tpl/recherche_user.tpl');
-$smarty->assign('dircss', '../assets/css/user.css');
-$smarty->assign('dirjs', '../assets/js/areyousure.js');
-$smarty->assign('titre', 'Recherche de compte');
+
+$smarty->assign('dirfile', '../tpl/recherche.tpl');
+$smarty->assign('dircss', '../assets/css/Connexion.css');
+$smarty->assign('dirjs', '../assets/js/RechercheU.js');
+$smarty->assign('titre', 'acceuille');
 $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
+$smarty->assign('FiltresMC', array(array("ID" => "Promotion","nom"=>"Promotions :"),array("ID" => "Campus","nom"=>"Campus :")));
+$smarty->assign('FiltresUC', $Uchoise);
 
-//var_dump($_SESSION);
-if($_SESSION["role"]=="Administrateur"){
-    $allutilisateur=$connexion->GetArray("SELECT utilisateur.IDu,NomU,PrenomU,Date_NaisU,MailU,role,AdresseA,promotion,ville.idv FROM utilisateur INNER JOIN adresse ON Utilisateur.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv= ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg LEFT JOIN Classe ON ville.idv = Classe.idv LEFT JOIN promotion ON Classe.IDProm = promotion.IDProm;");
 
-}else{
-    $allutilisateur=$connexion->GetArray("SELECT  utilisateur.IDu,NomU,PrenomU,Date_NaisU,MailU,role,AdresseA,promotion,ville.idv FROM utilisateur INNER JOIN etudiant ON utilisateur.IDu=etudiant.IDu  INNER JOIN Classe ON etudiant.IDClasse = Classe.IDClasse INNER JOIN promotion ON promotion.IDProm=Classe.IDProm INNER JOIN adresse ON Utilisateur.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv= ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg;");
 
-}
-$allpromotion=$connexion->GetArray("SELECT DISTINCT promotion FROM promotion;");
-$allcampus=$connexion->GetArray("SELECT DISTINCT ville,ville.idv FROM ville INNER JOIN Classe ON ville.idv = Classe.idv;");
-
-$smarty->assign('allutilisateur', $allutilisateur);
-$smarty->assign('allcampus', $allcampus);
-$smarty->assign('allpromotion', $allpromotion);
-$smarty->assign('_SESSION', $_SESSION);
-//var_dump($allutilisateur);
-//var_dump($allpromotion);
 $smarty->assign('_SESSION', $_SESSION);
 
 $smarty->display("../assets/tpl/main.tpl");

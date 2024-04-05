@@ -5,7 +5,7 @@
 <div class="flex-gauche">
     <div class="flex-container">
     <div class="flex-gauche">
-        <img class="image-profil" src="image/persov5.jpg" alt="image profil">
+        <img class="image-profil" src="http://presquauchaud.ddns.net/image/persov5.jpg" alt="image profil">
         <button type="submit" class="Importation" >Importer un image</button>
     </div>
     <div class="flex-droit">
@@ -111,6 +111,7 @@
     <button type="submit" class="Valider">Valider</button>
     </form>
     <form action="../assets/phpScripts/deleteUser.php">
+        <input type="hidden" required="required" id="IDu" name="IDu" value="{$usermodif["IDu"]}">
         <button type="submit" class="Reinitialiser">Supprimer</button> 
    </form>
     

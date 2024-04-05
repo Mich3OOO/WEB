@@ -18,7 +18,7 @@ $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 
 
-$hash=$connexion->GetFirstRow("SELECT IDE,NomE,AdresseA,Code_Post,ville,MailE,TelE,Site,Secteur_Act,descr,reg,N_siret   FROM Entreprise INNER JOIN Secteur_Activite ON Entreprise.IDSec = Secteur_Activite.IDSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv= ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg WHERE IDE='".$_GET['IDE']."';");
+$hash=$connexion->GetFirstRow("SELECT IDE,NomE,AdresseA,Code_Post,ville,MailE,TelE,Site,Secteur_Act,descr,reg,N_siret   FROM Entreprise INNER JOIN Secteur_Activite ON Entreprise.IDSec = Secteur_Activite.IDSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv= ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg WHERE IDE='".$_GET['ID']."';");
 
 
 $allsect=$connexion->GetArray("SELECT DISTINCT Secteur_Act FROM secteur_activite;");

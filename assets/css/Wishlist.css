@@ -6,7 +6,6 @@ body{
 }
 
 .FormeH{
-    margin-left: 44%;
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 30px;
@@ -18,7 +17,9 @@ h4{
 }
 
 h2{
-    margin: 10 auto;
+    text-align: center;
+    color:  white;
+
 }
 
 input{
@@ -170,4 +171,45 @@ input{
     border: none;
     border-radius: 30px;
     background-color: #C5C6C6;
+}
+
+@media screen and (max-width: 1024px) {
+    .FormeH {
+        margin-left: 10%;
+        font-size: 20px;
+    }
+
+    h4 {
+        padding-left: 10%;
+    }
+
+    .plus {
+        margin-left: 10%;
+    }
+
+    .gauche, .droite {
+        flex: 1;
+        width: 100%;
+        text-align: left;
+    }
+
+    .droite>a {
+        margin-left: 10%;
+    }
+
+    .liste-deroulante2 {
+        width: 100%;
+    }
+
+    .compte {
+        margin: 5px 0;
+    }
+
+    .droit-compte, .bas-compte {
+        padding: 5px;
+    }
+
+    .compte-droit {
+        padding: 5px;
+    }
 }

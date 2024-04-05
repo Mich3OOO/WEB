@@ -1,5 +1,6 @@
 <?php
 include './PDO.php';
+include './addfiltre.php';
 if(!isset($_SESSION))
     {
         session_start();
@@ -9,7 +10,7 @@ $con = new Sql($_SESSION["role"]);
 
 
 
-if(isset($_GET["ville"]) and isset($_GET["reg"]) and isset($_GET["Secteur"]) and isset($_GET["Date"]) and isset($_GET["Duree"]) and isset($_GET["Poste"]) and isset($_GET["Prom"]) )
+if(isset($_GET["Ville"]) and isset($_GET["Département"]) and isset($_GET["SécteurA"]) and isset($_GET["Date_début"]) and isset($_GET["durée"]) and isset($_GET["KeyWord"]) and isset($_GET["Prom"]) )
 {
     $table = "interesser";
     if($_SESSION["role"] == "Administrateur")
@@ -20,24 +21,24 @@ if(isset($_GET["ville"]) and isset($_GET["reg"]) and isset($_GET["Secteur"]) and
 
 
     $setand = false;
-    $sql = "SELECT n1.IDu as IDu ,offre.IDoffre as IDoffre, Poste, Ville, NomE FROM  OFFRE INNER JOIN entreprise ON Offre.IDE = entreprise.IDE INNER JOIN secteur_activite ON Entreprise.IdSec = secteur_activite.IdSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv = ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg LEFT join ((SELECT * from ".$table." WHERE IDu = ".$_SESSION["IDu"].") as n1) on n1.IDoffre = offre.IDoffre INNER JOIN viser on offre.IDoffre = viser.IDoffre inner join types_promotions on types_promotions.IDT = viser.IDT";
-    if($_GET["ville"][0] != "" or $_GET["reg"][0] != "" or $_GET["Secteur"][0] != "" or $_GET["Date"] != "" or $_GET["Duree"] != "" or $_GET["Poste"] != "" or $_GET["Prom"][0] !="")
+    $sql = "SELECT n1.IDu as IDu ,offre.IDoffre as IDoffre, Poste, Ville, NomE FROM  OFFRE INNER JOIN entreprise ON Offre.IDE = entreprise.IDE INNER JOIN secteur_activite ON Entreprise.IdSec = secteur_activite.IdSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN Ville ON adresse.idv = Ville.idv INNER JOIN reg ON Ville.ID_reg = reg.ID_reg LEFT join ((SELECT * from ".$table." WHERE IDu = ".$_SESSION["IDu"].") as n1) on n1.IDoffre = offre.IDoffre INNER JOIN viser on offre.IDoffre = viser.IDoffre inner join types_promotions on types_promotions.IDT = viser.IDT";
+    if($_GET["Ville"][0] != "" or $_GET["Département"][0] != "" or $_GET["SécteurA"][0] != "" or $_GET["Date_début"] != "" or $_GET["durée"] != "" or $_GET["KeyWord"] != "" or $_GET["Prom"][0] !="")
     {
         $sql = $sql . " WHERE" ;
-    if($_GET["ville"][0] != "")
+    if($_GET["Ville"][0] != "")
     {
-        $sql = $sql . addFiltre("ville", $_GET["ville"],$setand);
+        $sql = $sql . addFiltre("Ville", $_GET["Ville"],$setand);
         $setand = true;
     }
 
-    if($_GET["reg"][0] != "")
+    if($_GET["Département"][0] != "")
     {
-        $sql = $sql . addFiltre("reg", $_GET["reg"],$setand);
+        $sql = $sql . addFiltre("reg", $_GET["Département"],$setand);
         $setand = true;
     }
-    if($_GET["Secteur"][0] != "")
+    if($_GET["SécteurA"][0] != "")
     {
-        $sql = $sql . addFiltre("secteur_activite.secteur_activite", $_GET["Secteur"],$setand);
+        $sql = $sql . addFiltre("secteur_activite.secteur_Act", $_GET["SécteurA"],$setand);
         $setand = true;
     }
     if($_GET["Prom"][0] != "")
@@ -46,32 +47,32 @@ if(isset($_GET["ville"]) and isset($_GET["reg"]) and isset($_GET["Secteur"]) and
         $setand = true;
     }
 
-    if ($_GET["Date"] != "")
+    if ($_GET["Date_début"] != "")
     {
         if ($setand)
         {
             $sql = $sql . " and ";
         }
-        $sql = $sql . " Date_Stage >= '" . $_GET["Date"] . "'";
+        $sql = $sql . " Date_Stage >= '" . $_GET["Date_début"] . "'";
         $setand = true;
     }
-    if ($_GET["Duree"] != "")
+    if ($_GET["durée"] != "")
     {
         if ($setand)
         {
             $sql = $sql . " and ";
         }
-        $sql = $sql . " Duree = '" . $_GET["Duree"] . "'";
+        $sql = $sql . " duree = '" . $_GET["durée"] . "'";
         $setand = true;
     }
 
-    if ($_GET["Poste"] != "")
+    if ($_GET["KeyWord"] != "")
     {
         if ($setand)
         {
             $sql = $sql . " and ";
         }
-        $sql = $sql . " Poste like '%" . $_GET["Poste"] . "%'";
+        $sql = $sql . " Poste like '%" . $_GET["KeyWord"] . "%'";
         $setand = true;
     }
         
@@ -96,51 +97,14 @@ elseif(isset($_GET["ID"]))
     }
 
 
-    echo $con->Getjson("SELECT *,COUNT(postuler.IDu) as post,GROUP_CONCAT(competences.Comp) as Competence,n1.IDu as canpost FROM  OFFRE INNER JOIN Viser ON OFFRE.IDoffre = Viser.IDoffre INNER JOIN types_promotions ON Viser.IDT = types_promotions.IDT INNER JOIN entreprise ON Offre.IDE = entreprise.IDE INNER JOIN secteur_activite ON Entreprise.IdSec = secteur_activite.IdSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv = ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg LEFT JOIN postuler on postuler.IDoffre =offre.IDoffre INNER JOIN necessite on necessite.IDoffre = offre.IDoffre INNER JOIN competences on competences.IDComp = necessite.IDComp LEFT join ((SELECT * from ".$table." WHERE IDu = ".$_SESSION["IDu"].") as n1) on n1.IDoffre = offre.IDoffre where Offre.IDoffre = " . $_GET["ID"] . ";");
-    //echo "SELECT *,COUNT(postuler.IDu) as post,GROUP_CONCAT(competences.Comp) as Competence,n1.IDu as canpost FROM  OFFRE INNER JOIN Viser ON OFFRE.IDoffre = Viser.IDoffre INNER JOIN types_promotions ON Viser.IDT = types_promotions.IDT INNER JOIN entreprise ON Offre.IDE = entreprise.IDE INNER JOIN secteur_activite ON Entreprise.IdSec = secteur_activite.IdSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN ville ON adresse.idv = ville.idv INNER JOIN reg ON ville.ID_reg = reg.ID_reg LEFT JOIN postuler on postuler.IDoffre =offre.IDoffre INNER JOIN necessite on necessite.IDoffre = offre.IDoffre INNER JOIN competences on competences.IDComp = necessite.IDComp LEFT join ((SELECT * from ".$table." WHERE IDu = ".$_SESSION["IDu"].") as n1) on n1.IDoffre = offre.IDoffre where Offre.IDoffre = " . $_GET["ID"] . ";" ;
+    echo $con->Getjson("SELECT *,COUNT(postuler.IDu) as post,GROUP_CONCAT(competences.Comp) as Competence,n1.IDu as canpost ,offre.IDoffre as IDoffre FROM  OFFRE INNER JOIN Viser ON OFFRE.IDoffre = Viser.IDoffre INNER JOIN types_promotions ON Viser.IDT = types_promotions.IDT INNER JOIN entreprise ON Offre.IDE = entreprise.IDE INNER JOIN secteur_activite ON Entreprise.IdSec = secteur_activite.IdSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN Ville ON adresse.idv = Ville.idv INNER JOIN reg ON Ville.ID_reg = reg.ID_reg LEFT JOIN postuler on postuler.IDoffre =offre.IDoffre INNER JOIN necessite on necessite.IDoffre = offre.IDoffre INNER JOIN competences on competences.IDComp = necessite.IDComp LEFT join ((SELECT * from ".$table." WHERE IDu = ".$_SESSION["IDu"].") as n1) on n1.IDoffre = offre.IDoffre where Offre.IDoffre = " . $_GET["ID"] . ";");
+    //echo "SELECT *,COUNT(postuler.IDu) as post,GROUP_CONCAT(competences.Comp) as Competence,n1.IDu as canpost FROM  OFFRE INNER JOIN Viser ON OFFRE.IDoffre = Viser.IDoffre INNER JOIN types_promotions ON Viser.IDT = types_promotions.IDT INNER JOIN entreprise ON Offre.IDE = entreprise.IDE INNER JOIN secteur_activite ON Entreprise.IdSec = secteur_activite.IdSec INNER JOIN adresse ON Entreprise.ID_adresse = adresse.ID_adresse INNER JOIN Ville ON adresse.idv = Ville.idv INNER JOIN Département ON Ville.ID_reg = Département.ID_reg LEFT JOIN postuler on postuler.IDoffre =offre.IDoffre INNER JOIN necessite on necessite.IDoffre = offre.IDoffre INNER JOIN competences on competences.IDComp = necessite.IDComp LEFT join ((SELECT * from ".$table." WHERE IDu = ".$_SESSION["IDu"].") as n1) on n1.IDoffre = offre.IDoffre where Offre.IDoffre = " . $_GET["ID"] . ";" ;
 }
+
 else
 {
     echo "[]";
 }
 
-function addFiltre($NFiltre, $tab ,$setand)
-{
-    
-    $close = true;
-    
-
-    $r = "";
-
-    
-    for($i = 0 ; $i <count($tab); $i++)
-    {
-        
-        if($setand)
-        {
-            $r = $r . " and";
-            $setand = false;
-        }
-        if($close)
-        {
-            $r = $r . " ( ".$NFiltre." LIKE '%".$tab[$i] ."%'" ;
-            $close = false;
-        }
-        else
-        {
-            $r = $r . " or ".$NFiltre." LIKE '%".$tab[$i] ."%'" ;
-        }
-        
-        
-    }
-
-    if(!$close)
-    {
-        $r = $r . " )";
-
-    }
-    
-    return $r;
-}
 
 ?>

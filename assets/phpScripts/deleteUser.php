@@ -26,4 +26,4 @@ if($role[0] =='Etudiant'){
 }
 
 
-header('Location: ../../recherche_user/');
+header('Location: http://presquauchaud.ddns.net/recherche_user/');

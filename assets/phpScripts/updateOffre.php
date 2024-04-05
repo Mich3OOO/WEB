@@ -43,5 +43,5 @@ if($v[0]!=0){
 else {
     echo "L'entreprise n'existe pas ! Veuillez d'abord la créer !";
 }
-header('Location: ../../../recherche/');
+header('Location: http://presquauchaud.ddns.net/recherche/');
 ?>

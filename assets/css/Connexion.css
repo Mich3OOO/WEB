@@ -1,3 +1,8 @@
+#ImgProf
+{
+    width: 100%;
+    margin-top: 20px;
+}
 #Titre
 {
     text-align: center;
@@ -131,7 +136,7 @@ main
     flex: 2;
 }
 
-#search
+#KeyWord
 {
     display: list-item;
     border: solid;
@@ -144,7 +149,7 @@ main
 }
 
 
-#offres
+#Blocs
 {  
     float:inline-start; 
     width: 100%; 
@@ -153,58 +158,58 @@ main
     overflow-y: auto;
     overflow-x: hidden;
 }
-#offres>h2
+#Blocs>h2
 {
     text-align: center;
     color: grey;
 }
 
 
-.Offre>div>button:first-child , .Offre>div
+.Block>div>button:first-child , .Block>div
 {    
     border-radius: 20px;
     background-color: #FFFFFF;
     transition: all 500ms;
 }
-.Offre>div>button:first-child
+.Block>div>button:first-child
 {
     border: solid;
     border-width: 1px;
     width: 100%; height: 100%;
 }
-.Offre>div
+.Block>div
 {
     width: 200px; height: 120px;
     position: relative;
     margin: auto;
 }
-.Offre
+.Block
 {
     width: 220px; height: 140px;
     float: inline-start;
     padding: 5px;
 }
 
-.Offre>div>button:hover
+.Block>div>button:hover
 {
     background-color: #C5C6C6;
     cursor:pointer;
     transition: all 500ms;
 }
-.Offre>div:hover
+.Block>div:hover
 {
     transition: all 500ms;
     width: 220px; height: 140px;
 }
 
-.Offre>div>button>ul>li:not(:nth-last-child(1),:nth-last-child(2))
+.Block>div>button>ul>li:not(:nth-last-child(1),:nth-last-child(2))
 {
     font-weight: bold;
     font-size: 20px;   
 }
 
 
-.Offre>div>button>ul
+.Block>div>button>ul
 {
    padding: 0px 15px;
 }
@@ -219,10 +224,17 @@ main
     cursor: pointer;
 }
 
-.Offre>div>.StarButon
+.Block>div>.StarButon
 {
     position: relative;
     bottom: 107%; left: 82%;
+}
+
+.edit
+{
+    position: relative;
+    bottom: 25%; left: 7%;
+    
 }
 
 .StarButon::before
@@ -233,10 +245,33 @@ main
 
 }
 
+
 .StarButon:checked::before
 {
     visibility:visible ;
     content: "\2726";
+    opacity: 100%;   
+}
+.StartNote
+{
+    margin-left: 15px;
+    visibility: hidden;
+    font-size: 38px;
+    color: orange;
+    cursor: pointer;
+}
+.StartNote::before
+{
+    visibility:visible ;
+    content: "\2606";
+    opacity: 80%;
+
+}
+
+.StartNote:checked::before
+{
+    visibility:visible ;
+    content: "\2605";
     opacity: 100%;   
 }
 
@@ -250,7 +285,7 @@ main
 
 }
 
-#StagePopUp
+#MainPopUp
 {
     animation: show 300ms 300ms cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
 
@@ -270,7 +305,7 @@ main
 
     
 }
-#StagePopUp>div
+#MainPopUp>div
 {
     display: flex;
     width: 100%; height: 100%;
@@ -284,7 +319,7 @@ main
     padding: 50px;
 
 }
-#StagePopUp>div>#Close
+#MainPopUp>div>#Close
 {
     position: sticky;
     left: 95%; top: 10px;
@@ -293,7 +328,7 @@ main
     background-color: #FFFFFF;
     
 }
-#StagePopUp>div>#Close:hover
+#MainPopUp>div>#Close:hover
 {
     background-color: #C5C6C6;
 }
@@ -325,7 +360,7 @@ main
     margin-top: 10px;
     flex: 1;
     background-color: #eeeeee;
-    width: max-content
+    width: max-content;
 }
 
 article>p
@@ -361,9 +396,15 @@ article>p
     cursor: pointer;
 
 }
-#StagePopUp>div>.StarButon
+#MainPopUp>div>.StarButon
 {
     position: relative;
+}
+
+
+#note
+{
+
 }
 
 @keyframes show {
@@ -373,7 +414,7 @@ article>p
   }
 
 @media screen and (max-width: 1000px) {
-    #offres
+    #Blocs
     {
         width: 480px; 
     }
@@ -381,7 +422,7 @@ article>p
     
 }
 @media screen and (min-width: 1000px) {
-    #offres
+    #Blocs
     {
         width: 700px; 
     }
