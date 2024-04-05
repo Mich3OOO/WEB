@@ -9,6 +9,7 @@ p{
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 10px;
+    text-align: center;
 }
 
 .Mot_de_passe{
@@ -17,10 +18,12 @@ p{
 
 h4{
     color :grey;
+    text-align: center;
 }
 
 h1{
     color:grey;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1024px) {
