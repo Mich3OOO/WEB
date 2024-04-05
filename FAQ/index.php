@@ -1,5 +1,5 @@
 <?php
-include "../assets/phpScripts/redirect.php";
+    include "../assets/phpScripts/redirect.php";
 require_once('../smarty/libs/Smarty.class.php');
 $smarty = new Smarty();
 

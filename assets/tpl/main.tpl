@@ -7,7 +7,7 @@
         <meta name="keywords" content="{$keywords}">
         <meta name="description" content="{$description}">
 
-        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    
 
         <link href="{$dircss}" rel="stylesheet" type="text/css" />
         <script async src="{$dirjs}"></script>

@@ -33,4 +33,4 @@ N_siret='".$_GET["SIRET"]."' WHERE IDE ='".$IDE[0]."';");
 
 var_dump($_GET);
 
-header('Location: ../../recherche_Entreprise/');
+header('Location: http://presquauchaud.ddns.net/recherche_Entreprise/');

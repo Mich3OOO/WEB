@@ -31,7 +31,7 @@ class Sql
                 break;
         }
         try{
-            $this->connexion = new PDO("mysql:host=localhost;dbname=presquauchaud; port=3366", $user, $password);        }
+            $this->connexion = new PDO("mysql:host=presquauchaud.ddns.net;dbname=presquauchaud; port=3366", $user, $password);        }
         catch(PDOException $e){
             print "Erreur :". $e->getMessage() . "<br/>";
         }

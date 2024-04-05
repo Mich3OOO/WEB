@@ -15,4 +15,4 @@ $DeleteOffre = $connexion->delete("DELETE FROM offre WHERE IDOffre = '".$_GET['I
 
 
 
-header('Location: ../../recherche/');
+header('Location: http://presquauchaud.ddns.net/recherche/');

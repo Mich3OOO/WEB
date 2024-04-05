@@ -8,24 +8,30 @@ function init()
 {
     role =document.cookie.split(";")[0].split("=")[1];
 
-    document.getElementById("Admin").value = 1
-    document.getElementById("Pilote").value = 1
-    document.getElementById("etudiant").value = 1
-    document.getElementById("Admin").checked = true;
-    document.getElementById("Pilote").checked = true;
-    document.getElementById("etudiant").checked = true;
+    if(document.getElementById("Admin") != null)
+    {
+        document.getElementById("Admin").value = 1
+        document.getElementById("Pilote").value = 1
+        document.getElementById("etudiant").value = 1
+        document.getElementById("Admin").checked = true;
+        document.getElementById("Pilote").checked = true;
+        document.getElementById("etudiant").checked = true;
+        document.getElementById("Admin").addEventListener("change",checkedvalues);
+        document.getElementById("Pilote").addEventListener("change",checkedvalues);
+        document.getElementById("etudiant").addEventListener("change",checkedvalues);
+
+    }
+    
 
 
-    document.getElementById("Promotion").addEventListener("input",(event)=>{ updateDL(event,"http://localhost/assets/phpscripts/getpromotion.php?Promotion=")});
+    document.getElementById("Promotion").addEventListener("input",(event)=>{ updateDL(event,"http://presquauchaud.ddns.net/assets/phpscripts/getpromotion.php?Promotion=")});
     document.getElementById("Campus").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/communes?nom=") });
 
-    document.getElementById("Promotion").addEventListener("change",(event => {addFiltre(event,"http://localhost/assets/phpscripts/getpromotion.php?Promotion=")}));
+    document.getElementById("Promotion").addEventListener("change",(event => {addFiltre(event,"http://presquauchaud.ddns.net/assets/phpscripts/getpromotion.php?Promotion=")}));
     document.getElementById("Campus").addEventListener("change",(event => {addFiltre(event,"https://geo.api.gouv.fr/communes?nom=")}));
 
-    document.getElementById("Admin").addEventListener("change",checkedvalues);
-    document.getElementById("Pilote").addEventListener("change",checkedvalues);
-    document.getElementById("etudiant").addEventListener("change",checkedvalues);
-    search("http://localhost/assets/phpScripts/searchuser.php");
+
+    search("http://presquauchaud.ddns.net/assets/phpScripts/searchuser.php");
 }
 
 function checkedvalues(event)
@@ -39,7 +45,7 @@ function checkedvalues(event)
         event.target.value = 0;
     }
 
-    search("http://localhost/assets/phpScripts/searchuser.php")
+    search("http://presquauchaud.ddns.net/assets/phpScripts/searchuser.php")
 }
 
 function getPopupHtml(data)
@@ -60,11 +66,11 @@ function getPopupHtml(data)
 
 function GetBlock(data)
 {
+    console.log(data);
+    r = "<div class='Block' id ="+data.IDu+"><div><button onclick = \"ShowPopUp(event,'http://presquauchaud.ddns.net/assets/phpScripts/searchuser.php?ID=')\"><ul class='liste'><li>"+data.prenomU+" "+ data.NomU+"</li><li>"+data.role+"</li><li>"+ data.MailU +"</li> </ul></button>";
     
-    r = "<div class='Block' id ="+data.IDu+"><div><button onclick = \"ShowPopUp(event,'http://localhost/assets/phpScripts/searchuser.php?ID=')\"><ul class='liste'><li>"+data.prenomU+" "+ data.NomU+"</li><li>"+data.role+"</li><li>"+ data.MailU +"</li> </ul></button>";
     
-    
-    r+= "<a  class='edit' href='../modifier_compte/?Mail="+data.IDoffre+"'>edit</a>";
+    r+= "<a  class='edit' href='../modifier_compte/?email="+data.MailU+"'>edit</a>";
     r += "</div></div>" ; 
     return r;
 }

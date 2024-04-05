@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded",init)
 
 function init()
 {
-  fetch("http://localhost/assets/phpScripts/GetStats.php",{method:"GET"}).then(r => r.json()).then(data => {
+  fetch("http://presquauchaud.ddns.net/assets/phpScripts/GetStats.php",{method:"GET"}).then(r => r.json()).then(data => {
 
   console.log(JSON.stringify(data.PromotionsEtudiant.x));
 

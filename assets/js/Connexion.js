@@ -8,21 +8,21 @@ function init()
 {
     role =document.cookie.split(";")[0].split("=")[1];
 
-    document.getElementById("KeyWord").addEventListener("change",() =>search("http://localhost/assets/phpScripts/search.php"));
+    document.getElementById("KeyWord").addEventListener("change",() =>search("http://presquauchaud.ddns.net/assets/phpScripts/search.php"));
 
     document.getElementById("Département").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/regions?nom=")});
     document.getElementById("Ville").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/communes?nom=") });
-    document.getElementById("SécteurA").addEventListener("input",(event)=>{ updateDL(event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=") });
-    document.getElementById("Prom").addEventListener("input",(event)=>{ updateDL(event,"http://localhost/assets/phpscripts/TypePromotion.php?TypePromotion=") });
+    document.getElementById("SécteurA").addEventListener("input",(event)=>{ updateDL(event,"http://presquauchaud.ddns.net/assets/phpscripts/secteurAct.php?secteur=") });
+    document.getElementById("Prom").addEventListener("input",(event)=>{ updateDL(event,"http://presquauchaud.ddns.net/assets/phpscripts/TypePromotion.php?TypePromotion=") });
 
     document.getElementById("Département").addEventListener("change",(event => {addFiltre(event,"https://geo.api.gouv.fr/regions?nom=")}));
     document.getElementById("Ville").addEventListener("change",(event => {addFiltre(event,"https://geo.api.gouv.fr/communes?nom=")}));
-    document.getElementById("SécteurA").addEventListener("change",(event => {addFiltre(event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=")}));
-    document.getElementById("Prom").addEventListener("change",(event => {addFiltre(event,"http://localhost/assets/phpscripts/TypePromotion.php?TypePromotion=")}));
+    document.getElementById("SécteurA").addEventListener("change",(event => {addFiltre(event,"http://presquauchaud.ddns.net/assets/phpscripts/secteurAct.php?secteur=")}));
+    document.getElementById("Prom").addEventListener("change",(event => {addFiltre(event,"http://presquauchaud.ddns.net/assets/phpscripts/TypePromotion.php?TypePromotion=")}));
 
-    document.getElementById("Date_début").addEventListener("change",() =>search("http://localhost/assets/phpScripts/search.php"));
-    document.getElementById("durée").addEventListener("change",() =>search("http://localhost/assets/phpScripts/search.php"));
-    search("http://localhost/assets/phpScripts/search.php");
+    document.getElementById("Date_début").addEventListener("change",() =>search("http://presquauchaud.ddns.net/assets/phpScripts/search.php"));
+    document.getElementById("durée").addEventListener("change",() =>search("http://presquauchaud.ddns.net/assets/phpScripts/search.php"));
+    search("http://presquauchaud.ddns.net/assets/phpScripts/search.php");
 }
 
 
@@ -36,11 +36,11 @@ function WishList(event)
     if (event.target.checked == 1)
     {
         
-        fetch("http://localhost/assets/phpScripts/AddToWhislist.php",{method: 'POST',body: tmp });
+        fetch("http://presquauchaud.ddns.net/assets/phpScripts/AddToWhislist.php",{method: 'POST',body: tmp });
     }
     else 
     {   
-        fetch("http://localhost/assets/phpScripts/removeFromWhislist.php",{method: 'POST',body: tmp});
+        fetch("http://presquauchaud.ddns.net/assets/phpScripts/removeFromWhislist.php",{method: 'POST',body: tmp});
     }
 }
 function getPopupHtml(data)
@@ -61,7 +61,7 @@ function GetBlock(data)
 {
     
     
-    r = "<div class='Block' id ="+data.IDoffre+"><div><button onclick = \"ShowPopUp(event,'http://localhost/assets/phpScripts/search.php?ID=')\"><ul class='liste'><li>"+data.Poste+"</li><li>"+data.NomE+"</li><li>"+ data.Ville +"</li> </ul></button>";
+    r = "<div class='Block' id ="+data.IDoffre+"><div><button onclick = \"ShowPopUp(event,'http://presquauchaud.ddns.net/assets/phpScripts/search.php?ID=')\"><ul class='liste'><li>"+data.Poste+"</li><li>"+data.NomE+"</li><li>"+ data.Ville +"</li> </ul></button>";
     if(role != "Pilote")
     {
         r+= "<input class='StarButon' type='checkbox' onclick = 'WishList(event)' ";

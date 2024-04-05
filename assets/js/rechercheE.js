@@ -10,12 +10,12 @@ function init()
 
     document.getElementById("reg").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/regions?nom=")});
     document.getElementById("Ville").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/communes?nom=") });
-    document.getElementById("secteur").addEventListener("input",(event)=>{ updateDL(event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=") });
+    document.getElementById("secteur").addEventListener("input",(event)=>{ updateDL(event,"http://presquauchaud.ddns.net/assets/phpscripts/secteurAct.php?secteur=") });
     document.getElementById("reg").addEventListener("change",(event => {addFiltre(event,"https://geo.api.gouv.fr/regions?nom=")}));
     document.getElementById("Ville").addEventListener("change",(event => {addFiltre(event,"https://geo.api.gouv.fr/communes?nom=")}));
-    document.getElementById("secteur").addEventListener("change",(event => {addFiltre(event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=")}));
+    document.getElementById("secteur").addEventListener("change",(event => {addFiltre(event,"http://presquauchaud.ddns.net/assets/phpscripts/secteurAct.php?secteur=")}));
 
-    search("http://localhost/assets/phpScripts/searchEnt.php");
+    search("http://presquauchaud.ddns.net/assets/phpScripts/searchEnt.php");
 }
 
 function Noter(event,IDE)
@@ -27,12 +27,12 @@ function Noter(event,IDE)
     tmp.append("Note",event.target.value)
     tmp.append("IDE",IDE);
     
-    fetch("http://localhost/assets/phpScripts/noter.php",{method: 'POST',body: tmp });
+    fetch("http://presquauchaud.ddns.net/assets/phpScripts/noter.php",{method: 'POST',body: tmp });
     
 
     closePopup();
-    search("http://localhost/assets/phpScripts/searchEnt.php");
-    fetch('http://localhost/assets/phpScripts/searchEnt.php?ID='+IDE,{method: 'GET'}).then(r=> r.json()).then(data =>{
+    search("http://presquauchaud.ddns.net/assets/phpScripts/searchEnt.php");
+    fetch('http://presquauchaud.ddns.net/assets/phpScripts/searchEnt.php?ID='+IDE,{method: 'GET'}).then(r=> r.json()).then(data =>{
         console.log(data);
 
         document.body.insertAdjacentHTML("beforeend",getPopupHtml(data));
@@ -89,7 +89,7 @@ function getPopupHtml(data)
 function GetBlock(data)
 {
     
-    r = "<div class='Block' id ="+data.IDE+"><div><button onclick = \"ShowPopUp(event,'http://localhost/assets/phpScripts/searchEnt.php?ID=')\"><ul class='liste'><li>"+data.NomE+"</li><li>"+data.Site.replace("https://www.","")+"</li>";
+    r = "<div class='Block' id ="+data.IDE+"><div><button onclick = \"ShowPopUp(event,'http://presquauchaud.ddns.net/assets/phpScripts/searchEnt.php?ID=')\"><ul class='liste'><li>"+data.NomE+"</li><li>"+data.Site.replace("https://www.","")+"</li>";
 
     if(data.avg == null)
     {

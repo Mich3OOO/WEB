@@ -5,7 +5,7 @@
     {
         session_start();
     }
-    $connexion = new Sql($_SESSION["role"]);
+    $connexion = new Sql("Etudiant");
 
     
     $hash = $connexion->GetFirstRow("SELECT IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA from `utilisateur` inner join adresse on utilisateur.ID_adresse=adresse.ID_adresse where MailU ='".$_GET["Email"]."';");
@@ -24,12 +24,12 @@
         $_SESSION["Adresse"]= $hash[7];
         $_SESSION["role"]= $hash[6] ;
 
-        header('Location: ../../recherche/');
+        header('Location: http://presquauchaud.ddns.net/recherche/');
     }
     else
     {  
         
-        header('Location: ../../login/');
+        header('Location: http://presquauchaud.ddns.net/login/');
     
     }
 
