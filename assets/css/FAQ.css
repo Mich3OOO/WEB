@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, sans-serif;
+    background: url(../../image/fond.jpg);
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la surface */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+p{
+    color: grey;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+}
+
+.Mot_de_passe{
+    margin-top: 100px;
+}
+
+h4{
+    color :grey;
+}
+
+h1{
+    color:grey;
+}
+
+@media only screen and (max-width: 1024px) {
+    p {
+        padding-top: 100px;
+        margin-bottom: 50px;
+    }
+    
+    .Mot_de_passe {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
