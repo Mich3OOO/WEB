@@ -1,26 +1,42 @@
 
-<input list="Satages" id="search" placeholder="🔎︎ search">
+
 <div id="flex-mere">
     <div id="flex-filtres">
-        <h4>Filtre : </h4>
-        <label for="Ville">Ville</label><br>
-        <select name="Ville" id="Ville" class="selection">
-            <option value="Ville1">Ville 1</option>
-            <option value="Ville2">Ville 2</option>
-            <option value="Ville3">Ville 3</option>
-        </select><br><br>
-        <label for="Dep">Département</label><br>
-        <select name="Dep" id="Dep" class="selection">
-            <option value="Departement1">Département 1</option>
-            <option value="Departement2">Département 2</option>
-            <option value="Departement3">Département 3</option>
-        </select><br><br>
-        <label for="SectAct">Secteur d'activité</label><br>
-        <select name="SectAct" id="SectAct" class="selection">
-            <option value="SectAct1">Secteur d'activité 1</option>
-            <option value="SectAct2">Secteur d'activité 2</option>
-            <option value="SectAct3">Secteur d'activité 3</option>
-        </select><br><br>
+        <form action = '../recherche_entreprise/' methode= 'GET' onkeydown="return event.key != 'Enter';">
+            <input type="text" id="search" name = 'search' placeholder="🔎︎ search">
+            <h4>Filtre : </h4>
+
+            <label for="Ville">Ville</label>
+            <input type="text" id = "Ville" list="DLVille" class="MChoise"  oninput ="updateDL(event,'https://geo.api.gouv.fr/communes?nom=')" onchange ="addFiltre(event,'https://geo.api.gouv.fr/communes?nom=')">
+            <datalist id = "DLVille">
+            </datalist>
+            <div id = "VilleList" class="tagcontent">
+            </div>
+            
+
+
+           
+            <label for="Dep">région</label>
+            <input id = "Dep" list="DLDep" class="MChoise" oninput ="updateDL(event,'https://geo.api.gouv.fr/regions?nom=')" onchange ="addFiltre(event,'https://geo.api.gouv.fr/regions?nom=')">
+            <datalist id = "DLDep">
+            </datalist>
+            <div id = "DepList" class="tagcontent">
+            </div>
+
+
+            <label for="SectAct">Secteur d'activité</label>
+            <input id = "SectAct" list="DLSectAct" class="MChoise" oninput ="updateDL(event,'http://localhost/assets/phpscripts/secteurAct.php?secteur=')" onchange ="addFiltre(event,'http://localhost/assets/phpscripts/secteurAct.php?secteur=')">
+            <datalist id = "DLSectAct">
+            </datalist>
+            <div id = "SectActList" class="tagcontent">
+            </div>
+
+            <button type = 'submit'>search</button>
+            
+
+
+
+        </form>
     </div>
     <div id="flex-recherche">
         <div class="liste-deroulante2">
