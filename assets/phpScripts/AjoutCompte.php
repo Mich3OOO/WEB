@@ -34,4 +34,5 @@
             $requetePilote = $connexion->add("INSERT INTO admin(IDu) VALUES ('".$StockIDu[0]."');");
         }
     }
-
+    header('Location: ../../recherche_user/'); 
+    ?>
