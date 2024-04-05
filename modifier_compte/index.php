@@ -19,7 +19,7 @@ $smarty->assign('keywords', 'algo');
 $smarty->assign('description', 'algo');
 
 
-$hash = $connexion->GetFirstRow("SELECT utilisateur.IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA,promotion,Code_Post,ville,reg from utilisateur INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg LEFT JOIN Classe ON Classe.idv = ville.idv left JOIN promotion ON Classe.IDProm=promotion.IDProm  where MailU ='".$_GET["email"]."';");
+$hash = $connexion->GetFirstRow("SELECT utilisateur.IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA,promotion,Code_Post,ville,reg from utilisateur INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg LEFT JOIN Classe ON Classe.idv = ville.idv left JOIN promotion ON Classe.IDProm=promotion.IDProm  where MailU ='".$_GET["email"]."' GROUP BY MailU  ;");
 $StockCampus = $connexion->GetFirstRow("SELECT Classe.idv FROM Classe left JOIN ville ON ville.idv = CLasse.idv left JOIN adresse ON adresse.idv = ville.idv left JOIN Utilisateur ON Utilisateur.ID_adresse = adresse.ID_adresse WHERE MailU ='".$_GET["email"]."';");
 $StockVille = $connexion->GetFirstRow("SELECT ville FROM ville WHERE idv = '".$StockCampus[0]."';");
 //var_dump("SELECT utilisateur.IDu,MdpU,NomU,PrenomU,Date_NaisU,MailU,role,adresseA,promotion,Code_Post,ville,reg from utilisateur INNER JOIN adresse ON utilisateur.ID_adresse=adresse.ID_adresse INNER JOIN ville ON ville.idv=adresse.idv INNER JOIN reg ON reg.ID_reg=ville.ID_reg left JOIN Classe ON Classe.idv = ville.idv left JOIN promotion ON Classe.IDProm=promotion.IDProm where MailU ='".$_GET["email"]."';");

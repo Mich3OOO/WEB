@@ -64,7 +64,7 @@
                         <div class="droite">
                             <p class="mail" >Numéro de téléphone : {$entreprise.TelE}</p>
                             <a class="Info More" href="">Adresse : {$entreprise.AdresseA}</a>
-                            {if ($_SESSION["role"] == "Administrateur")}
+                            {if ($_SESSION["role"] == "Administrateur" )}
                             <form action="../assets/phpScripts/deleteEntreprise.php" method="get">
                             <input type="hidden" required="required" id="IDE" name="IDE" value="{$entreprise["IDE"]}">
                                 <button id="sure" type="submit">Supprimer</button>
