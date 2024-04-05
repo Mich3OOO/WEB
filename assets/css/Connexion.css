@@ -1,3 +1,8 @@
+#ImgProf
+{
+    width: 100%;
+    margin-top: 20px;
+}
 #Titre
 {
     text-align: center;
@@ -225,6 +230,13 @@ main
     bottom: 107%; left: 82%;
 }
 
+.edit
+{
+    position: relative;
+    bottom: 25%; left: 7%;
+    
+}
+
 .StarButon::before
 {
     visibility:visible ;
@@ -233,10 +245,33 @@ main
 
 }
 
+
 .StarButon:checked::before
 {
     visibility:visible ;
     content: "\2726";
+    opacity: 100%;   
+}
+.StartNote
+{
+    margin-left: 15px;
+    visibility: hidden;
+    font-size: 38px;
+    color: orange;
+    cursor: pointer;
+}
+.StartNote::before
+{
+    visibility:visible ;
+    content: "\2606";
+    opacity: 80%;
+
+}
+
+.StartNote:checked::before
+{
+    visibility:visible ;
+    content: "\2605";
     opacity: 100%;   
 }
 
@@ -325,7 +360,7 @@ main
     margin-top: 10px;
     flex: 1;
     background-color: #eeeeee;
-    width: max-content
+    width: max-content;
 }
 
 article>p
@@ -364,6 +399,12 @@ article>p
 #MainPopUp>div>.StarButon
 {
     position: relative;
+}
+
+
+#note
+{
+
 }
 
 @keyframes show {

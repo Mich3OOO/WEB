@@ -9,7 +9,7 @@ function updateDL(event,api)
 
     }
     
-    if(event.target.value.length >= 2)
+    if(event.target.value.length >= 1)
     {
         fetch(api+event.target.value).then(r=> r.json()).then(data =>{
         
@@ -61,7 +61,7 @@ function getfiltres()
     }
 
 
-
+    
     return "?" +r.slice(1);
     
 
@@ -128,6 +128,7 @@ function ShowPopUp(event,searchApi)
 
 function search(searchApi)
 {
+    console.log(searchApi+getfiltres());
      fetch(searchApi+getfiltres(),{method: 'GET'}).then(r=> r.json()).then(data =>{
 
         let OffreCon = document.getElementById("Blocs");
@@ -137,6 +138,7 @@ function search(searchApi)
             OffreCon.children[i].remove();
 
         }
+        
         
 
         if(data.length>0)

@@ -10,6 +10,7 @@ if ($_SESSION["role"] == "Administrateur")
 {
     $Uchoise = array(array("ID" => "etudiant","nom"=>"Étudiants","type"=> "checkbox"),array("ID" => "Pilote","nom"=>"Pilotes","type"=> "checkbox"),array("ID" => "Admin","nom"=>"Administrateur","type"=> "checkbox"));
 }
+//etudiant,Pilote,Admin,Promotion,Campus
 
 $smarty->assign('dirfile', '../tpl/recherche.tpl');
 $smarty->assign('dircss', '../assets/css/Connexion.css');

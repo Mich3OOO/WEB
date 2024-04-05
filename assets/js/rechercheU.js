@@ -8,19 +8,66 @@ function init()
 {
     role =document.cookie.split(";")[0].split("=")[1];
 
-    //document.getElementById("KeyWord").addEventListener("change",() =>search("http://localhost/assets/phpScripts/search.php"));
+    document.getElementById("Admin").value = 1
+    document.getElementById("Pilote").value = 1
+    document.getElementById("etudiant").value = 1
+    document.getElementById("Admin").checked = true;
+    document.getElementById("Pilote").checked = true;
+    document.getElementById("etudiant").checked = true;
 
-    // document.getElementById("Département").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/regions?nom=")});
-    // document.getElementById("Ville").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/communes?nom=") });
-    // document.getElementById("SécteurA").addEventListener("input",(event)=>{ updateDL(event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=") });
-    // document.getElementById("Prom").addEventListener("input",(event)=>{ updateDL(event,"http://localhost/assets/phpscripts/TypePromotion.php?TypePromotion=") });
 
-    // document.getElementById("Département").addEventListener("change",(event => {addFiltre(event,"https://geo.api.gouv.fr/regions?nom=")}));
-    // document.getElementById("Ville").addEventListener("change",(event => {addFiltre(event,"https://geo.api.gouv.fr/communes?nom=")}));
-    // document.getElementById("SécteurA").addEventListener("change",(event => {addFiltre(event,"http://localhost/assets/phpscripts/secteurAct.php?secteur=")}));
-    // document.getElementById("Prom").addEventListener("change",(event => {addFiltre(event,"http://localhost/assets/phpscripts/TypePromotion.php?TypePromotion=")}));
+    document.getElementById("Promotion").addEventListener("input",(event)=>{ updateDL(event,"http://localhost/assets/phpscripts/getpromotion.php?Promotion=")});
+    document.getElementById("Campus").addEventListener("input",(event)=>{ updateDL(event,"https://geo.api.gouv.fr/communes?nom=") });
 
-    // document.getElementById("Date_début").addEventListener("change",() =>search("http://localhost/assets/phpScripts/search.php"));
-    // document.getElementById("durée").addEventListener("change",() =>search("http://localhost/assets/phpScripts/search.php"));
-    // search("http://localhost/assets/phpScripts/search.php");
+    document.getElementById("Promotion").addEventListener("change",(event => {addFiltre(event,"http://localhost/assets/phpscripts/getpromotion.php?Promotion=")}));
+    document.getElementById("Campus").addEventListener("change",(event => {addFiltre(event,"https://geo.api.gouv.fr/communes?nom=")}));
+
+    document.getElementById("Admin").addEventListener("change",checkedvalues);
+    document.getElementById("Pilote").addEventListener("change",checkedvalues);
+    document.getElementById("etudiant").addEventListener("change",checkedvalues);
+    search("http://localhost/assets/phpScripts/searchuser.php");
 }
+
+function checkedvalues(event)
+{
+    if(event.target.checked)
+    {
+        event.target.value = 1;
+    }
+    else
+    {
+        event.target.value = 0;
+    }
+
+    search("http://localhost/assets/phpScripts/searchuser.php")
+}
+
+function getPopupHtml(data)
+{
+    console.log(data);
+    r = "<div id='BGPopup' onclick = 'closePopup()'></div><div id = 'MainPopUp'><div class = 'scrollContainer'><button id = 'Close' onclick = 'closePopup()'>x</button><div id='infostage'><h2>"+data[0].PrenomU+" "+ data[0].NomU+"</h2><article><h3>E-Mail</h3><p>"+data[0].MailU+"</p></article><article><h3>Date de naissance</h3><p>"+data[0].Date_NaisU+"</p></article><p><strong>Rôle :</strong>"+data[0].role+"</p>"
+    if(data[0].role=="Etudiant")
+    {
+        r+="<p><strong>Promotion :</strong>"+data[0].Promotion+"</p><p><strong>campus:</strong>"+ data[0].ville+ "</p>"
+        
+    }
+
+    r+="</div><div id='infoEntreprise'><img id = 'ImgProf' src= '../image/persov5.jpg'/><a href='../modifier_compte/?Mail="+data.IDoffre+"'><button id = 'Postuler'>Modiffier</button></a>"
+    r+="</div></div></div>";
+
+    return r;
+} 
+
+function GetBlock(data)
+{
+    
+    r = "<div class='Block' id ="+data.IDu+"><div><button onclick = \"ShowPopUp(event,'http://localhost/assets/phpScripts/searchuser.php?ID=')\"><ul class='liste'><li>"+data.prenomU+" "+ data.NomU+"</li><li>"+data.role+"</li><li>"+ data.MailU +"</li> </ul></button>";
+    
+    
+    r+= "<a  class='edit' href='../modifier_compte/?Mail="+data.IDoffre+"'>edit</a>";
+    r += "</div></div>" ; 
+    return r;
+}
+
+  
+
