@@ -17,9 +17,14 @@ body{
     width: 500px; height: 500px;
     float: left;
 }
-
+h2
+{
+    text-align: center;
+    color: white;
+}
 h1
 {
+    color: white;
     text-align: center;
     margin: 10px 0px;
 }

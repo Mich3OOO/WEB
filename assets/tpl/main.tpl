@@ -6,6 +6,7 @@
         <meta charset="utf-8" >
         <meta name="keywords" content="{$keywords}">
         <meta name="description" content="{$description}">
+        <link rel="icon" type="image/x-icon" href="http://presquauchaud.ddns.net/image/icon.ico">
 
     
 

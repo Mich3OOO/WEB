@@ -8,8 +8,8 @@ $smarty->assign('dirfile', '../html/stats.html');
 $smarty->assign('dircss', '../assets/css/stats.css');
 $smarty->assign('dirjs', '../assets/js/stats.js');
 $smarty->assign('titre', 'Statistique');
-$smarty->assign('keywords', 'algo');
-$smarty->assign('description', 'algo');
+$smarty->assign('keywords', 'Statistique promotions offres entreprises');
+$smarty->assign('description', 'Statistique sur le promotions les offres et les entreprises');
 
 $smarty->assign('_SESSION', $_SESSION);
 

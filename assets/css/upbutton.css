@@ -1,7 +1,7 @@
 #upbutton
 {
     position: sticky;
-    left: 90%; bottom: 20px;
+    left: 90%; bottom: 45px;
     width: 100px; height: 100px;
     transition: 150ms 150ms linear;
     font-size: 50px;
